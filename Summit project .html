@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta name="x-poe-datastore-behavior" content="local_only" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden; /* يمنع التمدد العرضي */
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        word-wrap: break-word;
+      }
+    </style>
+    <title>شركة سومت العالمية - Summit(SIC)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;900&amp;family=Inter:wght@300;400;600;700&amp;display=swap"
+      rel="stylesheet preload"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="stylesheet" href="./main-ltr.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              arabic: ["Tajawal", "sans-serif"],
+              english: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#11224E" /* blue */,
+              secondary: "#F87B1B" /* orange */,
+              accent: "#CBD99B",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://puc.poecdn.net/authenticated_preview_page/syncedState.bd4eeeb8e8e02052ee92.js"></script>
+  </head>
+  <body class="bg-white text-gray-900 duration-300">
+    <header class="bg-white top-0 shadow-lg">
+      <!-- Navigation -->
+      <nav class="">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4">
+            <div class="logo-3d">
+              <img
+                src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
+                alt="Summit Global Logo"
+                class="h-12 w-12 rounded-full"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="hidden md:flex space-x-8 rtl:space-x-reverse">
+              <a
+                href="#home"
+                class="nav-link text-primary hover:text-secondary transition-colors"
+              >
+                <span class="ar">الرئيسية</span>
+                <span class="en hidden">Home</span>
+              </a>
+              <a
+                href="#about"
+                class="nav-link text-primary hover:text-secondary transition-colors"
+              >
+                <span class="ar">عن الشركة</span>
+                <span class="en hidden">About</span>
+              </a>
+              <a
+                href="#services"
+                class="nav-link text-primary hover:text-secondary transition-colors"
+              >
+                <span class="ar">الخدمات</span>
+                <span class="en hidden">Services</span>
+              </a>
+              <a
+                id="all-projects"
+                href="projects.html"
+                class="nav-link text-primary hover:text-secondary transition-colors"
+                title="مشاريع كاملة"
+                ><span class="ar">عرض المشاريع الكاملة</span
+                ><span class="en hidden">View All Projects</span></a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-primary hover:text-secondary transition-colors"
+              >
+                <span class="ar">اتصل بنا</span>
+                <span class="en hidden">contact</span>
+              </a>
+            </div>
+
+            <div
+              class="flex items-center space-x-4 rtl:space-x-reverse relative"
+            >
+              <button
+                id="langToggle"
+                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                <span class="ar">EN</span>
+                <span class="en hidden">عربي</span>
+              </button>
+              <div class="relative">
+                <button id="mobileMenu" class="md:hidden">
+                  <i class="fas fa-bars text-xl"></i>
+                </button>
+                <div id="mobileNav"class="md:hidden">
+                  <a href="#home" class="block py-3"
+                    ><span class="ar">الرئيسية</span>
+                    <span class="en hidden">Home</span></a
+                  >
+                  <a href="#about" class="block py-3"
+                    ><span class="ar">عن الشركة</span>
+                    <span class="en hidden">About</span></a
+                  >
+                  <a href="#services" class="block py-3"
+                    ><span class="ar">خدماتنا</span>
+                    <span class="en hidden">Services</span></a
+                  >
+                  <a href="#projects" class="block py-3"
+                    ><span class="ar">مشاريعنا</span>
+                    <span class="en hidden">projects</span></a
+                  >
+                  <a href="#contact" class="block py-3"
+                    ><span class="ar">اتصل بنا</span>
+                    <span class="en hidden">contact</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="py-20 mt-6 flex items-center justify-center contact overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-secondary/30 to-white/30"
+      ></div>
+      <div class="container mx-auto px-5 text-center relative z-10">
+        <div class="logo-3d mb-6 fade-in inline-block">
+          <img
+            src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
+            alt="Summit Logo"
+            class="h-40 w-40 mx-auto rounded-full floating"
+            loading="lazy"
+          />
+        </div>
+
+        <h1 class="text-6xl md:text-7xl font-bold mb-9 fade-in">
+          <span class="ar">شركة سومت العالمية</span>
+          <span class="en hidden">Summit International Company</span>
+        </h1>
+
+        <p class="text-2xl md:text-2xl font-bold text-gray-900 fade-in">
+          <span class="ar"
+            >حلول متكاملة لسحب المياه والتدعيم والحفر باحترافية عالية</span
+          >
+          <span class="en hidden"
+            >Comprehensive solutions for dewatering, shoring and drilling with
+            high professionalism</span
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-orange-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4 slide-in-left">
+            <span class="ar">عن الشركة</span>
+            <span class="en hidden">About Company</span>
+          </h2>
+          <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="slide-in-left">
+            <h3
+              class="text-2xl font-bold mb-6 text-primary mb-6 leading-relaxed"
+            >
+              <span class="ar">نبذة عن الشركة</span>
+              <span class="en hidden">Company Overview</span>
+            </h3>
+            <p class="text-gray-900 mb-6 leading-relaxed">
+              <span class="ar"
+                >تأسست شركة سومت العالمية لتكون واحدة من الشركات المتخصصة
+                والرائدة في مجال سحب المياه الجوفية وأعمال التدعيم والحفر، مع
+                التوسع في تقديم حلول متكاملة لأعمال البناء والتشطيبات.</span
+              >
+              <span class="en hidden"
+                >Summit Global was established to be one of the specialized and
+                leading companies in the field of groundwater pumping,
+                reinforcement and drilling works, with expansion in providing
+                integrated solutions for construction and finishing works.</span
+              >
+            </p>
+            <p class="text-gray-900 leading-relaxed">
+              <span class="ar"
+                >نتميز بخبرة عملية وفريق عمل مؤهل، مدعوم بأحدث المعدات والأنظمة،
+                لنضمن لعملائنا تنفيذ مشاريعهم بجودة عالية، ووفق أعلى معايير
+                السلامة والالتزام بالمواعيد.</span
+              >
+              <span class="en hidden"
+                >We are distinguished by practical experience and a qualified
+                work team, supported by the latest equipment and systems, to
+                ensure our clients implement their projects with high quality,
+                according to the highest standards of safety and commitment to
+                deadlines.</span
+              >
+            </p>
+          </div>
+
+          <div class="slide-in-right">
+            <div class="grid grid-cols-1 gap-6">
+              <div class="bg-gray-100 p-6 rounded-lg shadow-lg card-hover">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
+                  >
+                    <i class="fas fa-eye text-secondary text-xl"></i>
+                  </div>
+                  <h4 class="text-xl font-bold">
+                    <span class="ar">رؤيتنا</span>
+                    <span class="en hidden">Our Vision</span>
+                  </h4>
+                </div>
+                <p class="text-gray-900">
+                  <span class="ar"
+                    >أن نكون الخيار الأول في الكويت والمنطقة في مجال سحب المياه
+                    والتدعيم وأعمال الحفر والتشطيبات</span
+                  >
+                  <span class="en hidden"
+                    >To be the first choice in Kuwait and the region in water
+                    pumping, reinforcement, drilling and finishing works</span
+                  >
+                </p>
+              </div>
+
+              <div class="bg-gray-100 p-6 rounded-lg shadow-lg card-hover">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
+                  >
+                    <i class="fas fa-bullseye text-secondary text-xl"></i>
+                  </div>
+                  <h4 class="text-xl font-bold">
+                    <span class="ar">رسالتنا</span>
+                    <span class="en hidden">Our Mission</span>
+                  </h4>
+                </div>
+                <p class="text-gray-900">
+                  <span class="ar"
+                    >الالتزام بتقديم خدمات متخصصة وفعّالة لعملائنا، ترتكز على
+                    الخبرة، الكفاءة، الابتكار، والسلامة</span
+                  >
+                  <span class="en hidden"
+                    >Commitment to providing specialized and effective services
+                    to our clients, based on experience, efficiency, innovation,
+                    and safety</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-12">
+          <span class="ar">قيمنا الأساسية</span>
+          <span class="en hidden">Our Core Values</span>
+        </h3>
+
+        <div class="grid md:grid-cols-5 gap-6">
+          <div
+            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
+          >
+            <div
+              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-star text-secondary text-2xl"></i>
+            </div>
+            <h4 class="font-bold mb-2">
+              <span class="ar">الجودة</span>
+              <span class="en hidden">Quality</span>
+            </h4>
+          </div>
+
+          <div
+            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
+          >
+            <div
+              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-clock text-secondary text-2xl"></i>
+            </div>
+            <h4 class="font-bold mb-2">
+              <span class="ar">الالتزام</span>
+              <span class="en hidden">Commitment</span>
+            </h4>
+          </div>
+
+          <div
+            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
+          >
+            <div
+              class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
+            </div>
+            <h4 class="font-bold mb-2">
+              <span class="ar">السلامة</span>
+              <span class="en hidden">Safety</span>
+            </h4>
+          </div>
+
+          <div
+            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
+          >
+            <div
+              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-users text-secondary text-2xl"></i>
+            </div>
+            <h4 class="font-bold mb-2">
+              <span class="ar">الاحترافية</span>
+              <span class="en hidden">Professionalism</span>
+            </h4>
+          </div>
+
+          <div
+            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
+          >
+            <div
+              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-handshake text-secondary text-2xl"></i>
+            </div>
+            <h4 class="font-bold mb-2">
+              <span class="ar">الشفافية</span>
+              <span class="en hidden">Transparency</span>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-orange-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="ar">خدماتنا</span>
+            <span class="en hidden">Our Services</span>
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
+          >
+            <div
+              class="service-icon bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-tint text-blue-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">سحب المياه الجوفية</span>
+              <span class="en hidden">Groundwater Pumping</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات المتطورة</span
+              >
+              <span class="en hidden"
+                >Groundwater pumping services with the latest equipment and
+                advanced technologies</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
+          >
+            <div
+              class="service-icon bg-yellow-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-hard-hat text-yellow-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">أعمال التدعيم</span>
+              <span class="en hidden">Reinforcement Works</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >تدعيم المباني والمنشآت بأعلى معايير السلامة والجودة</span
+              >
+              <span class="en hidden"
+                >Building and structure reinforcement with the highest safety
+                and quality standards</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
+          >
+            <div
+              class="service-icon bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-tools text-orange-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">أعمال الحفر</span>
+              <span class="en hidden">Drilling Works</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات</span
+              >
+              <span class="en hidden"
+                >Precise and safe drilling for all types of projects and
+                applications</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
+          >
+            <div
+              class="service-icon bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-paint-roller text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">التشطيبات</span>
+              <span class="en hidden">Finishing Works</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم</span
+              >
+              <span class="en hidden"
+                >High-quality finishes that achieve clients' vision and
+                expectations</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="ar">معداتنا</span>
+            <span class="en hidden">Our Equipment</span>
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center fade-in">
+            <div
+              class="bg-blue-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-cog text-blue-500 text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">
+              <span class="ar">مضخات</span>
+              <span class="en hidden">Pumps</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">مضخات متطورة عالية الكفاءة</span>
+              <span class="en hidden">Advanced high-efficiency pumps</span>
+            </p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div
+              class="bg-yellow-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-truck text-yellow-500 text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">
+              <span class="ar">لوادر</span>
+              <span class="en hidden">Loaders</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">لوادر حديثة لجميع الأعمال</span>
+              <span class="en hidden">Modern loaders for all works</span>
+            </p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div
+              class="bg-orange-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-hammer text-orange-500 text-4xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">
+              <span class="ar">حفارات تدعيم</span>
+              <span class="en hidden">Support Excavators</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">حفارات متخصصة لأعمال التدعيم</span>
+              <span class="en hidden"
+                >Specialized excavators for support works</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 selected bg-orange-100">
+      <div class="container mx-auto">
+        <div class="text-center mb-10">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="ar">مشاريعنا</span>
+            <span class="en hidden">Our Projects</span>
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+          <p class="text-gray-900 mt-4">
+            <span class="ar"
+              >نفخر بتنفيذ مشاريع متنوعة وناجحة في جميع أنحاء الكويت</span
+            >
+            <span class="en hidden"
+              >We are proud to implement diverse and successful projects
+              throughout Kuwait</span
+            >
+          </p>
+        </div>
+
+        <div class="select owl-carousel owl-theme">
+          <!-- Placeholder for project images -->
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 1</span>
+                <span class="en hidden">Project #1</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-secondary to-primary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 2</span>
+                <span class="en hidden">Project #2</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 1</span>
+                <span class="en hidden">Project #1</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 1</span>
+                <span class="en hidden">Project #1</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 1</span>
+                <span class="en hidden">Project #1</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
+            >
+              <i class="fas fa-image text-white text-4xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar">مشروع رقم 1</span>
+                <span class="en hidden">Project #1</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
+                <span class="en hidden"
+                  >Project details and location will be added</span
+                >
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div>
+          <button
+            onclick="location= 'projects.html'"
+            class="w-full bg-secondary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors mt-10"
+          >
+            <span class="ar">عرض كل المشاريع</span
+            ><span class="en hidden">View all projects</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="ar">مميزات الشركة</span>
+            <span class="en hidden">Company Advantages</span>
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center fade-in">
+            <div
+              class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-award text-primary text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">الجودة</span>
+              <span class="en hidden">Quality</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">نلتزم بأعلى معايير الجودة العالمية</span>
+              <span class="en hidden"
+                >We adhere to the highest international quality standards</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div
+              class="bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-clock text-green-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">الالتزام بالوقت</span>
+              <span class="en hidden">Time Commitment</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">نوفي بوعودنا ونلتزم بالمواعيد المحددة</span>
+              <span class="en hidden"
+                >We keep our promises and meet deadlines</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div
+              class="bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-user-graduate text-blue-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">الخبرة</span>
+              <span class="en hidden">Experience</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">فريق عمل متخصص ذو خبرة واسعة</span>
+              <span class="en hidden"
+                >Specialized team with extensive experience</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center fade-in">
+            <div
+              class="bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="fas fa-dollar-sign text-orange-500 text-3xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">الأسعار التنافسية</span>
+              <span class="en hidden">Competitive Prices</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar">أسعار تنافسية مع جودة عالية</span>
+              <span class="en hidden"
+                >Competitive prices with high quality</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20 px-4 mx-auto inset-0 bg-gradient-to-br from-secondary/30 to-white/90"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            <span class="ar">اتصل بنا</span>
+            <span class="en hidden">Contact Us</span>
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="slide-in-left">
+            <h3 class="text-2xl font-bold mb-6">
+              <span class="ar">تواصل معنا</span>
+              <span class="en hidden">Get in Touch</span>
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div
+                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-phone text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar">الهاتف</span>
+                    <span class="en hidden">Phone</span>
+                  </h4>
+                  <p class="text-gray-600">60415151</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-envelope text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar">البريد الإلكتروني</span>
+                    <span class="en hidden">Email</span>
+                  </h4>
+                  <p class="text-gray-600">summitceo25@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-map-marker-alt text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar">العنوان</span>
+                    <span class="en hidden">Address</span>
+                  </h4>
+                  <p class="text-gray-600">
+                    <span class="ar">الكويت</span>
+                    <span class="en hidden">Kuwait</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide-in-right">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold mb-6">
+                <span class="ar">أرسل رسالة</span>
+                <span class="en hidden">Send Message</span>
+              </h3>
+              <form class="space-y-4">
+                <input
+                  type="text"
+                  placeholder="الاسم / Name"
+                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <input
+                  type="email"
+                  placeholder="البريد الإلكتروني / Email"
+                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                />
+                <textarea
+                  rows="5"
+                  placeholder="الرسالة / Message"
+                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="w-full bg-secondary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors"
+                >
+                  <span class="ar">إرسال</span>
+                  <span class="en hidden">Send</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="logo-3d mb-4">
+              <img
+                src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
+                alt="Summit Global Logo"
+                class="h-16 w-16 rounded-full"
+              />
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              <span class="ar">شركة سومت العالمية</span>
+              <span class="en hidden">Summit International Company</span>
+            </h3>
+            <p class="text-gray-400">
+              <span class="ar">حلول متكاملة لسحب المياه والتدعيم والحفر</span>
+              <span class="en hidden"
+                >Comprehensive solutions for dewatering, shoring and
+                drilling</span
+              >
+            </p>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4">
+              <span class="ar">روابط سريعة</span>
+              <span class="en hidden">Quick Links</span>
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <span class="ar">الرئيسية</span>
+                  <span class="en hidden">Home</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <span class="ar">عن الشركة</span>
+                  <span class="en hidden">About</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <span class="ar">الخدمات</span>
+                  <span class="en hidden">Services</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-bold mb-4">
+              <span class="ar">تواصل معنا</span>
+              <span class="en hidden">Contact Info</span>
+            </h4>
+            <div class="space-y-2">
+              <p class="text-gray-400">
+                <i class="fas fa-phone mr-2 rtl:mr-0 rtl:ml-2"></i>
+                60415151
+              </p>
+              <p class="text-gray-400">
+                <i class="fas fa-envelope mr-2 rtl:mr-0 rtl:ml-2"></i>
+                summitceo25@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            <span class="ar"
+              >© 2024 شركة سومت العالمية. جميع الحقوق محفوظة.</span
+            >
+            <span class="en hidden"
+              >© 2024 Summit Global Company. All rights reserved.</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- مكتبات ثم سكربتات المشروع -->
+    <script src="./jquery-3.3.1.min.js" defer></script>
+    <script src="./bootstrap.bundle.min.js" defer></script>
+    <script src="./owl.carousel.min.js" defer></script>
+    <script src="./all.min.js" defer></script>
+    <!-- إذا يعتمد على jQuery فليكن بعده -->
+    <script src="./main.js" defer></script>
+  </body>
+</html>
