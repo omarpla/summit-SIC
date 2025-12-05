@@ -26,7 +26,7 @@ nav {
   transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   will-change: transform;
-  background-color: #f7ebe1;
+  background-color: #001f6d;
 
 }
 nav.nav-hidden { transform: translateY(-100%); }
@@ -102,6 +102,174 @@ html[dir="rtl"] #mobileNav {
   background-color: #F87B1B;
   color: #fff;
 }
+/* المشاريع */
+.select .cart {
+  position: relative;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+.product_section .cart {
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+.product_section .cart:hover .project-bg {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  padding: 15px;
+  color: #fff;
+}
+
+.project-overlay .logo-3d img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+}
+
+.project-overlay .logo-3d img:hover {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+.project-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.2rem;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.project-overlay .logo-3d img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.6s ease;
+}
+
+.select .cart:hover .project-bg {
+  transform: scale(1.05);
+}
+
+.select .cart:hover .project-overlay .logo-3d img {
+  transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+}
+
+/* الحاوية العامة */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* خلفية السلايدر */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-bg .slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-bg .slide.active {
+  opacity: 1;
+}
+
+/* طبقة التدرج */
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.6)
+  );
+  z-index: 5;
+}
+
+/* المحتوى */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+/* العناوين */
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+}
+
+.hero-desc {
+  font-size: 1.6rem;
+  max-width: 750px;
+}
+
+/* الزر */
+.hero-btn {
+  background: #fbb03b;
+  color: #000;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #fff;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-desc { font-size: 1rem; }
+  .hero-btn { padding: 10px 26px; }
+}
+
 
 /* ظل احتياطي لو مش تستخدم Tailwind */
 .shadow-md { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
@@ -263,34 +431,73 @@ html:not(.en) body {
 }
 
 .selected {
-  margin-top: 50px;
   position: relative;
+  width: 100%;
+  height: 100vh;                 /* يغطي الشاشة */
+  overflow: hidden;
 }
-.selected .select .cart-btn {
-  width: 100px;
-  height: 40px;
-  border-radius: 25%;
-  background-color: #ffffff;
-  border: 0px;
-  margin-top: 15px;
-  position: relative;
-}
-.selected .select .cart-btn:hover {
-  background-color: #fbb03b;
-}
-.selected .select .cart-btn .cart-moon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .selected .select .cart {
-  position: relative;
-  margin-top: 20px;
-  width: 100% !important; /* let carousel control width */
-  max-width: 340px;        /* keep cards neat */
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax */
+  transition: opacity 1.2s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+.selected .select .cart.active {
+  opacity: 1;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.hero-desc {
+  font-size: 1.4rem;
+  max-width: 650px;
+  margin-bottom: 2rem;
+}
+.hero-btn {
+  background: #fbb03b;
+  color: #111;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.hero-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+
+/* موبايل */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2rem; }
+  .hero-desc { font-size: 1rem; }
+  .hero-btn { padding: 12px 30px; }
 }
 .selected .select .cart img {
   width: 100%;

@@ -1,47 +1,78 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta name="x-poe-datastore-behavior" content="local_only" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://code.jquery.com https://unpkg.com https://d3js.org https://threejs.org https://cdn.plot.ly https://stackpath.bootstrapcdn.com https://maps.googleapis.com https://cdn.tailwindcss.com https://ajax.googleapis.com https://kit.fontawesome.com https://cdn.datatables.net https://maxcdn.bootstrapcdn.com https://code.highcharts.com https://tako-static-assets-production.s3.amazonaws.com https://www.youtube.com https://fonts.googleapis.com https://fonts.gstatic.com https://pfst.cf2.poecdn.net https://puc.poecdn.net https://i.imgur.com https://wikimedia.org https://*.icons8.com https://*.giphy.com https://picsum.photos https://images.unsplash.com; frame-src 'self' https://www.youtube.com https://trytako.com; child-src 'self'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests; block-all-mixed-content;"
-    />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      html,
-      body {
-        max-width: 100%;
-        overflow-x: hidden; /* يمنع التمدد العرضي */
-      }
-
-      img,
-      video {
-        max-width: 100%;
-        height: auto;
-      }
-
-      h1,
-      h2,
-      h3,
-      p {
-        word-wrap: break-word;
-      }
-    </style>
-    <title>شركة سومت العالمية - Summit(SIC)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;900&amp;family=Inter:wght@300;400;600;700&amp;display=swap"
-      rel="stylesheet preload"
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
+    <meta name="handheldFriendly" content="true" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <title>شركة سومت العالمية - Summit International Company</title>
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="description"
+      content="شركة سومت العالمية - رواد في حلول البناء والبنية التحتية بأعلى معايير الجودة والسلامة"
+    />
+    <meta
+      name="keywords"
+      content="سومت, بناء, تشييد, كويت, مقاولات, هندسة, مشاريع, سحب مياه, تدعيم, حفر, تشطيبات"
+    />
+    <meta name="author" content="Summit International Company" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              tajawal: ["Tajawal", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+            colors: {
+              primary: "#F87B1B",
+              secondary: "#11224E",
+              accent: "#CBD99B",
+              "dark-blue": "#003b73",
+              "royal-blue": "#0074b7",
+              "baby-blue": "#bfd7ed",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ربط خطوط Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;700;900&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/bootstrap.min.css"
-    />
+
+    <!-- Owl Carousel -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
@@ -50,444 +81,3401 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
     />
-    <link rel="stylesheet" href="./main-ltr.css" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              arabic: ["Tajawal", "sans-serif"],
-              english: ["Inter", "sans-serif"],
-            },
-            colors: {
-              primary: "#11224E" /* blue */,
-              secondary: "#F87B1B" /* orange */,
-              accent: "#CBD99B",
-            },
-          },
-        },
-      };
-    </script>
+
+    <style>
+      /* ============================================
+       نظام التصميم الأساسي والألوان
+  ============================================ */
+
+      :root {
+        /* نظام الألوان الأساسي */
+        --color-primary: #f87b1b; /* البرتقالي الرئيسي */
+        --color-primary-light: #ff9e4d; /* برتقالي فاتح */
+        --color-primary-dark: #d46a00; /* برتقالي داكن */
+
+        --color-secondary: #11224e; /* الأزرق الداكن */
+        --color-secondary-light: #1a3469; /* أزرق متوسط */
+        --color-secondary-dark: #0a192f; /* أزرق داكن جداً */
+
+        --color-accent: #cbd99b; /* أخضر فاتح */
+        --color-accent-light: #e0e9c3; /* أخضر فاتح جداً */
+
+        --color-dark: #0a192f;
+        --color-light: #f8fafc;
+        --color-white: #ffffff;
+        --color-black: #000000;
+
+        /* تدرج الرمادي */
+        --color-gray-50: #f9fafb;
+        --color-gray-100: #f3f4f6;
+        --color-gray-200: #e5e7eb;
+        --color-gray-300: #d1d5db;
+        --color-gray-400: #9ca3af;
+        --color-gray-500: #6b7280;
+        --color-gray-600: #4b5563;
+        --color-gray-700: #374151;
+        --color-gray-800: #1f2937;
+        --color-gray-900: #111827;
+
+        /* نظام الخطوط */
+        --font-arabic: "IBM Plex Sans Arabic", "Segoe UI", sans-serif;
+        --font-english: "Inter", "Roboto", sans-serif;
+        --font-heading: "Inter", "Montserrat", sans-serif;
+
+        /* نظام التباعد */
+        --space-1: 0.25rem; /* 4px */
+        --space-2: 0.5rem; /* 8px */
+        --space-3: 0.75rem; /* 12px */
+        --space-4: 1rem; /* 16px */
+        --space-5: 1.5rem; /* 24px */
+        --space-6: 2rem; /* 32px */
+        --space-7: 3rem; /* 48px */
+        --space-8: 4rem; /* 64px */
+        --space-9: 6rem; /* 96px */
+        --space-10: 8rem; /* 128px */
+
+        /* نظام الزوايا */
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1rem;
+        --radius-2xl: 1.5rem;
+        --radius-full: 9999px;
+
+        /* تأثيرات الظلال */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        --shadow-primary: 0 10px 30px -5px rgba(248, 123, 27, 0.3);
+        --shadow-secondary: 0 10px 30px -5px rgba(17, 34, 78, 0.3);
+
+        /* الحركات والانتقالات */
+        --transition-fast: 150ms ease;
+        --transition-base: 300ms ease;
+        --transition-slow: 500ms ease;
+      }
+
+      /* ============================================
+       إعدادات عامة
+  ============================================ */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family: var(--font-english);
+        background-color: var(--color-light);
+        color: var(--color-gray-800);
+        line-height: 1.6;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* اللغة العربية */
+      .rtl,
+      [lang="ar"],
+      [dir="rtl"] {
+        font-family: var(--font-arabic);
+        text-align: right;
+        line-height: 1.8;
+        letter-spacing: 2px;
+        word-spacing: normal;
+      }
+
+      /* اللغة الإنجليزية */
+      .ltr,
+      [lang="en"],
+      [dir="ltr"] {
+        font-family: var(--font-english);
+        text-align: left;
+        line-height: 1.6;
+      }
+
+      /* ============================================
+       نظام التخطيط والتباعد
+  ============================================ */
+
+      .section-padding {
+        padding: var(--space-10) 0;
+      }
+
+      .section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: var(--space-8);
+        position: relative;
+      }
+
+      .section-title h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: var(--space-4);
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary) 0%,
+          var(--color-primary) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(
+          90deg,
+          var(--color-primary) 0%,
+          var(--color-secondary) 100%
+        );
+        border-radius: var(--radius-full);
+      }
+
+      /* ============================================
+       تأثيرات الحركة والظهور
+  ============================================ */
+
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+      }
+
+      .fade-in-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: fadeInLeft 0.6s ease forwards;
+      }
+
+      .fade-in-right {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: fadeInRight 0.6s ease forwards;
+      }
+
+      .stagger-delay-1 {
+        animation-delay: 0.1s;
+      }
+      .stagger-delay-2 {
+        animation-delay: 0.2s;
+      }
+      .stagger-delay-3 {
+        animation-delay: 0.3s;
+      }
+      .stagger-delay-4 {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .pulse-animation {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(248, 123, 27, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 15px rgba(248, 123, 27, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(248, 123, 27, 0);
+        }
+      }
+
+      /* ============================================
+       شريط التنقل
+  ============================================ */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(17, 34, 78, 0.98);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all var(--transition-base);
+        padding: var(--space-3) 0;
+      }
+
+      .navbar.scrolled {
+        background: rgba(17, 34, 78, 0.98);
+        padding: var(--space-2) 0;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--space-6);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar-brand {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        text-decoration: none;
+      }
+
+      .navbar-logo {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        border: 3px solid var(--color-primary);
+        transition: all var(--transition-base);
+      }
+
+      .navbar-logo:hover {
+        transform: rotateY(15deg) scale(1.05);
+        box-shadow: 0 0 20px rgba(248, 123, 27, 0.4);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: var(--color-white);
+        background: linear-gradient(
+          135deg,
+          var(--color-white) 0%,
+          var(--color-primary-light) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .brand-subtitle {
+        font-size: 0.75rem;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        list-style: none;
+      }
+
+      .nav-link {
+        position: relative;
+        padding: var(--space-2) var(--space-3);
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: none;
+        border-radius: var(--radius-md);
+        transition: all var(--transition-base);
+      }
+
+      .nav-link:hover {
+        color: var(--color-white);
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+      }
+
+      .nav-link.active {
+        color: var(--color-primary-light);
+        background: rgba(248, 123, 27, 0.1);
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 3px;
+        background: var(--color-primary);
+        border-radius: var(--radius-full);
+      }
+
+      .language-switcher {
+        display: flex;
+        align-items: center;
+      }
+
+      .lang-btn {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-white);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-base);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .lang-btn:hover {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-primary);
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--color-white);
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        transition: all var(--transition-base);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .mobile-menu-btn:hover {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: rotate(90deg);
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 300px;
+        height: calc(100vh - 80px);
+        background: rgba(17, 34, 78, 0.98);
+        backdrop-filter: blur(10px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateX(100%);
+        transition: transform var(--transition-base);
+        padding: var(--space-6);
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+        z-index: 999;
+      }
+
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      .rtl .mobile-menu {
+        right: auto;
+        left: 0;
+        border-left: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateX(-100%);
+      }
+
+      .rtl .mobile-menu.active {
+        transform: translateX(0);
+      }
+
+      /* ============================================
+       قسم الهيرو الرئيسي
+  ============================================ */
+
+      .hero-slider {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        min-height: -webkit-fill-available; /* تقليل من 600px */
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: clamp(0.5rem, 2vw, 1.5rem);
+        padding: 0; /* إضافة padding صفر */
+      }
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      .carousel-slide {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity var(--transition-slow),
+          visibility var(--transition-slow);
+        z-index: 1;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+      }
+
+      .slide-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          135deg,
+          rgba(17, 34, 78, 0.92) 0%,
+          /* زيادة العتامة من 0.9 إلى 0.92 */ rgba(17, 34, 78, 0.78) 50%,
+          /* زيادة العتامة من 0.7 إلى 0.78 */ rgba(248, 123, 27, 0.45) 100%
+            /* زيادة العتامة من 0.4 إلى 0.45 */
+        );
+        z-index: 1;
+        overflow: hidden;
+        padding: var(--space-6); /* إضافة padding */
+      }
+
+      .content-wrapper {
+        max-width: 1400px; /* زيادة من 1200px */
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-6); /* إضافة padding */
+        text-align: center;
+      }
+
+      .slide-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 0;
+        flex: 1;
+        width: 90%; /* تغيير من 100% إلى 90% */
+        max-width: 1200px;
+        text-align: center;
+        color: var(--color-white);
+        z-index: 3;
+        padding: var(--space-4); /* إضافة padding */
+      }
+
+      .slide-title {
+        font-size: clamp(2.5rem, 8vw, 5rem); /* تحسين القيم */
+        margin-bottom: var(--space-4); /* زيادة من var(--space-2) */
+        font-weight: 900;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* زيادة الظل */
+        line-height: 1.15; /* تحسين من 1.1 */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        padding: 0 var(--space-4); /* إضافة padding جانبي */
+      }
+
+      .slide-subtitle p {
+        font-size: clamp(1.1rem, 3vw, 1.8rem); /* تحسين القيم */
+        margin-bottom: var(--space-4); /* زيادة من var(--space-2) */
+        opacity: 0.95; /* زيادة من 0.9 */
+        line-height: 1.7; /* زيادة من 1.6 */
+        font-weight: 400;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 var(--space-4); /* إضافة padding جانبي */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* إضافة ظل للنص */
+      }
+      .hero-buttons {
+        display: flex;
+        gap: var(--space-4);
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: var(--space-6);
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .btn-outline {
+        padding: var(--space-3) var(--space-6);
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        transition: all var(--transition-base);
+        border: 2px solid transparent;
+      }
+
+      .btn-primary {
+        background: var(--color-primary);
+        color: var(--color-white);
+      }
+
+      .btn-primary:hover {
+        background: var(--color-primary-dark);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-primary);
+      }
+
+      .btn-secondary {
+        background: var(--color-secondary);
+        color: var(--color-white);
+      }
+
+      .btn-secondary:hover {
+        background: var(--color-secondary-dark);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-secondary);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--color-white);
+        border-color: var(--color-white);
+      }
+
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-3px);
+      }
+
+      .slider-controls {
+        position: absolute;
+        bottom: clamp(0rem, 0vh, 0rem); /* استخدام clamp */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: var(--space-4); /* تقليل من var(--space-6) */
+        z-index: 20;
+        background: rgba(0, 0, 0, 0.6); /* زيادة العتامة من 0.5 */
+        padding: var(--space-3) var(--space-5); /* تعديل padding */
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.15); /* زيادة الشفافية */
+        backdrop-filter: blur(10px); /* إضافة تأثير blur */
+        width: auto; /* تغيير العرض */
+        min-width: 300px; /* عرض أدنى */
+        max-width: 90%; /* أقصى عرض 90% */
+        justify-content: center;
+      }
+
+      .carousel-indicators {
+        display: flex;
+        gap: var(--space-1);
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--space-2); /* يظهر المؤشرات أسفل عناصر التحكم */
+        left: 0;
+        transform: none;
+      }
+
+      .indicator-btn {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid transparent;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition: all var(--transition-base);
+      }
+
+      .indicator-btn:hover,
+      .indicator-btn.active {
+        background: var(--color-primary);
+        transform: scale(1.2);
+      }
+
+      .carousel-nav {
+        display: flex;
+        gap: var(--space-3);
+      }
+
+      .nav-btn {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--radius-full);
+        color: var(--color-white);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all var(--transition-base);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav-btn:hover {
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-primary);
+      }
+      /* ============================================
+       تحسينات إضافية لقسم الهيرو
+  ============================================ */
+
+      /* تحسينات الشارة التفاعلية */
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: var(--radius-full);
+        padding: 0.5rem 1rem;
+        margin: 0.8rem 0;
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .badge i {
+        color: var(--color-primary);
+        animation: certificateSpin 3s linear infinite;
+      }
+
+      @keyframes certificateSpin {
+        0% {
+          transform: rotateY(0);
+        }
+        100% {
+          transform: rotateY(360deg);
+        }
+      }
+
+      /* تحسينات الإحصائيات */
+      .hero-stats {
+        position: relative;
+        z-index: 3;
+        margin: 2rem 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: clamp(1rem, 3vw, 2rem);
+        flex-wrap: wrap;
+      }
+
+      .stat-item {
+        text-align: center;
+        animation: counterUp 1s ease-out forwards;
+        min-width: 100px;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: var(--color-primary);
+        text-shadow: 0 0 20px rgba(248, 123, 27, 0.5);
+        line-height: 1;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-top: 0.5rem;
+        font-weight: 500;
+      }
+
+      @keyframes counterUp {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* تحسينات قائمة الخدمات */
+      .service-highlights {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .highlight-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all var(--transition-base);
+      }
+
+      .highlight-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+        border-color: var(--color-primary);
+      }
+
+      .highlight-item i {
+        font-size: 2rem;
+        color: var(--color-primary);
+        background: rgba(255, 255, 255, 0.1);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-full);
+      }
+
+      /* تحسينات أنواع المشاريع */
+      .project-types {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .type-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all var(--transition-base);
+        min-width: 180px;
+      }
+
+      .type-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px) scale(1.05);
+        border-color: var(--color-primary);
+      }
+
+      .type-card i {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+      }
+
+      .type-card h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      /* تحسينات مميزات الجودة */
+      .quality-features {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+
+      .feature-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+        border-radius: var(--radius-xl);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all var(--transition-base);
+        min-width: 200px;
+      }
+
+      .feature-item:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-5px);
+        border-color: var(--color-primary);
+      }
+
+      .feature-item i {
+        font-size: 2.5rem;
+        color: var(--color-primary);
+      }
+
+      .feature-item h4 {
+        margin: 0;
+        font-size: 1.1rem;
+        text-align: center;
+      }
+
+      .feature-item p {
+        margin: 0;
+        font-size: 0.9rem;
+        text-align: center;
+        opacity: 0.9;
+      }
+
+      .thumbnail-btn:hover,
+      .thumbnail-btn.active {
+        border-color: var(--color-primary);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-primary);
+      }
+
+      .thumbnail-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+        color: white;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity var(--transition-base);
+      }
+
+      .thumbnail-btn:hover .thumbnail-label {
+        opacity: 1;
+      }
+
+      /* تحسينات شريط التقدم */
+      .progress-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        z-index: 25; /* أعلى طبقة */
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          var(--color-primary),
+          var(--color-primary-light)
+        );
+        width: 0%;
+        transition: width linear;
+        position: relative;
+      }
+
+      .progress-bar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.5),
+          transparent
+        );
+        animation: shimmer 2s infinite;
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      /* تأثيرات النصوص */
+
+      @keyframes glowPulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+      .hero-stats,
+      .service-highlights,
+      .project-type {
+        position: relative;
+        z-index: 3;
+      }
+      .service-highlights,
+      .project-types {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+      .safe-area {
+        position: relative;
+        margin: 0 auto;
+        padding-left: max(env(safe-area-inset-left), 1rem);
+        padding-right: max(env(safe-area-inset-right), 1rem);
+      }
+      .highlight-item,
+      .type-card {
+        flex: 1;
+        min-width: 150px;
+        max-width: 200px;
+      }
+      .overflow-protector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: 9999;
+        overflow: hidden;
+      }
+
+      /* تنسيقات للعناصر المطلقة */
+      .absolute-contained {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+
+      /* ============================================
+       قسم الخدمات
+  ============================================ */
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-6);
+        margin-top: var(--space-8);
+      }
+
+      .service-card {
+        background: var(--color-white);
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        transition: all var(--transition-base);
+        border: 1px solid var(--color-gray-200);
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-2xl);
+        border-color: var(--color-primary);
+      }
+
+      .service-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .service-content {
+        padding: var(--space-6);
+      }
+
+      .service-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-3);
+        color: var(--color-secondary);
+      }
+
+      .service-content p {
+        color: var(--color-gray-600);
+        margin-bottom: var(--space-4);
+      }
+
+      /* ============================================
+       قسم المشاريع
+  ============================================ */
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-6);
+        margin-top: var(--space-8);
+      }
+
+      .project-card {
+        position: relative;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        height: 300px;
+        cursor: pointer;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform var(--transition-slow);
+      }
+
+      .project-card:hover .project-image {
+        transform: scale(1.1);
+      }
+
+      .project-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: var(--space-6);
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.9) 0%,
+          transparent 100%
+        );
+        color: var(--color-white);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all var(--transition-base);
+      }
+
+      .project-card:hover .project-overlay {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .project-overlay h3 {
+        color: var(--color-white);
+        margin-bottom: var(--space-2);
+      }
+
+      /* ============================================
+       خريطة الموقع
+  ============================================ */
+
+      .map-container {
+        position: relative;
+        border-radius: var(--radius-2xl);
+        overflow: hidden;
+        box-shadow: var(--shadow-2xl);
+        height: 500px;
+        margin-top: var(--space-8);
+        border: 1px solid var(--color-gray-200);
+      }
+
+      #interactiveMap {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .map-overlay {
+        position: absolute;
+        bottom: var(--space-6);
+        left: var(--space-6);
+        right: var(--space-6);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: var(--radius-xl);
+        padding: var(--space-5);
+        box-shadow: var(--shadow-xl);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: var(--space-4);
+        z-index: 100;
+      }
+
+      .map-btn {
+        padding: var(--space-2) var(--space-4);
+        background: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-base);
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .map-btn:hover {
+        background: var(--color-secondary);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .map-btn.secondary {
+        background: var(--color-secondary);
+      }
+
+      .map-btn.secondary:hover {
+        background: var(--color-primary);
+      }
+
+      /* ============================================
+       نموذج الاتصال
+  ============================================ */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-8);
+        margin-top: var(--space-8);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-6);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-4);
+      }
+
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          var(--color-primary) 0%,
+          var(--color-secondary) 100%
+        );
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        flex-shrink: 0;
+      }
+
+      .contact-form {
+        background: var(--color-white);
+        border-radius: var(--radius-2xl);
+        padding: var(--space-8);
+        box-shadow: var(--shadow-xl);
+        border: 1px solid var(--color-gray-200);
+      }
+
+      .form-group {
+        margin-bottom: var(--space-5);
+      }
+
+      .form-control {
+        width: 100%;
+        padding: var(--space-3) var(--space-4);
+        border: 2px solid var(--color-gray-200);
+        border-radius: var(--radius-lg);
+        font-size: 1rem;
+        transition: all var(--transition-base);
+        background: var(--color-gray-50);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        background: var(--color-white);
+        box-shadow: 0 0 0 3px rgba(248, 123, 27, 0.1);
+      }
+
+      textarea.form-control {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .btn-submit {
+        background: linear-gradient(
+          135deg,
+          var(--color-primary) 0%,
+          var(--color-secondary) 100%
+        );
+        color: var(--color-white);
+        border: none;
+        padding: var(--space-3) var(--space-8);
+        border-radius: var(--radius-full);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-base);
+        width: 100%;
+        height: 50px;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-xl);
+        background: linear-gradient(
+          135deg,
+          var(--color-secondary) 0%,
+          var(--color-primary) 100%
+        );
+      }
+
+      /* ============================================
+       شريط الاتصال الثابت
+  ============================================ */
+
+      .fixed-contact-bar {
+        position: fixed;
+        left: var(--space-6);
+        bottom: var(--space-6);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+      }
+
+      .rtl .fixed-contact-bar {
+        left: auto;
+        right: var(--space-6);
+      }
+
+      .contact-fab {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-white);
+        font-size: 1.5rem;
+        box-shadow: var(--shadow-lg);
+        cursor: pointer;
+        transition: all var(--transition-base);
+        border: none;
+        text-decoration: none;
+      }
+
+      .contact-fab:hover {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: var(--shadow-2xl);
+      }
+
+      .contact-fab.whatsapp {
+        background: #25d366;
+        animation: pulse 2s infinite;
+      }
+
+      .contact-fab.email {
+        background: #ea4335;
+      }
+
+      .contact-fab.website {
+        background: var(--color-secondary);
+      }
+
+      .contact-fab.social {
+        background: linear-gradient(45deg, #405de6, #e1306c, #ffdc80);
+      }
+
+      .social-dropdown {
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        background: var(--color-white);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-2xl);
+        padding: var(--space-4);
+        display: none;
+        flex-direction: column;
+        gap: var(--space-3);
+        min-width: 200px;
+        z-index: 1000;
+        border: 1px solid var(--color-gray-200);
+      }
+
+      .rtl .social-dropdown {
+        left: auto;
+        right: 0;
+      }
+
+      .social-dropdown.active {
+        display: flex;
+        animation: slideInUp 0.3s ease;
+      }
+
+      .social-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        padding: var(--space-2) var(--space-3);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        color: var(--color-gray-800);
+        transition: all var(--transition-fast);
+      }
+
+      .social-item:hover {
+        background: var(--color-gray-100);
+        transform: translateX(5px);
+      }
+
+      .rtl .social-item:hover {
+        transform: translateX(-5px);
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ============================================
+       التذييل
+  ============================================ */
+
+      .footer {
+        background: var(--color-secondary);
+        color: var(--color-white);
+        padding: var(--space-10) 0 var(--space-6);
+        margin-top: var(--space-10);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--space-8);
+        margin-bottom: var(--space-8);
+      }
+
+      .footer-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: var(--radius-full);
+        object-fit: cover;
+        margin-bottom: var(--space-4);
+        border: 3px solid var(--color-primary);
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-3);
+      }
+
+      .footer-link {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: all var(--transition-fast);
+        font-size: 0.875rem;
+      }
+
+      .footer-link:hover {
+        color: var(--color-primary-light);
+        transform: translateX(5px);
+      }
+
+      .rtl .footer-link:hover {
+        transform: translateX(-5px);
+      }
+
+      .social-links {
+        display: flex;
+        gap: var(--space-3);
+        margin-top: var(--space-4);
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--color-white);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all var(--transition-base);
+      }
+
+      .social-link:hover {
+        background: var(--color-primary);
+        transform: translateY(-3px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: var(--space-6);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.875rem;
+      }
+
+      /* ============================================
+       زر العودة للأعلى
+  ============================================ */
+
+      .back-to-top {
+        position: fixed;
+        bottom: var(--space-6);
+        right: var(--space-6);
+        width: 50px;
+        height: 50px;
+        background: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: var(--radius-full);
+        font-size: 1.25rem;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-base);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .rtl .back-to-top {
+        right: auto;
+        left: var(--space-6);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: var(--color-secondary);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-xl);
+      }
+
+      /* ============================================
+       تحسينات الاستجابة
+  ============================================ */
+      @media (prefers-reduced-motion: reduce) {
+        .fade-in,
+        .fade-in-left,
+        .fade-in-right {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
+      /* Medium screens (Tablets) */
+      @media (max-width: 1024px) {
+        .hero-slider {
+          min-height: 500px;
+          max-height: 800px;
+        }
+
+        .slide-subtitle p {
+          font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+          line-height: 1.5;
+        }
+
+        .content-wrapper {
+          padding: var(--space-5);
+        }
+        .slider-controls {
+          width: 70%;
+          max-width: 400px;
+        }
+      }
+
+      @media (max-width: 991px) {
+        .nav-menu {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .brand-text {
+          display: none;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 840px) {
+        .hero-slider {
+          min-height: 400px;
+        }
+
+        .slide-title {
+          font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        .slide-subtitle p {
+          font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+        }
+        .stat-number {
+          font-size: 2rem !important;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-slider {
+          height: 100vh;
+          min-height: 100vh;
+          max-height: 100vh;
+          padding: 0;
+          margin: 0;
+        }
+        .carousel-slide {
+          position: absolute;
+          height: 100%;
+          overflow: hidden;
+          width: 100vw;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+        .slide-text {
+          width: 100vw;
+          max-width: 100vw;
+          overflow-x: hidden;
+          padding: 15px;
+          position: relative;
+          transform: none;
+        }
+        .slide-title {
+          font-size: clamp(2rem, 5vw, 2.5rem) !important;
+          line-height: 1.3 !important;
+          margin-bottom: 1rem !important;
+          padding: 0 10px !important;
+          word-break: break-word;
+          hyphens: auto;
+        }
+
+        .slide-subtitle p {
+          font-size: clamp(1rem, 3.5vw, 1.2rem) !important;
+          line-height: 1.5 !important;
+          margin-bottom: 1.5rem !important;
+          padding: 0 2px !important;
+        }
+        .slide-content {
+          padding: env(safe-area-inset-top) env(safe-area-inset-right)
+            env(safe-area-inset-bottom) env(safe-area-inset-left);
+          height: 100%;
+          width: 100vw;
+          max-width: 100vw;
+          overflow-x: hidden;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+        .content-wrapper {
+          padding: 20px 15px;
+          height: auto;
+          min-height: 100%;
+          display: flex;
+          width: 100vw;
+          max-width: 100vw;
+          overflow-x: hidden;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .hero-stats {
+          display: flex;
+          justify-content: center;
+          gap: 0.8rem;
+          margin: 1rem 0;
+          flex-wrap: wrap;
+          width: 100%;
+          max-width: 100%;
+        }
+        .hero-buttons {
+          flex-direction: column;
+          width: 100%;
+          max-width: 280px;
+          margin: 1.5rem auto 0;
+          gap: 0.8rem;
+        }
+        .slider-controls {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          max-width: 300px;
+          padding: 10px 15px;
+          z-index: 1000;
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(10px);
+        }
+
+        .service-highlights {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+        .carousel-indicators {
+          margin-bottom: 0;
+        }
+        .quality-features {
+          flex-direction: column;
+          width: 100%;
+          max-width: 250px;
+          margin: 0rem auto;
+          gap: 0.5rem;
+        }
+
+        .feature-item {
+          width: 100%;
+          min-width: unset;
+          max-width: 100%;
+          padding: 1rem;
+        }
+
+        .badge {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.85rem;
+        }
+
+        .project-types {
+          gap: 1rem;
+        }
+
+        .type-card {
+          min-width: 150px;
+          padding: 1rem;
+        }
+
+        .thumbnail-indicators {
+          display: none;
+        }
+        .navbar {
+          padding: var(--space-2) 0;
+        }
+
+        .navbar-logo {
+          width: 50px;
+          height: 50px;
+        }
+
+        .mobile-menu {
+          width: 100%;
+          top: 70px;
+          height: calc(100vh - 70px);
+        }
+
+        .carousel-nav {
+          display: none; /* إخفاء الأسهم على الموبايل */
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .btn-outline {
+          min-height: 44px; /* الحد الأدنى للمس القابل للنقر */
+          width: 100%;
+          padding: 0.8rem 1rem;
+          font-size: 0.95rem;
+          text-align: center;
+          justify-content: center;
+        }
+        .stat-item {
+          min-width: 70px;
+          padding: 0.5rem;
+        }
+
+        .stat-number {
+          font-size: 1.8rem !important;
+          line-height: 1;
+        }
+
+        .stat-label {
+          font-size: 0.75rem;
+        }
+        * {
+          box-sizing: border-box;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-stats {
+          gap: 0.5rem;
+        }
+        .hero-slider {
+          min-height: 100vh;
+        }
+        .slide-text {
+          padding: 15px;
+        }
+        .slide-title {
+          font-size: clamp(1.6rem, 4.5vw, 2rem) !important;
+          line-height: 1.25 !important;
+          margin-bottom: 0.8rem !important;
+        }
+
+        .slide-subtitle p {
+          font-size: clamp(0.9rem, 3vw, 1.1rem) !important;
+          margin-bottom: 1.2rem !important;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .btn-primary,
+        .btn-secondary,
+        .btn-outline {
+          width: 100%;
+          justify-content: center;
+          padding: var(--space-2) var(--space-4);
+        }
+
+        .slider-controls {
+          min-width: 200px;
+          padding: var(--space-2) var(--space-3);
+          bottom: 15px;
+        }
+
+        .service-highlights {
+          grid-template-columns: 1fr;
+        }
+
+        .project-types {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .services-grid,
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .service-card,
+        .project-card {
+          margin: 0 var(--space-3);
+        }
+
+        .contact-form {
+          padding: var(--space-6);
+        }
+
+        .fixed-contact-bar {
+          left: var(--space-3);
+          bottom: var(--space-3);
+        }
+
+        .rtl .fixed-contact-bar {
+          right: var(--space-3);
+        }
+        .nav-btn {
+          width: 35px;
+          height: 35px;
+        }
+        .stat-item {
+          min-width: 60px;
+          padding: 0.4rem;
+        }
+
+        .stat-number {
+          font-size: 1.5rem !important;
+        }
+
+        .stat-label {
+          font-size: 0.7rem;
+        }
+
+        .contact-fab {
+          width: 50px;
+          height: 50px;
+          font-size: 1.25rem;
+        }
+
+        .back-to-top {
+          bottom: var(--space-3);
+          right: var(--space-3);
+          width: 45px;
+          height: 45px;
+        }
+
+        .rtl .back-to-top {
+          left: var(--space-3);
+        }
+      }
+      /* Large screens (Desktop Large) */
+      @media (min-width: 1600px) {
+        .hero-slider {
+          max-height: 1200px;
+        }
+
+        .content-wrapper {
+          max-width: 1400px;
+        }
+
+        .slide-title {
+          font-size: clamp(4rem, 6vw, 6rem);
+        }
+
+        .slide-subtitle p {
+          font-size: clamp(1.2rem, 2.5vw, 2rem);
+          max-width: 1000px;
+        }
+      }
+
+      /* تحسين لشاشات الطول الكبير (Landscape mobiles) */
+      @media (max-height: 600px) and (orientation: landscape) {
+        .hero-slider {
+          height: 100vh;
+          min-height: 100vh;
+        }
+
+        .slide-title {
+          font-size: clamp(2rem, 5vw, 3rem);
+          margin-bottom: var(--space-2);
+          line-height: 1.2 !important;
+        }
+        .slide-content {
+          padding-top: max(20px, env(safe-area-inset-top));
+          padding-bottom: max(20px, env(safe-area-inset-bottom));
+        }
+        .slide-subtitle p {
+          font-size: clamp(0.9rem, 2vw, 1.2rem);
+
+          margin-bottom: var(--space-2);
+        }
+        .btn-primary,
+        .btn-secondary,
+        .btn-outline {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+        .hero-buttons {
+          margin-top: var(--space-3);
+        }
+
+        .slider-controls {
+          bottom: var(--space-2);
+        }
+      }
+      /* إصلاح مشاكل الحواف الآمنة */
+      @supports (padding: max(0px)) {
+        .hero-slider {
+          padding-left: min(0vmin, env(safe-area-inset-left));
+          padding-right: min(0vmin, env(safe-area-inset-right));
+        }
+
+        .slide-content {
+          padding-top: max(0px, env(safe-area-inset-top));
+          padding-bottom: max(0px, env(safe-area-inset-bottom));
+        }
+      }
+
+      /* ============================================
+       تحسينات الوصولية
+  ============================================ */
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      /* ============================================
+       تحسينات الطباعة
+  ============================================ */
+
+      @media print {
+        .navbar,
+        .mobile-menu,
+        .fixed-contact-bar,
+        .back-to-top,
+        .slider-controls,
+        .map-overlay {
+          display: none !important;
+        }
+
+        body {
+          font-size: 12pt;
+          color: #000;
+          background: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          color: #000;
+        }
+      }
+    </style>
   </head>
-  <body class="bg-white min-h-screen flex flex-col text-gray-900 duration-300">
-    <header class="bg-white top-0 shadow-lg">
-      <!-- Navigation -->
-      <nav class="">
-        <div class="container mx-auto px-4">
-          <div class="flex justify-between items-center py-4">
-            <div class="logo-3d">
-              <img
-                src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
-                alt="Summit Logo"
-                class="h-12 w-12 rounded-full"
-                loading="lazy"
-              />
-            </div>
+  <body class="">
+    <!-- Navigation - محسّن لتجربة مستخدم أفضل -->
+    <!-- Navigation - محسّن ومصَحَح -->
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="القائمة الرئيسية"
+    >
+      <div class="navbar-container">
+        <!-- الشعار والنص -->
+        <a
+          href="#home"
+          class="navbar-brand"
+          aria-label="الرئيسية - سومت العالمية"
+        >
+          <div class="logo-3d" role="img" aria-label="شعار سومت العالمية">
+            <img
+              src="assets/images/logo/logo.png"
+              alt="شعار سومت العالمية للخدمات والمشاريع"
+              class="navbar-logo"
+              onerror="this.src='https://via.placeholder.com/60x60/11224E/F87B1B?text=SIC'"
+              loading="lazy"
+              width="60"
+              height="60"
+            />
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">
+              <span class="ar">سومت العالمية</span>
+              <span class="en hidden">Summit International</span>
+            </h1>
+            <p class="brand-subtitle">
+              <span class="ar">للخدمات المتكاملة</span>
+              <span class="en hidden">Integrated Services</span>
+            </p>
+          </div>
+        </a>
 
-            <div class="hidden md:flex space-x-8 rtl:space-x-reverse">
-              <a
-                href="#home"
-                class="nav-link text-primary hover:text-secondary transition-colors"
-              >
-                <span class="ar">الرئيسية</span>
-                <span class="en hidden">Home</span>
-              </a>
-              <a
-                href="#about"
-                class="nav-link text-primary hover:text-secondary transition-colors"
-              >
-                <span class="ar">عن الشركة</span>
-                <span class="en hidden">About</span>
-              </a>
-              <a
-                href="#services"
-                class="nav-link text-primary hover:text-secondary transition-colors"
-              >
-                <span class="ar">الخدمات</span>
-                <span class="en hidden">Services</span>
-              </a>
-              <a
-                id="all-projects"
-                href="projects.html"
-                class="nav-link text-primary hover:text-secondary transition-colors"
-                title="مشاريع كاملة"
-                ><span class="ar">عرض المشاريع الكاملة</span
-                ><span class="en hidden">View All Projects</span></a
-              >
-              <a
-                href="#contact"
-                class="nav-link text-primary hover:text-secondary transition-colors"
-              >
-                <span class="ar">اتصل بنا</span>
-                <span class="en hidden">contact</span>
-              </a>
-            </div>
-
-            <div
-              class="flex items-center space-x-4 rtl:space-x-reverse relative"
+        <!-- القائمة الرئيسية (للشاشات الكبيرة) -->
+        <ul
+          class="nav-menu desktop-menu"
+          role="menubar"
+          aria-label="القائمة الرئيسية"
+        >
+          <li role="none">
+            <a
+              href="#home"
+              class="nav-link active"
+              role="menuitem"
+              data-section="home"
+              aria-label="الذهاب إلى الصفحة الرئيسية"
             >
-              <button
-                id="langToggle"
-                class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
-              >
-                <span class="ar">EN</span>
-                <span class="en hidden">عربي</span>
-              </button>
-              <div class="relative">
-                <button id="mobileMenu" class="md:hidden">
-                  <i class="fas fa-bars text-xl"></i>
-                </button>
-                <div id="mobileNav"class="md:hidden">
-                  <a href="#home" class="block py-3"
-                    ><span class="ar">الرئيسية</span>
-                    <span class="en hidden">Home</span></a
-                  >
-                  <a href="#about" class="block py-3"
-                    ><span class="ar">عن الشركة</span>
-                    <span class="en hidden">About</span></a
-                  >
-                  <a href="#services" class="block py-3"
-                    ><span class="ar">خدماتنا</span>
-                    <span class="en hidden">Services</span></a
-                  >
-                  <a href="#projects" class="block py-3"
-                    ><span class="ar">مشاريعنا</span>
-                    <span class="en hidden">projects</span></a
-                  >
-                  <a href="#contact" class="block py-3"
-                    ><span class="ar">اتصل بنا</span>
-                    <span class="en hidden">contact</span></a
-                  >
-                </div>
-              </div>
-            </div>
+              <span class="ar">الرئيسية</span>
+              <span class="en hidden">Home</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#about"
+              class="nav-link"
+              role="menuitem"
+              data-section="about"
+              aria-label="الذهاب إلى صفحة عن الشركة"
+            >
+              <span class="ar">عن الشركة</span>
+              <span class="en hidden">About</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#services"
+              class="nav-link"
+              role="menuitem"
+              data-section="services"
+              aria-label="الذهاب إلى صفحة الخدمات"
+            >
+              <span class="ar">الخدمات</span>
+              <span class="en hidden">Services</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#projects"
+              class="nav-link"
+              role="menuitem"
+              data-section="projects"
+              aria-label="الذهاب إلى صفحة المشاريع"
+            >
+              <span class="ar">المشاريع</span>
+              <span class="en hidden">Projects</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#more-projects"
+              class="nav-link"
+              role="menuitem"
+              data-section="more-projects"
+              aria-label="الذهاب إلى صفحة المشاريع الإضافية"
+            >
+              <span class="ar">المشاريع الإضافية</span>
+              <span class="en hidden">More Projects</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#map"
+              class="nav-link"
+              role="menuitem"
+              data-section="map"
+              aria-label="الذهاب إلى خريطة الموقع"
+            >
+              <span class="ar">خريطة الموقع</span>
+              <span class="en hidden">Location Map</span>
+            </a>
+          </li>
+          <li role="none">
+            <a
+              href="#contact"
+              class="nav-link"
+              role="menuitem"
+              data-section="contact"
+              aria-label="الذهاب إلى صفحة اتصل بنا"
+            >
+              <span class="ar">اتصل بنا</span>
+              <span class="en hidden">Contact</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- الجزء الأيمن: اللغة وزر القائمة -->
+        <div class="navbar-right">
+          <!-- زر اللغة (للشاشات الكبيرة) -->
+          <div class="language-switcher desktop-lang">
+            <button
+              class="lang-btn"
+              id="langToggle"
+              aria-label="تبديل اللغة"
+              title="اضغط لتغيير اللغة"
+            >
+              <span class="ar">
+                English
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </span>
+              <span class="en hidden">
+                العربية
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- زر القائمة (للشاشات الصغيرة) -->
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="فتح القائمة الرئيسية"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <i class="fas fa-bars" aria-hidden="true"></i>
+            <span class="sr-only">فتح/إغلاق القائمة</span>
+          </button>
+        </div>
+
+        <!-- القائمة المتنقلة (للشاشات الصغيرة) -->
+        <div
+          class="mobile-menu"
+          id="mobileMenu"
+          role="menu"
+          aria-label="القائمة الرئيسية للمحمول"
+          aria-hidden="true"
+        >
+          <a href="#home" class="nav-link active" data-section="home">
+            <span class="ar">الرئيسية</span>
+            <span class="en hidden">Home</span>
+          </a>
+          <a href="#about" class="nav-link" data-section="about">
+            <span class="ar">عن الشركة</span>
+            <span class="en hidden">About</span>
+          </a>
+          <a href="#services" class="nav-link" data-section="services">
+            <span class="ar">الخدمات</span>
+            <span class="en hidden">Services</span>
+          </a>
+          <a href="#projects" class="nav-link" data-section="projects">
+            <span class="ar">المشاريع</span>
+            <span class="en hidden">Projects</span>
+          </a>
+          <a
+            href="#more-projects"
+            class="nav-link"
+            data-section="more-projects"
+          >
+            <span class="ar">المشاريع الإضافية</span>
+            <span class="en hidden">More Projects</span>
+          </a>
+          <a href="#map" class="nav-link" data-section="map">
+            <span class="ar">خريطة الموقع</span>
+            <span class="en hidden">Location Map</span>
+          </a>
+          <a href="#contact" class="nav-link" data-section="contact">
+            <span class="ar">اتصل بنا</span>
+            <span class="en hidden">Contact</span>
+          </a>
+
+          <!-- زر اللغة في القائمة المتنقلة -->
+          <div class="mobile-language-switcher">
+            <button
+              class="lang-btn"
+              id="mobileLangToggle"
+              aria-label="تبديل اللغة من القائمة المتنقلة"
+            >
+              <span class="ar">
+                English
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </span>
+              <span class="en hidden">
+                العربية
+                <i class="fas fa-globe" aria-hidden="true"></i>
+              </span>
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <!-- Hero Section -->
+    <style>
+      /* CSS إضافي محدد للعناصر المذكورة في HTML */
+      .desktop-lang {
+        display: flex;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* إصلاحات للغة العربية */
+      [dir="rtl"] .navbar-container {
+        direction: rtl;
+      }
+
+      [dir="ltr"] .navbar-container {
+        direction: ltr;
+      }
+
+      /* تحسينات للشاشات الصغيرة */
+      @media (max-width: 991px) {
+        .desktop-lang {
+          display: none;
+        }
+      }
+    </style>
+
+    <!-- Hero Section with Enhanced Slider -->
+
     <section
       id="home"
-      class="py-20 mt-6 flex items-center justify-center contact overflow-hidden"
+      class="hero-slider"
+      aria-label="شركة سومت العالمية - القسم الرئيسي"
     >
       <div
-        class="absolute inset-0 bg-gradient-to-br from-secondary/30 to-white/30"
-      ></div>
-      <div class="container mx-auto px-5 text-center relative z-10">
-        <div class="logo-3d mb-6 fade-in inline-block">
-          <img
-            src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
-            alt="Summit Logo"
-            class="h-40 w-40 mx-auto rounded-full floating"
-            loading="lazy"
-          />
+        class="carousel-container"
+        tabindex="0"
+        aria-label="عارض الشرائح"
+        id="carouselContainer"
+      >
+        <!-- شريحة 1: الترحيب -->
+        <div
+          class="carousel-slide active"
+          data-slide="1"
+          role="region"
+          aria-label="شريحة 1 من 4: ترحيبية"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
+          "
+        >
+          <div class="slide-content">
+            <div class="content-wrapper">
+              <div class="slide-text">
+                <!-- الشارة التفاعلية -->
+                <div class="badge fade-in" aria-hidden="true">
+                  <span class="badge-text">
+                    <span class="ar">شركة معتمدة</span>
+                    <span class="en hidden">Certified Company</span>
+                  </span>
+                  <i class="fas fa-certificate"></i>
+                </div>
+
+                <!-- العنوان الرئيسي -->
+                <h1 class="slide-title fade-in stagger-delay-1">
+                  <span class="ar">شركة سومت العالمية</span>
+                  <span class="en hidden">Summit International Company</span>
+                </h1>
+
+                <!-- الوصف -->
+                <div class="slide-subtitle fade-in stagger-delay-2">
+                  <p>
+                    <span class="ar"
+                      >رواد في حلول البناء والبنية التحتية بأعلى معايير الجودة
+                      والسلامة</span
+                    >
+                    <span class="en hidden"
+                      >Leaders in construction and infrastructure solutions with
+                      the highest standards of quality and safety</span
+                    >
+                  </p>
+                </div>
+
+                <!-- الإحصائيات -->
+                <div class="hero-stats fade-in stagger-delay-3">
+                  <div class="stat-item">
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">
+                      <span class="ar">سنة خبرة</span>
+                      <span class="en hidden">Years Experience</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">
+                      <span class="ar">مشروع ناجح</span>
+                      <span class="en hidden">Successful Projects</span>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">
+                      <span class="ar">فريق متخصص</span>
+                      <span class="en hidden">Expert Team</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- الأزرار الرئيسية -->
+                <div class="hero-buttons fade-in stagger-delay-4">
+                  <a
+                    href="#contact"
+                    class="btn-primary pulse-animation"
+                    aria-label="الاتصال بنا"
+                  >
+                    <span class="ar">اتصل بنا الآن</span>
+                    <span class="en hidden">Contact Us Now</span>
+                    <i class="fas fa-phone-alt"></i>
+                  </a>
+                  <a
+                    href="#projects"
+                    class="btn-secondary"
+                    aria-label="عرض المشاريع"
+                  >
+                    <span class="ar">عرض المشاريع</span>
+                    <span class="en hidden">View Projects</span>
+                    <i class="fas fa-eye"></i>
+                  </a>
+                  <a
+                    href="#services"
+                    class="btn-outline"
+                    aria-label="اكتشاف الخدمات"
+                  >
+                    <span class="ar">اكتشف خدماتنا</span>
+                    <span class="en hidden">Discover Services</span>
+                    <i class="fas fa-arrow-down"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <h1 class="text-6xl md:text-7xl font-bold mb-9 fade-in">
-          <span class="ar">شركة سومت العالمية</span>
-          <span class="en hidden">Summit International Company</span>
+        <!-- شريحة 2: الخدمات -->
+        <div
+          class="carousel-slide"
+          data-slide="2"
+          role="region"
+          aria-label="شريحة 2 من 4: الخدمات"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
+          "
+        >
+          <div class="slide-content">
+            <div class="content-wrapper">
+              <div class="slide-text">
+                <!-- الشارة -->
+                <div class="badge">
+                  <span class="badge-text">
+                    <span class="ar">خدمات متخصصة</span>
+                    <span class="en hidden">Specialized Services</span>
+                  </span>
+                  <i class="fas fa-cogs"></i>
+                </div>
+
+                <!-- العنوان -->
+                <h1 class="slide-title">
+                  <span class="ar">الخبرة والتميز في التنفيذ</span>
+                  <span class="en hidden"
+                    >Experience & Excellence in Execution</span
+                  >
+                </h1>
+
+                <!-- الوصف -->
+                <div class="slide-subtitle">
+                  <p>
+                    <span class="ar"
+                      >خبرة واسعة في سحب المياه والتدعيم والحفر والتشطيبات بأعلى
+                      المعايير</span
+                    >
+                    <span class="en hidden"
+                      >Extensive experience in water pumping, reinforcement,
+                      drilling, and finishing with highest standards</span
+                    >
+                  </p>
+                </div>
+
+                <!-- الأزرار -->
+                <div class="hero-buttons">
+                  <a
+                    href="#services"
+                    class="btn-primary"
+                    aria-label="عرض جميع الخدمات"
+                  >
+                    <span class="ar">عرض جميع الخدمات</span>
+                    <span class="en hidden">View All Services</span>
+                    <i class="fas fa-list"></i>
+                  </a>
+                  <a href="#contact" class="btn-outline" aria-label="طلب خدمة">
+                    <span class="ar">طلب خدمة</span>
+                    <span class="en hidden">Request Service</span>
+                    <i class="fas fa-clipboard-list"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- شريحة 3: المشاريع -->
+        <div
+          class="carousel-slide"
+          data-slide="3"
+          role="region"
+          aria-label="شريحة 3 من 4: المشاريع"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
+          "
+        >
+          <div class="slide-content">
+            <div class="content-wrapper">
+              <div class="slide-text">
+                <!-- الشارة -->
+                <div class="badge">
+                  <span class="badge-text">
+                    <span class="ar">مشاريع ناجحة</span>
+                    <span class="en hidden">Successful Projects</span>
+                  </span>
+                  <i class="fas fa-trophy"></i>
+                </div>
+
+                <!-- العنوان -->
+                <h1 class="slide-title">
+                  <span class="ar">سجل حافل بالمشاريع الناجحة</span>
+                  <span class="en hidden"
+                    >A Track Record of Successful Projects</span
+                  >
+                </h1>
+
+                <!-- الوصف -->
+                <div class="slide-subtitle">
+                  <p>
+                    <span class="ar"
+                      >ننفذ مشاريع معقدة باحترافية عالية ونسلمها في الوقت
+                      المحدد</span
+                    >
+                    <span class="en hidden"
+                      >We execute complex projects with high professionalism and
+                      deliver on time</span
+                    >
+                  </p>
+                </div>
+
+                <!-- الأزرار -->
+                <div class="hero-buttons">
+                  <a
+                    href="#projects"
+                    class="btn-primary"
+                    aria-label="استعراض المشاريع"
+                  >
+                    <span class="ar">استعراض المشاريع</span>
+                    <span class="en hidden">Browse Projects</span>
+                    <i class="fas fa-images"></i>
+                  </a>
+                  <a
+                    href="#more-projects"
+                    class="btn-outline"
+                    aria-label="المزيد من المشاريع"
+                  >
+                    <span class="ar">المزيد من المشاريع</span>
+                    <span class="en hidden">More Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- شريحة 4: الجودة والسلامة -->
+        <div
+          class="carousel-slide"
+          data-slide="4"
+          role="region"
+          aria-label="شريحة 4 من 4: الجودة والسلامة"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
+          "
+        >
+          <div class="slide-content">
+            <div class="content-wrapper">
+              <div class="slide-text">
+                <!-- الشارة -->
+                <div class="badge">
+                  <span class="badge-text">
+                    <span class="ar">الجودة والسلامة</span>
+                    <span class="en hidden">Quality & Safety</span>
+                  </span>
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <!-- العنوان -->
+                <h1 class="slide-title">
+                  <span class="ar">الجودة والسلامة أولاً</span>
+                  <span class="en hidden">Quality and Safety First</span>
+                </h1>
+
+                <!-- الوصف -->
+                <div class="slide-subtitle">
+                  <p>
+                    <span class="ar"
+                      >نلتزم بأعلى معايير الجودة العالمية ونضع السلامة كأولوية
+                      قصوى</span
+                    >
+                    <span class="en hidden"
+                      >We commit to the highest international quality standards
+                      and prioritize safety</span
+                    >
+                  </p>
+                </div>
+
+                <!-- مميزات الجودة -->
+                <div class="quality-features">
+                  <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <h4>
+                      <span class="ar">شهادات الجودة</span>
+                      <span class="en hidden">Quality Certificates</span>
+                    </h4>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>
+                      <span class="ar">نظام سلامة متكامل</span>
+                      <span class="en hidden">Integrated Safety System</span>
+                    </h4>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>
+                      <span class="ar">التسليم في الوقت </span>
+                      <span class="en hidden">On-Time Delivery</span>
+                    </h4>
+                  </div>
+                </div>
+
+                <!-- الأزرار -->
+                <div class="hero-buttons">
+                  <a
+                    href="#about"
+                    class="btn-primary"
+                    aria-label="معرفة المزيد عنا"
+                  >
+                    <span class="ar">معرفة المزيد عنا</span>
+                    <span class="en hidden">Learn More About Us</span>
+                    <i class="fas fa-info-circle"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- عناصر التحكم -->
+      <div class="slider-controls">
+        <div
+          class="carousel-indicators"
+          role="tablist"
+          aria-label="التحكم بالشرائح"
+        >
+          <div class="slide-counter" role="presentation">
+            <button
+              class="indicator-btn active"
+              data-slide="0"
+              role="tab"
+              aria-label="الانتقال إلى الشريحة 1"
+              aria-selected="true"
+            ></button>
+            <button
+              class="indicator-btn"
+              data-slide="1"
+              role="tab"
+              aria-label="الانتقال إلى الشريحة 2"
+              aria-selected="false"
+            ></button>
+            <button
+              class="indicator-btn"
+              data-slide="2"
+              role="tab"
+              aria-label="الانتقال إلى الشريحة 3"
+              aria-selected="false"
+            ></button>
+            <button
+              class="indicator-btn"
+              data-slide="3"
+              role="tab"
+              aria-label="الانتقال إلى الشريحة 4"
+              aria-selected="false"
+            ></button>
+          </div>
+        </div>
+
+        <div class="carousel-nav">
+          <button
+            type="button"
+            class="nav-btn prev-btn"
+            aria-label="الشريحة السابقة"
+            title="الشريحة السابقة"
+          >
+            <i class="fas fa-chevron-right"></i>
+            <span class="sr-only">
+              <span class="ar">السابقة</span>
+              <span class="en hidden">Previous</span>
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="nav-btn next-btn"
+            aria-label="الشريحة التالية"
+            title="الشريحة التالية"
+          >
+            <i class="fas fa-chevron-left"></i>
+            <span class="sr-only">
+              <span class="ar">التالية</span>
+              <span class="en hidden">Next</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- شريط التقدم -->
+        <div class="progress-container" aria-hidden="true">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="25"
+          ></div>
+        </div>
+      </div>
+
+      <!-- تعليمات لوحة المفاتيح -->
+      <div class="keyboard-instructions sr-only" role="note">
+        <span class="ar"
+          >استخدم مفاتيح الأسهم اليمنى واليسرى للتنقل بين الشرائح</span
+        >
+        <span class="en hidden"
+          >Use left and right arrow keys to navigate between slides</span
+        >
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-white">
+      <div class="section-container">
+        <h1 class="section-title text-center">
+          <span class="ar">عن شركتنا</span>
+          <span class="en hidden">About Our Company</span>
         </h1>
 
-        <p class="text-2xl md:text-2xl font-bold text-gray-900 fade-in">
-          <span class="ar"
-            >حلول متكاملة لسحب المياه والتدعيم والحفر باحترافية عالية</span
-          >
-          <span class="en hidden"
-            >Comprehensive solutions for dewatering, shoring and drilling with
-            high professionalism</span
-          >
-        </p>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-orange-100">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4 slide-in-left">
-            <span class="ar">عن الشركة</span>
-            <span class="en hidden">About Company</span>
-          </h2>
-          <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="slide-in-left">
-            <h3
-              class="text-2xl font-bold mb-6 text-primary mb-6 leading-relaxed"
-            >
-              <span class="ar">نبذة عن الشركة</span>
-              <span class="en hidden">Company Overview</span>
+        <div class="about-content">
+          <div class="fade-in-left">
+            <h3 class="mb-6">
+              <span class="ar">نظرة عامة</span>
+              <span class="en hidden">Overview</span>
             </h3>
-            <p class="text-gray-900 mb-6 leading-relaxed">
-              <span class="ar"
-                >تأسست شركة سومت العالمية لتكون واحدة من الشركات المتخصصة
+            <p class="mb-4 text-gray-600">
+              <span class="ar">
+                تأسست شركة سومت العالمية لتكون واحدة من الشركات المتخصصة
                 والرائدة في مجال سحب المياه الجوفية وأعمال التدعيم والحفر، مع
-                التوسع في تقديم حلول متكاملة لأعمال البناء والتشطيبات.</span
-              >
-              <span class="en hidden"
-                >Summit was established to be one of the specialized and
-                leading companies in the field of groundwater pumping,
-                reinforcement and drilling works, with expansion in providing
-                integrated solutions for construction and finishing works.</span
-              >
+                التوسع في تقديم حلول متكاملة لأعمال البناء والتشطيبات.
+              </span>
+              <span class="en hidden">
+                Summit International Company was established to be one of the
+                specialized and leading companies in groundwater pumping,
+                reinforcement works, and drilling, while expanding to provide
+                integrated solutions for construction and finishing works.
+              </span>
             </p>
-            <p class="text-gray-900 leading-relaxed">
-              <span class="ar"
-                >نتميز بخبرة عملية وفريق عمل مؤهل، مدعوم بأحدث المعدات والأنظمة،
+            <p class="text-gray-600">
+              <span class="ar">
+                نتميز بخبرة عملية وفريق عمل مؤهل، مدعوم بأحدث المعدات والأنظمة،
                 لنضمن لعملائنا تنفيذ مشاريعهم بجودة عالية، ووفق أعلى معايير
-                السلامة والالتزام بالمواعيد.</span
-              >
-              <span class="en hidden"
-                >We are distinguished by practical experience and a qualified
-                work team, supported by the latest equipment and systems, to
-                ensure our clients implement their projects with high quality,
-                according to the highest standards of safety and commitment to
-                deadlines.</span
-              >
+                السلامة والالتزام بالمواعيد.
+              </span>
+              <span class="en hidden">
+                We are distinguished by practical experience and a qualified
+                team, supported by the latest equipment and systems, to ensure
+                our clients' projects are implemented with high quality and
+                according to the highest standards of safety and deadline
+                commitment.
+              </span>
             </p>
           </div>
 
-          <div class="slide-in-right">
-            <div class="grid grid-cols-1 gap-6">
-              <div class="bg-gray-100 p-6 rounded-lg shadow-lg card-hover">
-                <div class="flex items-center mb-4">
-                  <div
-                    class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
-                  >
-                    <i class="fas fa-eye text-secondary text-xl"></i>
-                  </div>
-                  <h4 class="text-xl font-bold">
-                    <span class="ar">رؤيتنا</span>
-                    <span class="en hidden">Our Vision</span>
-                  </h4>
-                </div>
-                <p class="text-gray-900">
-                  <span class="ar"
-                    >أن نكون الخيار الأول في الكويت والمنطقة في مجال سحب المياه
-                    والتدعيم وأعمال الحفر والتشطيبات</span
-                  >
-                  <span class="en hidden"
-                    >To be the first choice in Kuwait and the region in water
-                    pumping, reinforcement, drilling and finishing works</span
-                  >
-                </p>
+          <div class="grid grid-cols-2 gap-6 fade-in-right">
+            <div
+              class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
+            >
+              <div class="text-primary text-3xl mb-4">
+                <i class="fas fa-eye"></i>
               </div>
+              <h4 class="mb-2">
+                <span class="ar">الرؤية</span>
+                <span class="en hidden">Vision</span>
+              </h4>
+              <p class="text-gray-600 text-sm">
+                <span class="ar"
+                  >أن نكون الخيار الأول في الكويت والمنطقة في مجال سحب المياه
+                  والتدعيم وأعمال الحفر والتشطيبات، من خلال تقديم حلول متكاملة
+                  تواكب التطور وتحقق أعلى معايير الجودة.</span
+                >
+                <span class="en hidden"
+                  >To be the first choice in Kuwait and the region in water
+                  pumping, reinforcement, drilling and finishing works, by
+                  providing integrated solutions that keep pace with development
+                  and achieve the highest quality standards.</span
+                >
+              </p>
+            </div>
 
-              <div class="bg-gray-100 p-6 rounded-lg shadow-lg card-hover">
-                <div class="flex items-center mb-4">
-                  <div
-                    class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
-                  >
-                    <i class="fas fa-bullseye text-secondary text-xl"></i>
-                  </div>
-                  <h4 class="text-xl font-bold">
-                    <span class="ar">رسالتنا</span>
-                    <span class="en hidden">Our Mission</span>
-                  </h4>
-                </div>
-                <p class="text-gray-900">
-                  <span class="ar"
-                    >الالتزام بتقديم خدمات متخصصة وفعّالة لعملائنا، ترتكز على
-                    الخبرة، الكفاءة، الابتكار، والسلامة</span
-                  >
-                  <span class="en hidden"
-                    >Commitment to providing specialized and effective services
-                    to our clients, based on experience, efficiency, innovation,
-                    and safety</span
-                  >
-                </p>
+            <div
+              class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
+            >
+              <div class="text-primary text-3xl mb-4">
+                <i class="fas fa-bullseye"></i>
               </div>
+              <h4 class="mb-2">
+                <span class="ar">الرسالة</span>
+                <span class="en hidden">Mission</span>
+              </h4>
+              <p class="text-gray-600 text-sm">
+                <span class="ar"
+                  >الالتزام بتقديم خدمات متخصصة وفعّالة لعملائنا، ترتكز على
+                  الخبرة، الكفاءة، الابتكار، والسلامة، وبناء شراكات طويلة الأمد
+                  تقوم على الثقة والاحترافية.</span
+                >
+                <span class="en hidden"
+                  >Commitment to providing specialized and effective services to
+                  our clients, based on experience, efficiency, innovation, and
+                  safety, and building long-term partnerships based on trust and
+                  professionalism.</span
+                >
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Values Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center mb-12">
-          <span class="ar">قيمنا الأساسية</span>
-          <span class="en hidden">Our Core Values</span>
-        </h3>
-
-        <div class="grid md:grid-cols-5 gap-6">
-          <div
-            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
-          >
             <div
-              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
             >
-              <i class="fas fa-star text-secondary text-2xl"></i>
+              <div class="text-primary text-3xl mb-4">
+                <i class="fas fa-star"></i>
+              </div>
+              <h4 class="mb-2">
+                <span class="ar">الجودة</span>
+                <span class="en hidden">Quality</span>
+              </h4>
+              <p class="text-gray-600 text-sm">
+                <span class="ar"
+                  >نحرص على تنفيذ جميع أعمالنا وفق أعلى معايير الجودة
+                  العالمية.</span
+                >
+                <span class="en hidden"
+                  >We ensure all our works are executed according to the highest
+                  international quality standards.</span
+                >
+              </p>
             </div>
-            <h4 class="font-bold mb-2">
-              <span class="ar">الجودة</span>
-              <span class="en hidden">Quality</span>
-            </h4>
-          </div>
 
-          <div
-            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
-          >
             <div
-              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow"
             >
-              <i class="fas fa-clock text-secondary text-2xl"></i>
+              <div class="text-primary text-3xl mb-4">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4 class="mb-2">
+                <span class="ar">السلامة</span>
+                <span class="en hidden">Safety</span>
+              </h4>
+              <p class="text-gray-600 text-sm">
+                <span class="ar"
+                  >نضع سلامة فريقنا ومواقع العمل على رأس أولوياتنا.</span
+                >
+                <span class="en hidden"
+                  >We place the safety of our team and work sites at the top of
+                  our priorities.</span
+                >
+              </p>
             </div>
-            <h4 class="font-bold mb-2">
-              <span class="ar">الالتزام</span>
-              <span class="en hidden">Commitment</span>
-            </h4>
-          </div>
-
-          <div
-            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
-          >
-            <div
-              class="bg-blue-500/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-shield-alt text-blue-500 text-2xl"></i>
-            </div>
-            <h4 class="font-bold mb-2">
-              <span class="ar">السلامة</span>
-              <span class="en hidden">Safety</span>
-            </h4>
-          </div>
-
-          <div
-            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
-          >
-            <div
-              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-users text-secondary text-2xl"></i>
-            </div>
-            <h4 class="font-bold mb-2">
-              <span class="ar">الاحترافية</span>
-              <span class="en hidden">Professionalism</span>
-            </h4>
-          </div>
-
-          <div
-            class="text-center fade-in card-hover bg-gray-100 p-6 rounded-lg shadow-lg"
-          >
-            <div
-              class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-            >
-              <i class="fas fa-handshake text-secondary text-2xl"></i>
-            </div>
-            <h4 class="font-bold mb-2">
-              <span class="ar">الشفافية</span>
-              <span class="en hidden">Transparency</span>
-            </h4>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-orange-100">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">خدماتنا</span>
-            <span class="en hidden">Our Services</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+    <section id="services" class="section-padding bg-gray-50">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">خدماتنا</span>
+          <span class="en hidden">Our Services</span>
+        </h2>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="سحب المياه الجوفية"
+              class="service-image"
+            />
+            <div class="service-content">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-water text-blue-600 text-xl"></i>
+                </div>
+                <h3>
+                  <span class="ar">سحب المياه الجوفية</span>
+                  <span class="en hidden">Groundwater Pumping</span>
+                </h3>
+              </div>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >خدمات متخصصة في سحب المياه الجوفية باستخدام أحدث المعدات
+                  والتقنيات المتطورة لضمان كفاءة وجودة عالية.</span
+                >
+                <span class="en hidden"
+                  >Specialized groundwater pumping services using the latest
+                  equipment and advanced technologies to ensure high efficiency
+                  and quality.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card fade-in stagger-delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="أعمال التدعيم"
+              class="service-image"
+            />
+            <div class="service-content">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-hard-hat text-orange-600 text-xl"></i>
+                </div>
+                <h3>
+                  <span class="ar">أعمال التدعيم</span>
+                  <span class="en hidden">Reinforcement Works</span>
+                </h3>
+              </div>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >تدعيم المباني والمنشآت بأعلى معايير السلامة والجودة والكفاءة
+                  لضمان متانة وأمان المنشآت.</span
+                >
+                <span class="en hidden"
+                  >Building and structure reinforcement with the highest
+                  standards of safety, quality and efficiency to ensure the
+                  durability and safety of facilities.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card fade-in stagger-delay-2">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="أعمال الحفر"
+              class="service-image"
+            />
+            <div class="service-content">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-tools text-green-600 text-xl"></i>
+                </div>
+                <h3>
+                  <span class="ar">أعمال الحفر</span>
+                  <span class="en hidden">Drilling Works</span>
+                </h3>
+              </div>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات باستخدام معدات
+                  متطورة وخبراء مؤهلين.</span
+                >
+                <span class="en hidden"
+                  >Precise and safe drilling for all types of projects and
+                  applications using advanced equipment and qualified
+                  experts.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card fade-in stagger-delay-3">
+            <img
+              src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="التشطيبات"
+              class="service-image"
+            />
+            <div class="service-content">
+              <div class="flex items-center gap-3 mb-3">
+                <div
+                  class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-paint-roller text-purple-600 text-xl"></i>
+                </div>
+                <h3>
+                  <span class="ar">التشطيبات</span>
+                  <span class="en hidden">Finishing Works</span>
+                </h3>
+              </div>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم بأفضل
+                  الأسعار وأعلى مستويات الدقة.</span
+                >
+                <span class="en hidden"
+                  >High-quality finishes that achieve clients' vision and
+                  expectations at the best prices and highest levels of
+                  precision.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-white">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">مشاريعنا</span>
+          <span class="en hidden">Our Projects</span>
+        </h2>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="مشروع 1"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="text-white mb-2">
+                <span class="ar">مشروع محطة توليد الكهرباء</span>
+                <span class="en hidden">Power Plant Project</span>
+              </h3>
+              <p class="text-gray-200 text-sm">
+                <span class="ar">إصلاح وصيانة أنابيب المياه</span>
+                <span class="en hidden"
+                  >Water pipes repair and maintenance</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card fade-in stagger-delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="مشروع 2"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="text-white mb-2">
+                <span class="ar">أبراج الكهرباء عالية الضغط</span>
+                <span class="en hidden">High Voltage Electricity Towers</span>
+              </h3>
+              <p class="text-gray-200 text-sm">
+                <span class="ar">إنشاء وصيانة أبراج الكهرباء</span>
+                <span class="en hidden"
+                  >Construction and maintenance of electricity towers</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card fade-in stagger-delay-2">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="مشروع 3"
+              class="project-image"
+            />
+            <div class="project-overlay">
+              <h3 class="text-white mb-2">
+                <span class="ar">مشاريع البنية التحتية</span>
+                <span class="en hidden">Infrastructure Projects</span>
+              </h3>
+              <p class="text-gray-200 text-sm">
+                <span class="ar">حفر وتدعيم الأساسات</span>
+                <span class="en hidden"
+                  >Foundation drilling and reinforcement</span
+                >
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-block px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-orange-600 transition-all"
+          >
+            <span class="ar">طلب مشروع جديد</span>
+            <span class="en hidden">Request New Project</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Projects Section -->
+    <section id="more-projects" class="section-padding bg-gray-50">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">مشاريع إضافية</span>
+          <span class="en hidden">Additional Projects</span>
+        </h2>
+
+        <!-- Projects Filter -->
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">
+            <span class="ar">الكل</span>
+            <span class="en hidden">All</span>
+          </button>
+          <button class="filter-btn" data-filter="construction">
+            <span class="ar">تشييد</span>
+            <span class="en hidden">Construction</span>
+          </button>
+          <button class="filter-btn" data-filter="infrastructure">
+            <span class="ar">بنية تحتية</span>
+            <span class="en hidden">Infrastructure</span>
+          </button>
+          <button class="filter-btn" data-filter="water">
+            <span class="ar">مياه</span>
+            <span class="en hidden">Water</span>
+          </button>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Project 1 -->
+          <div class="cart fade-in" data-category="construction">
+            <div
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
+            >
+              <i class="fas fa-building text-white text-4xl"></i>
+            </div>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">مشروع مجمع سكني</span>
+                <span class="en hidden">Residential Complex Project</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >تشييد مجمع سكني متكامل يحتوي على 50 وحدة سكنية مع جميع
+                  الخدمات</span
+                >
+                <span class="en hidden"
+                  >Construction of an integrated residential complex containing
+                  50 housing units with all services</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
           <div
-            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
+            class="cart fade-in stagger-delay-1"
+            data-category="infrastructure"
           >
             <div
-              class="service-icon bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1577446500725-0c73ae8e2b55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
             >
-              <i class="fas fa-tint text-blue-500 text-3xl"></i>
+              <i class="fas fa-road text-white text-4xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">سحب المياه الجوفية</span>
-              <span class="en hidden">Groundwater Pumping</span>
-            </h3>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">تطوير الطرق</span>
+                <span class="en hidden">Road Development</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >تطوير وتوسعة شبكة طرق بطول 5 كيلومترات مع أنظمة الصرف
+                  الصحي</span
+                >
+                <span class="en hidden"
+                  >Development and expansion of a 5-kilometer road network with
+                  drainage systems</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="cart fade-in stagger-delay-2" data-category="water">
+            <div
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
+            >
+              <i class="fas fa-water text-white text-4xl"></i>
+            </div>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">شبكة المياه</span>
+                <span class="en hidden">Water Network</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >إنشاء شبكة مياه متكاملة للمنطقة الصناعية الجديدة</span
+                >
+                <span class="en hidden"
+                  >Establishment of an integrated water network for the new
+                  industrial area</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="cart fade-in" data-category="construction">
+            <div
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
+            >
+              <i class="fas fa-school text-white text-4xl"></i>
+            </div>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">مدرسة نموذجية</span>
+                <span class="en hidden">Model School</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >بناء مدرسة نموذجية تتسع لـ 800 طالب مع مرافق رياضية
+                  متكاملة</span
+                >
+                <span class="en hidden"
+                  >Construction of a model school accommodating 800 students
+                  with integrated sports facilities</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="cart fade-in stagger-delay-1"
+            data-category="infrastructure"
+          >
+            <div
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
+            >
+              <i class="fas fa-bolt text-white text-4xl"></i>
+            </div>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">محطة كهرباء</span>
+                <span class="en hidden">Power Station</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >إنشاء محطة كهرباء فرعية مع أعمال التدعيم والحفر
+                  المتخصصة</span
+                >
+                <span class="en hidden"
+                  >Construction of a substation with specialized reinforcement
+                  and drilling works</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="cart fade-in stagger-delay-2" data-category="water">
+            <div
+              class="cart-image"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');
+              "
+            >
+              <i class="fas fa-tint text-white text-4xl"></i>
+            </div>
+            <div class="cart-content">
+              <h3 class="hero-title">
+                <span class="ar">نظام الصرف الصحي</span>
+                <span class="en hidden">Sewage System</span>
+              </h3>
+              <p class="text-gray-600">
+                <span class="ar"
+                  >تصميم وتنفيذ نظام صرف صحي متطور لمنطقة سكنية</span
+                >
+                <span class="en hidden"
+                  >Design and implementation of an advanced sewage system for a
+                  residential area</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button
+            id="loadMore"
+            class="px-8 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-blue-900 transition-all"
+          >
+            <span class="ar">تحميل المزيد</span>
+            <span class="en hidden">Load More</span>
+            <i class="fas fa-arrow-down ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section id="map" class="map-section">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">موقعنا على الخريطة</span>
+          <span class="en hidden">Our Location on Map</span>
+        </h2>
+
+        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+          <span class="ar"
+            >يمكنكم زيارة مكتبنا في الكويت أو التواصل معنا عبر الهاتف والبريد
+            الإلكتروني</span
+          >
+          <span class="en hidden"
+            >You can visit our office in Kuwait or contact us via phone and
+            email</span
+          >
+        </p>
+
+        <div class="map-container">
+          <!-- Interactive Google Map -->
+          <iframe
+            id="interactiveMap"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892621.9633528772!2d46.94956243383769!3d29.29852725421783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+
+          <!-- Map Overlay with Info -->
+          <div class="map-overlay">
+            <div class="map-info">
+              <h4 class="font-bold text-secondary mb-2">
+                <span class="ar">مكتب شركة سومت العالمية</span>
+                <span class="en hidden"
+                  >Summit International Company Office</span
+                >
+              </h4>
+              <div class="flex items-center gap-2 text-gray-600 mb-1">
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span class="ar">الكويت</span>
+                <span class="en hidden">Kuwait</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-600 mb-1">
+                <i class="fas fa-phone text-primary"></i>
+                <span>+965 6041 5151</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-600">
+                <i class="fas fa-envelope text-primary"></i>
+                <span>summitceo25@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="map-actions">
+              <button class="map-btn" id="getDirections">
+                <i class="fas fa-directions"></i>
+                <span class="ar">الاتجاهات</span>
+                <span class="en hidden">Get Directions</span>
+              </button>
+              <button class="map-btn secondary" id="copyAddress">
+                <i class="far fa-copy"></i>
+                <span class="ar">نسخ العنوان</span>
+                <span class="en hidden">Copy Address</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Location Info -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-clock text-blue-600 text-2xl"></i>
+            </div>
+            <h4 class="mb-2">
+              <span class="ar">ساعات العمل</span>
+              <span class="en hidden">Working Hours</span>
+            </h4>
             <p class="text-gray-600">
-              <span class="ar"
-                >خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات المتطورة</span
-              >
-              <span class="en hidden"
-                >Groundwater pumping services with the latest equipment and
-                advanced technologies</span
-              >
+              <span class="ar">الأحد - الخميس</span>
+              <span class="en hidden">Sunday - Thursday</span>
+            </p>
+            <p class="text-gray-600 font-semibold">8:00 ص - 5:00 م</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-car text-green-600 text-2xl"></i>
+            </div>
+            <h4 class="mb-2">
+              <span class="ar">مواقف السيارات</span>
+              <span class="en hidden">Parking</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="ar">مواقف مجانية متاحة</span>
+              <span class="en hidden">Free parking available</span>
+            </p>
+            <p class="text-gray-600">
+              <span class="ar">للعملاء والزوار</span>
+              <span class="en hidden">For clients and visitors</span>
             </p>
           </div>
 
-          <div
-            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
-          >
+          <div class="bg-white p-6 rounded-xl shadow-sm text-center">
             <div
-              class="service-icon bg-yellow-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-hard-hat text-yellow-500 text-3xl"></i>
+              <i class="fas fa-users text-orange-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">أعمال التدعيم</span>
-              <span class="en hidden">Reinforcement Works</span>
-            </h3>
+            <h4 class="mb-2">
+              <span class="ar">الزيارات</span>
+              <span class="en hidden">Visits</span>
+            </h4>
             <p class="text-gray-600">
-              <span class="ar"
-                >تدعيم المباني والمنشآت بأعلى معايير السلامة والجودة</span
-              >
-              <span class="en hidden"
-                >Building and structure reinforcement with the highest safety
-                and quality standards</span
-              >
+              <span class="ar">يرجى تحديد موعد مسبق</span>
+              <span class="en hidden">Please schedule an appointment</span>
             </p>
-          </div>
-
-          <div
-            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
-          >
-            <div
-              class="service-icon bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-tools text-orange-500 text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">أعمال الحفر</span>
-              <span class="en hidden">Drilling Works</span>
-            </h3>
             <p class="text-gray-600">
-              <span class="ar"
-                >حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات</span
-              >
-              <span class="en hidden"
-                >Precise and safe drilling for all types of projects and
-                applications</span
-              >
-            </p>
-          </div>
-
-          <div
-            class="bg-gray-100 p-8 rounded-lg shadow-lg card-hover text-center"
-          >
-            <div
-              class="service-icon bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-paint-roller text-green-500 text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">التشطيبات</span>
-              <span class="en hidden">Finishing Works</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar"
-                >تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم</span
-              >
-              <span class="en hidden"
-                >High-quality finishes that achieve clients' vision and
-                expectations</span
-              >
+              <span class="ar">للاجتماعات</span>
+              <span class="en hidden">For meetings</span>
             </p>
           </div>
         </div>
@@ -495,63 +3483,76 @@
     </section>
 
     <!-- Equipment Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">معداتنا</span>
-            <span class="en hidden">Our Equipment</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
-        </div>
+    <section class="section-padding bg-white">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">معداتنا</span>
+          <span class="en hidden">Our Equipment</span>
+        </h2>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="text-center fade-in">
             <div
-              class="bg-blue-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-cog text-blue-500 text-4xl"></i>
+              <i class="fas fa-cog text-blue-600 text-3xl"></i>
             </div>
-            <h3 class="text-2xl font-bold mb-4">
-              <span class="ar">مضخات</span>
-              <span class="en hidden">Pumps</span>
+            <h3 class="mb-2">
+              <span class="ar">مضخات متطورة</span>
+              <span class="en hidden">Advanced Pumps</span>
             </h3>
             <p class="text-gray-600">
-              <span class="ar">مضخات متطورة عالية الكفاءة</span>
-              <span class="en hidden">Advanced high-efficiency pumps</span>
-            </p>
-          </div>
-
-          <div class="text-center fade-in">
-            <div
-              class="bg-yellow-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-truck text-yellow-500 text-4xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4">
-              <span class="ar">لوادر</span>
-              <span class="en hidden">Loaders</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">لوادر حديثة لجميع الأعمال</span>
-              <span class="en hidden">Modern loaders for all works</span>
-            </p>
-          </div>
-
-          <div class="text-center fade-in">
-            <div
-              class="bg-orange-500/10 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-hammer text-orange-500 text-4xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-4">
-              <span class="ar">حفارات تدعيم</span>
-              <span class="en hidden">Support Excavators</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">حفارات متخصصة لأعمال التدعيم</span>
+              <span class="ar"
+                >مضخات عالية الكفاءة لسحب المياه الجوفية بأحدث التقنيات
+                العالمية</span
+              >
               <span class="en hidden"
-                >Specialized excavators for support works</span
+                >High-efficiency pumps for groundwater pumping using the latest
+                global technologies</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center fade-in stagger-delay-1">
+            <div
+              class="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-truck text-yellow-600 text-3xl"></i>
+            </div>
+            <h3 class="mb-2">
+              <span class="ar">لوادر حديثة</span>
+              <span class="en hidden">Modern Loaders</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >لوادر حديثة لجميع أعمال البناء والتشييد مع قدرات تحميل
+                عالية</span
+              >
+              <span class="en hidden"
+                >Modern loaders for all construction works with high loading
+                capacities</span
+              >
+            </p>
+          </div>
+
+          <div class="text-center fade-in stagger-delay-2">
+            <div
+              class="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-hammer text-red-600 text-3xl"></i>
+            </div>
+            <h3 class="mb-2">
+              <span class="ar">حفارات تدعيم</span>
+              <span class="en hidden">Reinforcement Excavators</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="ar"
+                >حفارات متخصصة لأعمال التدعيم والحفر بأعلى مستويات الدقة
+                والأمان</span
+              >
+              <span class="en hidden"
+                >Specialized excavators for reinforcement and drilling works
+                with the highest levels of precision and safety</span
               >
             </p>
           </div>
@@ -559,253 +3560,91 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 selected bg-orange-100">
-      <div class="container mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">مشاريعنا</span>
-            <span class="en hidden">Our Projects</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
-          <p class="text-gray-900 mt-4">
-            <span class="ar"
-              >نفخر بتنفيذ مشاريع متنوعة وناجحة في جميع أنحاء الكويت</span
-            >
-            <span class="en hidden"
-              >We are proud to implement diverse and successful projects
-              throughout Kuwait</span
-            >
-          </p>
-        </div>
+    <!-- Features Section -->
+    <section class="section-padding bg-gray-50">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">مميزات الشركة</span>
+          <span class="en hidden">Company Features</span>
+        </h2>
 
-        <div class="select owl-carousel owl-theme">
-          <!-- Placeholder for project images -->
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 1</span>
-                <span class="en hidden">Project #1</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-secondary to-primary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 2</span>
-                <span class="en hidden">Project #2</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 1</span>
-                <span class="en hidden">Project #1</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 1</span>
-                <span class="en hidden">Project #1</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 1</span>
-                <span class="en hidden">Project #1</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="bg-white cart rounded-lg shadow-lg overflow-hidden card-hover"
-          >
-            <div
-              class="h-48 bg-gradient-to-br from-primary to-secondary flex items-center justify-center"
-            >
-              <i class="fas fa-image text-white text-4xl"></i>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">
-                <span class="ar">مشروع رقم 1</span>
-                <span class="en hidden">Project #1</span>
-              </h3>
-              <p class="text-gray-600">
-                <span class="ar">سيتم إضافة تفاصيل المشروع والموقع</span>
-                <span class="en hidden"
-                  >Project details and location will be added</span
-                >
-              </p>
-            </div>
-          </div>
-
-        </div>
-        <div>
-          <button
-            onclick="location= 'projects.html'"
-            class="w-full bg-secondary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors mt-10"
-          >
-            <span class="ar">عرض كل المشاريع</span
-            ><span class="en hidden">View all projects</span>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Advantages Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">مميزات الشركة</span>
-            <span class="en hidden">Company Advantages</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center fade-in">
             <div
-              class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-award text-primary text-3xl"></i>
+              <i class="fas fa-award text-green-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 class="mb-2">
               <span class="ar">الجودة</span>
               <span class="en hidden">Quality</span>
             </h3>
-            <p class="text-gray-600">
-              <span class="ar">نلتزم بأعلى معايير الجودة العالمية</span>
+            <p class="text-gray-600 text-sm">
+              <span class="ar"
+                >نلتزم بأعلى معايير الجودة العالمية في جميع مشاريعنا</span
+              >
               <span class="en hidden"
-                >We adhere to the highest international quality standards</span
+                >We adhere to the highest international quality standards in all
+                our projects</span
               >
             </p>
           </div>
 
-          <div class="text-center fade-in">
+          <div class="text-center fade-in stagger-delay-1">
             <div
-              class="bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-clock text-green-500 text-3xl"></i>
+              <i class="fas fa-clock text-blue-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 class="mb-2">
               <span class="ar">الالتزام بالوقت</span>
               <span class="en hidden">Time Commitment</span>
             </h3>
-            <p class="text-gray-600">
-              <span class="ar">نوفي بوعودنا ونلتزم بالمواعيد المحددة</span>
+            <p class="text-gray-600 text-sm">
+              <span class="ar"
+                >نسلم مشاريعنا في المواعيد المتفق عليها بدقة</span
+              >
               <span class="en hidden"
-                >We keep our promises and meet deadlines</span
+                >We deliver our projects on the agreed deadlines with
+                precision</span
               >
             </p>
           </div>
 
-          <div class="text-center fade-in">
+          <div class="text-center fade-in stagger-delay-2">
             <div
-              class="bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-user-graduate text-blue-500 text-3xl"></i>
+              <i class="fas fa-graduation-cap text-orange-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
+            <h3 class="mb-2">
               <span class="ar">الخبرة</span>
               <span class="en hidden">Experience</span>
             </h3>
-            <p class="text-gray-600">
-              <span class="ar">فريق عمل متخصص ذو خبرة واسعة</span>
+            <p class="text-gray-600 text-sm">
+              <span class="ar">أكثر من 20 عاماً من الخبرة في المجال</span>
               <span class="en hidden"
-                >Specialized team with extensive experience</span
+                >Over 20 years of experience in the field</span
               >
             </p>
           </div>
 
-          <div class="text-center fade-in">
+          <div class="text-center fade-in stagger-delay-3">
             <div
-              class="bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
+              class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
             >
-              <i class="fas fa-dollar-sign text-orange-500 text-3xl"></i>
+              <i class="fas fa-tag text-purple-600 text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">الأسعار التنافسية</span>
+            <h3 class="mb-2">
+              <span class="ar">أسعار تنافسية</span>
               <span class="en hidden">Competitive Prices</span>
             </h3>
-            <p class="text-gray-600">
-              <span class="ar">أسعار تنافسية مع جودة عالية</span>
+            <p class="text-gray-600 text-sm">
+              <span class="ar"
+                >نقدم أفضل الأسعار مع الحفاظ على الجودة العالية</span
+              >
               <span class="en hidden"
-                >Competitive prices with high quality</span
+                >We offer the best prices while maintaining high quality</span
               >
             </p>
           </div>
@@ -814,49 +3653,40 @@
     </section>
 
     <!-- Contact Section -->
-    <section
-      id="contact"
-      class="py-20 px-4 mx-auto inset-0 bg-gradient-to-br from-secondary/30 to-white/90"
-    >
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">اتصل بنا</span>
-            <span class="en hidden">Contact Us</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
-        </div>
+    <section id="contact" class="section-padding bg-white">
+      <div class="section-container">
+        <h2 class="section-title text-center">
+          <span class="ar">اتصل بنا</span>
+          <span class="en hidden">Contact Us</span>
+        </h2>
 
-        <div class="grid md:grid-cols-2 gap-12">
-          <div class="slide-in-left">
-            <h3 class="text-2xl font-bold mb-6">
-              <span class="ar">تواصل معنا</span>
-              <span class="en hidden">Get in Touch</span>
+        <div class="contact-grid">
+          <div class="fade-in-left">
+            <h3 class="mb-6">
+              <span class="ar">معلومات التواصل</span>
+              <span class="en hidden">Contact Information</span>
             </h3>
-            <div class="space-y-6">
-              <div class="flex items-center">
-                <div
-                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
-                >
-                  <i class="fas fa-phone text-secondary"></i>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold">
+                  <h4 class="font-semibold">
                     <span class="ar">الهاتف</span>
                     <span class="en hidden">Phone</span>
                   </h4>
-                  <p class="text-gray-600">60415151</p>
+                  <p class="text-gray-600">+965 6041 5151</p>
                 </div>
               </div>
 
-              <div class="flex items-center">
-                <div
-                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
-                >
-                  <i class="fas fa-envelope text-secondary"></i>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold">
+                  <h4 class="font-semibold">
                     <span class="ar">البريد الإلكتروني</span>
                     <span class="en hidden">Email</span>
                   </h4>
@@ -864,14 +3694,12 @@
                 </div>
               </div>
 
-              <div class="flex items-center">
-                <div
-                  class="bg-secondary/10 p-3 rounded-lg mr-4 rtl:mr-0 rtl:ml-4"
-                >
-                  <i class="fas fa-map-marker-alt text-secondary"></i>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                  <h4 class="font-bold">
+                  <h4 class="font-semibold">
                     <span class="ar">العنوان</span>
                     <span class="en hidden">Address</span>
                   </h4>
@@ -881,142 +3709,1276 @@
                   </p>
                 </div>
               </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-globe"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">
+                    <span class="ar">الموقع الإلكتروني</span>
+                    <span class="en hidden">Website</span>
+                  </h4>
+                  <p class="text-gray-600">summit-sic.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h4 class="font-semibold mb-4">
+                <span class="ar">ساعات العمل</span>
+                <span class="en hidden">Working Hours</span>
+              </h4>
+              <p class="text-gray-600">
+                <span class="ar">الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً</span>
+                <span class="en hidden"
+                  >Sunday - Thursday: 8:00 AM - 5:00 PM</span
+                >
+              </p>
             </div>
           </div>
 
-          <div class="slide-in-right">
-            <div class="bg-white p-8 rounded-lg shadow-lg">
-              <h3 class="text-2xl font-bold mb-6">
-                <span class="ar">أرسل رسالة</span>
-                <span class="en hidden">Send Message</span>
-              </h3>
-              <form class="space-y-4">
+          <div class="fade-in-right">
+            <h3 class="mb-6">
+              <span class="ar">أرسل لنا رسالة</span>
+              <span class="en hidden">Send Us a Message</span>
+            </h3>
+
+            <form id="contactForm" class="space-y-4">
+              <div class="form-group">
                 <input
                   type="text"
-                  placeholder="الاسم / Name"
-                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="form-control"
+                  placeholder="الاسم"
+                  required
                 />
+              </div>
+
+              <div class="form-group">
                 <input
                   type="email"
-                  placeholder="البريد الإلكتروني / Email"
-                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  class="form-control"
+                  placeholder="البريد الإلكتروني"
+                  required
                 />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="الموضوع"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
                 <textarea
+                  class="form-control"
+                  placeholder="الرسالة"
                   rows="5"
-                  placeholder="الرسالة / Message"
-                  class="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
                 ></textarea>
-                <button
-                  type="submit"
-                  class="w-full bg-secondary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors"
-                >
-                  <span class="ar">إرسال</span>
-                  <span class="en hidden">Send</span>
-                </button>
-              </form>
-            </div>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <span class="ar">إرسال الرسالة</span>
+                <span class="en hidden">Send Message</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
+    <footer class="footer">
+      <div class="section-container">
+        <div class="footer-grid">
           <div>
-            <div class="logo-3d mb-4">
-              <img
-                src="https://pfst.cf2.poecdn.net/base/image/74ea69ba814f56e9ff73ba5ceefed2de1cb98887e54a8386d9d1680af3e4d6e5?w=1079&amp;h=1074"
-                alt="Summit Logo"
-                class="h-16 w-16 rounded-full"
-              />
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">شركة سومت العالمية</span>
-              <span class="en hidden">Summit International Company</span>
-            </h3>
-            <p class="text-gray-400">
-              <span class="ar">حلول متكاملة لسحب المياه والتدعيم والحفر</span>
+            <img
+              src="assets/images/logo.png"
+              alt="Logo"
+              class="footer-logo"
+              onerror="this.src='https://via.placeholder.com/80x80/11224E/F87B1B?text=SIC'"
+            />
+            <h3 class="text-white mb-2">سومت العالمية</h3>
+            <p class="text-gray-300 mb-4">
+              <span class="ar"
+                >شركة رائدة في مجال حلول البناء والبنية التحتية في الكويت</span
+              >
               <span class="en hidden"
-                >Comprehensive solutions for dewatering, shoring and
-                drilling</span
+                >A leading company in construction and infrastructure solutions
+                in Kuwait</span
               >
             </p>
+            <div class="social-links">
+              <a
+                href="https://facebook.com/summitsic"
+                target="_blank"
+                class="social-link"
+                onclick="trackSocialClick('facebook')"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://instagram.com/summitsic"
+                target="_blank"
+                class="social-link"
+                onclick="trackSocialClick('instagram')"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://linkedin.com/company/summitsic"
+                target="_blank"
+                class="social-link"
+                onclick="trackSocialClick('linkedin')"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
 
           <div>
-            <h4 class="text-lg font-bold mb-4">
+            <h4 class="text-white mb-4">
               <span class="ar">روابط سريعة</span>
               <span class="en hidden">Quick Links</span>
             </h4>
-            <ul class="space-y-2">
-              <li>
-                <a
-                  href="#home"
-                  class="text-gray-400 hover:text-white transition-colors"
-                >
-                  <span class="ar">الرئيسية</span>
-                  <span class="en hidden">Home</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="text-gray-400 hover:text-white transition-colors"
-                >
-                  <span class="ar">عن الشركة</span>
-                  <span class="en hidden">About</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  class="text-gray-400 hover:text-white transition-colors"
-                >
-                  <span class="ar">الخدمات</span>
-                  <span class="en hidden">Services</span>
-                </a>
-              </li>
-            </ul>
+            <div class="footer-links">
+              <a href="#home" class="footer-link"
+                ><span class="ar">الرئيسية</span
+                ><span class="en hidden">Home</span></a
+              >
+              <a href="#about" class="footer-link"
+                ><span class="ar">عن الشركة</span
+                ><span class="en hidden">About</span></a
+              >
+              <a href="#services" class="footer-link"
+                ><span class="ar">الخدمات</span
+                ><span class="en hidden">Services</span></a
+              >
+              <a href="#projects" class="footer-link"
+                ><span class="ar">المشاريع</span
+                ><span class="en hidden">Projects</span></a
+              >
+              <a href="#map" class="footer-link"
+                ><span class="ar">خريطة الموقع</span
+                ><span class="en hidden">Location Map</span></a
+              >
+              <a href="#contact" class="footer-link"
+                ><span class="ar">اتصل بنا</span
+                ><span class="en hidden">Contact</span></a
+              >
+            </div>
           </div>
 
           <div>
-            <h4 class="text-lg font-bold mb-4">
-              <span class="ar">تواصل معنا</span>
+            <h4 class="text-white mb-4">
+              <span class="ar">خدماتنا</span>
+              <span class="en hidden">Our Services</span>
+            </h4>
+            <div class="footer-links">
+              <a href="#services" class="footer-link"
+                ><span class="ar">سحب المياه الجوفية</span
+                ><span class="en hidden">Groundwater Pumping</span></a
+              >
+              <a href="#services" class="footer-link"
+                ><span class="ar">أعمال التدعيم</span
+                ><span class="en hidden">Reinforcement Works</span></a
+              >
+              <a href="#services" class="footer-link"
+                ><span class="ar">أعمال الحفر</span
+                ><span class="en hidden">Drilling Works</span></a
+              >
+              <a href="#services" class="footer-link"
+                ><span class="ar">التشطيبات</span
+                ><span class="en hidden">Finishing Works</span></a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white mb-4">
+              <span class="ar">بيانات التواصل</span>
               <span class="en hidden">Contact Info</span>
             </h4>
-            <div class="space-y-2">
-              <p class="text-gray-400">
-                <i class="fas fa-phone mr-2 rtl:mr-0 rtl:ml-2"></i>
-                60415151
+            <div class="footer-links">
+              <p class="text-gray-300 mb-2">
+                <i class="fas fa-phone mr-2"></i>+965 6041 5151
               </p>
-              <p class="text-gray-400">
-                <i class="fas fa-envelope mr-2 rtl:mr-0 rtl:ml-2"></i>
-                summitceo25@gmail.com
+              <p class="text-gray-300 mb-2">
+                <i class="fas fa-envelope mr-2"></i>summitceo25@gmail.com
+              </p>
+              <p class="text-gray-300">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span class="ar">الكويت</span>
+                <span class="en hidden">Kuwait</span>
               </p>
             </div>
           </div>
         </div>
 
-        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p class="text-gray-400">
+        <div class="footer-bottom">
+          <p>
             <span class="ar"
               >© 2024 شركة سومت العالمية. جميع الحقوق محفوظة.</span
             >
             <span class="en hidden"
-              >© 2024 Summit Company. All rights reserved.</span
+              >© 2024 Summit International Company. All rights reserved.</span
             >
           </p>
         </div>
       </div>
     </footer>
-    <!-- مكتبات ثم سكربتات المشروع -->
-    <script src="./jquery-3.3.1.min.js" defer></script>
-    <script src="./bootstrap.bundle.min.js" defer></script>
-    <script src="./owl.carousel.min.js" defer></script>
-    <script src="./all.min.js" defer></script>
-    <!-- إذا يعتمد على jQuery فليكن بعده -->
-    <script src="./main.js" defer></script>
+
+    <!-- Fixed Contact Bar -->
+    <div class="fixed-contact-bar">
+      <!-- WhatsApp -->
+      <button
+        class="contact-fab whatsapp-pulse"
+        data-tooltip="+965 6041 5151"
+        onclick="window.open('https://wa.me/96560415151', '_blank')"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </button>
+
+      <!-- Email -->
+      <button
+        class="contact-fab email"
+        data-tooltip="summitceo25@gmail.com"
+        onclick="window.location.href='mailto:summitceo25@gmail.com?subject=استفسار عن خدمات سومت العالمية&body=أهلاً وسهلاً، أريد الاستفسار عن:'"
+      >
+        <i class="fas fa-envelope"></i>
+      </button>
+
+      <!-- Website -->
+      <button
+        class="contact-fab website"
+        data-tooltip="summit-sic.com"
+        onclick="window.open('https://summit-sic.com', '_blank')"
+      >
+        <i class="fas fa-globe"></i>
+      </button>
+
+      <!-- Social Media -->
+      <button class="contact-fab social" id="socialToggle">
+        <i class="fas fa-share-alt"></i>
+        <div class="social-dropdown" id="socialDropdown">
+          <!-- Facebook -->
+          <a
+            href="https://facebook.com/summitsic"
+            target="_blank"
+            class="social-item"
+            onclick="trackSocialClick('facebook')"
+          >
+            <div class="social-icon facebook">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <span class="social-text">
+              <span class="ar">فيسبوك</span>
+              <span class="en hidden">Facebook</span>
+            </span>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/summitsic"
+            target="_blank"
+            class="social-item"
+            onclick="trackSocialClick('instagram')"
+          >
+            <div class="social-icon instagram">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <span class="social-text">
+              <span class="ar">إنستغرام</span>
+              <span class="en hidden">Instagram</span>
+            </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/company/summitsic"
+            target="_blank"
+            class="social-item"
+            onclick="trackSocialClick('linkedin')"
+          >
+            <div class="social-icon linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <span class="social-text">
+              <span class="ar">لينكدإن</span>
+              <span class="en hidden">LinkedIn</span>
+            </span>
+          </a>
+        </div>
+      </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      // ============================================
+      // PAGE LOADING AND INITIALIZATION
+      // ============================================
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize all components
+        initNavbar();
+        initHeroSlider();
+        initAnimations();
+        initContactForm();
+        initProjectsFilter();
+        initMapFunctionality();
+        initFixedContactBar();
+        initBackToTop();
+        initLanguageSwitcher();
+      });
+
+      // ============================================
+      // NAVBAR FUNCTIONALITY
+      // ============================================
+      function initNavbar() {
+        const navbar = document.getElementById("navbar");
+        const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        if (!navbar || !mobileMenuBtn || !mobileMenu) return;
+
+        // Scroll effect on navbar
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+          } else {
+            navbar.classList.remove("scrolled");
+          }
+        });
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const isExpanded = this.getAttribute("aria-expanded") === "true";
+
+          mobileMenu.classList.toggle("active");
+          this.classList.toggle("active");
+
+          this.setAttribute("aria-expanded", !isExpanded);
+          mobileMenu.setAttribute("aria-hidden", isExpanded);
+
+          const icon = this.querySelector(".fa-bars, .fa-times");
+          if (icon) {
+            if (icon.classList.contains("fa-bars")) {
+              icon.classList.remove("fa-bars");
+              icon.classList.add("fa-times");
+            } else {
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            mobileMenuBtn.classList.remove("active");
+            mobileMenuBtn.setAttribute("aria-expanded", "false");
+            mobileMenu.setAttribute("aria-hidden", "true");
+
+            const icon = mobileMenuBtn.querySelector(".fa-bars, .fa-times");
+            if (icon && icon.classList.contains("fa-times")) {
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (
+            !mobileMenu.contains(e.target) &&
+            !mobileMenuBtn.contains(e.target)
+          ) {
+            mobileMenu.classList.remove("active");
+            mobileMenuBtn.classList.remove("active");
+            mobileMenuBtn.setAttribute("aria-expanded", "false");
+            mobileMenu.setAttribute("aria-hidden", "true");
+
+            const icon = mobileMenuBtn.querySelector(".fa-bars, .fa-times");
+            if (icon && icon.classList.contains("fa-times")) {
+              icon.classList.remove("fa-times");
+              icon.classList.add("fa-bars");
+            }
+          }
+        });
+
+        // Active link on scroll
+        const sections = document.querySelectorAll("section[id]");
+
+        function setActiveLink() {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (window.scrollY >= sectionTop - 100) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+              link.classList.add("active");
+            }
+          });
+        }
+
+        window.addEventListener("scroll", setActiveLink);
+        setActiveLink();
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              const navbarHeight = navbar.offsetHeight;
+              const targetPosition = targetElement.offsetTop - navbarHeight;
+
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
+
+              // Update URL without page reload
+              if (history.pushState) {
+                history.pushState(null, null, targetId);
+              }
+            }
+          });
+        });
+      }
+
+      // ============================================
+      // HERO SLIDER
+      // ============================================
+      function initHeroSlider() {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const indicators = document.querySelectorAll(".indicator-btn");
+        const thumbnails = document.querySelectorAll(".thumbnail-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+        const playPauseBtn = document.querySelector(".play-pause-btn");
+        const slider = document.querySelector(".hero-slider");
+
+        if (!slides.length) return;
+
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        let autoSlideInterval;
+        const autoSlideDelay = 7000; // 7 seconds
+
+        // ============================================
+        // دوال الرسوم المتحركة
+        // ============================================
+
+        /**
+         * دالة لتحريك الأرقام (العدادات)
+         */
+        function animateCounters() {
+          const counters = document.querySelectorAll(".stat-number");
+          counters.forEach((counter) => {
+            const target = parseInt(counter.getAttribute("data-count"));
+            const increment = target / 100;
+            let current = 0;
+
+            const timer = setInterval(() => {
+              current += increment;
+              if (current >= target) {
+                counter.textContent = target;
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current);
+              }
+            }, 20);
+          });
+        }
+
+        /**
+         * دالة لإضافة تأثيرات ظهور متتالية
+         */
+        function addStaggerEffects() {
+          const elements = document.querySelectorAll(
+            ".fade-in, .fade-in-left, .fade-in-right"
+          );
+
+          elements.forEach((element, index) => {
+            // إضافة تأخير تدريجي
+            element.style.animationDelay = `${index * 0.2}s`;
+
+            // إضافة تأثيرات إضافية
+            element.addEventListener("animationend", () => {
+              element.classList.add("animated");
+            });
+          });
+        }
+
+        /**
+         * دالة لتحسين تفاعل المستخدم
+         */
+        function enhanceUserInteraction() {
+          // تأثير عند النقر على الأزرار
+          const buttons = document.querySelectorAll(
+            ".btn-primary, .btn-secondary, .btn-outline"
+          );
+          buttons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+              // تأثير اهتزاز بسيط
+              button.style.transform = "scale(0.95)";
+              setTimeout(() => {
+                button.style.transform = "";
+              }, 150);
+            });
+          });
+
+          // تأثير عند التمرير على العناصر
+          const interactiveElements = document.querySelectorAll(
+            ".highlight-item, .type-card, .feature-item"
+          );
+          interactiveElements.forEach((element) => {
+            element.addEventListener("mouseenter", () => {
+              element.style.transform = "translateY(-5px) scale(1.05)";
+            });
+
+            element.addEventListener("mouseleave", () => {
+              element.style.transform = "";
+            });
+          });
+        }
+
+        // ============================================
+        // دوال التحكم في الشرائح
+        // ============================================
+
+        /**
+         * عرض شريحة معينة
+         * @param {number} index - فهرس الشريحة المطلوبة
+         */
+        function showSlide(index) {
+          // إخفاء جميع الشرائح
+          slides.forEach((slide) => slide.classList.remove("active"));
+
+          // إزالة الفئة النشطة من المؤشرات والصورة المصغرة
+          indicators.forEach((indicator) =>
+            indicator.classList.remove("active")
+          );
+          thumbnails.forEach((thumbnail) =>
+            thumbnail.classList.remove("active")
+          );
+
+          // إظهار الشريحة الحالية
+          slides[index].classList.add("active");
+
+          // تفعيل المؤشر والصورة المصغرة للشريحة الحالية
+          if (indicators[index]) indicators[index].classList.add("active");
+          if (thumbnails[index]) thumbnails[index].classList.add("active");
+
+          // تحديث الشريحة الحالية
+          currentSlide = index;
+
+          // تحديث العداد
+          updateCounter();
+
+          // تحديث اتجاه الأسهم
+          updateChevronDirection();
+
+          // إعادة تعيين شريط التقدم
+          resetProgressBar();
+
+          // تشغيل الرسوم المتحركة للشريحة الحالية
+          if (slides[index]) {
+            // إعادة تشغيل العدادات إذا كانت الشريحة الأولى
+            if (index === 0) {
+              animateCounters();
+            }
+            // إضافة تأثيرات الظهور
+            addStaggerEffects();
+          }
+        }
+
+        /**
+         * الانتقال إلى الشريحة التالية
+         */
+        function nextSlide() {
+          const nextIndex = (currentSlide + 1) % totalSlides;
+          showSlide(nextIndex);
+        }
+
+        /**
+         * الانتقال إلى الشريحة السابقة
+         */
+        function prevSlide() {
+          const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+          showSlide(prevIndex);
+        }
+
+        /**
+         * الانتقال إلى شريحة محددة
+         * @param {number} index - فهرس الشريحة المطلوبة
+         */
+        function goToSlide(index) {
+          if (index >= 0 && index < totalSlides) {
+            showSlide(index);
+            resetAutoSlide();
+          }
+        }
+
+        // ============================================
+        // دوال التحكم في التمرير التلقائي
+        // ============================================
+
+        /**
+         * بدء التمرير التلقائي
+         */
+        function startAutoSlide() {
+          autoSlideInterval = setInterval(nextSlide, autoSlideDelay);
+        }
+
+        /**
+         * إيقاف التمرير التلقائي
+         */
+        function stopAutoSlide() {
+          clearInterval(autoSlideInterval);
+        }
+
+        /**
+         * إعادة تعيين التمرير التلقائي
+         */
+        function resetAutoSlide() {
+          stopAutoSlide();
+          startAutoSlide();
+        }
+
+        // ============================================
+        // دوال التحديث
+        // ============================================
+
+        /**
+         * تحديث عداد الشرائح
+         */
+        function updateCounter() {
+          const currentNum = (currentSlide + 1).toString().padStart(2, "0");
+          const totalNum = totalSlides.toString().padStart(2, "0");
+        }
+
+        /**
+         * تحديث اتجاه الأسهم حسب اتجاه النص
+         */
+        function updateChevronDirection() {
+          const html = document.documentElement;
+          const prevBtns = document.querySelectorAll(".prev-btn i");
+          const nextBtns = document.querySelectorAll(".next-btn i");
+
+          prevBtns.forEach((icon) => {
+            if (html.getAttribute("dir") === "rtl") {
+              icon.classList.remove("fa-chevron-left");
+              icon.classList.add("fa-chevron-right");
+            } else {
+              icon.classList.remove("fa-chevron-right");
+              icon.classList.add("fa-chevron-left");
+            }
+          });
+
+          nextBtns.forEach((icon) => {
+            if (html.getAttribute("dir") === "rtl") {
+              icon.classList.remove("fa-chevron-right");
+              icon.classList.add("fa-chevron-left");
+            } else {
+              icon.classList.remove("fa-chevron-left");
+              icon.classList.add("fa-chevron-right");
+            }
+          });
+        }
+
+        /**
+         * إعادة تعيين شريط التقدم
+         */
+        function resetProgressBar() {
+          const progressBar = document.querySelector(".progress-bar");
+          if (progressBar) {
+            progressBar.style.width = "0%";
+            progressBar.style.transition = "none";
+
+            setTimeout(() => {
+              progressBar.style.transition = `width ${autoSlideDelay}ms linear`;
+              progressBar.style.width = "100%";
+            }, 50);
+          }
+        }
+
+        // ============================================
+        // دوال التفاعل
+        // ============================================
+
+        /**
+         * التعامل مع السحب بالإصبع
+         * @param {number} startX - نقطة بدء اللمس
+         * @param {number} endX - نقطة نهاية اللمس
+         */
+        function handleSwipe(startX, endX) {
+          const swipeThreshold = 50;
+          if (startX - endX > swipeThreshold) nextSlide();
+          if (endX - startX > swipeThreshold) prevSlide();
+        }
+
+        // ============================================
+        // إعداد المستمعين للأحداث
+        // ============================================
+
+        // أحداث الأزرار
+        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+
+        // أحداث المؤشرات
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener("click", () => goToSlide(index));
+        });
+
+        // أحداث الصور المصغرة
+        thumbnails.forEach((thumbnail, index) => {
+          thumbnail.addEventListener("click", () => goToSlide(index));
+        });
+
+        // التنقل بواسطة لوحة المفاتيح
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") prevSlide();
+          if (e.key === "ArrowRight") nextSlide();
+        });
+
+        // الدعم باللمس للأجهزة المحمولة
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (slider) {
+          slider.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+          });
+
+          slider.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe(touchStartX, touchEndX);
+          });
+
+          // إيقاف التمرير التلقائي عند التمرير فوق الشريط
+          // slider.addEventListener("mouseenter", stopAutoSlide);
+          //slider.addEventListener("mouseleave", startAutoSlide);
+        }
+        // إضافة حدث resize لإعادة حساب المواقع
+        window.addEventListener("resize", function () {
+          adjustElementPositions();
+        });
+
+        function adjustElementPositions() {
+          const windowHeight = window.innerHeight;
+          const controls = document.querySelector(".slider-controls");
+          const thumbnails = document.querySelector(".thumbnail-indicators");
+
+          if (controls && thumbnails) {
+            if (windowHeight < 700) {
+              controls.style.bottom = "20px";
+              thumbnails.style.bottom = "100px";
+            } else {
+              controls.style.bottom = "0";
+              thumbnails.style.bottom = "180px";
+            }
+          }
+        }
+        // ============================================
+        // التهيئة
+        // ============================================
+        showSlide(currentSlide);
+        startAutoSlide();
+        animateCounters();
+        addStaggerEffects();
+        enhanceUserInteraction();
+        adjustElementPositions();
+      }
+      // ============================================
+      // SCROLL ANIMATIONS
+      // ============================================
+      function initAnimations() {
+        const animatedElements = document.querySelectorAll(
+          ".fade-in, .fade-in-left, .fade-in-right"
+        );
+
+        function checkAnimation() {
+          animatedElements.forEach((element) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+
+            if (elementTop < window.innerHeight - elementVisible) {
+              element.classList.add("animate");
+            }
+          });
+        }
+
+        checkAnimation();
+        window.addEventListener("scroll", checkAnimation);
+
+        // Intersection Observer for better performance
+        if ("IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("animate");
+                }
+              });
+            },
+            {
+              threshold: 0.1,
+              rootMargin: "0px 0px -50px 0px",
+            }
+          );
+
+          animatedElements.forEach((el) => observer.observe(el));
+        }
+      }
+
+      // ============================================
+      // CONTACT FORM
+      // ============================================
+      function initContactForm() {
+        const contactForm = document.getElementById("contactForm");
+        if (!contactForm) return;
+
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let isValid = true;
+          const inputs = this.querySelectorAll("input, textarea");
+
+          inputs.forEach((input) => {
+            if (!input.value.trim()) {
+              input.style.borderColor = "#ef4444";
+              isValid = false;
+            } else {
+              input.style.borderColor = "#e2e8f0";
+            }
+          });
+
+          if (isValid) {
+            const isArabic =
+              document.documentElement.getAttribute("dir") === "rtl";
+            alert(
+              isArabic
+                ? "تم إرسال رسالتك بنجاح! سنتواصل معك قريباً."
+                : "Your message has been sent successfully! We will contact you soon."
+            );
+
+            this.reset();
+          }
+        });
+      }
+
+      // ============================================
+      // PROJECTS FILTER
+      // ============================================
+      function initProjectsFilter() {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".cart[data-category]");
+
+        if (!filterButtons.length) return;
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            projectCards.forEach((card) => {
+              if (
+                filterValue === "all" ||
+                card.getAttribute("data-category") === filterValue
+              ) {
+                card.style.display = "block";
+                setTimeout(() => {
+                  card.style.opacity = "1";
+                  card.style.transform = "translateY(0)";
+                }, 100);
+              } else {
+                card.style.opacity = "0";
+                card.style.transform = "translateY(20px)";
+                setTimeout(() => {
+                  card.style.display = "none";
+                }, 300);
+              }
+            });
+          });
+        });
+
+        // Load more button
+        const loadMoreBtn = document.getElementById("loadMore");
+        if (loadMoreBtn) {
+          loadMoreBtn.addEventListener("click", function () {
+            const isArabic =
+              document.documentElement.getAttribute("dir") === "rtl";
+            alert(
+              isArabic
+                ? "سيتم تحميل المزيد من المشاريع في التحديثات القادمة"
+                : "More projects will be loaded in future updates"
+            );
+
+            this.disabled = true;
+            this.innerHTML = isArabic
+              ? 'قريباً سيتم إضافة المزيد <i class="fas fa-clock ml-2"></i>'
+              : 'More coming soon <i class="fas fa-clock ml-2"></i>';
+
+            setTimeout(() => {
+              this.disabled = false;
+              this.innerHTML = isArabic
+                ? 'تحميل المزيد <i class="fas fa-arrow-down ml-2"></i>'
+                : 'Load More <i class="fas fa-arrow-down ml-2"></i>';
+            }, 3000);
+          });
+        }
+      }
+
+      // ============================================
+      // INTERACTIVE MAP
+      // ============================================
+      function initMapFunctionality() {
+        const getDirectionsBtn = document.getElementById("getDirections");
+        const copyAddressBtn = document.getElementById("copyAddress");
+        const interactiveMap = document.getElementById("interactiveMap");
+
+        // Get Directions
+        if (getDirectionsBtn) {
+          getDirectionsBtn.addEventListener("click", function () {
+            const isArabic =
+              document.documentElement.getAttribute("dir") === "rtl";
+            const address = encodeURIComponent("الكويت");
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
+            window.open(url, "_blank");
+
+            alert(
+              isArabic
+                ? "سيتم فتح تطبيق خرائط Google مع الاتجاهات إلى مكتبنا"
+                : "Google Maps will open with directions to our office"
+            );
+          });
+        }
+
+        // Copy Address
+        if (copyAddressBtn) {
+          copyAddressBtn.addEventListener("click", function () {
+            const address = "الكويت";
+            const isArabic =
+              document.documentElement.getAttribute("dir") === "rtl";
+
+            navigator.clipboard
+              .writeText(address)
+              .then(() => {
+                const originalText = this.innerHTML;
+                this.innerHTML = isArabic
+                  ? '<i class="fas fa-check"></i> تم النسخ'
+                  : '<i class="fas fa-check"></i> Copied';
+                this.style.background = "#10B981";
+
+                setTimeout(() => {
+                  this.innerHTML = originalText;
+                  this.style.background = "";
+                }, 2000);
+              })
+              .catch(() => {
+                // Fallback for older browsers
+                const textArea = document.createElement("textarea");
+                textArea.value = address;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textArea);
+
+                const originalText = this.innerHTML;
+                this.innerHTML = isArabic
+                  ? '<i class="fas fa-check"></i> تم النسخ'
+                  : '<i class="fas fa-check"></i> Copied';
+                this.style.background = "#10B981";
+
+                setTimeout(() => {
+                  this.innerHTML = originalText;
+                  this.style.background = "";
+                }, 2000);
+              });
+          });
+        }
+
+        // Map loading effect
+        if (interactiveMap) {
+          interactiveMap.addEventListener("load", function () {
+            this.style.opacity = "1";
+            this.style.transition = "opacity 0.5s ease";
+          });
+          interactiveMap.style.opacity = "0";
+        }
+      }
+
+      // ============================================
+      // FIXED CONTACT BAR
+      // ============================================
+      function initFixedContactBar() {
+        const socialToggle = document.getElementById("socialToggle");
+        const socialDropdown = document.getElementById("socialDropdown");
+
+        // Social media dropdown toggle
+        if (socialToggle && socialDropdown) {
+          socialToggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            socialDropdown.classList.toggle("active");
+          });
+
+          // Close dropdown when clicking outside
+          document.addEventListener("click", function (e) {
+            if (
+              !socialToggle.contains(e.target) &&
+              !socialDropdown.contains(e.target)
+            ) {
+              socialDropdown.classList.remove("active");
+            }
+          });
+
+          // Close dropdown on link click
+          socialDropdown.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", function () {
+              socialDropdown.classList.remove("active");
+            });
+          });
+        }
+
+        // Auto-hide on scroll
+        let lastScrollTop = 0;
+        const contactBar = document.querySelector(".fixed-contact-bar");
+
+        if (contactBar) {
+          window.addEventListener("scroll", function () {
+            const scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+              contactBar.style.opacity = "0.5";
+              contactBar.style.transform = "translateY(20px)";
+            } else {
+              contactBar.style.opacity = "1";
+              contactBar.style.transform = "translateY(0)";
+            }
+
+            lastScrollTop = scrollTop;
+          });
+        }
+
+        // Touch feedback for mobile
+        if ("ontouchstart" in window) {
+          const contactFabs = document.querySelectorAll(".contact-fab");
+          contactFabs.forEach((fab) => {
+            fab.addEventListener("touchstart", function () {
+              this.style.transform = "scale(0.95)";
+            });
+
+            fab.addEventListener("touchend", function () {
+              this.style.transform = "";
+            });
+          });
+        }
+
+        // Social media click tracking
+        window.trackSocialClick = function (platform) {
+          console.log(`Social media click tracked: ${platform}`);
+          // Add analytics tracking here if needed
+        };
+      }
+
+      // ============================================
+      // BACK TO TOP BUTTON
+      // ============================================
+      function initBackToTop() {
+        const backToTopBtn = document.getElementById("backToTop");
+        if (!backToTopBtn) return;
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      // ============================================
+      // LANGUAGE SWITCHER
+      // ============================================
+      function initLanguageSwitcher() {
+        const langToggle = document.getElementById("langToggle");
+        const mobileLangToggle = document.getElementById("mobileLangToggle");
+
+        function toggleLanguage() {
+          const htmlElement = document.documentElement;
+          const currentLang = htmlElement.getAttribute("lang") || "ar";
+          const newLang = currentLang === "ar" ? "en" : "ar";
+
+          // Update HTML attributes
+          htmlElement.setAttribute("lang", newLang);
+          htmlElement.setAttribute("dir", newLang === "ar" ? "rtl" : "ltr");
+
+          // Update body classes
+          document.body.classList.toggle("rtl", newLang === "ar");
+          document.body.classList.toggle("ltr", newLang === "en");
+
+          // Toggle text visibility
+          document.querySelectorAll(".ar, .en").forEach((el) => {
+            if (el.classList.contains(newLang === "ar" ? "ar" : "en")) {
+              el.classList.remove("hidden");
+            } else {
+              el.classList.add("hidden");
+            }
+          });
+
+          // Save preference
+          localStorage.setItem("preferredLang", newLang);
+
+          // Update chevron direction in slider
+          updateChevronDirection();
+        }
+
+        // Add event listeners
+        if (langToggle) {
+          langToggle.addEventListener("click", toggleLanguage);
+        }
+
+        if (mobileLangToggle) {
+          mobileLangToggle.addEventListener("click", toggleLanguage);
+        }
+
+        // Load saved language
+        const savedLang = localStorage.getItem("preferredLang");
+        if (savedLang) {
+          const htmlElement = document.documentElement;
+          const currentLang = htmlElement.getAttribute("lang");
+
+          if (currentLang !== savedLang) {
+            // Update HTML attributes
+            htmlElement.setAttribute("lang", savedLang);
+            htmlElement.setAttribute("dir", savedLang === "ar" ? "rtl" : "ltr");
+
+            // Update body classes
+            document.body.classList.toggle("rtl", savedLang === "ar");
+            document.body.classList.toggle("ltr", savedLang === "en");
+
+            // Update text visibility
+            document.querySelectorAll(".ar, .en").forEach((el) => {
+              if (el.classList.contains(savedLang === "ar" ? "ar" : "en")) {
+                el.classList.remove("hidden");
+              } else {
+                el.classList.add("hidden");
+              }
+            });
+          }
+        }
+
+        function updateChevronDirection() {
+          const html = document.documentElement;
+          const prevBtns = document.querySelectorAll(".prev-btn i");
+          const nextBtns = document.querySelectorAll(".next-btn i");
+
+          if (prevBtns.length) {
+            prevBtns.forEach((icon) => {
+              if (html.getAttribute("dir") === "rtl") {
+                icon.classList.remove("fa-chevron-left");
+                icon.classList.add("fa-chevron-right");
+              } else {
+                icon.classList.remove("fa-chevron-right");
+                icon.classList.add("fa-chevron-left");
+              }
+            });
+          }
+
+          if (nextBtns.length) {
+            nextBtns.forEach((icon) => {
+              if (html.getAttribute("dir") === "rtl") {
+                icon.classList.remove("fa-chevron-right");
+                icon.classList.add("fa-chevron-left");
+              } else {
+                icon.classList.remove("fa-chevron-left");
+                icon.classList.add("fa-chevron-right");
+              }
+            });
+          }
+        }
+      }
+
+      // ============================================
+      // UTILITY FUNCTIONS
+      // ============================================
+
+      // Lazy loading for images
+      if ("loading" in HTMLImageElement.prototype) {
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+          img.loading = "lazy";
+        });
+      } else {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              imageObserver.unobserve(img);
+            }
+          });
+        });
+
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+          imageObserver.observe(img);
+        });
+      }
+
+      // Handle page loading
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          const loadingOverlay = document.getElementById("loadingOverlay");
+          if (loadingOverlay) {
+            loadingOverlay.classList.add("hidden");
+          }
+        }, 1000);
+      });
+
+      // Performance optimization
+      document.addEventListener("DOMContentLoaded", function () {
+        // Reduce motion for users who prefer it
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.documentElement.style.scrollBehavior = "auto";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -7,31 +7,48 @@ $(document).ready(function () {
     if (value == "All") {
       $(".itembox").show("1000");
     } else {
-      $(".itembox").not("." + value).hide("1000");
-      $(".itembox").filter("." + value).show("1000");
+      $(".itembox")
+        .not("." + value)
+        .hide("1000");
+      $(".itembox")
+        .filter("." + value)
+        .show("1000");
     }
     $(this).addClass("active").siblings().removeClass("active");
   });
+  let slides = document.querySelectorAll(".hero-bg .slide");
+  let idx = 0;
 
+  setInterval(() => {
+    slides[idx].classList.remove("active");
+    idx = (idx + 1) % slides.length;
+    slides[idx].classList.add("active");
+  }, 3000);
   // تهيئة الكاروسيل (دعم RTL/LTR)
   function initProjectsCarousel() {
     const isRTL = $("html").attr("dir") === "rtl";
 
-    try { $(".select").trigger("destroy.owl.carousel"); } catch (e) { /* ignore if not init */ }
+    try {
+      $(".select").trigger("destroy.owl.carousel");
+    } catch (e) {
+      /* ignore if not init */
+    }
 
     $(".select").owlCarousel({
-      loop: true,
-      margin: 16,
-      rtl: isRTL,
-      center: true, // مهم: false لتفادي الفراغات
-      items: 1,
-      responsive: {
-        0:   { items: 1 },
-        480: { items: 1 },
-        768: { items: 2 },
-        1025:{ items: 3 },
-        1200:{ items: 4 }
-      }
+      loop:true,
+    margin:16,
+    nav:true,
+    dots:true,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+    responsive:{
+      0:{items:1},
+      480:{items:1},
+      768:{items:2},
+      1024:{items:3},
+      1200:{items:4}
+      },
     });
   }
 
@@ -54,13 +71,18 @@ document.querySelectorAll("a").forEach((a) => {
 });
 
 // Dark mode detection
-if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+if (
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
   document.documentElement.classList.add("dark");
 }
-window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
-  if (event.matches) document.documentElement.classList.add("dark");
-  else document.documentElement.classList.remove("dark");
-});
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+    if (event.matches) document.documentElement.classList.add("dark");
+    else document.documentElement.classList.remove("dark");
+  });
 
 // Language toggle — (يغيّر عناصر .ar و .en و dir)
 const langToggle = document.getElementById("langToggle");
@@ -71,14 +93,22 @@ if (langToggle) {
       html.classList.remove("en");
       html.setAttribute("lang", "ar");
       html.setAttribute("dir", "rtl");
-      document.querySelectorAll(".ar").forEach(el => el.classList.remove("hidden"));
-      document.querySelectorAll(".en").forEach(el => el.classList.add("hidden"));
+      document
+        .querySelectorAll(".ar")
+        .forEach((el) => el.classList.remove("hidden"));
+      document
+        .querySelectorAll(".en")
+        .forEach((el) => el.classList.add("hidden"));
     } else {
       html.classList.add("en");
       html.setAttribute("lang", "en");
       html.setAttribute("dir", "ltr");
-      document.querySelectorAll(".en").forEach(el => el.classList.remove("hidden"));
-      document.querySelectorAll(".ar").forEach(el => el.classList.add("hidden"));
+      document
+        .querySelectorAll(".en")
+        .forEach((el) => el.classList.remove("hidden"));
+      document
+        .querySelectorAll(".ar")
+        .forEach((el) => el.classList.add("hidden"));
     }
   });
 }
@@ -101,9 +131,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 // Intersection Observer for animations
 const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add("active"); });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("active");
+  });
 }, observerOptions);
-document.querySelectorAll(".fade-in, .slide-in-left, .slide-in-right").forEach(el => observer.observe(el));
+document
+  .querySelectorAll(".fade-in, .slide-in-left, .slide-in-right")
+  .forEach((el) => observer.observe(el));
 
 // Mobile menu toggle — استخدم الـ #mobileNav الموجود في HTML (لا تنشئ عنصر جديد)
 // ✅ فتح وإغلاق القائمة بنفس الزر
@@ -113,11 +147,11 @@ const mobileNav = document.getElementById("mobileNav");
 if (mobileMenuBtn && mobileNav) {
   mobileMenuBtn.addEventListener("click", () => {
     mobileNav.classList.toggle("show");
-    
+
     // تبديل الأيقونة (من bars إلى x)
     const icon = mobileMenuBtn.querySelector("i, svg");
     if (mobileNav.classList.contains("show")) {
-     icon?.classList.remove("fa-bars");
+      icon?.classList.remove("fa-bars");
       icon?.classList.add("fa-times");
     } else {
       icon?.classList.remove("fa-times");
@@ -126,7 +160,7 @@ if (mobileMenuBtn && mobileNav) {
   });
 }
 // ✅ إخفاء القائمة عند الضغط على أي رابط بداخلها
-document.querySelectorAll("#mobileNav a").forEach(link => {
+document.querySelectorAll("#mobileNav a").forEach((link) => {
   link.addEventListener("click", () => {
     mobileNav.classList.remove("show");
     const icon = mobileMenuBtn.querySelector("i, svg");
@@ -147,8 +181,6 @@ window.addEventListener("orientationchange", () => {
   }
 });
 
-
-
 // Loading animation for hero
 window.addEventListener("load", () => {
   document.querySelectorAll(".fade-in").forEach((el, index) => {
@@ -160,7 +192,8 @@ window.addEventListener("load", () => {
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", () => {
-  const header = document.querySelector("header") || document.querySelector("nav");
+  const header =
+    document.querySelector("header") || document.querySelector("nav");
   const navbar = document.querySelector("nav");
   const scrollY = window.scrollY || window.pageYOffset;
 
@@ -188,4 +221,3 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollY;
 });
-
