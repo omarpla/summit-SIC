@@ -1,0 +1,715 @@
+/* ============================================
+   HERO SLIDER STYLES - شركة سومت العالمية
+   File: home-hero.css
+   Version: 3.0.0
+   Description: أنماط هيرو سلايدر بسيطة وفعّالة
+   ============================================ */
+
+/* ============================================
+   الهيكل الأساسي
+   ============================================ */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background-color: var(--color-primary-900);
+}
+
+/* ============================================
+   حاوية الشرائح
+   ============================================ */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============================================
+   الشرائح الفردية
+   ============================================ */
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-slow) var(--ease-in-out);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* تراكب شفاف على الصورة */
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(17, 34, 78, 0.9) 0%,
+        rgba(17, 34, 78, 0.7) 50%,
+        rgba(248, 123, 27, 0.3) 100%
+    );
+}
+
+/* ============================================
+   محتوى الشريحة
+   ============================================ */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8) var(--space-4);
+    z-index: 2;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: var(--space-8) var(--container-padding);
+    text-align: center;
+}
+
+.slide-text {
+    color: var(--color-white);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   اللوجو
+   ============================================ */
+.hero-logo-container {
+    margin-bottom: var(--space-8);
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: var(--radius-full);
+    background: var(--gradient-brand);
+    padding: var(--space-3);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ============================================
+   النصوص
+   ============================================ */
+.slide-title {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+    margin-bottom: var(--space-6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: var(--leading-tight);
+}
+
+.slide-subtitle p {
+    font-size: var(--text-lg);
+    color: var(--color-neutral-100);
+    margin-bottom: var(--space-8);
+    line-height: var(--leading-relaxed);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================
+   الإحصائيات
+   ============================================ */
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    margin: var(--space-8) 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 100px;
+}
+
+.stat-number {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-bold);
+    color: var(--color-secondary-400);
+    margin-bottom: var(--space-2);
+}
+
+.stat-label {
+    font-size: var(--text-sm);
+    color: var(--color-neutral-200);
+}
+
+/* ============================================
+   الشارات
+   ============================================ */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    padding: var(--space-2) var(--space-4);
+    margin-bottom: var(--space-4);
+    color: var(--color-white);
+    font-weight: var(--font-medium);
+}
+
+/* ============================================
+   ميزات الجودة
+   ============================================ */
+.quality-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-6);
+    margin: var(--space-6) 0;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature-item i {
+    font-size: var(--text-2xl);
+    color: var(--color-secondary-400);
+    margin-bottom: var(--space-2);
+}
+
+.feature-item h4 {
+    font-size: var(--text-base);
+    color: var(--color-white);
+}
+
+/* ============================================
+   الأزرار
+   ============================================ */
+.hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-top: var(--space-8);
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-outline {
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-medium);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--color-secondary-500);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: var(--color-secondary-600);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--color-primary-500);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary-600);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(248, 123, 27, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(248, 123, 27, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(248, 123, 27, 0);
+    }
+}
+
+/* ============================================
+   عناصر التحكم - داخل السلايد
+   ============================================ */
+.slider-controls {
+    position: absolute;
+    bottom: var(--space-6);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+/* المؤشرات */
+.carousel-indicators {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.indicator-btn {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.indicator-btn:hover,
+.indicator-btn.active {
+    background: var(--color-secondary-500);
+    transform: scale(1.2);
+}
+
+/* أزرار التنقل */
+.carousel-nav {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+}
+
+.nav-btn:hover {
+    background: var(--color-secondary-500);
+    border-color: var(--color-secondary-500);
+    transform: translateY(-2px);
+}
+
+/* شريط التقدم */
+.progress-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 30;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--color-secondary-500);
+    width: 0%;
+    transition: width linear;
+}
+
+/* ============================================
+   استعلامات الوسائط
+   ============================================ */
+
+/* DESKTOP – LARGE SCREENS (1200px+) */
+@media (min-width: 1200px) {
+    .slide-title {
+        font-size: var(--text-5xl);
+    }
+    
+    .slide-subtitle p {
+        font-size: var(--text-xl);
+    }
+    
+    .hero-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* LAPTOP – MEDIUM SCREENS (992px–1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .slide-title {
+        font-size: var(--text-4xl);
+    }
+    
+    .slide-subtitle p {
+        font-size: var(--text-lg);
+    }
+    
+    .hero-logo {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* TABLETS – SMALL SCREENS (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-slider {
+        height: 80vh;
+        min-height: 500px;
+    }
+    
+    .slide-title {
+        font-size: var(--text-3xl);
+    }
+    
+    .slide-subtitle p {
+        font-size: var(--text-base);
+    }
+    
+    .hero-logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hero-stats {
+        gap: var(--space-6);
+    }
+    
+    .quality-features {
+        gap: var(--space-4);
+    }
+}
+
+/* MOBILE – LARGE (600px–767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+    .hero-slider {
+        height: 70vh;
+        min-height: 400px;
+    }
+    
+    .slide-title {
+        font-size: var(--text-2xl);
+        margin-bottom: var(--space-4);
+    }
+    
+    .slide-subtitle p {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-6);
+    }
+    
+    .hero-logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: var(--space-4);
+    }
+    
+    .hero-stats {
+        gap: var(--space-4);
+        margin: var(--space-6) 0;
+    }
+    
+    .stat-item {
+        min-width: 80px;
+    }
+    
+    .stat-number {
+        font-size: var(--text-2xl);
+    }
+    
+    .quality-features {
+        gap: var(--space-3);
+        margin: var(--space-4) 0;
+    }
+    
+    .feature-item {
+        max-width: 150px;
+    }
+    
+    .hero-buttons {
+        gap: var(--space-3);
+        margin-top: var(--space-6);
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        padding: var(--space-2) var(--space-4);
+        font-size: var(--text-sm);
+    }
+    
+    .slider-controls {
+        bottom: var(--space-4);
+        padding: var(--space-2);
+    }
+    
+    .nav-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* MOBILE – NORMAL (599px وما تحت) */
+@media (max-width: 599px) {
+    .hero-slider {
+        height: 80vh;
+        min-height: 400px;
+    }
+    
+    .slide-content {
+        padding: var(--space-4);
+    }
+    
+    .content-wrapper {
+        padding: var(--space-4);
+    }
+    
+    .slide-title {
+        font-size: var(--text-xl);
+        margin-bottom: var(--space-3);
+    }
+    
+    .slide-subtitle p {
+        font-size: var(--text-sm);
+        margin-bottom: var(--space-4);
+        padding: 0 var(--space-2);
+    }
+    
+    .hero-logo-container {
+        margin-bottom: var(--space-4);
+    }
+    
+    .hero-logo {
+        width: 70px;
+        height: 70px;
+        padding: var(--space-2);
+    }
+    
+    .hero-stats {
+        gap: var(--space-3);
+        margin: var(--space-4) 0;
+    }
+    
+    .stat-item {
+        min-width: 70px;
+    }
+    
+    .stat-number {
+        font-size: var(--text-xl);
+    }
+    
+    .stat-label {
+        font-size: var(--text-xs);
+    }
+    
+    .quality-features {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-2);
+        margin: var(--space-4) 0;
+    }
+    
+    .feature-item {
+        width: 100%;
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+    }
+    
+    .feature-item i {
+        margin-bottom: 0;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin-top: var(--space-4);
+        gap: var(--space-2);
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        width: 100%;
+        justify-content: center;
+        padding: var(--space-3) var(--space-4);
+    }
+    
+    .slider-controls {
+        bottom: var(--space-3);
+        padding: var(--space-2);
+        gap: var(--space-2);
+        flex-direction: column;
+    }
+    
+    .carousel-nav {
+        order: -1;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .indicator-btn {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+/* ============================================
+   تحسينات الوصولية
+   ============================================ */
+
+/* تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slider * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .pulse-animation {
+        animation: none !important;
+    }
+}
+
+/* التباين العالي */
+@media (prefers-contrast: high) {
+    .slide-title {
+        color: var(--color-white);
+        text-shadow: 0 0 0 transparent;
+    }
+    
+    .slide-subtitle p {
+        color: var(--color-neutral-50);
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        border: 2px solid var(--color-white);
+    }
+}
+
+/* عناصر للشاشة فقط */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ============================================
+   تحسينات عامة
+   ============================================ */
+
+/* تحسينات للشاشات الملموسة */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-outline {
+        min-height: 48px;
+        padding: var(--space-3) var(--space-5);
+    }
+    
+    .nav-btn,
+    .indicator-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* دعم RTL */
+[dir="rtl"] .hero-slider {
+    text-align: right;
+}
+
+[dir="rtl"] .fa-chevron-left::before {
+    content: "\f054";
+}
+
+[dir="rtl"] .fa-chevron-right::before {
+    content: "\f053";
+}
+
+/* الطباعة */
+@media print {
+    .hero-slider {
+        height: auto;
+        min-height: auto;
+        background: none !important;
+    }
+    
+    .carousel-slide::before {
+        background: transparent;
+    }
+    
+    .slider-controls,
+    .progress-container,
+    .hero-logo {
+        display: none !important;
+    }
+    
+    .slide-title {
+        color: var(--color-primary-900) !important;
+    }
+    
+    .slide-subtitle p {
+        color: var(--color-neutral-700) !important;
+    }
+}
+
+/* ============================================
+   نهاية الملف
+   ============================================ */

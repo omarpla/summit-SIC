@@ -1,0 +1,648 @@
+/* ============================================
+   NAVIGATION SYSTEM - SUMMIT INTERNATIONAL COMPANY
+   File: navigation.css
+   Version: 3.0.0
+   Description: Enhanced navigation with modern design system
+   ============================================ */
+
+/* ============================================
+   NAVIGATION VARIABLES & BASE SETUP
+   ============================================ */
+
+/* استخدم هذه المتغيرات في JavaScript للتحكم في الحالات */
+:root {
+  /* Navigation specific variables - فقط إذا كانت ضرورية */
+  --nav-height-desktop: 5rem;           /* 80px */
+  --nav-height-tablet: 4.375rem;        /* 70px */
+  --nav-height-mobile: 3.75rem;         /* 60px */
+  
+  /* حركات التنقل */
+  --nav-transition: all var(--transition-base) var(--ease-in-out);
+  --menu-transition: transform var(--transition-slow) var(--ease-in-out);
+}
+
+/* ============================================
+   BASE NAVBAR STYLES
+   ============================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height-desktop);
+  z-index: var(--z-50);
+background: color-mix(in srgb, var(--color-primary-800), transparent 2%);  backdrop-filter: blur(10px);
+  border-bottom: var(--border-width) solid rgba(255, 255, 255, 0.1);
+  transition: var(--nav-transition);
+  will-change: transform, background, backdrop-filter;
+}
+
+/* تأثير التمرير */
+.navbar.scrolled {
+  background: rgba(10, 21, 47, 0.98); /* var(--color-primary-900) */
+  box-shadow: var(--shadow-lg);
+  height: calc(var(--nav-height-desktop) - 0.5rem);
+}
+
+/* حاوية التنقل */
+.navbar-container {
+  max-width: var(--container-max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ============================================
+   BRANDING & LOGO
+   ============================================ */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  height: 100%;
+  z-index: calc(var(--z-50) + 10);
+    margin: var(--space-3) 0;
+
+}
+
+.navbar-logo {
+  width: 3.75rem; /* 60px */
+  height: 3.75rem; /* 60px */
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  border: var(--border-width-1) solid var(--color-secondary-500);
+  transition: var(--nav-transition);
+  will-change: transform;
+}
+
+.navbar-logo:hover {
+  transform: rotateY(15deg) scale(1.05);
+  box-shadow: 0 0 1.25rem rgba(248, 123, 27, 0.4); /* var(--color-secondary-500) */
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.brand-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-white);
+  background: linear-gradient(
+    135deg,
+    var(--color-white) 0%,
+    var(--color-secondary-300) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: var(--leading-tight);
+}
+
+.brand-subtitle {
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: var(--leading-tight);
+}
+
+/* ============================================
+   DESKTOP NAVIGATION (≥ 992px)
+   ============================================ */
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  list-style: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 100%;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: var(--nav-transition);
+  border-radius: var(--radius-md);
+  will-change: color, background, transform;
+}
+
+.nav-link:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-0.125rem); /* -2px */
+}
+
+.nav-link.active {
+  color: var(--color-secondary-300);
+}
+
+/* مؤشر الصفحة النشطة */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.25rem; /* 20px */
+  height: 0.1875rem; /* 3px */
+  background: var(--color-secondary-500);
+  border-radius: var(--radius-full);
+}
+
+/* تسليط الضوء الإضافي */
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + var(--space-4));
+  height: calc(100% + var(--space-2));
+  background: rgba(248, 123, 27, 0.05); /* var(--color-secondary-500) */
+  border-radius: var(--radius-lg);
+  z-index: -1;
+}
+
+/* ============================================
+   DESKTOP NAVIGATION RIGHT SECTION
+   ============================================ */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  height: 100%;
+}
+
+/* زر اللغة لسطح المكتب */
+.desktop-lang {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--nav-transition);
+  will-change: background, transform;
+}
+
+.lang-btn:hover {
+  background: var(--color-secondary-500);
+  border-color: var(--color-secondary-500);
+  transform: translateY(-0.125rem); /* -2px */
+  box-shadow: var(--shadow-secondary);
+}
+
+/* زر CTA لسطح المكتب */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-secondary-500);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: var(--nav-transition);
+  border: var(--border-width-2) solid transparent;
+  will-change: transform, background;
+}
+
+.nav-cta:hover {
+  background: var(--color-secondary-600);
+  transform: translateY(-0.125rem); /* -2px */
+  box-shadow: var(--shadow-secondary);
+}
+
+.nav-cta:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   MOBILE NAVIGATION (< 992px)
+   ============================================ */
+
+/* زر القائمة المتنقلة */
+.mobile-menu-btn {
+  display: none;
+  width: 2.75rem; /* 44px */
+  height: 2.75rem; /* 44px */
+  background: rgba(255, 255, 255, 0.1);
+  border: var(--border-width) solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: var(--nav-transition);
+  align-items: center;
+  justify-content: center;
+  z-index: calc(var(--z-50) + 20);
+  will-change: transform, background;
+}
+
+.mobile-menu-btn:hover {
+  background: var(--color-secondary-500);
+  border-color: var(--color-secondary-500);
+}
+
+.mobile-menu-btn.active {
+  transform: rotate(90deg);
+}
+
+.mobile-menu-btn .fa-bars {
+  transition: transform var(--transition-base);
+}
+
+.mobile-menu-btn.active .fa-bars {
+  transform: rotate(45deg);
+}
+
+/* القائمة المتنقلة */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-primary-900);
+  backdrop-filter: blur(20px);
+  transform: translateX(100%);
+  transition: var(--menu-transition);
+  padding: var(--nav-height-mobile) var(--space-6) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  z-index: calc(var(--z-50) - 10);
+  overflow-y: auto;
+  will-change: transform;
+}
+
+/* RTL support للقائمة المتنقلة */
+[dir="rtl"] .mobile-menu {
+  right: auto;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+}
+
+[dir="rtl"] .mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* روابط القائمة المتنقلة */
+.mobile-menu .nav-link {
+  height: auto;
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.05);
+  border: var(--border-width) solid transparent;
+  transition: var(--nav-transition);
+}
+
+.mobile-menu .nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(var(--space-1));
+}
+
+[dir="rtl"] .mobile-menu .nav-link:hover {
+  transform: translateX(calc(var(--space-1) * -1));
+}
+
+.mobile-menu .nav-link.active {
+  background: rgba(248, 123, 27, 0.15); /* var(--color-secondary-500) */
+  color: var(--color-secondary-300);
+  border-color: rgba(248, 123, 27, 0.3);
+}
+
+/* زر اللغة في القائمة المتنقلة */
+.mobile-language-switcher {
+  margin-top: auto;
+  padding-top: var(--space-6);
+  border-top: var(--border-width) solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-language-switcher .lang-btn {
+  width: 100%;
+  justify-content: center;
+  padding: var(--space-3);
+  font-size: var(--text-base);
+}
+
+/* زر CTA في القائمة المتنقلة */
+.mobile-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-secondary-500);
+  color: var(--color-white);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: var(--nav-transition);
+  margin-top: var(--space-4);
+  justify-content: center;
+  will-change: transform;
+}
+
+.mobile-cta:hover {
+  background: var(--color-secondary-600);
+  transform: translateY(-0.125rem); /* -2px */
+}
+
+/* ============================================
+   NAVIGATION UTILITY CLASSES
+   ============================================ */
+
+/* إخفاء العناصر حسب الشاشة */
+.nav-desktop-only {
+  display: flex;
+}
+
+.nav-mobile-only {
+  display: none;
+}
+
+/* مؤشر التمرير */
+.nav-scroll-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0.1875rem; /* 3px */
+  background: var(--gradient-brand);
+  transition: width var(--transition-base) linear;
+  z-index: calc(var(--z-50) + 5);
+}
+
+/* ============================================
+   ACCESSIBILITY ENHANCEMENTS
+   ============================================ */
+
+/* تحسينات للواجهة */
+.nav-link:focus-visible {
+  outline: 0.125rem solid var(--color-secondary-500); /* 2px */
+  outline-offset: 0.25rem; /* 4px */
+  border-radius: var(--radius-md);
+}
+
+.lang-btn:focus-visible,
+.mobile-menu-btn:focus-visible,
+.nav-cta:focus-visible {
+  outline: 0.125rem solid var(--color-secondary-500); /* 2px */
+  outline-offset: 0.125rem; /* 2px */
+}
+
+/* تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .nav-link,
+  .lang-btn,
+  .nav-cta,
+  .mobile-menu-btn,
+  .mobile-menu {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .navbar-logo:hover {
+    transform: none;
+  }
+  
+  .nav-link:hover,
+  .nav-cta:hover,
+  .lang-btn:hover {
+    transform: none !important;
+  }
+  
+  .mobile-menu {
+    transition: transform 0.1s !important;
+  }
+}
+
+/* وضع التباين العالي */
+@media (prefers-contrast: high) {
+  .navbar {
+    background: var(--color-primary-900) !important;
+    border-bottom: 0.1875rem solid var(--color-secondary-500); /* 3px */
+  }
+  
+  .nav-link {
+    color: var(--color-white) !important;
+  }
+  
+  .nav-link.active {
+    color: var(--color-secondary-500) !important;
+    background: var(--color-primary-800) !important;
+  }
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* LAPTOP – MEDIUM SCREENS (992px–1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar {
+    height: var(--nav-height-tablet);
+  }
+  
+  .navbar-container {
+    padding: 0 var(--space-6);
+  }
+  
+  .nav-link {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--text-sm);
+  }
+  
+}
+
+/* TABLETS (768px–991px) */
+@media (max-width: 991px) {
+  .navbar {
+    height: var(--nav-height-tablet);
+  }
+  
+  .desktop-menu,
+  .desktop-lang,
+  .nav-cta {
+    display: none;
+  }
+  
+  .mobile-menu-btn,
+  .nav-mobile-only {
+    display: flex;
+  }
+  
+  .navbar-brand {
+    gap: var(--space-2);
+  }
+  
+  .navbar-logo {
+    width: 2.5rem; /* 40px */
+    height: 2.5rem; /* 40px */
+  }
+  
+  .mobile-language-switcher {
+    display: block;
+  }
+}
+
+/* MOBILE – LARGE (600px–767px) */
+@media (max-width: 767px) {
+  .navbar {
+    height: var(--nav-height-mobile);
+  }
+  
+  .navbar-container {
+    padding: 0 var(--space-4);
+  }
+  
+  .mobile-menu {
+    padding: var(--nav-height-mobile) var(--space-4) var(--space-6);
+  }
+  
+  .mobile-menu .nav-link {
+    font-size: var(--text-base);
+    padding: var(--space-3);
+  }
+  
+  .navbar-logo {
+    width: 2.25rem; /* 36px */
+    height: 2.25rem; /* 36px */
+  }
+}
+
+/* MOBILE – NORMAL (599px وما تحت) */
+@media (max-width: 599px) {
+  .navbar-container {
+    padding: 0 var(--space-3);
+  }
+  
+  .mobile-menu {
+    padding: var(--nav-height-mobile) var(--space-3) var(--space-4);
+  }
+  
+  .mobile-menu .nav-link {
+    font-size: var(--text-sm);
+    padding: var(--space-2_5) var(--space-3);
+  }
+  
+  .mobile-language-switcher {
+    padding-top: var(--space-4);
+  }
+  
+  .mobile-language-switcher .lang-btn {
+    padding: var(--space-2_5);
+  }
+  
+  .mobile-cta {
+    padding: var(--space-2_5) var(--space-3);
+    font-size: var(--text-sm);
+  }
+}
+
+/* DESKTOP LARGE (1200px+) */
+@media (min-width: 1200px) {
+  .navbar-container {
+    max-width: var(--container-xl);
+  }
+}
+
+/* ============================================
+   CONTAINER QUERIES FOR FUTURE COMPONENTS
+   ============================================ 
+
+@container (min-width: 20rem) {
+  .nav-container-queried {
+    أنماط للحاويات الصغيرة 
+}
+
+@container (min-width: 48rem) {
+  .nav-container-queried {
+    أنماط للحاويات المتوسطة 
+  }
+}
+
+@container (min-width: 64rem) {
+  .nav-container-queried {
+    أنماط للحاويات الكبيرة 
+  }
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES FOR FUTURE USE
+   ============================================ */
+
+@keyframes navSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-animate-in {
+  animation: navSlideIn var(--transition-slow) var(--ease-out) forwards;
+}
+
+/* ============================================
+   END OF NAVIGATION STYLES
+   ============================================ */

@@ -1,0 +1,824 @@
+/* ============================================
+   PROJECTS SYSTEM - SUMMIT INTERNATIONAL COMPANY
+   File: project.css
+   Version: 1.0.0
+   Author: Summit International Company
+   Description: نظام متكامل لعرض وإدارة مشاريع الشركة
+   ============================================ */
+
+/* ============================================
+   مشاريعنا - قسم رئيسي
+   ============================================ */
+
+#projects {
+  background-color: var(--color-neutral-50);
+  position: relative;
+  overflow: hidden;
+}
+
+/* رأس القسم المحسن */
+.projects-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.projects-header .section-title {
+  margin-bottom: var(--space-8);
+}
+
+.projects-subtitle {
+  font-size: var(--text-lg);
+  color: var(--color-neutral-600);
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: var(--leading-relaxed);
+}
+
+/* عداد المشاريع */
+.projects-counter {
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  display: inline-block;
+  margin-top: var(--space-6);
+  border: var(--border-width) solid var(--color-primary-100);
+}
+
+.projects-counter strong {
+  color: var(--color-primary-600);
+  font-weight: var(--font-bold);
+}
+
+/* ============================================
+   نظام الفلترة
+   ============================================ */
+
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-12);
+  padding: var(--space-4);
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: var(--border-width) solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-btn {
+  padding: var(--space-2) var(--space-6);
+  background-color: var(--color-white);
+  color: var(--color-neutral-700);
+  border: var(--border-width) solid var(--color-neutral-300);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-primary-400);
+  color: var(--color-primary-600);
+  transform: translateY(var(--space-0_5) * -1);
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  border-color: var(--color-primary-500);
+  box-shadow: var(--shadow-primary);
+}
+
+.filter-btn i {
+  font-size: var(--text-xs);
+}
+
+/* ============================================
+   المشاريع المميزة (كاروسيل)
+   ============================================ */
+
+.featured-projects {
+  margin-bottom: var(--space-16);
+}
+
+.section-subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  color: var(--color-primary-600);
+}
+
+.section-subtitle i {
+  color: var(--color-secondary-500);
+}
+
+.featured-slider {
+  position: relative;
+  padding: var(--space-4);
+  background: var(--gradient-light);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: var(--border-width) solid var(--color-neutral-200);
+}
+
+.owl-carousel .owl-stage-outer {
+  padding: var(--space-4) 0;
+}
+
+.featured-project-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin: var(--space-2);
+  transition: all var(--transition-base);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-project-card:hover {
+  transform: translateY(var(--space-1) * -1);
+  box-shadow: var(--shadow-xl);
+}
+
+.featured-image {
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.featured-project-card:hover .featured-image img {
+  transform: scale(1.05);
+}
+
+.featured-content {
+  padding: var(--space-5);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-content h3 {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary-700);
+  margin-bottom: var(--space-2);
+}
+
+.featured-content p {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-relaxed);
+  flex-grow: 1;
+}
+
+.featured-badge {
+  display: inline-block;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  margin-top: var(--space-3);
+  align-self: flex-start;
+}
+
+/* عناصر تحكم الكاروسيل */
+.owl-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.owl-prev,
+.owl-next {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-white) !important;
+  border: var(--border-width) solid var(--color-neutral-300) !important;
+  border-radius: var(--radius-full) !important;
+  color: var(--color-neutral-700) !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+  background-color: var(--color-primary-500) !important;
+  border-color: var(--color-primary-500) !important;
+  color: var(--color-white) !important;
+  transform: translateY(var(--space-0_5) * -1);
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.owl-dot {
+  width: var(--space-2);
+  height: var(--space-2);
+  background-color: var(--color-neutral-300) !important;
+  border-radius: var(--radius-full) !important;
+  transition: all var(--transition-base);
+}
+
+.owl-dot.active {
+  background-color: var(--color-primary-500) !important;
+  transform: scale(1.2);
+}
+
+/* ============================================
+   شبكة المشاريع الرئيسية
+   ============================================ */
+
+.projects-grid-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.project-card-enhanced {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: var(--border-width) solid var(--color-neutral-200);
+  transition: all var(--transition-base);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-enhanced:hover {
+  transform: translateY(var(--space-2) * -1);
+  box-shadow: var(--shadow-2xl);
+  border-color: var(--color-primary-300);
+}
+
+.project-image-container {
+  position: relative;
+  height: 15rem;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card-enhanced:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  z-index: 10;
+}
+
+.project-content {
+  padding: var(--space-6);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary-700);
+  margin-bottom: var(--space-3);
+  line-height: var(--leading-snug);
+}
+
+.project-description {
+  font-size: var(--text-base);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: var(--border-width) solid var(--color-neutral-200);
+}
+
+.project-date {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-500);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-primary-600);
+  font-weight: var(--font-semibold);
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.project-link:hover {
+  color: var(--color-primary-700);
+  gap: var(--space-3);
+}
+
+/* ============================================
+   رسالة عدم وجود مشاريع
+   ============================================ */
+
+.no-projects-message {
+  text-align: center;
+  padding: var(--space-16);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-2xl);
+  border: var(--border-width) dashed var(--color-neutral-300);
+  display: none;
+}
+
+.no-projects-message i {
+  font-size: var(--text-4xl);
+  color: var(--color-neutral-400);
+  margin-bottom: var(--space-4);
+}
+
+.no-projects-message h3 {
+  color: var(--color-neutral-700);
+  margin-bottom: var(--space-3);
+}
+
+.no-projects-message p {
+  color: var(--color-neutral-600);
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+/* ============================================
+   مؤشر التحميل
+   ============================================ */
+
+.loading-indicator {
+  text-align: center;
+  padding: var(--space-8);
+  display: none;
+}
+
+.loading-spinner {
+  width: var(--space-10);
+  height: var(--space-10);
+  border: var(--space-1) solid var(--color-neutral-200);
+  border-top-color: var(--color-primary-500);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+  margin: 0 auto var(--space-4);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-indicator p {
+  color: var(--color-neutral-600);
+  font-size: var(--text-sm);
+}
+
+/* ============================================
+   أزرار التحكم
+   ============================================ */
+
+.projects-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.load-more-btn {
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--color-primary-500);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.load-more-btn:hover {
+  background-color: var(--color-primary-600);
+  transform: translateY(var(--space-0_5) * -1);
+  box-shadow: var(--shadow-primary);
+}
+
+.load-more-btn:disabled {
+  background-color: var(--color-neutral-400);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.view-all-btn {
+  padding: var(--space-3) var(--space-8);
+  background-color: var(--color-secondary-500);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.view-all-btn:hover {
+  background-color: var(--color-secondary-600);
+  transform: translateY(var(--space-0_5) * -1);
+  box-shadow: var(--shadow-secondary);
+}
+
+/* ============================================
+   تفاصيل المشروع (مودال)
+   ============================================ */
+
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  max-width: 48rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-2xl);
+}
+
+.modal-header {
+  padding: var(--space-6);
+  border-bottom: var(--border-width) solid var(--color-neutral-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: var(--color-primary-700);
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: var(--color-neutral-500);
+  cursor: pointer;
+  font-size: var(--text-xl);
+  transition: color var(--transition-base);
+}
+
+.close-modal:hover {
+  color: var(--color-error);
+}
+
+.modal-body {
+  padding: var(--space-6);
+}
+
+.modal-image {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-6);
+}
+
+.modal-description {
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-neutral-700);
+  margin-bottom: var(--space-6);
+}
+
+.modal-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.detail-label {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-500);
+  font-weight: var(--font-semibold);
+}
+
+.detail-value {
+  font-size: var(--text-base);
+  color: var(--color-neutral-800);
+}
+
+.modal-footer {
+  padding: var(--space-6);
+  border-top: var(--border-width) solid var(--color-neutral-200);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-4);
+}
+
+/* ============================================
+   استعلامات الوسائط للتجاوب
+   ============================================ */
+
+/* شاشات كبيرة 1200px+ */
+@media (min-width: 1200px) {
+  .projects-grid-main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-slider .owl-item {
+    padding: var(--space-2);
+  }
+}
+
+/* أجهزة الكمبيوتر المحمولة 992px-1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .projects-grid-main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-slider {
+    padding: var(--space-3);
+  }
+}
+
+/* أجهزة اللوحات 768px-991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .projects-grid-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-filter {
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+
+  .filter-btn {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-xs);
+  }
+
+  .projects-actions {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .load-more-btn,
+  .view-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* الهواتف الكبيرة 600px-767px */
+@media (min-width: 600px) and (max-width: 767px) {
+  .projects-grid-main {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .project-image-container {
+    height: 12rem;
+  }
+
+  .projects-filter {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: var(--space-3);
+    margin-bottom: var(--space-8);
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
+
+/* الهواتف العادية أقل من 599px */
+@media (max-width: 599px) {
+  .projects-grid-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .projects-header {
+    margin-bottom: var(--space-8);
+  }
+
+  .projects-subtitle {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-6);
+  }
+
+  .projects-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+  }
+
+  .filter-btn {
+    justify-content: center;
+  }
+
+  .project-content {
+    padding: var(--space-4);
+  }
+
+  .featured-content {
+    padding: var(--space-4);
+  }
+
+  .owl-nav {
+    display: none;
+  }
+
+  .projects-actions {
+    flex-direction: column;
+  }
+
+  .load-more-btn,
+  .view-all-btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   تحسينات الوصولية
+   ============================================ */
+
+/* تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  .project-card-enhanced,
+  .featured-project-card,
+  .filter-btn,
+  .load-more-btn,
+  .view-all-btn {
+    transition: none;
+  }
+
+  .project-card-enhanced:hover,
+  .featured-project-card:hover,
+  .filter-btn:hover,
+  .load-more-btn:hover,
+  .view-all-btn:hover {
+    transform: none;
+  }
+
+  .project-image,
+  .featured-image img {
+    transition: none;
+  }
+
+  .loading-spinner {
+    animation: none;
+  }
+
+  .fade-in,
+  .fade-in-left,
+  .fade-in-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* وضع التباين العالي */
+@media (prefers-contrast: high) {
+  .project-card-enhanced {
+    border-width: var(--border-width-2);
+  }
+
+  .filter-btn {
+    border-width: var(--border-width-2);
+  }
+
+  .project-badge,
+  .featured-badge {
+    border: var(--border-width) solid var(--color-white);
+  }
+}
+
+/* ============================================
+   أنماط الطباعة
+   ============================================ */
+
+@media print {
+  .projects-filter,
+  .projects-actions,
+  .owl-nav,
+  .owl-dots {
+    display: none !important;
+  }
+
+  .projects-grid-main {
+    display: block;
+  }
+
+  .project-card-enhanced {
+    break-inside: avoid;
+    margin-bottom: var(--space-6);
+    box-shadow: none;
+    border: var(--border-width) solid var(--color-neutral-300);
+  }
+
+  .project-card-enhanced:hover {
+    transform: none;
+  }
+
+  .featured-slider {
+    background: none;
+    border: none;
+  }
+}
+
+/* ============================================
+   تحسينات الأداء
+   ============================================ */
+
+.project-image,
+.featured-image img {
+  will-change: transform;
+}
+
+.projects-grid-main {
+  contain: layout style;
+}
+
+/* ============================================
+   نهاية ملف المشاريع
+   ============================================ */

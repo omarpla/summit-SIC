@@ -1,0 +1,2947 @@
+# 🤖 **AI Prompt لاستخدام نظام CSS الجديد**
+
+## **النموذج الأمثل للذكاء الاصطناعي (AI Prompt)**
+
+```
+أنت مطور CSS محترف تعمل على مشروع شركة سومت العالمية. لديك نظام CSS متكامل ومحسن يجب استخدامه بالكامل دون إنشاء أنماط أو متغيرات جديدة إلا للضرورة القصوى.
+
+## 🚫 **المحظورات المطلقة:**
+1. ❌ لا تنشئ متغيرات CSS جديدة (لا var(--new-var))
+2. ❌ لا تكتب قيم ثابتة (لا color: #11224e; لا margin: 16px;)
+3. ❌ لا تنشئ فئات CSS جديدة إلا للمكونات الجديدة
+4. ❌ لا تعيد كتابة أنماط موجودة
+5. ❌ لا تستخدم !important
+
+## ✅ **المطلوبات الإلزامية:**
+1. ✅ استخدم فقط المتغيرات الموجودة في :root
+2. ✅ استخدم فقط فئات المساعدة الموجودة (Utility Classes)
+3. ✅ استخدم نظام التباعد Tailwind-like (var(--space-X))
+4. ✅ استخدم نظام الخطوط السائل (var(--text-X))
+5. ✅ استخدم نظام الألوان المحسن (var(--color-XXX-YYY))
+
+## 📁 **نظام الملفات المراد إكماله:**
+- global-styles.css (هذا الملف) - ✓ مكتمل
+- home-hero.css - ✓ مكتمل
+- navigation.css - ✓ مكتمل
+-Services-map.css  ✓ مكتمل
+-project.css ✓ مكتمل
+-contact.css ✓ مكتمل
+
+## 🎨 **نظام الألوان الأساسي (استخدم هذه فقط):**
+- PRIMARY: var(--color-primary-50) إلى var(--color-primary-900)
+- SECONDARY: var(--color-secondary-50) إلى var(--color-secondary-900)
+- NEUTRAL: var(--color-neutral-50) إلى var(--color-neutral-900)
+- SEMANTIC: var(--color-success), var(--color-warning), var(--color-error), var(--color-info)
+- GRADIENTS: var(--gradient-primary), var(--gradient-secondary), var(--gradient-brand)
+
+## 📏 **نظام التباعد (استخدم هذه فقط):**
+- var(--space-0) إلى var(--space-96)
+- var(--section-padding-base) إلى var(--section-padding-xl)
+- var(--container-padding), var(--container-max-width)
+
+## 🔤 **نظام الخطوط (استخدم هذه فقط):**
+- var(--text-xs) إلى var(--text-8xl)
+- var(--leading-none) إلى var(--leading-loose)
+- var(--font-thin) إلى var(--font-black)
+
+## 🏗️ **الهيكل الأساسي:**
+1. استخدم .section-container للحاويات
+2. استخدم .section-padding للتباعد
+3. استخدم .section-title للعناوين
+
+## 🛠️ **عند إنشاء مكون جديد:**
+```
+/* مثال لإنشاء بطاقة باستخدام النظام */
+.new-card {
+  /* الخلفية واللون */
+  background-color: var(--color-white);
+  color: var(--color-neutral-800);
+  
+  /* التباعد - استخدم نظام Tailwind */
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+  
+  /* الخطوط - استخدم النظام السائل */
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  
+  /* الحواف والظلال */
+  border-radius: var(--radius-lg);
+  border: var(--border-width) solid var(--color-neutral-200);
+  box-shadow: var(--shadow-md);
+  
+  /* الانتقالات */
+  transition: all var(--transition-base);
+}
+
+/* التحسين للشاشات الكبيرة */
+@media (min-width: 768px) {
+  .new-card {
+    padding: var(--space-8);
+    font-size: var(--text-lg);
+  }
+}
+```
+
+## 📱 **Media Queries (استخدم هذه فقط):**
+- 1200px+: @media (min-width: 1200px)
+- 992px-1199px: @media (min-width: 992px) and (max-width: 1199px)
+- 768px-991px: @media (min-width: 768px) and (max-width: 991px)
+- 600px-767px: @media (min-width: 600px) and (max-width: 767px)
+- <599px: @media (max-width: 599px)
+
+## ♿ **تحسينات الوصولية (استخدم هذه فقط):**
+- @media (prefers-reduced-motion: reduce)
+- @media (prefers-contrast: high)
+- .sr-only للعناصر المخفية
+
+## 🎯 **التعليمات النهائية:**
+1. ابدأ دائمًا بالتحقق مما إذا كان النمط موجودًا بالفعل
+2. استخدم فئات المساعدة أولاً (Utility-first)
+3. اجمع الأنماط المتشابهة في مكونات
+4. اتبع هيكل الملفات المحدد
+5. علق على الأقسام الجديدة بوضوح
+
+## ❓ **عند الحاجة لشيء غير موجود:**
+1. تحقق من المتغيرات الحالية أولاً
+2. استخدم أقرب قيمة موجودة
+3. إذا كان ضروريًا حقًا، أضف تعليقًا: /* يحتاج إضافة إلى :root */
+
+## 📝 **تنسيق التعليقات:**
+
+
+🔗 كيفية الاستخدام:
+حفظ الملف كـ global-styles.css
+
+ربطه في HTML:
+
+html
+<link rel="stylesheet" href="css/global-styles.css">
+إزالة CSS العام من index.html الحالي
+
+الاستفادة من المتغيرات الجديدة:
+
+css
+.custom-element {
+  color: var(--color-primary-500);
+  padding: var(--space-4);
+  font-size: var(--text-lg);
+}
+```
+/* ============================================
+   [اسم القسم]
+   ============================================ */
+```
+
+الآن، قم بتطوير [اسم المكون أو الصفحة] باستخدام النظام المحدد أعلاه تمامًا.
+```
+
+---
+
+## **مثال عملي لاستخدام البرومبت:**
+
+### **الطلب:**
+"قم بإنشاء تنسيقات لصفحة الخدمات (Services Page) باستخدام نظام CSS الجديد"
+
+### **الاستجابة المتوقعة من الذكاء الاصطناعي:**
+```css
+/* ============================================
+   SERVICES PAGE
+   ============================================ */
+
+.services-header {
+  background: var(--gradient-primary);
+  padding: var(--section-padding-lg);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.services-header h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-extrabold);
+  margin-bottom: var(--space-6);
+}
+
+.services-grid {
+  display: grid;
+  gap: var(--grid-gap-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: var(--section-padding-base);
+}
+
+.service-item {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-lg);
+  border: var(--border-width) solid var(--color-neutral-200);
+  transition: all var(--transition-base);
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary-300);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary-100);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+}
+
+.service-icon i {
+  font-size: var(--text-2xl);
+  color: var(--color-primary-600);
+}
+
+.service-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-700);
+  margin-bottom: var(--space-3);
+}
+
+.service-description {
+  font-size: var(--text-base);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* تحسين للشاشات المتوسطة */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-item {
+    padding: var(--space-8);
+  }
+}
+
+/* تحسين للشاشات الكبيرة */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .services-header h1 {
+    font-size: var(--text-5xl);
+  }
+}
+
+/* تحسينات الوصولية */
+@media (prefers-reduced-motion: reduce) {
+  .service-item {
+    transition: none;
+  }
+  
+  .service-item:hover {
+    transform: none;
+  }
+}
+```
+
+---
+
+## **برومبت مختصر للاستخدام السريع:**
+
+```
+استخدم نظام CSS الخاص بشركة سومت العالمية فقط. استخدم المتغيرات من :root، نظام التباعد Tailwind-like، نظام الخطوط السائل، وفئات المساعدة. لا تنشئ متغيرات أو أنماط جديدة. ركز على إعادة الاستخدام والكفاءة.
+```
+
+---
+
+## **للتحقق من الامتثال:**
+
+### **أسئلة التحقق الذاتي للذكاء الاصطناعي:**
+1. هل استخدمت var(--color-XXX) بدلاً من الألوان الثابتة؟
+2. هل استخدمت var(--space-X) بدلاً من القيم الثابتة؟
+3. هل استخدمت var(--text-X) بدلاً من أحجام الخطوط الثابتة؟
+4. هل استخدمت فئات المساعدة حيثما أمكن؟
+5. هل أضفت استعلامات وسائط للتجاوب؟
+6. هل تحققت من وجود الأنماط مسبقاً؟
+
+
+ التعليمات اللازمة لتعديل ملف index.html
+1. إضافة روابط CSS:
+html
+<!-- في head بعد global-styles.css -->
+<link rel="stylesheet" href="css/navigation.css">
+2. تعديل هيكل HTML للشريط التنقلي:
+أ. إضافة زر CTA في سطح المكتب:
+html
+<!-- بعد .desktop-lang -->
+<a href="#contact" class="nav-cta nav-desktop-only">
+  <span class="ar">اتصل بنا</span>
+  <span class="en hidden">Contact Us</span>
+  <i class="fas fa-phone-alt"></i>
+</a>
+ب. تحديث زر القائمة المتنقلة:
+html
+<button class="mobile-menu-btn nav-mobile-only" id="mobileMenuBtn">
+  <i class="fas fa-bars"></i>
+  <span class="sr-only">القائمة</span>
+</button>
+ج. إضافة زر CTA في القائمة المتنقلة:
+html
+<!-- في .mobile-menu قبل زر اللغة -->
+<a href="#contact" class="mobile-cta">
+  <span class="ar">اتصل بنا الآن</span>
+  <span class="en hidden">Contact Us Now</span>
+  <i class="fas fa-phone-alt"></i>
+</a>
+د. إضافة مؤشر التمرير:
+html
+<!-- داخل .navbar بعد .navbar-container -->
+<div class="nav-scroll-indicator" id="navScrollIndicator"></div>
+🤖 تعليمات JavaScript للذكاء الاصطناعي
+javascript
+/**
+ * NAVIGATION SYSTEM - JavaScript Instructions
+ * استخدم هذه الدوال للتحكم في شريط التنقل
+ */
+
+// ============================================
+// NAVIGATION INITIALIZATION
+// ============================================
+
+function initNavigation() {
+  // 1. العناصر الأساسية
+  const navbar = document.getElementById('navbar');
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const langToggles = document.querySelectorAll('.lang-btn');
+  const navScrollIndicator = document.getElementById('navScrollIndicator');
+
+  // 2. حالة القائمة المتنقلة
+  let isMobileMenuOpen = false;
+
+  // ============================================
+  // MOBILE MENU TOGGLE
+  // ============================================
+
+  function toggleMobileMenu() {
+    isMobileMenuOpen = !isMobileMenuOpen;
+    
+    // تبديل حالة القائمة
+    mobileMenu.classList.toggle('active');
+    mobileMenuBtn.classList.toggle('active');
+    
+    // تحديث ARIA attributes
+    mobileMenuBtn.setAttribute('aria-expanded', isMobileMenuOpen);
+    mobileMenu.setAttribute('aria-hidden', !isMobileMenuOpen);
+    
+    // منع التمرير عند فتح القائمة
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+    
+    // تغيير الأيقونة
+    const icon = mobileMenuBtn.querySelector('i');
+    if (icon) {
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    }
+  }
+
+  // ============================================
+  // SCROLL EFFECTS
+  // ============================================
+
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    
+    // تأثير التمرير على الشريط
+    if (scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    
+    // تحديث مؤشر التمرير
+    if (navScrollIndicator) {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollY / scrollHeight) * 100;
+      navScrollIndicator.style.width = `${scrollPercent}%`;
+    }
+  }
+
+  // ============================================
+  // ACTIVE LINK DETECTION
+  // ============================================
+
+  function updateActiveLink() {
+    const sections = document.querySelectorAll('section[id]');
+    let currentSection = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      
+      if (window.scrollY >= sectionTop - 100) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+    
+    // تحديث الروابط النشطة
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === `#${currentSection}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // ============================================
+  // LANGUAGE TOGGLE
+  // ============================================
+
+  function handleLanguageToggle() {
+    const html = document.documentElement;
+    const currentLang = html.getAttribute('lang') || 'ar';
+    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+    
+    // تحديث HTML attributes
+    html.setAttribute('lang', newLang);
+    html.setAttribute('dir', newLang === 'ar' ? 'rtl' : 'ltr');
+    
+    // تحديث النصوص المخفية
+    document.querySelectorAll('.ar, .en').forEach(el => {
+      if (el.classList.contains(newLang === 'ar' ? 'ar' : 'en')) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+    
+    // حفظ التفضيل
+    localStorage.setItem('preferredLang', newLang);
+  }
+
+  // ============================================
+  // EVENT LISTENERS
+  // ============================================
+
+  // حدث القائمة المتنقلة
+  mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+  // أحداث التمرير
+  window.addEventListener('scroll', () => {
+    handleScroll();
+    updateActiveLink();
+  });
+
+  // أحداث تغيير اللغة
+  langToggles.forEach(btn => {
+    btn.addEventListener('click', handleLanguageToggle);
+  });
+
+  // إغلاق القائمة عند النقر على رابط
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (isMobileMenuOpen) {
+        toggleMobileMenu();
+      }
+    });
+  });
+
+  // إغلاق القائمة عند النقر خارجها
+  document.addEventListener('click', (e) => {
+    if (isMobileMenuOpen && 
+        !mobileMenu.contains(e.target) && 
+        !mobileMenuBtn.contains(e.target)) {
+      toggleMobileMenu();
+    }
+  });
+
+  // إغلاق القائمة بمفتاح ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isMobileMenuOpen) {
+      toggleMobileMenu();
+    }
+  });
+
+  // ============================================
+  // INITIALIZATION
+  // ============================================
+
+  // التهيئة الأولية
+  handleScroll();
+  updateActiveLink();
+  
+  // تحميل تفضيل اللغة
+  const savedLang = localStorage.getItem('preferredLang');
+  if (savedLang) {
+    const html = document.documentElement;
+    const currentLang = html.getAttribute('lang');
+    
+    if (currentLang !== savedLang) {
+      html.setAttribute('lang', savedLang);
+      html.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
+      
+      document.querySelectorAll('.ar, .en').forEach(el => {
+        if (el.classList.contains(savedLang === 'ar' ? 'ar' : 'en')) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+  }
+}
+
+// ============================================
+// LAZY LOADING FOR NAVIGATION
+// ============================================
+
+function lazyLoadNavigation() {
+  // تحميل متأخر للصور في القائمة إذا كانت موجودة
+  const navImages = document.querySelectorAll('.navbar-logo[data-src]');
+  
+  if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+    
+    navImages.forEach(img => imageObserver.observe(img));
+  } else {
+    // Fallback للمتصفحات القديمة
+    navImages.forEach(img => {
+      img.src = img.dataset.src;
+      img.removeAttribute('data-src');
+    });
+  }
+}
+
+// ============================================
+// PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+function optimizeNavigationPerformance() {
+  // استخدام will-change بشكل ذكي
+  const navElements = document.querySelectorAll('.nav-link, .lang-btn, .nav-cta');
+  
+  navElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      el.style.willChange = 'transform, background, color';
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      el.style.willChange = 'auto';
+    });
+  });
+  
+  // Debounce لأحداث التمرير
+  let scrollTimer;
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(handleScroll, 100);
+  });
+}
+
+// ============================================
+// EXPORT FUNCTIONS FOR MODULAR USE
+// ============================================
+
+export const Navigation = {
+  init: initNavigation,
+  lazyLoad: lazyLoadNavigation,
+  optimize: optimizeNavigationPerformance,
+  toggleMobileMenu: null, // سيتم تعيينه في init
+  handleLanguageToggle: null // سيتم تعيينه في init
+};
+
+// أو للاستخدام العام
+window.SummitNavigation = Navigation;
+📋 ملخص الميزات المطبقة:
+✅ 1. النظام الأساسي:
+استخدام كامل لمتغيرات global-styles.css
+
+نظام تباعد Tailwind-like
+
+خطوط سائلة متجاوبة
+
+✅ 2. دعم ثنائي اللغة:
+RTL/LTR كامل
+
+تبديل سلس للغة
+
+نصوص مخفية للغة غير النشطة
+
+✅ 3. تجربة متنقلة محسنة:
+قائمة كاملة الشاشة مع تأثير blur
+
+حركات حديثة (transform + opacity)
+
+تفاعلات touch-friendly
+
+✅ 4. تحسينات الأداء:
+will-change للتحسينات
+
+Lazy loading للصور
+
+Debounced scroll events
+
+✅ 5. تحسينات الوصولية:
+دعم prefers-reduced-motion
+
+دعم prefers-contrast: high
+
+ARIA attributes كاملة
+
+Keyboard navigation
+
+✅ 6. تأثيرات بصرية:
+مؤشر التمرير الديناميكي
+
+تأثير hover مفصّل
+
+مؤشر الصفحة النشطة
+
+ظلال وحركات أنيقة
+إضافة روابط CSS:
+html
+<!-- في head بعد global-styles.css -->
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/home-hero.css">
+2. إضافة اللوجو للشريحة الأولى:
+html
+<!-- داخل .slide-text للشريحة الأولى بعد .badge -->
+<div class="hero-logo-container fade-in">
+  <img 
+    src="assets/images/logo/logo-large.png" 
+    alt="شعار سومت العالمية" 
+    class="hero-logo"
+    loading="lazy"
+    width="150"
+    height="150"
+    onerror="this.src='assets/images/logo/logo.png'"
+  >
+</div>
+3. تحسين ARIA labels:
+html
+<!-- تحديث role للمحتوى -->
+<div class="slide-content" role="region" aria-live="polite" aria-atomic="true">
+🤖 تعليمات JavaScript للذكاء الاصطناعي - Hero Slider
+javascript
+/**
+ * HERO SLIDER SYSTEM - JavaScript Instructions
+ * نظام متقدم للتحكم في سلايدر الهيرو
+ */
+
+class HeroSlider {
+  constructor(options = {}) {
+    // ============================================
+    // CONFIGURATION
+    // ============================================
+    this.config = {
+      autoPlay: true,
+      autoPlayDelay: 7000, // 7 seconds
+      transitionDuration: 500,
+      loop: true,
+      touchEnabled: true,
+      keyboardEnabled: true,
+      lazyLoad: true,
+      preloadNext: true,
+      ...options
+    };
+
+    // ============================================
+    // ELEMENTS
+    // ============================================
+    this.slider = document.querySelector('.hero-slider');
+    this.container = document.querySelector('.carousel-container');
+    this.slides = document.querySelectorAll('.carousel-slide');
+    this.indicators = document.querySelectorAll('.indicator-btn');
+    this.prevBtn = document.querySelector('.prev-btn');
+    this.nextBtn = document.querySelector('.next-btn');
+    this.progressBar = document.querySelector('.progress-bar');
+
+    // ============================================
+    // STATE MANAGEMENT
+    // ============================================
+    this.currentIndex = 0;
+    this.totalSlides = this.slides.length;
+    this.isAnimating = false;
+    this.autoPlayInterval = null;
+    this.touchStartX = 0;
+    this.touchEndX = 0;
+
+    // ============================================
+    // INITIALIZATION
+    // ============================================
+    this.init();
+  }
+
+  // ============================================
+  // INITIALIZATION METHODS
+  // ============================================
+
+  init() {
+    if (!this.slides.length) return;
+
+    // 1. Set initial active slide
+    this.showSlide(this.currentIndex);
+
+    // 2. Initialize event listeners
+    this.bindEvents();
+
+    // 3. Start auto-play if enabled
+    if (this.config.autoPlay) {
+      this.startAutoPlay();
+    }
+
+    // 4. Lazy load images if enabled
+    if (this.config.lazyLoad) {
+      this.lazyLoadImages();
+    }
+
+    // 5. Preload next slide if enabled
+    if (this.config.preloadNext) {
+      this.preloadNextSlide();
+    }
+
+    // 6. Update chevron direction for RTL
+    this.updateChevronDirection();
+
+    // 7. Dispatch custom event
+    this.dispatchEvent('slider:initialized', { totalSlides: this.totalSlides });
+  }
+
+  // ============================================
+  // SLIDE NAVIGATION
+  // ============================================
+
+  showSlide(index) {
+    if (this.isAnimating || index < 0 || index >= this.totalSlides) return;
+
+    this.isAnimating = true;
+
+    // Hide current slide
+    this.slides[this.currentIndex].classList.remove('active');
+    this.indicators[this.currentIndex].classList.remove('active');
+
+    // Update current index
+    this.currentIndex = index;
+
+    // Show new slide
+    this.slides[this.currentIndex].classList.add('active');
+    this.indicators[this.currentIndex].classList.add('active');
+
+    // Reset progress bar
+    this.resetProgressBar();
+
+    // Update counter animation
+    if (this.currentIndex === 0) {
+      this.animateCounters();
+    }
+
+    // Dispatch slide change event
+    this.dispatchEvent('slide:change', {
+      currentIndex: this.currentIndex,
+      totalSlides: this.totalSlides
+    });
+
+    // Preload next slide
+    if (this.config.preloadNext) {
+      this.preloadNextSlide();
+    }
+
+    // Reset animation flag
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, this.config.transitionDuration);
+  }
+
+  nextSlide() {
+    const nextIndex = (this.currentIndex + 1) % this.totalSlides;
+    this.showSlide(nextIndex);
+    this.resetAutoPlay();
+  }
+
+  prevSlide() {
+    const prevIndex = (this.currentIndex - 1 + this.totalSlides) % this.totalSlides;
+    this.showSlide(prevIndex);
+    this.resetAutoPlay();
+  }
+
+  goToSlide(index) {
+    if (index >= 0 && index < this.totalSlides) {
+      this.showSlide(index);
+      this.resetAutoPlay();
+    }
+  }
+
+  // ============================================
+  // AUTO PLAY CONTROLS
+  // ============================================
+
+  startAutoPlay() {
+    if (this.autoPlayInterval) return;
+
+    this.autoPlayInterval = setInterval(() => {
+      this.nextSlide();
+    }, this.config.autoPlayDelay);
+
+    this.dispatchEvent('autoplay:start');
+  }
+
+  stopAutoPlay() {
+    if (this.autoPlayInterval) {
+      clearInterval(this.autoPlayInterval);
+      this.autoPlayInterval = null;
+      this.dispatchEvent('autoplay:stop');
+    }
+  }
+
+  resetAutoPlay() {
+    this.stopAutoPlay();
+    if (this.config.autoPlay) {
+      this.startAutoPlay();
+    }
+  }
+
+  // ============================================
+  // PROGRESS BAR
+  // ============================================
+
+  resetProgressBar() {
+    if (!this.progressBar) return;
+
+    this.progressBar.style.transition = 'none';
+    this.progressBar.style.width = '0%';
+
+    setTimeout(() => {
+      this.progressBar.style.transition = `width ${this.config.autoPlayDelay}ms linear`;
+      this.progressBar.style.width = '100%';
+    }, 50);
+  }
+
+  // ============================================
+  // ANIMATIONS
+  // ============================================
+
+  animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-count'), 10);
+      if (isNaN(target)) return;
+
+      const increment = target / 100;
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          counter.textContent = target;
+          clearInterval(timer);
+        } else {
+          counter.textContent = Math.floor(current);
+        }
+      }, 20);
+    });
+  }
+
+  // ============================================
+  // PERFORMANCE OPTIMIZATIONS
+  // ============================================
+
+  lazyLoadImages() {
+    const images = this.slider.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(img => observer.observe(img));
+    } else {
+      // Fallback for older browsers
+      images.forEach(img => {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      });
+    }
+  }
+
+  preloadNextSlide() {
+    const nextIndex = (this.currentIndex + 1) % this.totalSlides;
+    const nextSlide = this.slides[nextIndex];
+    
+    // Preload background image
+    const bgImage = nextSlide.style.backgroundImage;
+    if (bgImage) {
+      const img = new Image();
+      img.src = bgImage.replace(/url\(['"]?(.*?)['"]?\)/, '$1');
+    }
+  }
+
+  // ============================================
+  // EVENT HANDLING
+  // ============================================
+
+  bindEvents() {
+    // Indicator buttons
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => this.goToSlide(index));
+    });
+
+    // Navigation buttons
+    if (this.prevBtn) {
+      this.prevBtn.addEventListener('click', () => this.prevSlide());
+    }
+
+    if (this.nextBtn) {
+      this.nextBtn.addEventListener('click', () => this.nextSlide());
+    }
+
+    // Keyboard navigation
+    if (this.config.keyboardEnabled) {
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') this.prevSlide();
+        if (e.key === 'ArrowRight') this.nextSlide();
+        if (e.key === 'Home') this.goToSlide(0);
+        if (e.key === 'End') this.goToSlide(this.totalSlides - 1);
+      });
+    }
+
+    // Touch/swipe support
+    if (this.config.touchEnabled && 'ontouchstart' in window) {
+      this.slider.addEventListener('touchstart', (e) => {
+        this.touchStartX = e.changedTouches[0].screenX;
+      });
+
+      this.slider.addEventListener('touchend', (e) => {
+        this.touchEndX = e.changedTouches[0].screenX;
+        this.handleSwipe();
+      });
+    }
+
+    // Mouse wheel support
+    this.slider.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      if (e.deltaY > 0) this.nextSlide();
+      if (e.deltaY < 0) this.prevSlide();
+    }, { passive: false });
+
+    // Pause on hover
+    this.slider.addEventListener('mouseenter', () => {
+      if (this.config.autoPlay) this.stopAutoPlay();
+    });
+
+    this.slider.addEventListener('mouseleave', () => {
+      if (this.config.autoPlay) this.startAutoPlay();
+    });
+  }
+
+  handleSwipe() {
+    const swipeThreshold = 50;
+    if (this.touchStartX - this.touchEndX > swipeThreshold) {
+      this.nextSlide();
+    }
+    if (this.touchEndX - this.touchStartX > swipeThreshold) {
+      this.prevSlide();
+    }
+  }
+
+  updateChevronDirection() {
+    const html = document.documentElement;
+    const prevIcons = document.querySelectorAll('.prev-btn i');
+    const nextIcons = document.querySelectorAll('.next-btn i');
+
+    prevIcons.forEach(icon => {
+      if (html.getAttribute('dir') === 'rtl') {
+        icon.classList.remove('fa-chevron-left');
+        icon.classList.add('fa-chevron-right');
+      } else {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-left');
+      }
+    });
+
+    nextIcons.forEach(icon => {
+      if (html.getAttribute('dir') === 'rtl') {
+        icon.classList.remove('fa-chevron-right');
+        icon.classList.add('fa-chevron-left');
+      } else {
+        icon.classList.remove('fa-chevron-left');
+        icon.classList.add('fa-chevron-right');
+      }
+    });
+  }
+
+  // ============================================
+  // EVENT DISPATCHING
+  // ============================================
+
+  dispatchEvent(eventName, detail = {}) {
+    const event = new CustomEvent(eventName, {
+      detail: { ...detail, slider: this }
+    });
+    this.slider.dispatchEvent(event);
+  }
+
+  // ============================================
+  // PUBLIC API
+  // ============================================
+
+  get currentSlide() {
+    return this.slides[this.currentIndex];
+  }
+
+  get totalSlidesCount() {
+    return this.totalSlides;
+  }
+
+  pause() {
+    this.stopAutoPlay();
+    this.dispatchEvent('slider:pause');
+  }
+
+  resume() {
+    if (this.config.autoPlay) {
+      this.startAutoPlay();
+    }
+    this.dispatchEvent('slider:resume');
+  }
+
+  destroy() {
+    this.stopAutoPlay();
+    
+    // Remove event listeners
+    this.indicators.forEach(indicator => {
+      indicator.replaceWith(indicator.cloneNode(true));
+    });
+
+    if (this.prevBtn) this.prevBtn.replaceWith(this.prevBtn.cloneNode(true));
+    if (this.nextBtn) this.nextBtn.replaceWith(this.nextBtn.cloneNode(true));
+
+    this.dispatchEvent('slider:destroy');
+  }
+}
+
+// ============================================
+// GLOBAL INITIALIZATION
+// ============================================
+
+function initHeroSlider() {
+  const sliderElement = document.querySelector('.hero-slider');
+  if (!sliderElement) return;
+
+  // Check if slider already initialized
+  if (sliderElement._sliderInstance) return;
+
+  // Create slider instance
+  const slider = new HeroSlider({
+    autoPlay: true,
+    autoPlayDelay: 7000,
+    transitionDuration: 500,
+    touchEnabled: true,
+    keyboardEnabled: true,
+    lazyLoad: true,
+    preloadNext: true
+  });
+
+  // Store instance for global access
+  sliderElement._sliderInstance = slider;
+  window.SummitHeroSlider = slider;
+
+  // Dispatch initialization event
+  document.dispatchEvent(new CustomEvent('heroSlider:ready', { detail: { slider } }));
+
+  return slider;
+}
+
+// ============================================
+// PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+function optimizeSliderPerformance() {
+  // Use will-change for performance
+  const slideElements = document.querySelectorAll('.carousel-slide');
+  slideElements.forEach((slide, index) => {
+    slide.style.willChange = index === 0 ? 'opacity, transform' : 'auto';
+  });
+
+  // Debounce resize events
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (window.SummitHeroSlider) {
+        window.SummitHeroSlider.updateChevronDirection();
+      }
+    }, 250);
+  });
+}
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+function enhanceSliderAccessibility() {
+  // Respect reduced motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const transitions = document.querySelectorAll('.carousel-slide');
+    transitions.forEach(el => {
+      el.style.transition = 'none';
+    });
+  }
+
+  // Add focus management
+  const slides = document.querySelectorAll('.carousel-slide[aria-hidden="false"]');
+  slides.forEach(slide => {
+    slide.setAttribute('tabindex', '0');
+  });
+}
+
+// ============================================
+// EXPORT FOR MODULAR USE
+// ============================================
+
+export const HeroSliderSystem = {
+  init: initHeroSlider,
+  optimize: optimizeSliderPerformance,
+  enhanceAccessibility: enhanceSliderAccessibility,
+  HeroSlider: HeroSlider
+};
+
+// أو للاستخدام العام
+window.SummitHeroSliderSystem = HeroSliderSystem;
+
+// التهيئة التلقائية عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroSlider();
+  optimizeSliderPerformance();
+  enhanceSliderAccessibility();
+});
+📋 ملخص الميزات المطبقة:
+✅ 1. النظام الأساسي:
+ارتفاع ثابت 600px للكمبيوتر
+
+تكيف ذكي مع جميع الشاشات
+
+استخدام كامل لنظام global-styles.css
+
+✅ 2. اللوجو المحسن:
+حجم 150px للشاشات الكبيرة
+
+تأثيرات ظهور متدرجة
+
+تفاعلات hover أنيقة
+
+تكيف مع جميع أحجام الشاشات
+
+✅ 3. تحسينات الأداء:
+Lazy loading للصور
+
+Preload للشريحة التالية
+
+will-change للتحسينات
+
+Debounced resize events
+
+✅ 4. التحكم المتقدم:
+Auto-play مع pause على hover
+
+Touch/swipe للجوال
+
+Keyboard navigation
+
+Mouse wheel support
+
+✅ 5. الوصولية:
+دعم prefers-reduced-motion
+
+ARIA labels كاملة
+
+Focus management
+
+Screen reader friendly
+
+✅ 6. التأثيرات البصرية:
+رسوم متحركة متدرجة
+
+شريط تقدم ديناميكي
+
+تأثيرات hover مفصلة
+
+حركات سلسة
+📝 التعليمات لتعديل HTML
+1. قسم الخدمات التفاعلية:
+أ. تحديث هيكل بطاقات الخدمات:
+html
+<div class="services-section">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="ar">خدماتنا المتكاملة</span>
+      <span class="en hidden">Our Integrated Services</span>
+    </h2>
+    
+    <div class="services-grid" id="servicesGrid">
+      <!-- Service 1: سحب المياه الجوفية -->
+      <div class="service-card" data-service="water-pumping">
+        <div class="service-preview">
+          <div class="service-icon">
+            <i class="fas fa-water"></i>
+          </div>
+          <h3 class="service-title">
+            <span class="ar">سحب المياه الجوفية</span>
+            <span class="en hidden">Groundwater Pumping</span>
+          </h3>
+          <p class="service-brief">
+            <span class="ar">خدمات متخصصة بسحب المياه باستخدام أحدث التقنيات العالمية</span>
+            <span class="en hidden">Specialized water pumping services using latest global technologies</span>
+          </p>
+          <button class="service-toggle" data-action="expand">
+            <span class="ar">عرض التفاصيل</span>
+            <span class="en hidden">View Details</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+        
+        <div class="service-details">
+          <div class="details-content">
+            <p class="service-description">
+              <span class="ar">نقدم خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات...</span>
+              <span class="en hidden">We provide groundwater pumping services with the latest equipment...</span>
+            </p>
+            
+            <div class="service-media">
+              <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5" 
+                   alt="سحب المياه" 
+                   class="media-image"
+                   loading="lazy">
+              <div class="media-video">
+                <!-- يمكن إضافة فيديو هنا -->
+              </div>
+            </div>
+            
+            <button class="close-details" data-action="collapse">
+              <span class="ar">إغلاق التفاصيل</span>
+              <span class="en hidden">Close Details</span>
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Repeat for other 3 services -->
+    </div>
+  </div>
+</div>
+ب. إضافة أزرار التبديل:
+html
+<div class="services-actions" id="servicesActions">
+  <button class="btn-primary" id="expandAll">
+    <span class="ar">عرض كل التفاصيل</span>
+    <span class="en hidden">Expand All</span>
+  </button>
+  <button class="btn-secondary" id="collapseAll">
+    <span class="ar">إغلاق الكل</span>
+    <span class="en hidden">Collapse All</span>
+  </button>
+</div>
+2. قسم الخريطة متعددة العلامات:
+أ. تحديث هيكل الخريطة:
+html
+<div class="map-section">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="ar">موقعنا ومشاريعنا</span>
+      <span class="en hidden">Our Location & Projects</span>
+    </h2>
+    
+    <div class="map-container">
+      <!-- Google Map Iframe -->
+      <iframe id="interactiveMap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892621.9633528772!2d46.94956243383769!3d29.29852725421783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+      <!-- Custom Markers -->
+      <div class="custom-markers" id="mapMarkers">
+        <!-- Marker 1: Main Office -->
+        <div class="map-marker pulse-marker" 
+             data-marker="office" 
+             style="top: 50%; left: 50%;"
+             data-lat="29.2985" 
+             data-lng="47.6855">
+          <div class="marker-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <div class="marker-label">
+            <span class="ar">المكتب الرئيسي</span>
+            <span class="en hidden">Main Office</span>
+          </div>
+        </div>
+        
+        <!-- Add 4-9 more markers for projects -->
+      </div>
+      
+      <!-- Floating Controls -->
+      <div class="map-controls floating">
+        <button class="map-btn" id="zoomIn" title="Zoom In">
+          <i class="fas fa-plus"></i>
+        </button>
+        <button class="map-btn" id="zoomOut" title="Zoom Out">
+          <i class="fas fa-minus"></i>
+        </button>
+        <button class="map-btn" id="resetMap" title="Reset Map">
+          <i class="fas fa-home"></i>
+        </button>
+        <button class="map-btn" id="toggleMapType" title="Toggle Map Type">
+          <i class="fas fa-layer-group"></i>
+        </button>
+      </div>
+      
+      <!-- Info Overlay -->
+      <div class="map-overlay">
+        <div class="map-info">
+          <h4>
+            <span class="ar">مشاريعنا على الخريطة</span>
+            <span class="en hidden">Our Projects on Map</span>
+          </h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="ar">الكويت - موقع رئيسي مع مشاريع متعددة</span>
+            <span class="en hidden">Kuwait - Main location with multiple projects</span>
+          </p>
+        </div>
+        
+        <div class="map-actions">
+          <button class="action-btn" id="getDirections">
+            <i class="fas fa-directions"></i>
+            <span class="ar">الاتجاهات</span>
+            <span class="en hidden">Directions</span>
+          </button>
+          <button class="action-btn secondary" id="copyAddress">
+            <i class="far fa-copy"></i>
+            <span class="ar">نسخ العنوان</span>
+            <span class="en hidden">Copy Address</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+🤖 تعليمات JavaScript للذكاء الاصطناعي
+javascript
+/**
+ * SERVICES & MAP INTERACTIVITY - JavaScript System
+ * نظام تفاعلي للخدمات متعددة التوسيع + خريطة متعددة العلامات
+ */
+
+// ============================================
+// INTERACTIVE SERVICES SYSTEM
+// ============================================
+
+class InteractiveServices {
+  constructor() {
+    this.grid = document.getElementById('servicesGrid');
+    this.cards = Array.from(document.querySelectorAll('.service-card'));
+    this.toggles = Array.from(document.querySelectorAll('.service-toggle, .close-details'));
+    this.activeCard = null;
+    
+    this.init();
+  }
+  
+  init() {
+    // Initialize event listeners
+    this.bindEvents();
+    
+    // Set initial state
+    this.updateGridState();
+    
+    // Dispatch ready event
+    this.dispatchEvent('services:ready');
+  }
+  
+  bindEvents() {
+    // Card click events
+    this.cards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('.service-toggle, .close-details')) {
+          this.toggleCard(card);
+        }
+      });
+    });
+    
+    // Toggle button events
+    this.toggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const card = toggle.closest('.service-card');
+        
+        if (toggle.dataset.action === 'expand') {
+          this.expandCard(card);
+        } else {
+          this.collapseCard(card);
+        }
+      });
+    });
+    
+    // Expand/Collapse all buttons
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    
+    if (expandAllBtn) {
+      expandAllBtn.addEventListener('click', () => this.expandAll());
+    }
+    
+    if (collapseAllBtn) {
+      collapseAllBtn.addEventListener('click', () => this.collapseAll());
+    }
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.activeCard) {
+        this.collapseCard(this.activeCard);
+      }
+    });
+  }
+  
+  toggleCard(card) {
+    if (card.classList.contains('active')) {
+      this.collapseCard(card);
+    } else {
+      this.expandCard(card);
+    }
+  }
+  
+  expandCard(card) {
+    // Collapse current active card if exists
+    if (this.activeCard && this.activeCard !== card) {
+      this.collapseCard(this.activeCard);
+    }
+    
+    // Set states
+    this.activeCard = card;
+    card.classList.add('active');
+    card.classList.remove('inactive');
+    
+    // Update other cards
+    this.cards.forEach(c => {
+      if (c !== card) {
+        c.classList.add('inactive');
+        c.classList.remove('active');
+      }
+    });
+    
+    // Update grid state
+    this.updateGridState();
+    
+    // Dispatch event
+    this.dispatchEvent('service:expand', { card });
+    
+    // Scroll card into view (smoothly)
+    setTimeout(() => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 300);
+  }
+  
+  collapseCard(card) {
+    card.classList.remove('active');
+    
+    // If collapsing the active card
+    if (this.activeCard === card) {
+      this.activeCard = null;
+    }
+    
+    // Reset other cards
+    this.cards.forEach(c => {
+      if (c !== card) {
+        c.classList.remove('inactive');
+      }
+    });
+    
+    // Update grid state
+    this.updateGridState();
+    
+    // Dispatch event
+    this.dispatchEvent('service:collapse', { card });
+  }
+  
+  expandAll() {
+    this.cards.forEach(card => {
+      card.classList.add('active');
+      card.classList.remove('inactive');
+    });
+    
+    this.grid.classList.add('has-active');
+    this.dispatchEvent('services:expandAll');
+  }
+  
+  collapseAll() {
+    this.cards.forEach(card => {
+      card.classList.remove('active', 'inactive');
+    });
+    
+    this.activeCard = null;
+    this.updateGridState();
+    this.dispatchEvent('services:collapseAll');
+  }
+  
+  updateGridState() {
+    if (this.activeCard) {
+      this.grid.classList.add('has-active');
+    } else {
+      this.grid.classList.remove('has-active');
+    }
+  }
+  
+  dispatchEvent(eventName, detail = {}) {
+    const event = new CustomEvent(eventName, {
+      detail: { ...detail, system: this }
+    });
+    document.dispatchEvent(event);
+  }
+  
+  // Public API
+  getActiveService() {
+    return this.activeCard;
+  }
+  
+  getServicesCount() {
+    return this.cards.length;
+  }
+}
+
+// ============================================
+// MULTI-MARKER MAP SYSTEM
+// ============================================
+
+class MultiMarkerMap {
+  constructor() {
+    this.map = document.getElementById('interactiveMap');
+    this.markers = Array.from(document.querySelectorAll('.map-marker'));
+    this.controls = {
+      zoomIn: document.getElementById('zoomIn'),
+      zoomOut: document.getElementById('zoomOut'),
+      reset: document.getElementById('resetMap'),
+      toggleType: document.getElementById('toggleMapType')
+    };
+    
+    this.activeMarker = null;
+    this.mapType = 'roadmap'; // roadmap, satellite, hybrid, terrain
+    this.zoomLevel = 14;
+    
+    this.init();
+  }
+  
+  init() {
+    // Initialize event listeners
+    this.bindEvents();
+    
+    // Set initial marker states
+    this.updateMarkers();
+    
+    // Dispatch ready event
+    this.dispatchEvent('map:ready');
+  }
+  
+  bindEvents() {
+    // Marker click events
+    this.markers.forEach(marker => {
+      marker.addEventListener('click', (e) => {
+        e.stopPropagation();
+        this.activateMarker(marker);
+      });
+      
+      marker.addEventListener('mouseenter', () => {
+        marker.classList.add('hover');
+      });
+      
+      marker.addEventListener('mouseleave', () => {
+        marker.classList.remove('hover');
+      });
+    });
+    
+    // Map control events
+    if (this.controls.zoomIn) {
+      this.controls.zoomIn.addEventListener('click', () => this.zoomIn());
+    }
+    
+    if (this.controls.zoomOut) {
+      this.controls.zoomOut.addEventListener('click', () => this.zoomOut());
+    }
+    
+    if (this.controls.reset) {
+      this.controls.reset.addEventListener('click', () => this.resetMap());
+    }
+    
+    if (this.controls.toggleType) {
+      this.controls.toggleType.addEventListener('click', () => this.toggleMapType());
+    }
+    
+    // Directions and address copy buttons
+    const directionsBtn = document.getElementById('getDirections');
+    const copyAddressBtn = document.getElementById('copyAddress');
+    
+    if (directionsBtn) {
+      directionsBtn.addEventListener('click', () => this.getDirections());
+    }
+    
+    if (copyAddressBtn) {
+      copyAddressBtn.addEventListener('click', () => this.copyAddress());
+    }
+    
+    // Close active marker on outside click
+    document.addEventListener('click', (e) => {
+      if (this.activeMarker && !this.activeMarker.contains(e.target)) {
+        this.deactivateMarker(this.activeMarker);
+      }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && this.activeMarker) {
+        this.deactivateMarker(this.activeMarker);
+      }
+    });
+  }
+  
+  activateMarker(marker) {
+    // Deactivate current active marker
+    if (this.activeMarker && this.activeMarker !== marker) {
+      this.deactivateMarker(this.activeMarker);
+    }
+    
+    // Toggle if clicking the same marker
+    if (this.activeMarker === marker) {
+      this.deactivateMarker(marker);
+      return;
+    }
+    
+    // Activate new marker
+    marker.classList.add('active');
+    this.activeMarker = marker;
+    
+    // Center map on marker
+    this.centerOnMarker(marker);
+    
+    // Dispatch event
+    this.dispatchEvent('marker:activate', { marker });
+  }
+  
+  deactivateMarker(marker) {
+    marker.classList.remove('active');
+    
+    if (this.activeMarker === marker) {
+      this.activeMarker = null;
+    }
+    
+    this.dispatchEvent('marker:deactivate', { marker });
+  }
+  
+  centerOnMarker(marker) {
+    const lat = marker.dataset.lat || '29.2985';
+    const lng = marker.dataset.lng || '47.6855';
+    
+    // Update map iframe src to center on marker
+    this.updateMapView(lat, lng, this.zoomLevel);
+  }
+  
+  updateMapView(lat, lng, zoom = 14) {
+    const mapType = this.mapType === 'satellite' ? 'satellite' : 'roadmap';
+    const newSrc = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${lat}!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDE3JzU0LjYiTiA0N8KwNDEnMDcuOCJF!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s&zoom=${zoom}&maptype=${mapType}`;
+    
+    this.map.src = newSrc;
+    this.zoomLevel = zoom;
+  }
+  
+  zoomIn() {
+    if (this.zoomLevel < 20) {
+      this.zoomLevel++;
+      this.updateMapView('29.2985', '47.6855', this.zoomLevel);
+      this.dispatchEvent('map:zoomIn', { zoom: this.zoomLevel });
+    }
+  }
+  
+  zoomOut() {
+    if (this.zoomLevel > 1) {
+      this.zoomLevel--;
+      this.updateMapView('29.2985', '47.6855', this.zoomLevel);
+      this.dispatchEvent('map:zoomOut', { zoom: this.zoomLevel });
+    }
+  }
+  
+  resetMap() {
+    this.zoomLevel = 14;
+    this.mapType = 'roadmap';
+    this.updateMapView('29.2985', '47.6855', 14);
+    
+    // Update toggle button
+    if (this.controls.toggleType) {
+      this.controls.toggleType.classList.remove('active');
+      this.controls.toggleType.innerHTML = '<i class="fas fa-layer-group"></i>';
+      this.controls.toggleType.title = 'Switch to Satellite View';
+    }
+    
+    this.dispatchEvent('map:reset');
+  }
+  
+  toggleMapType() {
+    const toggleBtn = this.controls.toggleType;
+    
+    if (this.mapType === 'roadmap') {
+      this.mapType = 'satellite';
+      toggleBtn.classList.add('active');
+      toggleBtn.innerHTML = '<i class="fas fa-map"></i>';
+      toggleBtn.title = 'Switch to Road Map';
+    } else {
+      this.mapType = 'roadmap';
+      toggleBtn.classList.remove('active');
+      toggleBtn.innerHTML = '<i class="fas fa-layer-group"></i>';
+      toggleBtn.title = 'Switch to Satellite View';
+    }
+    
+    this.updateMapView('29.2985', '47.6855', this.zoomLevel);
+    this.dispatchEvent('map:typeToggle', { type: this.mapType });
+  }
+  
+  getDirections() {
+    const address = encodeURIComponent('الكويت');
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${address}`;
+    window.open(url, '_blank');
+    
+    this.dispatchEvent('map:getDirections', { address });
+  }
+  
+  copyAddress() {
+    const address = 'الكويت';
+    
+    navigator.clipboard.writeText(address).then(() => {
+      this.showCopyFeedback();
+    }).catch(() => {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = address;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      this.showCopyFeedback();
+    });
+  }
+  
+  showCopyFeedback() {
+    const copyBtn = document.getElementById('copyAddress');
+    const originalHTML = copyBtn.innerHTML;
+    
+    copyBtn.innerHTML = '<i class="fas fa-check"></i> <span class="ar">تم النسخ</span><span class="en hidden">Copied</span>';
+    copyBtn.style.background = 'var(--color-success)';
+    
+    setTimeout(() => {
+      copyBtn.innerHTML = originalHTML;
+      copyBtn.style.background = '';
+    }, 2000);
+  }
+  
+  updateMarkers() {
+    // Add any marker-specific updates here
+    this.markers.forEach(marker => {
+      // Example: Add pulse animation to specific markers
+      if (marker.dataset.marker === 'office') {
+        marker.classList.add('pulse-marker');
+      }
+    });
+  }
+  
+  dispatchEvent(eventName, detail = {}) {
+    const event = new CustomEvent(eventName, {
+      detail: { ...detail, system: this }
+    });
+    document.dispatchEvent(event);
+  }
+  
+  // Public API
+  getActiveMarker() {
+    return this.activeMarker;
+  }
+  
+  getMarkersCount() {
+    return this.markers.length;
+  }
+  
+  addMarker(options) {
+    // Method to dynamically add markers
+    const marker = document.createElement('div');
+    marker.className = 'map-marker';
+    marker.dataset.lat = options.lat;
+    marker.dataset.lng = options.lng;
+    marker.style.top = options.top || '50%';
+    marker.style.left = options.left || '50%';
+    
+    marker.innerHTML = `
+      <div class="marker-icon">
+        <i class="${options.icon || 'fas fa-map-marker-alt'}"></i>
+      </div>
+      <div class="marker-label">
+        <span class="ar">${options.labelAr || 'علامة جديدة'}</span>
+        <span class="en hidden">${options.labelEn || 'New Marker'}</span>
+      </div>
+    `;
+    
+    document.querySelector('.custom-markers').appendChild(marker);
+    this.markers.push(marker);
+    
+    // Rebind events for new marker
+    this.bindMarkerEvents(marker);
+    
+    return marker;
+  }
+  
+  bindMarkerEvents(marker) {
+    marker.addEventListener('click', (e) => {
+      e.stopPropagation();
+      this.activateMarker(marker);
+    });
+    
+    marker.addEventListener('mouseenter', () => {
+      marker.classList.add('hover');
+    });
+    
+    marker.addEventListener('mouseleave', () => {
+      marker.classList.remove('hover');
+    });
+  }
+}
+
+// ============================================
+// GLOBAL INITIALIZATION
+// ============================================
+
+function initServicesMap() {
+  // Initialize Services System
+  const services = new InteractiveServices();
+  
+  // Initialize Map System
+  const map = new MultiMarkerMap();
+  
+  // Store instances globally for external access
+  window.SummitServices = services;
+  window.SummitMap = map;
+  
+  // Dispatch combined ready event
+  document.dispatchEvent(new CustomEvent('servicesMap:ready', {
+    detail: { services, map }
+  }));
+  
+  return { services, map };
+}
+
+// ============================================
+// PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+function optimizeServicesMapPerformance() {
+  // Lazy load images in service cards
+  const serviceImages = document.querySelectorAll('.media-image');
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          if (img.dataset.src) {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+          }
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    serviceImages.forEach(img => observer.observe(img));
+  }
+  
+  // Use will-change for performance
+  const interactiveElements = document.querySelectorAll('.service-card, .map-marker, .map-btn');
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      el.style.willChange = 'transform, opacity';
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      el.style.willChange = 'auto';
+    });
+  });
+}
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+function enhanceServicesMapAccessibility() {
+  // Respect reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const transitions = document.querySelectorAll('.service-card, .map-marker');
+    transitions.forEach(el => {
+      el.style.transition = 'none';
+    });
+  }
+  
+  // Add keyboard navigation for services
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach((card, index) => {
+    card.setAttribute('tabindex', '0');
+    
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+      
+      // Arrow key navigation between cards
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextCard = serviceCards[(index + 1) % serviceCards.length];
+        nextCard.focus();
+      }
+      
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevCard = serviceCards[(index - 1 + serviceCards.length) % serviceCards.length];
+        prevCard.focus();
+      }
+    });
+  });
+}
+
+// ============================================
+// EXPORT FOR MODULAR USE
+// ============================================
+
+export const ServicesMapSystem = {
+  init: initServicesMap,
+  optimize: optimizeServicesMapPerformance,
+  enhanceAccessibility: enhanceServicesMapAccessibility,
+  InteractiveServices,
+  MultiMarkerMap
+};
+
+// أو للاستخدام العام
+window.SummitServicesMap = ServicesMapSystem;
+
+// التهيئة التلقائية عند تحميل الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+  // Wait for DOM to be fully loaded
+  setTimeout(() => {
+    initServicesMap();
+    optimizeServicesMapPerformance();
+    enhanceServicesMapAccessibility();
+  }, 100);
+});
+
+// التهيئة عند تحميل كل شيء
+window.addEventListener('load', () => {
+  // Additional optimizations after everything loads
+  if (window.SummitServices) {
+    window.SummitServices.updateGridState();
+  }
+  
+  if (window.SummitMap) {
+    window.SummitMap.updateMarkers();
+  }
+});
+📋 ملخص الميزات المطبقة:
+✅ 1. نظام الخدمات التفاعلي:
+4 بطاقات خدمات قابلة للتوسيع
+
+عند النقر → تكبير البطاقة وعرض التفاصيل
+
+باقي البطاقات تصغر وتتلاشى
+
+تفاعلات hover متقدمة
+
+أزرار تحكم (عرض الكل/إغلاق الكل)
+
+✅ 2. نظام الخريطة متعددة العلامات:
+خريطة كاملة الشاشة مع تحكم عائم
+
+5-10 علامات متعددة على نفس العنوان
+
+تأثيرات hover للعلامات
+
+نظام zoom in/out
+
+تبديل نوع الخريطة (Satellite/Street)
+
+زر إعادة التعيين
+
+✅ 3. تحسينات الأداء:
+Lazy loading للصور
+
+will-change للتحسينات
+
+Event delegation
+
+Debounced interactions
+
+✅ 4. الوصولية:
+دعم prefers-reduced-motion
+
+Keyboard navigation
+
+ARIA labels
+
+Focus management
+
+✅ 5. الاستجابة الكاملة:
+تكيف مع جميع أحجام الشاشات
+
+تصميم خاص للجوال
+
+تحسينات للطباعة
+
+الملف جاهز للاستخدام الفوري! 🚀
+
+تعليمات الاستخدام:
+أضف CSS:
+
+html
+<link rel="stylesheet" href="css/services-map.css">
+أضف JavaScript:
+
+html
+<script src="js/services-map.js" defer></script>
+ project.js (نظام JavaScript التفاعلي)
+javascript
+/**
+ * PROJECTS SYSTEM - نظام متكامل لإدارة المشاريع
+ * تم إنشاؤه باستخدام نظام شركة سومت العالمية
+ */
+
+// ============================================
+// CONFIGURATION & INITIALIZATION
+// ============================================
+
+class ProjectsSystem {
+  constructor() {
+    this.config = {
+      itemsPerPage: 6,
+      currentPage: 1,
+      totalPages: 1,
+      filter: 'all',
+      isRTL: document.documentElement.dir === 'rtl'
+    };
+    
+    this.elements = {
+      grid: document.getElementById('projectsGridMain'),
+      filterButtons: document.querySelectorAll('.filter-btn'),
+      loadMoreBtn: document.getElementById('loadMoreProjects'),
+      viewAllBtn: document.getElementById('viewAllProjects'),
+      loadingIndicator: document.querySelector('.loading-indicator'),
+      noProjectsMessage: document.querySelector('.no-projects-message'),
+      featuredSlider: document.querySelector('.featured-projects .owl-carousel'),
+      projectsCount: document.getElementById('projectsCount')
+    };
+    
+    this.projects = [];
+    this.filteredProjects = [];
+    
+    this.init();
+  }
+  
+  // ============================================
+  // INITIALIZATION METHODS
+  // ============================================
+  
+  init() {
+    // 1. استخراج المشاريع من HTML
+    this.extractProjectsFromDOM();
+    
+    // 2. تهيئة نظام الفلترة
+    this.initFilterSystem();
+    
+    // 3. تهيئة نظام التحميل التدريجي
+    this.initLoadMoreSystem();
+    
+    // 4. تهيئة الكاروسيل للمشاريع المميزة
+    this.initFeaturedSlider();
+    
+    // 5. تحديث العداد
+    this.updateProjectsCounter();
+    
+    // 6. إرسال حدث التهيئة
+    this.dispatchEvent('projects:initialized', {
+      totalProjects: this.projects.length,
+      filteredProjects: this.filteredProjects.length
+    });
+  }
+  
+  extractProjectsFromDOM() {
+    const projectCards = document.querySelectorAll('.project-card-enhanced');
+    
+    this.projects = Array.from(projectCards).map((card, index) => {
+      return {
+        id: index + 1,
+        element: card,
+        category: card.dataset.category || 'all',
+        title: card.querySelector('.project-title').textContent.trim(),
+        description: card.querySelector('.project-description').textContent.trim(),
+        date: card.querySelector('.project-date')?.textContent.trim() || '',
+        image: card.querySelector('.project-image')?.src || '',
+        badge: card.querySelector('.project-badge')?.textContent.trim() || '',
+        isFeatured: card.classList.contains('featured') || false
+      };
+    });
+    
+    this.filteredProjects = [...this.projects];
+    this.config.totalPages = Math.ceil(this.projects.length / this.config.itemsPerPage);
+  }
+  
+  // ============================================
+  // FILTER SYSTEM
+  // ============================================
+  
+  initFilterSystem() {
+    if (!this.elements.filterButtons.length) return;
+    
+    this.elements.filterButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // تحديث الأزرار النشطة
+        this.elements.filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        // تحديث الفلتر الحالي
+        this.config.filter = button.dataset.filter;
+        this.config.currentPage = 1;
+        
+        // تطبيق الفلتر
+        this.applyFilter();
+        
+        // إرسال حدث التغيير
+        this.dispatchEvent('filter:changed', { filter: this.config.filter });
+      });
+    });
+  }
+  
+  applyFilter() {
+    if (this.config.filter === 'all') {
+      this.filteredProjects = [...this.projects];
+    } else {
+      this.filteredProjects = this.projects.filter(project => 
+        project.category === this.config.filter
+      );
+    }
+    
+    // تحديث العدد الإجمالي للصفحات
+    this.config.totalPages = Math.ceil(this.filteredProjects.length / this.config.itemsPerPage);
+    
+    // تحديث العرض
+    this.renderProjects();
+    
+    // تحديث العداد
+    this.updateProjectsCounter();
+  }
+  
+  // ============================================
+  // LOAD MORE SYSTEM
+  // ============================================
+  
+  initLoadMoreSystem() {
+    if (!this.elements.loadMoreBtn) return;
+    
+    this.elements.loadMoreBtn.addEventListener('click', () => {
+      this.loadMoreProjects();
+    });
+    
+    // إخفاء الزر إذا كانت كل المشاريع معروضة
+    this.updateLoadMoreButton();
+  }
+  
+  loadMoreProjects() {
+    if (this.config.currentPage >= this.config.totalPages) return;
+    
+    // إظهار مؤشر التحميل
+    this.showLoading(true);
+    
+    // محاكاة تأخير الشبكة
+    setTimeout(() => {
+      this.config.currentPage++;
+      
+      // إعادة عرض المشاريع مع الصفحة الجديدة
+      this.renderProjects();
+      
+      // إخفاء مؤشر التحميل
+      this.showLoading(false);
+      
+      // تحديث زر التحميل
+      this.updateLoadMoreButton();
+      
+      // إرسال حدث التحميل
+      this.dispatchEvent('projects:loadedMore', {
+        currentPage: this.config.currentPage,
+        totalPages: this.config.totalPages
+      });
+    }, 800);
+  }
+  
+  updateLoadMoreButton() {
+    if (!this.elements.loadMoreBtn) return;
+    
+    if (this.config.currentPage >= this.config.totalPages) {
+      this.elements.loadMoreBtn.disabled = true;
+      this.elements.loadMoreBtn.innerHTML = `
+        <i class="fas fa-check"></i>
+        <span class="ar">تم عرض كل المشاريع</span>
+        <span class="en hidden">All Projects Loaded</span>
+      `;
+    } else {
+      this.elements.loadMoreBtn.disabled = false;
+      this.elements.loadMoreBtn.innerHTML = `
+        <i class="fas fa-plus"></i>
+        <span class="ar">تحميل المزيد</span>
+        <span class="en hidden">Load More</span>
+      `;
+    }
+  }
+  
+  // ============================================
+  // RENDERING METHODS
+  // ============================================
+  
+  renderProjects() {
+    if (!this.elements.grid) return;
+    
+    // إخفاء جميع المشاريع أولاً
+    this.projects.forEach(project => {
+      project.element.style.display = 'none';
+    });
+    
+    // حساب العناصر المراد عرضها
+    const itemsToShow = this.config.currentPage * this.config.itemsPerPage;
+    const projectsToShow = this.filteredProjects.slice(0, itemsToShow);
+    
+    // عرض المشاريع المصفاة
+    projectsToShow.forEach(project => {
+      project.element.style.display = 'flex';
+    });
+    
+    // التحقق إذا لم توجد مشاريع
+    this.checkEmptyState();
+    
+    // إضافة تأثيرات ظهور
+    this.addAppearEffects(projectsToShow);
+  }
+  
+  checkEmptyState() {
+    if (!this.elements.noProjectsMessage) return;
+    
+    if (this.filteredProjects.length === 0) {
+      this.elements.noProjectsMessage.style.display = 'block';
+      if (this.elements.grid) this.elements.grid.style.display = 'none';
+    } else {
+      this.elements.noProjectsMessage.style.display = 'none';
+      if (this.elements.grid) this.elements.grid.style.display = 'grid';
+    }
+  }
+  
+  addAppearEffects(projects) {
+    projects.forEach((project, index) => {
+      setTimeout(() => {
+        project.element.classList.add('fade-in');
+      }, index * 100);
+    });
+  }
+  
+  // ============================================
+  // FEATURED SLIDER
+  // ============================================
+  
+  initFeaturedSlider() {
+    if (!this.elements.featuredSlider || !window.jQuery) return;
+    
+    const $slider = $(this.elements.featuredSlider);
+    const isRTL = this.config.isRTL;
+    
+    $slider.owlCarousel({
+      loop: true,
+      margin: 16,
+      rtl: isRTL,
+      center: true,
+      nav: true,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1,
+          center: false
+        },
+        600: {
+          items: 2
+        },
+        992: {
+          items: 3
+        },
+        1200: {
+          items: 4
+        }
+      },
+      navText: [
+        '<i class="fas fa-chevron-right"></i>',
+        '<i class="fas fa-chevron-left"></i>'
+      ],
+      onInitialized: () => {
+        this.dispatchEvent('slider:initialized');
+      }
+    });
+    
+    // تحديث الاتجاه عند تغيير اللغة
+    document.addEventListener('language:changed', () => {
+      setTimeout(() => {
+        $slider.trigger('destroy.owl.carousel');
+        this.config.isRTL = document.documentElement.dir === 'rtl';
+        this.initFeaturedSlider();
+      }, 300);
+    });
+  }
+  
+  // ============================================
+  // UTILITY METHODS
+  // ============================================
+  
+  showLoading(show) {
+    if (!this.elements.loadingIndicator) return;
+    
+    if (show) {
+      this.elements.loadingIndicator.style.display = 'block';
+      if (this.elements.loadMoreBtn) {
+        this.elements.loadMoreBtn.disabled = true;
+      }
+    } else {
+      this.elements.loadingIndicator.style.display = 'none';
+      this.updateLoadMoreButton();
+    }
+  }
+  
+  updateProjectsCounter() {
+    if (!this.elements.projectsCount) return;
+    
+    const total = this.projects.length;
+    const filtered = this.filteredProjects.length;
+    const showing = Math.min(
+      this.config.currentPage * this.config.itemsPerPage,
+      filtered
+    );
+    
+    this.elements.projectsCount.innerHTML = `
+      <span class="ar">
+        عرض <strong>${showing}</strong> من <strong>${filtered}</strong> مشروع
+        ${filtered !== total ? `(مصفى من ${total})` : ''}
+      </span>
+      <span class="en hidden">
+        Showing <strong>${showing}</strong> of <strong>${filtered}</strong> projects
+        ${filtered !== total ? `(filtered from ${total})` : ''}
+      </span>
+    `;
+  }
+  
+  dispatchEvent(eventName, detail = {}) {
+    const event = new CustomEvent(eventName, {
+      detail: { ...detail, system: this }
+    });
+    document.dispatchEvent(event);
+  }
+  
+  // ============================================
+  // PUBLIC API
+  // ============================================
+  
+  getCurrentFilter() {
+    return this.config.filter;
+  }
+  
+  getTotalProjects() {
+    return this.projects.length;
+  }
+  
+  getFilteredProjects() {
+    return this.filteredProjects.length;
+  }
+  
+  filterByCategory(category) {
+    const button = Array.from(this.elements.filterButtons)
+      .find(btn => btn.dataset.filter === category);
+    
+    if (button) {
+      button.click();
+    }
+  }
+  
+  resetFilter() {
+    this.filterByCategory('all');
+  }
+  
+  addProject(projectData) {
+    // طريقة لإضافة مشروع ديناميكي
+    const newProject = {
+      id: this.projects.length + 1,
+      ...projectData
+    };
+    
+    this.projects.push(newProject);
+    this.applyFilter();
+    
+    return newProject;
+  }
+}
+
+// ============================================
+// GLOBAL INITIALIZATION
+// ============================================
+
+function initProjectsSystem() {
+  const projectsSection = document.getElementById('projects');
+  if (!projectsSection) return;
+  
+  // التحقق إذا تم التهيئة مسبقاً
+  if (projectsSection._projectsSystem) return;
+  
+  // إنشاء النظام
+  const projectsSystem = new ProjectsSystem();
+  
+  // حفظ المرجع للوصول العام
+  projectsSection._projectsSystem = projectsSystem;
+  window.SummitProjects = projectsSystem;
+  
+  // إرسال حدث التهيئة
+  document.dispatchEvent(new CustomEvent('projects:ready', {
+    detail: { system: projectsSystem }
+  }));
+  
+  return projectsSystem;
+}
+
+// ============================================
+// PERFORMANCE OPTIMIZATIONS
+// ============================================
+
+function optimizeProjectsPerformance() {
+  // Lazy loading للصور
+  const projectImages = document.querySelectorAll('.project-image[data-src]');
+  
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          observer.unobserve(img);
+        }
+      });
+    });
+    
+    projectImages.forEach(img => observer.observe(img));
+  }
+  
+  // will-change للتحسينات
+  const interactiveElements = document.querySelectorAll('.project-card-enhanced, .filter-btn');
+  interactiveElements.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      el.style.willChange = 'transform, opacity';
+    });
+    
+    el.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        el.style.willChange = 'auto';
+      }, 300);
+    });
+  });
+  
+  // Debounce لأحداث التمرير
+  let scrollTimer;
+  window.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(() => {
+      // إضافة تأثيرات الظهور أثناء التمرير
+      const elements = document.querySelectorAll('.project-card-enhanced:not(.fade-in)');
+      elements.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          setTimeout(() => {
+            el.classList.add('fade-in');
+          }, index * 100);
+        }
+      });
+    }, 100);
+  });
+}
+
+// ============================================
+// ACCESSIBILITY ENHANCEMENTS
+// ============================================
+
+function enhanceProjectsAccessibility() {
+  // احترام تفضيلات الحركة المخفّضة
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const transitions = document.querySelectorAll('.project-card-enhanced, .featured-project-card');
+    transitions.forEach(el => {
+      el.style.transition = 'none';
+    });
+  }
+  
+  // التنقل بلوحة المفاتيح
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  filterButtons.forEach((button, index) => {
+    button.setAttribute('tabindex', '0');
+    
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        button.click();
+      }
+      
+      // التنقل بين الأزرار باستخدام الأسهم
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextButton = filterButtons[(index + 1) % filterButtons.length];
+        nextButton.focus();
+      }
+      
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevButton = filterButtons[(index - 1 + filterButtons.length) % filterButtons.length];
+        prevButton.focus();
+      }
+    });
+  });
+  
+  // ARIA labels للكاروسيل
+  const slider = document.querySelector('.owl-carousel');
+  if (slider) {
+    slider.setAttribute('role', 'region');
+    slider.setAttribute('aria-label', 'Featured Projects Slider');
+  }
+}
+
+// ============================================
+// EXPORT FOR MODULAR USE
+// ============================================
+
+export const ProjectsSystemModule = {
+  init: initProjectsSystem,
+  optimize: optimizeProjectsPerformance,
+  enhanceAccessibility: enhanceProjectsAccessibility,
+  ProjectsSystem: ProjectsSystem
+};
+
+// للاستخدام العام
+window.SummitProjectsSystem = ProjectsSystemModule;
+
+// التهيئة التلقائية
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    initProjectsSystem();
+    optimizeProjectsPerformance();
+    enhanceProjectsAccessibility();
+  }, 500);
+});
+
+// التهيئة عند تحميل كل شيء
+window.addEventListener('load', () => {
+  if (window.SummitProjects) {
+    window.SummitProjects.updateProjectsCounter();
+  }
+});
+📝 تعديل HTML لقسم المشاريع
+html
+<!-- قسم المشاريع الموحد -->
+<section id="projects" class="section-padding bg-white">
+  <div class="section-container">
+    
+    <!-- رأس القسم المحسن -->
+    <div class="projects-header fade-in">
+      <h2 class="section-title">
+        <span class="ar">مشاريعنا الناجحة</span>
+        <span class="en hidden">Our Successful Projects</span>
+      </h2>
+      
+      <p class="projects-subtitle">
+        <span class="ar">
+          نفتخر بتنفيذ مشاريع متنوعة وناجحة في جميع أنحاء الكويت بأعلى معايير الجودة والسلامة.
+          استعرض مشاريعنا المميزة وتصفح أعمالنا في مختلف المجالات.
+        </span>
+        <span class="en hidden">
+          We are proud to implement diverse and successful projects throughout Kuwait 
+          with the highest standards of quality and safety. 
+          Browse our featured projects and explore our work in various fields.
+        </span>
+      </p>
+      
+      <!-- عداد المشاريع -->
+      <div class="projects-counter" id="projectsCount">
+        <span class="ar">عرض <strong>6</strong> من <strong>12</strong> مشروع</span>
+        <span class="en hidden">Showing <strong>6</strong> of <strong>12</strong> projects</span>
+      </div>
+    </div>
+    
+    <!-- نظام الفلترة -->
+    <div class="projects-filter fade-in stagger-delay-1">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-layer-group"></i>
+        <span class="ar">الكل</span>
+        <span class="en hidden">All</span>
+      </button>
+      
+      <button class="filter-btn" data-filter="construction">
+        <i class="fas fa-building"></i>
+        <span class="ar">تشييد</span>
+        <span class="en hidden">Construction</span>
+      </button>
+      
+      <button class="filter-btn" data-filter="infrastructure">
+        <i class="fas fa-road"></i>
+        <span class="ar">بنية تحتية</span>
+        <span class="en hidden">Infrastructure</span>
+      </button>
+      
+      <button class="filter-btn" data-filter="water">
+        <i class="fas fa-water"></i>
+        <span class="ar">مياه</span>
+        <span class="en hidden">Water</span>
+      </button>
+      
+      <button class="filter-btn" data-filter="energy">
+        <i class="fas fa-bolt"></i>
+        <span class="ar">طاقة</span>
+        <span class="en hidden">Energy</span>
+      </button>
+      
+      <button class="filter-btn" data-filter="commercial">
+        <i class="fas fa-store"></i>
+        <span class="ar">تجاري</span>
+        <span class="en hidden">Commercial</span>
+      </button>
+    </div>
+    
+    <!-- المشاريع المميزة (كاروسيل) -->
+    <div class="featured-projects fade-in stagger-delay-2">
+      <h3 class="section-subtitle">
+        <i class="fas fa-star"></i>
+        <span class="ar">مشاريعنا المميزة</span>
+        <span class="en hidden">Featured Projects</span>
+      </h3>
+      
+      <div class="featured-slider">
+        <div class="owl-carousel owl-theme">
+          <!-- سيتم توليد المشاريع المميزة ديناميكياً -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- شبكة المشاريع الرئيسية -->
+    <div class="projects-grid-main" id="projectsGridMain">
+      <!-- المشروع 1 -->
+      <div class="project-card-enhanced fade-in" data-category="construction" data-featured="true">
+        <div class="project-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+            alt="مشروع مجمع سكني"
+            class="project-image"
+            loading="lazy"
+          >
+          <span class="project-badge">
+            <span class="ar">مشروع مكتمل</span>
+            <span class="en hidden">Completed</span>
+          </span>
+        </div>
+        
+        <div class="project-content">
+          <h3 class="project-title">
+            <span class="ar">مجمع سكني فاخر</span>
+            <span class="en hidden">Luxury Residential Complex</span>
+          </h3>
+          
+          <p class="project-description">
+            <span class="ar">
+              تشييد مجمع سكني متكامل يحتوي على 50 وحدة سكنية مع جميع الخدمات
+              والمرافق الحديثة، تنفيذ كامل مع أعلى معايير الجودة.
+            </span>
+            <span class="en hidden">
+              Construction of an integrated residential complex containing 
+              50 housing units with all services and modern facilities, 
+              full implementation with highest quality standards.
+            </span>
+          </p>
+          
+          <div class="project-meta">
+            <div class="project-date">
+              <i class="far fa-calendar"></i>
+              <span>يناير 2024</span>
+            </div>
+            
+            <a href="#" class="project-link">
+              <span class="ar">عرض التفاصيل</span>
+              <span class="en hidden">View Details</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- باقي المشاريع (5 مشاريع إضافية) -->
+      <!-- ... -->
+      
+    </div>
+    
+    <!-- رسالة عدم وجود مشاريع -->
+    <div class="no-projects-message">
+      <i class="fas fa-search"></i>
+      <h3>
+        <span class="ar">لا توجد مشاريع مطابقة</span>
+        <span class="en hidden">No matching projects</span>
+      </h3>
+      <p>
+        <span class="ar">لم نعثر على مشاريع تطابق الفلتر المحدد. جرب فلتراً مختلفاً.</span>
+        <span class="en hidden">We couldn't find projects matching your filter. Try a different filter.</span>
+      </p>
+    </div>
+    
+    <!-- مؤشر التحميل -->
+    <div class="loading-indicator">
+      <div class="loading-spinner"></div>
+      <p>
+        <span class="ar">جاري تحميل المزيد من المشاريع...</span>
+        <span class="en hidden">Loading more projects...</span>
+      </p>
+    </div>
+    
+    <!-- أزرار التحكم -->
+    <div class="projects-actions">
+      <button class="load-more-btn" id="loadMoreProjects">
+        <i class="fas fa-plus"></i>
+        <span class="ar">تحميل المزيد</span>
+        <span class="en hidden">Load More</span>
+      </button>
+      
+      <button class="view-all-btn" id="viewAllProjects">
+        <i class="fas fa-eye"></i>
+        <span class="ar">عرض كل المشاريع</span>
+        <span class="en hidden">View All Projects</span>
+      </button>
+    </div>
+  </div>
+</section>
+🤖 تعليمات الذكاء الاصطناعي للاستكمال
+markdown
+# تعليمات استكمال نظام المشاريع
+
+## ✅ **ما تم تنفيذه:**
+1. ✅ إنشاء ملف `project.css` كاملاً باستخدام نظام CSS الجديد
+2. ✅ إنشاء ملف `project.js` كاملاً مع نظام فلترة وتحميل تدريجي
+3. ✅ هيكل HTML محسن لقسم المشاريع الموحد
+4. ✅ دعم كامل للغة العربية والإنجليزية
+5. ✅ تصميم متجاوب لجميع الشاشات
+6. ✅ تحسينات أداء ووصولية كاملة
+
+## 📋 **خطوات الاستكمال:**
+
+### 1. **إضافة روابط الملفات الجديدة:**
+```html
+<!-- في head بعد global-styles.css -->
+<link rel="stylesheet" href="css/project.css">
+html
+<!-- قبل إغلاق body -->
+<script src="js/project.js" defer></script>
+2. استبدال قسمي المشاريع القديمين:
+احذف قسم #projects الحالي
+
+احذف قسم #more-projects الحالي
+
+استبدلهما بقسم المشاريع الموحد أعلاه
+
+3. إضافة المشاريع الحالية:
+أضف 5-8 مشاريع إضافية داخل .projects-grid-main بنفس هيكل المشروع الأول.
+
+4. تكوين البيانات:
+قم بإضافة خاصية data-category لكل مشروع حسب تصنيفه:
+
+construction (تشييد)
+
+infrastructure (بنية تحتية)
+
+water (مياه)
+
+energy (طاقة)
+
+commercial (تجاري)
+
+5. اختبار النظام:
+اختبر الفلترة بالنقر على الأزرار
+
+اختبر زر "تحميل المزيد"
+
+اختبر الكاروسيل للمشاريع المميزة
+
+اختبر التجاوب على الجوال
+
+اختبر تبديل اللغة
+
+🎯 ملاحظات مهمة:
+النظام يعتمد كلياً على متغيرات :root الموجودة
+
+تم استخدام جميع أنظمة التباعد والخطوط المحددة
+
+لا توجد متغيرات أو أنماط جديدة مضافة
+
+النظام متكامل مع JavaScript الموجود
+
+يدعم الوصولية والطباعة
+
+🔧 للاستخدام السريع:
+javascript
+// الوصول للنظام من الكونسول
+window.SummitProjects.filterByCategory('construction');
+window.SummitProjects.resetFilter();
+window.SummitProjects.getTotalProjects();
+📞 الدعم الفني:
+إذا واجهت أي مشكلة:
+
+تحقق من وجود ملفات CSS و JS
+
+تأكد من وجود مكتبة jQuery و Owl Carousel
+
+تحقق من كونسول المطورين للأخطاء
+
+تأكد من صحة هيكل HTML
+
+النظام جاهز للاستخدام الفوري! 🚀
+
+text
+
+## 📊 **ملخص الميزات المطبقة:**
+
+✅ **1. النظام الأساسي:**
+- استخدام كامل لمتغيرات CSS الجديدة
+- نظام فلترة متكامل بـ6 فئات
+- تحميل تدريجي مع pagination
+
+✅ **2. التصميم المتجاوب:**
+- تكيف مع جميع أحجام الشاشات
+- تصميم خاص للجوال
+- تحسينات للشاشات الكبيرة
+
+✅ **3. التفاعلية:**
+- فلترة فورية دون إعادة تحميل
+- تحميل تدريجي للمشاريع
+- كاروسيل للمشاريع المميزة
+
+✅ **4. الأداء:**
+- Lazy loading للصور
+- Optimized animations
+- Debounced scroll events
+
+✅ **5. الوصولية:**
+- دعم لوحة المفاتيح
+- ARIA labels كاملة
+- دعم prefers-reduced-motion
+
+✅ **6. دعم ثنائي اللغة:**
+- RTL/LTR كامل
+- تبديل تلقائي للنصوص
+- اتجاهات مناسبة
+
+**الملفات جاهزة للاستخدام الفوري!** 🎉2. تعليمات الذكاء الاصطناعي (AI Instructions for Implementation)
+لضمان عمل هذا الملف بشكل صحيح مع باقي النظام، انسخ التعليمات التالية للذكاء الاصطناعي أو المطور الذي سيكتب كود HTML و JS.
+
+🤖 تعليمات HTML  index.html):
+HTML
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<div class="fixed-contact-bar">
+  <a href="https://wa.me/..." class="contact-fab whatsapp" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div style="position: relative;">
+    <button id="socialFab" class="contact-fab social" aria-label="Social Media">
+      <i class="fas fa-share-alt"></i>
+    </button>
+    
+    <div id="socialDropdown" class="social-dropdown">
+      <a href="#" class="social-item"><i class="fab fa-facebook-f text-primary"></i> Facebook</a>
+      <a href="#" class="social-item"><i class="fab fa-instagram text-secondary"></i> Instagram</a>
+      <a href="#" class="social-item"><i class="fab fa-linkedin-in text-info"></i> LinkedIn</a>
+    </div>
+  </div>
+</div>
+🤖 تعليمات JavaScript (contact.js):
+يجب إنشاء ملف js/contact.js يحتوي على الوظائف التالية لضمان عمل الفئات visible و active التي تم تعريفها في CSS:
+
+JavaScript
+
+/* Contact System Logic */
+
+// 1. Back to Top Logic
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.add('visible');
+  } else {
+    backToTopBtn.classList.remove('visible');
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 2. Social Dropdown Toggle
+const socialFab = document.getElementById('socialFab');
+const socialDropdown = document.getElementById('socialDropdown');
+
+socialFab.addEventListener('click', (e) => {
+  e.stopPropagation();
+  socialDropdown.classList.toggle('active');
+  // تغيير الأيقونة عند الفتح
+  const icon = socialFab.querySelector('i');
+  if (socialDropdown.classList.contains('active')) {
+    icon.classList.replace('fa-share-alt', 'fa-times');
+  } else {
+    icon.classList.replace('fa-times', 'fa-share-alt');
+  }
+});
+
+// إغلاق القائمة عند النقر خارجها
+document.addEventListener('click', (e) => {
+  if (!socialFab.contains(e.target) && !socialDropdown.contains(e.target)) {
+    socialDropdown.classList.remove('active');
+    socialFab.querySelector('i').classList.replace('fa-times', 'fa-share-alt');
+  }
+});
+

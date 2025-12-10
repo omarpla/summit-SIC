@@ -1,0 +1,330 @@
+/* ============================================
+   CONTACT SYSTEM - SUMMIT INTERNATIONAL COMPANY
+   File: contact.css
+   Version: 3.0.0
+   Description: Refined contact styles using Design System variables
+   ============================================ */
+
+/* ============================================
+   نموذج الاتصال (Contact Form & Grid)
+   ============================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.contact-icon {
+  width: var(--space-16); /* 64px approx */
+  height: var(--space-16);
+  background: var(--gradient-brand);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Exception: Standard CSS color for contrast */
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+  background-color: var(--color-white, white); /* Fallback to white if var not defined */
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+  border: var(--border-width) solid var(--color-neutral-200);
+}
+
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-width-2) solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-base);
+  transition: all var(--transition-base);
+  background-color: var(--color-neutral-50);
+  color: var(--color-neutral-800);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  background-color: var(--color-white, white);
+  box-shadow: 0 0 0 3px rgba(17, 34, 78, 0.1); /* Based on Primary-500 */
+}
+
+textarea.form-control {
+  min-height: 10rem; /* ~160px */
+  resize: vertical;
+}
+
+.btn-submit {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: var(--space-3) var(--space-8);
+  border-radius: var(--radius-full);
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  width: 100%;
+  min-height: var(--space-12); /* ~48px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+  background: var(--gradient-secondary);
+}
+
+/* ============================================
+   شريط الاتصال الثابت (Fixed Contact Bar)
+   ============================================ */
+
+.fixed-contact-bar {
+  position: fixed;
+  left: var(--space-6);
+  bottom: var(--space-6);
+  z-index: var(--z-50);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* RTL Support via HTML dir attribute */
+[dir="rtl"] .fixed-contact-bar {
+  left: auto;
+  right: var(--space-6);
+}
+
+.contact-fab {
+  width: var(--space-16);
+  height: var(--space-16);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: var(--text-xl);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+  text-decoration: none;
+}
+
+.contact-fab:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: var(--shadow-2xl);
+}
+
+/* Semantic Colors Mapping */
+.contact-fab.whatsapp {
+  background-color: var(--color-success); /* Replaces #25d366 */
+  animation: pulse 2s infinite;
+}
+
+.contact-fab.email {
+  background-color: var(--color-error); /* Replaces #ea4335 */
+}
+
+.contact-fab.website {
+  background-color: var(--color-secondary-500);
+}
+
+.contact-fab.social {
+  background: var(--gradient-brand); /* Replaces custom gradient */
+}
+
+.social-dropdown {
+  position: absolute;
+  bottom: calc(var(--space-16) + var(--space-4)); /* Dynamic positioning */
+  left: 0;
+  background-color: var(--color-white, white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-2xl);
+  padding: var(--space-4);
+  display: none;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 12rem; /* ~192px */
+  z-index: calc(var(--z-50) + 10);
+  border: var(--border-width) solid var(--color-neutral-200);
+}
+
+[dir="rtl"] .social-dropdown {
+  left: auto;
+  right: 0;
+}
+
+.social-dropdown.active {
+  display: flex;
+  animation: fadeInUp var(--transition-fast) var(--ease-out);
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-neutral-800);
+  transition: all var(--transition-fast);
+}
+
+.social-item:hover {
+  background-color: var(--color-neutral-100);
+  transform: translateX(var(--space-1));
+}
+
+[dir="rtl"] .social-item:hover {
+  transform: translateX(calc(var(--space-1) * -1));
+}
+
+/* ============================================
+   التذييل (Footer)
+   ============================================ */
+
+.footer {
+  background-color: var(--color-primary-900); /* Darker footer for contrast */
+  color: var(--color-neutral-50);
+  padding: var(--space-16) 0 var(--space-6);
+  margin-top: var(--space-20);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.footer-logo {
+  width: var(--space-20); /* 80px */
+  height: var(--space-20);
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  margin-bottom: var(--space-4);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.footer-link {
+  color: var(--color-neutral-300);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  font-size: var(--text-sm);
+}
+
+.footer-link:hover {
+  color: var(--color-secondary-300);
+  transform: translateX(var(--space-1));
+}
+
+[dir="rtl"] .footer-link:hover {
+  transform: translateX(calc(var(--space-1) * -1));
+}
+
+.social-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.social-link {
+  width: var(--space-10); /* 40px */
+  height: var(--space-10);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.social-link:hover {
+  background-color: var(--color-secondary-500);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-6);
+  border-top: var(--border-width) solid rgba(255, 255, 255, 0.1);
+  color: var(--color-neutral-400);
+  font-size: var(--text-sm);
+}
+
+/* ============================================
+   زر العودة للأعلى (Back to Top)
+   ============================================ */
+
+.back-to-top {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: var(--space-12); /* ~48px */
+  height: var(--space-12);
+  background-color: var(--color-primary-500);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--text-xl);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: var(--z-40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: var(--space-6);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--color-secondary-500);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
