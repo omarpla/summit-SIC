@@ -713,3 +713,246 @@
 /* ============================================
    نهاية الملف
    ============================================ */
+   /* ============================================
+   HERO SLIDER STYLES - شركة سومت العالمية
+   إصدار محسّن يركز على الوضوح والتجربة
+   ============================================ */
+
+/* 1. المتغيرات المحسنة للتحكم المرن */
+.hero-slider {
+    --hero-overlay-day: linear-gradient(135deg,
+        rgba(17, 34, 78, 0.85) 0%,    /* لون أساسي داكن */
+        rgba(17, 34, 78, 0.70) 50%,
+        rgba(248, 123, 27, 0.25) 100% /* لون ثانوي للفت الانتباه */
+    );
+    --hero-overlay-night: linear-gradient(135deg,
+        rgba(17, 34, 78, 0.92) 0%,
+        rgba(17, 34, 78, 0.80) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+    --control-bg: rgba(0, 0, 0, 0.65);
+}
+
+/* 2. الهيكل الأساسي - متجاوب بشكل أفضل */
+.hero-slider {
+    position: relative;
+    width: 100%;
+    /* استخدام min-height أكثر مرونة من height ثابتة */
+    min-height: 100svh; /* أفضل للموبايل */
+    max-height: 1000px; /* حد أقصى للشاشات الكبيرة */
+    overflow: hidden;
+    background-color: var(--color-primary-900);
+}
+
+/* 3. تحسين تراكب الخلفية للوضوح */
+.carousel-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hero-overlay-day);
+    z-index: 1;
+    /* إضافة انتقال لطيف إذا تغيرت الصورة */
+    transition: background 1s ease;
+}
+
+/* 4. تحسين محتوى النص والقراءة */
+.slide-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    padding: clamp(1rem, 4vw, 3rem); /* padding متجاوب */
+}
+
+.content-wrapper {
+    width: min(90%, 1200px); /* لا يتعدى عرض معين */
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* العنوان الرئيسي - أكثر وضوحًا */
+.slide-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* حجم خط متجاوب */
+    font-weight: var(--font-bold);
+    line-height: 1.2;
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* ظل أعمق للقراءة */
+}
+
+/* النص الفرعي - تحسين التباين */
+.slide-subtitle p {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    /* خلفية شبه شفافة خلف الفقرة الطويلة لتحسين القراءة */
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    padding: 1.2rem;
+    border-radius: var(--radius-md);
+}
+
+/* 5. تحسين أزرار الحث على الإجراء (CTA) */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    /* تحسين المساحة القابلة للضرب على الشاشات التي تعمل باللمس */
+    min-height: 52px;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+/* 6. عناصر التحكم - أوضح وأسهل في الاستخدام */
+.slider-controls {
+    position: absolute;
+    bottom: clamp(1rem, 4vh, 2.5rem); /* متجاوب مع ارتفاع الشاشة */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 20;
+    background: var(--control-bg);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* تأثير ضبابي خلفي حديث */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* جعل أزرار المؤشرات وأزرار السهم أكبر قليلاً */
+.indicator-btn {
+    width: clamp(10px, 2vw, 12px);
+    height: clamp(10px, 2vw, 12px);
+}
+.nav-btn {
+    width: clamp(40px, 6vw, 48px);
+    height: clamp(40px, 6vw, 48px);
+}
+
+/* 7. استعلامات الوسائط المحسنة (بناءً على طلبك) */
+
+/* شاشات كبيرة جداً */
+@media (min-width: 1200px) {
+    .hero-slider {
+        max-height: 900px;
+    }
+    .slide-title {
+        font-size: clamp(3rem, 4vw, 4rem);
+    }
+}
+
+/* أجهزة لوحية - شاشات صغيرة */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-slider {
+        min-height: 80vh;
+        max-height: 800px;
+    }
+    .slide-subtitle p {
+        padding: 1rem;
+    }
+}
+
+/* موبايل كبير */
+@media (min-width: 600px) and (max-width: 767px) {
+    .hero-slider {
+        min-height: 85svh;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    .slider-controls {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+    .carousel-nav {
+        order: -1; /* يضع أزرار السهم في الأعلى */
+    }
+}
+
+/* موبايل عادي */
+@media (max-width: 599px) {
+    .hero-slider {
+        min-height: 90svh;
+    }
+    .content-wrapper {
+        width: 95%;
+    }
+    .slide-subtitle p {
+        padding: 0.9rem;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.5); /* زيادة العتامة على الشاشات الصغيرة */
+    }
+    .slider-controls {
+        bottom: 1rem;
+        width: 90%;
+        justify-content: space-around;
+    }
+}
+
+/* 8. تحسينات الوصولية */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slider * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .slide-title {
+        text-shadow: 0 0 0 transparent;
+        -webkit-text-stroke: 1px var(--color-primary-900);
+    }
+    .slide-subtitle p {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid white;
+    }
+}
+
+/* 9. دعم خاص للأجهزة التي تعمل باللمس */
+@media (hover: none) and (pointer: coarse) {
+    .btn-primary, .btn-secondary {
+        min-height: 56px; /* مساحة أكبر للضرب */
+    }
+    .indicator-btn, .nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
