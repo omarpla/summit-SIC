@@ -1,33 +1,63 @@
 /* ============================================
-   HERO SLIDER STYLES - شركة سومت العالمية
-   File: home-hero.css
-   Version: 3.0.0
-   Description: أنماط هيرو سلايدر بسيطة وفعّالة
+   HERO SLIDER SYSTEM - شركة سومت العالمية
+   File: home-hero.css (الإصدار المحسّن)
+   Description: تصميم متكامل للهيرو سلايدر مع تحسينات الأداء والتجربة
    ============================================ */
 
 /* ============================================
-   الهيكل الأساسي
+   🎨 متغيرات النظام المحسنة
+   ============================================ */
+.hero-slider {
+    /* أبعاد متجاوبة مع السلايدر الحالي */
+    --hero-min-height: 100svh;
+    --hero-max-height: 90vh;
+    
+    /* تراكبات محسنة للقراءة */
+    --overlay-gradient: linear-gradient(
+        135deg,
+        rgba(17, 34, 78, 0.92) 0%,
+        rgba(17, 34, 78, 0.78) 50%,
+        rgba(248, 123, 27, 0.35) 100%
+    );
+    
+    /* ألوان محسنة للوضوح */
+    --control-bg: rgba(0, 0, 0, 0.7);
+    --control-border: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================
+   🏗️ الهيكل الأساسي المحسّن
    ============================================ */
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 100vh;
-    min-height: 600px;
+    min-height: var(--hero-min-height);
+    max-height: var(--hero-max-height);
     overflow: hidden;
     background-color: var(--color-primary-900);
+    
+    /* تحسينات الأداء */
+    contain: layout paint;
+    will-change: transform;
 }
 
 /* ============================================
-   حاوية الشرائح
+   🖼️ حاوية الشرائح - محسنة للأداء
    ============================================ */
 .carousel-container {
     position: relative;
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    /* تحسينات للشاشات اللمسية */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
 }
 
 /* ============================================
-   الشرائح الفردية
+   📄 الشرائح الفردية - مع تباين محسّن
    ============================================ */
 .carousel-slide {
     position: absolute;
@@ -37,18 +67,25 @@
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: opacity var(--transition-slow) var(--ease-in-out);
+    transition: 
+        opacity var(--transition-slow) var(--ease-in-out),
+        visibility var(--transition-slow) var(--ease-in-out);
+    z-index: 1;
+    
+    /* خلفية محسنة */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: var(--color-primary-800);
 }
 
 .carousel-slide.active {
     opacity: 1;
     visibility: visible;
+    z-index: 2;
 }
 
-/* تراكب شفاف على الصورة */
+/* تراكب محسّن للقراءة */
 .carousel-slide::before {
     content: '';
     position: absolute;
@@ -56,16 +93,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(17, 34, 78, 0.9) 0%,
-        rgba(17, 34, 78, 0.7) 50%,
-        rgba(248, 123, 27, 0.3) 100%
-    );
+    background: var(--overlay-gradient);
+    z-index: 1;
 }
 
 /* ============================================
-   محتوى الشريحة
+   🎨 محتوى الشريحة - تصميم متوازن
    ============================================ */
 .slide-content {
     position: relative;
@@ -74,8 +107,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 3;
     padding: var(--space-8) var(--space-4);
-    z-index: 2;
 }
 
 .content-wrapper {
@@ -87,138 +120,177 @@
 }
 
 .slide-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--color-white);
+    gap: var(--space-8);
+}
+
+/* ============================================
+   🔤 النظام النصي - تحسينات القراءة
+   ============================================ */
+
+/* العنوان الرئيسي - تباين عالي */
+.slide-title {
+    font-family: var(--font-heading);
+    font-size: clamp(var(--text-2xl), 6vw, var(--text-4xl));
+    font-weight: var(--font-bold);
     color: var(--color-white);
     text-align: center;
-    max-width: 900px;
+    line-height: var(--leading-tight);
+    margin: 0 0 var(--space-6) 0;
+    
+    /* تحسينات التباين */
+    text-shadow: 
+        2px 2px 8px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* النص الفرعي - خلفية شفافة */
+.slide-subtitle {
+    width: min(100%, 700px);
     margin: 0 auto;
 }
 
-/* ============================================
-   اللوجو
-   ============================================ */
-.hero-logo-container {
-    margin-bottom: var(--space-8);
-}
-
-.hero-logo {
-    width: 120px;
-    height: 120px;
-    object-fit: contain;
-    border-radius: var(--radius-full);
-    background: var(--gradient-brand);
-    padding: var(--space-3);
-    box-shadow: var(--shadow-lg);
-}
-
-/* ============================================
-   النصوص
-   ============================================ */
-.slide-title {
-    font-size: var(--text-4xl);
-    font-weight: var(--font-bold);
-    color: var(--color-white);
-    margin-bottom: var(--space-6);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    line-height: var(--leading-tight);
-}
-
 .slide-subtitle p {
-    font-size: var(--text-lg);
+    font-size: clamp(var(--text-base), 2.5vw, var(--text-lg));
     color: var(--color-neutral-100);
-    margin-bottom: var(--space-8);
     line-height: var(--leading-relaxed);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 0 var(--space-8) 0;
+    
+    /* خلفية شبه شفافة لتحسين القراءة */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ============================================
-   الإحصائيات
+   📊 الإحصائيات - تصميم واضح
    ============================================ */
 .hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-8);
-    margin: var(--space-8) 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-6);
+    width: min(100%, 600px);
+    margin: var(--space-8) auto;
+    padding: var(--space-4);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .stat-item {
-    text-align: center;
-    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-3);
 }
 
 .stat-number {
-    font-size: var(--text-3xl);
+    font-size: clamp(var(--text-2xl), 4vw, var(--text-3xl));
     font-weight: var(--font-bold);
     color: var(--color-secondary-400);
+    line-height: var(--leading-none);
     margin-bottom: var(--space-2);
+    text-shadow: 0 0 20px rgba(248, 123, 27, 0.5);
 }
 
 .stat-label {
     font-size: var(--text-sm);
-    color: var(--color-neutral-200);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: var(--font-medium);
+    text-align: center;
 }
 
 /* ============================================
-   الشارات
+   🏷️ الشارات والأيقونات
    ============================================ */
 .badge {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
     background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-full);
     padding: var(--space-2) var(--space-4);
-    margin-bottom: var(--space-4);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
     color: var(--color-white);
-    font-weight: var(--font-medium);
+    margin-bottom: var(--space-4);
 }
 
 /* ============================================
-   ميزات الجودة
+   ⭐ ميزات الجودة
    ============================================ */
 .quality-features {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-6);
-    margin: var(--space-6) 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+    width: min(100%, 800px);
+    margin: var(--space-8) auto;
+    padding: var(--space-4);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
     text-align: center;
-    max-width: 200px;
 }
 
 .feature-item i {
     font-size: var(--text-2xl);
     color: var(--color-secondary-400);
-    margin-bottom: var(--space-2);
+    background: rgba(248, 123, 27, 0.15);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
 }
 
 .feature-item h4 {
     font-size: var(--text-base);
+    font-weight: var(--font-semibold);
     color: var(--color-white);
+    margin: 0;
 }
 
 /* ============================================
-   الأزرار
+   🔘 نظام الأزرار - محسّن للاستخدام
    ============================================ */
 .hero-buttons {
     display: flex;
     gap: var(--space-4);
     justify-content: center;
-    margin-top: var(--space-8);
     flex-wrap: wrap;
+    align-items: center;
+    margin-top: var(--space-8);
+    padding: var(--space-4) 0;
+    width: 100%;
 }
 
+/* تصميم أساسي للأزرار */
 .btn-primary,
 .btn-secondary,
 .btn-outline {
     padding: var(--space-3) var(--space-6);
     border-radius: var(--radius-full);
+    font-size: var(--text-base);
     font-weight: var(--font-medium);
     text-decoration: none;
     display: inline-flex;
@@ -227,6 +299,8 @@
     transition: all var(--transition-base);
     border: 2px solid transparent;
     cursor: pointer;
+    min-height: 48px;
+    text-align: center;
 }
 
 .btn-primary {
@@ -237,6 +311,7 @@
 .btn-primary:hover {
     background: var(--color-secondary-600);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
@@ -247,6 +322,7 @@
 .btn-secondary:hover {
     background: var(--color-primary-600);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
@@ -260,11 +336,12 @@
     transform: translateY(-2px);
 }
 
+/* تأثير النبض */
 .pulse-animation {
-    animation: pulse 2s infinite;
+    animation: buttonPulse 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes buttonPulse {
     0% {
         box-shadow: 0 0 0 0 rgba(248, 123, 27, 0.7);
     }
@@ -277,37 +354,45 @@
 }
 
 /* ============================================
-   عناصر التحكم - داخل السلايد
+   🎮 عناصر التحكم - وضع ثابت ومحسّن
    ============================================ */
 .slider-controls {
-    position: absolute;
-    bottom: var(--space-6);
-    left: 0;
-    right: 0;
-    z-index: 20;
+    position: fixed;
+    bottom: var(--space-4);
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: var(--space-4);
-    padding: var(--space-3);
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    gap: var(--space-6);
+    z-index: 1000;
+    background: var(--control-bg);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--control-border);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: auto;
+    min-width: 300px;
+    max-width: 90%;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* المؤشرات */
+/* المؤشرات - محسنة للرؤية */
 .carousel-indicators {
     display: flex;
-    gap: var(--space-2);
+    gap: var(--space-3);
 }
 
 .indicator-btn {
     width: 10px;
     height: 10px;
     background: rgba(255, 255, 255, 0.3);
-    border: none;
+    border: 2px solid transparent;
     border-radius: var(--radius-full);
     cursor: pointer;
     transition: all var(--transition-base);
+    position: relative;
 }
 
 .indicator-btn:hover,
@@ -316,17 +401,17 @@
     transform: scale(1.2);
 }
 
-/* أزرار التنقل */
+/* أزرار التنقل - أكبر وأوضح */
 .carousel-nav {
     display: flex;
-    gap: var(--space-3);
+    gap: var(--space-4);
 }
 
 .nav-btn {
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: var(--radius-full);
     color: var(--color-white);
     cursor: pointer;
@@ -334,73 +419,101 @@
     align-items: center;
     justify-content: center;
     transition: all var(--transition-base);
+    backdrop-filter: blur(10px);
 }
 
 .nav-btn:hover {
     background: var(--color-secondary-500);
     border-color: var(--color-secondary-500);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* شريط التقدم */
 .progress-container {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 3px;
     background: rgba(255, 255, 255, 0.1);
-    z-index: 30;
+    overflow: hidden;
+    z-index: 999;
 }
 
 .progress-bar {
     height: 100%;
-    background: var(--color-secondary-500);
+    background: linear-gradient(
+        90deg,
+        var(--color-secondary-500),
+        var(--color-secondary-300)
+    );
     width: 0%;
     transition: width linear;
+    position: relative;
 }
 
 /* ============================================
-   استعلامات الوسائط
+   📱 استعلامات الوسائط المحسّنة
    ============================================ */
 
 /* DESKTOP – LARGE SCREENS (1200px+) */
 @media (min-width: 1200px) {
+    .hero-slider {
+        max-height: 85vh;
+    }
+    
     .slide-title {
         font-size: var(--text-5xl);
     }
     
     .slide-subtitle p {
         font-size: var(--text-xl);
+        padding: var(--space-6) var(--space-8);
     }
     
-    .hero-logo {
-        width: 150px;
-        height: 150px;
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-8);
+        padding: var(--space-6);
+    }
+    
+    .slider-controls {
+        padding: var(--space-4) var(--space-8);
+        min-width: 350px;
     }
 }
 
 /* LAPTOP – MEDIUM SCREENS (992px–1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .hero-slider {
+        min-height: 85vh;
+    }
+    
     .slide-title {
         font-size: var(--text-4xl);
     }
     
     .slide-subtitle p {
         font-size: var(--text-lg);
+        padding: var(--space-5) var(--space-7);
     }
     
-    .hero-logo {
-        width: 130px;
-        height: 130px;
+    .hero-stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-6);
+    }
+    
+    .slider-controls {
+        padding: var(--space-3) var(--space-6);
+        min-width: 320px;
     }
 }
 
 /* TABLETS – SMALL SCREENS (768px–991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .hero-slider {
-        height: 80vh;
-        min-height: 500px;
+        min-height: 80vh;
     }
     
     .slide-title {
@@ -409,52 +522,54 @@
     
     .slide-subtitle p {
         font-size: var(--text-base);
-    }
-    
-    .hero-logo {
-        width: 100px;
-        height: 100px;
+        padding: var(--space-4) var(--space-6);
     }
     
     .hero-stats {
-        gap: var(--space-6);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-4);
     }
     
-    .quality-features {
-        gap: var(--space-4);
+    .hero-buttons {
+        gap: var(--space-3);
+    }
+    
+    .slider-controls {
+        padding: var(--space-3) var(--space-4);
+        min-width: 280px;
+        bottom: var(--space-3);
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
     }
 }
 
 /* MOBILE – LARGE (600px–767px) */
 @media (min-width: 600px) and (max-width: 767px) {
     .hero-slider {
-        height: 70vh;
-        min-height: 400px;
+        min-height: 85svh;
+    }
+    
+    .slide-content {
+        padding: var(--space-6) var(--space-4);
     }
     
     .slide-title {
         font-size: var(--text-2xl);
-        margin-bottom: var(--space-4);
     }
     
     .slide-subtitle p {
-        font-size: var(--text-sm);
-        margin-bottom: var(--space-6);
-    }
-    
-    .hero-logo {
-        width: 80px;
-        height: 80px;
-        margin-bottom: var(--space-4);
+        font-size: var(--text-base);
+        padding: var(--space-3) var(--space-4);
     }
     
     .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
         gap: var(--space-4);
-        margin: var(--space-6) 0;
-    }
-    
-    .stat-item {
-        min-width: 80px;
+        margin: var(--space-6) auto;
+        padding: var(--space-3);
     }
     
     .stat-number {
@@ -462,50 +577,62 @@
     }
     
     .quality-features {
+        grid-template-columns: 1fr;
         gap: var(--space-3);
-        margin: var(--space-4) 0;
+        margin: var(--space-6) auto;
+        padding: var(--space-3);
     }
     
     .feature-item {
-        max-width: 150px;
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+        gap: var(--space-4);
+        padding: var(--space-3);
     }
     
     .hero-buttons {
+        flex-direction: column;
         gap: var(--space-3);
-        margin-top: var(--space-6);
+        width: 100%;
+        max-width: 320px;
+        margin: var(--space-6) auto;
     }
     
     .btn-primary,
     .btn-secondary,
     .btn-outline {
-        padding: var(--space-2) var(--space-4);
-        font-size: var(--text-sm);
+        width: 100%;
+        justify-content: center;
+        padding: var(--space-3) var(--space-5);
     }
     
     .slider-controls {
-        bottom: var(--space-4);
-        padding: var(--space-2);
+        flex-direction: column;
+        gap: var(--space-3);
+        padding: var(--space-3);
+        min-width: 260px;
+        bottom: var(--space-3);
+    }
+    
+    .carousel-nav {
+        order: -1;
     }
     
     .nav-btn {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
 }
 
 /* MOBILE – NORMAL (599px وما تحت) */
 @media (max-width: 599px) {
     .hero-slider {
-        height: 80vh;
-        min-height: 400px;
+        min-height: 90svh;
     }
     
     .slide-content {
-        padding: var(--space-4);
-    }
-    
-    .content-wrapper {
-        padding: var(--space-4);
+        padding: var(--space-4) var(--space-3);
     }
     
     .slide-title {
@@ -515,27 +642,19 @@
     
     .slide-subtitle p {
         font-size: var(--text-sm);
+        padding: var(--space-3);
         margin-bottom: var(--space-4);
-        padding: 0 var(--space-2);
-    }
-    
-    .hero-logo-container {
-        margin-bottom: var(--space-4);
-    }
-    
-    .hero-logo {
-        width: 70px;
-        height: 70px;
-        padding: var(--space-2);
     }
     
     .hero-stats {
-        gap: var(--space-3);
-        margin: var(--space-4) 0;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-2);
+        margin: var(--space-4) auto;
+        padding: var(--space-2);
     }
     
     .stat-item {
-        min-width: 70px;
+        padding: var(--space-2);
     }
     
     .stat-number {
@@ -547,30 +666,29 @@
     }
     
     .quality-features {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
         gap: var(--space-2);
-        margin: var(--space-4) 0;
+        margin: var(--space-4) auto;
+        padding: var(--space-2);
     }
     
     .feature-item {
-        width: 100%;
-        max-width: 250px;
-        display: flex;
-        align-items: center;
-        gap: var(--space-2);
+        padding: var(--space-3);
+        gap: var(--space-3);
     }
     
     .feature-item i {
-        margin-bottom: 0;
+        width: 45px;
+        height: 45px;
+        font-size: var(--text-xl);
     }
     
     .hero-buttons {
         flex-direction: column;
+        gap: var(--space-2);
+        margin-top: var(--space-4);
         width: 100%;
         max-width: 280px;
-        margin-top: var(--space-4);
-        gap: var(--space-2);
     }
     
     .btn-primary,
@@ -579,13 +697,16 @@
         width: 100%;
         justify-content: center;
         padding: var(--space-3) var(--space-4);
+        min-height: 44px;
+        font-size: var(--text-sm);
     }
     
     .slider-controls {
-        bottom: var(--space-3);
-        padding: var(--space-2);
-        gap: var(--space-2);
         flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-2);
+        min-width: 240px;
+        bottom: var(--space-2);
     }
     
     .carousel-nav {
@@ -593,8 +714,8 @@
     }
     
     .nav-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
     }
     
     .indicator-btn {
@@ -604,7 +725,7 @@
 }
 
 /* ============================================
-   تحسينات الوصولية
+   ♿ تحسينات الوصولية
    ============================================ */
 
 /* تقليل الحركة */
@@ -625,10 +746,13 @@
     .slide-title {
         color: var(--color-white);
         text-shadow: 0 0 0 transparent;
+        -webkit-text-stroke: 1px var(--color-primary-900);
     }
     
     .slide-subtitle p {
         color: var(--color-neutral-50);
+        background: rgba(0, 0, 0, 0.8);
+        border: 2px solid var(--color-white);
     }
     
     .btn-primary,
@@ -651,16 +775,22 @@
 }
 
 /* ============================================
-   تحسينات عامة
+   🚀 تحسينات الأداء
    ============================================ */
 
-/* تحسينات للشاشات الملموسة */
+/* تحسين تحميل الصور */
+.carousel-slide[style*="background-image"] {
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
+}
+
+/* تحسينات الشاشات الملموسة */
 @media (hover: none) and (pointer: coarse) {
     .btn-primary,
     .btn-secondary,
     .btn-outline {
-        min-height: 48px;
-        padding: var(--space-3) var(--space-5);
+        min-height: 52px;
+        padding: var(--space-4) var(--space-5);
     }
     
     .nav-btn,
@@ -668,22 +798,42 @@
         min-width: 44px;
         min-height: 44px;
     }
+    
+    /* إزالة hover على الأجهزة الملموسة */
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-outline:hover,
+    .nav-btn:hover,
+    .indicator-btn:hover {
+        transform: none;
+    }
 }
 
-/* دعم RTL */
-[dir="rtl"] .hero-slider {
-    text-align: right;
+/* ============================================
+   🌍 دعم RTL
+   ============================================ */
+
+[dir="rtl"] {
+    .hero-slider {
+        text-align: right;
+    }
+    
+    .fa-chevron-left::before {
+        content: "\f054";
+    }
+    
+    .fa-chevron-right::before {
+        content: "\f053";
+    }
+    
+    .feature-item {
+        text-align: right;
+    }
 }
 
-[dir="rtl"] .fa-chevron-left::before {
-    content: "\f054";
-}
-
-[dir="rtl"] .fa-chevron-right::before {
-    content: "\f053";
-}
-
-/* الطباعة */
+/* ============================================
+   🖨️ أنماط الطباعة
+   ============================================ */
 @media print {
     .hero-slider {
         height: auto;
@@ -691,268 +841,35 @@
         background: none !important;
     }
     
+    .carousel-slide {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+    }
+    
     .carousel-slide::before {
         background: transparent;
     }
     
     .slider-controls,
-    .progress-container,
-    .hero-logo {
+    .progress-container {
         display: none !important;
     }
     
     .slide-title {
         color: var(--color-primary-900) !important;
+        text-shadow: none !important;
     }
     
     .slide-subtitle p {
         color: var(--color-neutral-700) !important;
+        text-shadow: none !important;
+        background: none !important;
+        border: none !important;
     }
 }
 
 /* ============================================
-   نهاية الملف
+   نهاية ملف أنماط الهيرو سلايدر المحسّن
    ============================================ */
-   /* ============================================
-   HERO SLIDER STYLES - شركة سومت العالمية
-   إصدار محسّن يركز على الوضوح والتجربة
-   ============================================ */
-
-/* 1. المتغيرات المحسنة للتحكم المرن */
-.hero-slider {
-    --hero-overlay-day: linear-gradient(135deg,
-        rgba(17, 34, 78, 0.85) 0%,    /* لون أساسي داكن */
-        rgba(17, 34, 78, 0.70) 50%,
-        rgba(248, 123, 27, 0.25) 100% /* لون ثانوي للفت الانتباه */
-    );
-    --hero-overlay-night: linear-gradient(135deg,
-        rgba(17, 34, 78, 0.92) 0%,
-        rgba(17, 34, 78, 0.80) 50%,
-        rgba(0, 0, 0, 0.5) 100%
-    );
-    --control-bg: rgba(0, 0, 0, 0.65);
-}
-
-/* 2. الهيكل الأساسي - متجاوب بشكل أفضل */
-.hero-slider {
-    position: relative;
-    width: 100%;
-    /* استخدام min-height أكثر مرونة من height ثابتة */
-    min-height: 100svh; /* أفضل للموبايل */
-    max-height: 1000px; /* حد أقصى للشاشات الكبيرة */
-    overflow: hidden;
-    background-color: var(--color-primary-900);
-}
-
-/* 3. تحسين تراكب الخلفية للوضوح */
-.carousel-slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--hero-overlay-day);
-    z-index: 1;
-    /* إضافة انتقال لطيف إذا تغيرت الصورة */
-    transition: background 1s ease;
-}
-
-/* 4. تحسين محتوى النص والقراءة */
-.slide-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    padding: clamp(1rem, 4vw, 3rem); /* padding متجاوب */
-}
-
-.content-wrapper {
-    width: min(90%, 1200px); /* لا يتعدى عرض معين */
-    margin: 0 auto;
-    text-align: center;
-    color: var(--color-white);
-}
-
-/* العنوان الرئيسي - أكثر وضوحًا */
-.slide-title {
-    font-size: clamp(2rem, 5vw, 3.5rem); /* حجم خط متجاوب */
-    font-weight: var(--font-bold);
-    line-height: 1.2;
-    margin-bottom: clamp(1rem, 3vw, 1.5rem);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); /* ظل أعمق للقراءة */
-}
-
-/* النص الفرعي - تحسين التباين */
-.slide-subtitle p {
-    font-size: clamp(1.1rem, 2vw, 1.4rem);
-    line-height: 1.6;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2rem;
-    /* خلفية شبه شفافة خلف الفقرة الطويلة لتحسين القراءة */
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(2px);
-    padding: 1.2rem;
-    border-radius: var(--radius-md);
-}
-
-/* 5. تحسين أزرار الحث على الإجراء (CTA) */
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-}
-
-.btn-primary, .btn-secondary {
-    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all var(--transition-base);
-    border: 2px solid transparent;
-    /* تحسين المساحة القابلة للضرب على الشاشات التي تعمل باللمس */
-    min-height: 52px;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-/* 6. عناصر التحكم - أوضح وأسهل في الاستخدام */
-.slider-controls {
-    position: absolute;
-    bottom: clamp(1rem, 4vh, 2.5rem); /* متجاوب مع ارتفاع الشاشة */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 20;
-    background: var(--control-bg);
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius-xl);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    /* تأثير ضبابي خلفي حديث */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-
-/* جعل أزرار المؤشرات وأزرار السهم أكبر قليلاً */
-.indicator-btn {
-    width: clamp(10px, 2vw, 12px);
-    height: clamp(10px, 2vw, 12px);
-}
-.nav-btn {
-    width: clamp(40px, 6vw, 48px);
-    height: clamp(40px, 6vw, 48px);
-}
-
-/* 7. استعلامات الوسائط المحسنة (بناءً على طلبك) */
-
-/* شاشات كبيرة جداً */
-@media (min-width: 1200px) {
-    .hero-slider {
-        max-height: 900px;
-    }
-    .slide-title {
-        font-size: clamp(3rem, 4vw, 4rem);
-    }
-}
-
-/* أجهزة لوحية - شاشات صغيرة */
-@media (min-width: 768px) and (max-width: 991px) {
-    .hero-slider {
-        min-height: 80vh;
-        max-height: 800px;
-    }
-    .slide-subtitle p {
-        padding: 1rem;
-    }
-}
-
-/* موبايل كبير */
-@media (min-width: 600px) and (max-width: 767px) {
-    .hero-slider {
-        min-height: 85svh;
-    }
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-    }
-    .slider-controls {
-        flex-direction: column;
-        gap: 0.75rem;
-        padding: 0.75rem;
-    }
-    .carousel-nav {
-        order: -1; /* يضع أزرار السهم في الأعلى */
-    }
-}
-
-/* موبايل عادي */
-@media (max-width: 599px) {
-    .hero-slider {
-        min-height: 90svh;
-    }
-    .content-wrapper {
-        width: 95%;
-    }
-    .slide-subtitle p {
-        padding: 0.9rem;
-        font-size: 1rem;
-        background-color: rgba(0, 0, 0, 0.5); /* زيادة العتامة على الشاشات الصغيرة */
-    }
-    .slider-controls {
-        bottom: 1rem;
-        width: 90%;
-        justify-content: space-around;
-    }
-}
-
-/* 8. تحسينات الوصولية */
-@media (prefers-reduced-motion: reduce) {
-    .hero-slider * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-@media (prefers-contrast: high) {
-    .slide-title {
-        text-shadow: 0 0 0 transparent;
-        -webkit-text-stroke: 1px var(--color-primary-900);
-    }
-    .slide-subtitle p {
-        background-color: rgba(0, 0, 0, 0.8);
-        border: 1px solid white;
-    }
-}
-
-/* 9. دعم خاص للأجهزة التي تعمل باللمس */
-@media (hover: none) and (pointer: coarse) {
-    .btn-primary, .btn-secondary {
-        min-height: 56px; /* مساحة أكبر للضرب */
-    }
-    .indicator-btn, .nav-btn {
-        min-width: 44px;
-        min-height: 44px;
-    }
-}
