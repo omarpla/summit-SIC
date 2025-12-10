@@ -1,17 +1,17 @@
 /* ============================================
    HOME HERO SLIDER - شركة سومت العالمية
    File: home-hero.css
-   Version: 3.0.0
-   Description: سلايدر الهيرو المتكامل مع نظام التصميم
+   Version: 3.1.0
+   Description: سلايدر الهيرو المتكامل مع نظام التصميم - محسن
    ============================================ */
 
 /* ============================================
-   HERO SLIDER CONTAINER
+   HERO SLIDER CONTAINER - معدل للتوافق مع الموقع الحي
    ============================================ */
 .hero-slider {
   position: relative;
   width: 100%;
-  height: min(600px, 100vh);
+  height: min(550px, 90vh); /* تخفيض الارتفاع للتكيف مع التصميم الحالي */
   overflow: hidden;
   background-color: var(--color-primary-900);
   isolation: isolate;
@@ -19,7 +19,7 @@
 }
 
 /* ============================================
-   CAROUSEL CONTAINER & SLIDES
+   CAROUSEL CONTAINER & SLIDES - محسن للأداء
    ============================================ */
 .carousel-container {
   position: relative;
@@ -38,7 +38,7 @@
   height: 100%;
   opacity: 0;
   transform: translateZ(0);
-  transition: opacity var(--transition-slow) var(--ease-in-out);
+  transition: opacity var(--transition-base) var(--ease-in-out); /* تسريع الانتقال */
   pointer-events: none;
   background-size: cover;
   background-position: center;
@@ -52,7 +52,7 @@
   z-index: var(--z-10);
 }
 
-/* Dark overlay for better text contrast */
+/* تحسين التباين بين النص والخلفية */
 .carousel-slide::before {
   content: '';
   position: absolute;
@@ -62,14 +62,14 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(17, 34, 78, 0.85) 0%,
-    rgba(5, 7, 16, 0.9) 100%
+    rgba(17, 34, 78, 0.92) 0%,  /* زيادة الشفافية */
+    rgba(5, 7, 16, 0.95) 100%
   );
   z-index: -1;
 }
 
 /* ============================================
-   SLIDE CONTENT & TYPOGRAPHY
+   SLIDE CONTENT & TYPOGRAPHY - محسن للقراءة
    ============================================ */
 .slide-content {
   position: relative;
@@ -78,7 +78,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-8);
+  padding: var(--space-6); /* تخفيض padding */
   z-index: var(--z-20);
 }
 
@@ -86,15 +86,23 @@
   max-width: var(--container-xl);
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
 }
 
 @media (min-width: 768px) {
   .content-wrapper {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-start;
+    text-align: right;
+  }
+  
+  [dir="ltr"] .content-wrapper,
+  [lang="en"] .content-wrapper {
+    align-items: flex-start;
+    text-align: left;
   }
 }
 
@@ -102,6 +110,8 @@
   text-align: center;
   color: var(--color-white);
   z-index: var(--z-30);
+  width: 100%;
+  max-width: 700px; /* تحديد أقصى عرض للمحتوى */
 }
 
 @media (min-width: 768px) {
@@ -115,84 +125,51 @@
   }
 }
 
-/* Hero Logo Container */
+/* Hero Logo Container - محسن للحجم */
 .hero-logo-container {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-6);
   animation: logoFloat 3s var(--ease-in-out) infinite;
 }
 
-@keyframes logoFloat {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.05);
-  }
-}
-
 .hero-logo {
-  width: min(150px, 30vw);
+  width: min(120px, 25vw); /* تخفيض الحجم */
   height: auto;
-  max-height: 150px;
+  max-height: 120px;
   object-fit: contain;
-  filter: drop-shadow(var(--shadow-lg));
+  filter: drop-shadow(var(--shadow-md)); /* تخفيف الظل */
   transition: all var(--transition-base);
 }
 
 .hero-logo:hover {
-  transform: rotate(5deg) scale(1.1);
-  filter: drop-shadow(var(--shadow-2xl));
+  transform: rotate(3deg) scale(1.05); /* تخفيف التأثير */
+  filter: drop-shadow(var(--shadow-lg));
 }
 
-/* Slide Title */
+/* Slide Title - محسن للاستجابة */
 .slide-title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-black);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl)); /* استخدام clamp للاستجابة */
+  font-weight: var(--font-extrabold); /* تخفيف الوزن */
   line-height: var(--leading-tight);
-  margin-bottom: var(--space-6);
-  text-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* ظل أكثر وضوحاً */
   background: var(--gradient-brand);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s var(--ease-out) forwards;
 }
 
-@media (min-width: 768px) {
-  .slide-title {
-    font-size: var(--text-4xl);
-  }
-}
-
-@media (min-width: 1200px) {
-  .slide-title {
-    font-size: var(--text-5xl);
-  }
-}
-
-/* Slide Subtitle */
+/* Slide Subtitle - محسن للقراءة */
 .slide-subtitle {
-  font-size: var(--text-lg);
+  font-size: clamp(var(--text-base), 2.5vw, var(--text-lg));
   line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-8);
-  color: var(--color-neutral-200);
+  margin-bottom: var(--space-6);
+  color: var(--color-neutral-100); /* لون أفتح */
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
 }
 
-@media (min-width: 768px) {
-  .slide-subtitle {
-    font-size: var(--text-xl);
-  }
-}
-
-/* Badge */
+/* Badge - محسن للحجم */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -204,9 +181,6 @@
   font-weight: var(--font-semibold);
   margin-bottom: var(--space-6);
   font-size: var(--text-sm);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s var(--ease-out) 0.1s forwards;
 }
 
 .badge i {
@@ -214,71 +188,73 @@
 }
 
 /* ============================================
-   HERO STATISTICS
+   HERO STATISTICS - محسن للتخطيط
    ============================================ */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: var(--space-6);
-  margin: var(--space-8) 0;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s var(--ease-out) 0.3s forwards;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* حجم أقل للعناصر */
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stat-item {
   text-align: center;
-  padding: var(--space-4);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all var(--transition-base);
+  padding: var(--space-3); /* تقليل padding */
+  background: rgba(255, 255, 255, 0.08); /* شفافية أقل */
+  backdrop-filter: blur(8px); /* تقليل blur */
+  border-radius: var(--radius-lg); /* زوايا أصغر */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all var(--transition-fast); /* تسريع الانتقال */
 }
 
 .stat-item:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-5px);
-  border-color: var(--color-secondary-300);
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px); /* حركة أقل */
+  border-color: var(--color-secondary-400);
 }
 
 .stat-number {
-  font-size: var(--text-3xl);
+  font-size: var(--text-2xl); /* تخفيض الحجم */
   font-weight: var(--font-bold);
   color: var(--color-secondary-500);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
   font-variant-numeric: tabular-nums;
 }
 
 .stat-label {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--color-neutral-300);
   font-weight: var(--font-medium);
 }
 
 /* ============================================
-   QUALITY FEATURES
+   QUALITY FEATURES - محسن للتوزيع
    ============================================ */
 .quality-features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--space-6);
-  margin: var(--space-8) 0;
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s var(--ease-out) 0.4s forwards;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .feature-item {
   text-align: center;
-  padding: var(--space-4);
-  transition: all var(--transition-base);
+  padding: var(--space-3);
+  transition: all var(--transition-fast);
 }
 
 .feature-item i {
-  font-size: var(--text-2xl);
+  font-size: var(--text-xl);
   color: var(--color-secondary-500);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
   display: inline-block;
 }
 
@@ -291,17 +267,15 @@
 }
 
 /* ============================================
-   HERO BUTTONS
+   HERO BUTTONS - محسن للاستخدام
    ============================================ */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--space-3);
   justify-content: center;
-  margin-top: var(--space-8);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 0.8s var(--ease-out) 0.5s forwards;
+  margin-top: var(--space-6);
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -319,28 +293,33 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-6);
+  gap: var(--space-2);
+  padding: var(--space-2_5) var(--space-5); /* تعديل padding */
   font-weight: var(--font-semibold);
-  font-size: var(--text-base);
-  border-radius: var(--radius-lg);
+  font-size: var(--text-sm); /* تخفيض حجم الخط */
+  border-radius: var(--radius-md); /* زوايا أصغر */
   text-decoration: none;
-  transition: all var(--transition-base);
+  transition: all var(--transition-fast);
   white-space: nowrap;
-  min-height: 48px;
+  min-height: 44px; /* ارتفاع أقل */
+  min-width: 140px; /* عرض ثابت */
 }
 
+.hero-buttons a.btn-primary {
+  min-width: 160px; /* عرض أكبر للزر الرئيسي */
+}
+
+/* تعديل ألوان الأزرار */
 .btn-primary {
   background: var(--gradient-brand);
   color: var(--color-white);
-  border: 2px solid transparent;
-  box-shadow: var(--shadow-primary);
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-md); /* ظل أقل */
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-xl);
-  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
   background: linear-gradient(
     135deg,
     var(--color-primary-400) 0%,
@@ -349,36 +328,36 @@
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: var(--color-white);
-  border: 2px solid var(--color-secondary-500);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--color-secondary-500);
+  backdrop-filter: blur(5px);
 }
 
 .btn-secondary:hover {
   background: var(--color-secondary-500);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--color-white);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--color-white);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 /* ============================================
-   SLIDER CONTROLS
+   SLIDER CONTROLS - محسن للوضوح
    ============================================ */
 .slider-controls {
   position: absolute;
-  bottom: var(--space-8);
+  bottom: var(--space-6);
   left: 0;
   width: 100%;
   z-index: var(--z-40);
@@ -388,15 +367,15 @@
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: var(--space-3);
-  margin-bottom: var(--space-6);
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
 }
 
 .indicator-btn {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.4);
   border: none;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -405,17 +384,17 @@
 
 .indicator-btn:hover,
 .indicator-btn:focus {
-  background: rgba(255, 255, 255, 0.5);
-  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
 }
 
 .indicator-btn.active {
   background: var(--color-secondary-500);
-  width: 32px;
-  transform: scale(1.1);
+  width: 28px;
+  transform: scale(1);
 }
 
-/* Navigation Buttons */
+/* Navigation Buttons - محسن للحجم */
 .carousel-nav {
   position: absolute;
   top: 50%;
@@ -430,11 +409,11 @@
 }
 
 .nav-btn {
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-full);
-  background: rgba(17, 34, 78, 0.8);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(17, 34, 78, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: var(--color-white);
   display: flex;
   align-items: center;
@@ -442,28 +421,28 @@
   cursor: pointer;
   transition: all var(--transition-base);
   pointer-events: auto;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 
 .nav-btn:hover {
   background: var(--color-primary-500);
   border-color: var(--color-secondary-500);
-  transform: scale(1.1);
-  box-shadow: var(--shadow-primary);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .nav-btn i {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
 }
 
-/* Progress Bar */
+/* Progress Bar - محسن للرؤية */
 .progress-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .progress-bar {
@@ -475,91 +454,13 @@
 }
 
 /* ============================================
-   ACCESSIBILITY & PERFORMANCE
-   ============================================ */
-.keyboard-instructions {
-  position: absolute;
-  left: -9999px;
-}
-
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  .hero-slider,
-  .carousel-slide,
-  .hero-logo,
-  .stat-item,
-  .feature-item,
-  .hero-buttons a,
-  .indicator-btn,
-  .nav-btn {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
-  }
-  
-  .hero-logo-container {
-    animation: none;
-  }
-  
-  .carousel-slide {
-    transition: opacity 0.01ms linear;
-  }
-  
-  .fade-in,
-  .fade-in-left,
-  .fade-in-right {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .carousel-slide::before {
-    background: rgba(0, 0, 0, 0.9);
-  }
-  
-  .stat-item,
-  .btn-outline {
-    border: 2px solid var(--color-white);
-  }
-  
-  .indicator-btn {
-    border: 1px solid var(--color-white);
-  }
-}
-
-/* ============================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN - محسن للتجربة
    ============================================ */
 
 /* Desktop - Large Screens (1200px+) */
 @media (min-width: 1200px) {
   .hero-slider {
-    height: min(700px, 100vh);
-  }
-  
-  .slide-content {
-    padding: var(--space-12);
-  }
-  
-  .hero-logo {
-    width: 180px;
-    max-height: 180px;
-  }
-  
-  .hero-stats {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* Laptop - Medium Screens (992px-1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .hero-slider {
-    height: min(650px, 100vh);
+    height: min(600px, 85vh);
   }
   
   .slide-content {
@@ -570,90 +471,47 @@
     width: 140px;
     max-height: 140px;
   }
+  
+  .hero-stats {
+    max-width: 550px;
+  }
 }
 
-/* Tablets - Small Screens (768px-991px) */
-@media (min-width: 768px) and (max-width: 991px) {
+/* Laptop - Medium Screens (992px-1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
   .hero-slider {
-    height: min(550px, 100vh);
+    height: min(500px, 80vh);
   }
   
   .slide-content {
     padding: var(--space-8);
   }
-  
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .hero-buttons a {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
-/* Mobile - Large (600px-767px) */
-@media (min-width: 600px) and (max-width: 767px) {
+/* Tablets - Small Screens (768px-991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .hero-slider {
-    height: min(500px, 100vh);
+    height: min(450px, 75vh);
   }
   
   .slide-content {
     padding: var(--space-6);
   }
   
-  .slide-title {
-    font-size: var(--text-2xl);
-    margin-bottom: var(--space-4);
-  }
-  
-  .slide-subtitle {
-    font-size: var(--text-base);
-    margin-bottom: var(--space-6);
-  }
-  
-  .hero-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
-    margin: var(--space-6) 0;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-  }
-  
   .hero-buttons a {
-    width: 100%;
-  }
-  
-  .carousel-nav {
-    padding: 0 var(--space-2);
-  }
-  
-  .nav-btn {
-    width: 40px;
-    height: 40px;
+    min-width: 120px;
+    padding: var(--space-2) var(--space-4);
   }
 }
 
-/* Mobile - Normal (599px وما تحت) */
-@media (max-width: 599px) {
+/* Mobile - Large (600px-767px) */
+@media (min-width: 600px) and (max-width: 767px) {
   .hero-slider {
-    height: min(450px, 100vh);
+    height: min(400px, 70vh);
   }
   
   .slide-content {
-    padding: var(--space-4);
-  }
-  
-  .hero-logo-container {
-    margin-bottom: var(--space-6);
-  }
-  
-  .hero-logo {
-    width: 100px;
-    max-height: 100px;
+    padding: var(--space-5);
   }
   
   .slide-title {
@@ -666,24 +524,80 @@
     margin-bottom: var(--space-4);
   }
   
-  .badge {
-    font-size: var(--text-xs);
-    padding: var(--space-1_5) var(--space-3);
-    margin-bottom: var(--space-4);
-  }
-  
   .hero-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-3);
     margin: var(--space-4) 0;
   }
   
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .carousel-nav {
+    padding: 0 var(--space-3);
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile - Normal (599px وما تحت) */
+@media (max-width: 599px) {
+  .hero-slider {
+    height: min(350px, 65vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-4);
+  }
+  
+  .hero-logo-container {
+    margin-bottom: var(--space-4);
+  }
+  
+  .hero-logo {
+    width: 90px;
+    max-height: 90px;
+  }
+  
+  .slide-title {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+  }
+  
+  .slide-subtitle {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-3);
+    line-height: var(--leading-normal);
+  }
+  
+  .badge {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-2_5);
+    margin-bottom: var(--space-3);
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
+  }
+  
   .stat-item {
-    padding: var(--space-3);
+    padding: var(--space-2);
   }
   
   .stat-number {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
   }
   
   .stat-label {
@@ -692,55 +606,13 @@
   
   .quality-features {
     grid-template-columns: 1fr;
-    gap: var(--space-3);
-    margin: var(--space-4) 0;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
   }
   
   .hero-buttons {
-    margin-top: var(--space-6);
-    gap: var(--space-3);
-  }
-  
-  .hero-buttons a {
-    padding: var(--space-2_5) var(--space-4);
-    font-size: var(--text-sm);
-    min-height: 44px;
-  }
-  
-  .slider-controls {
-    bottom: var(--space-4);
-  }
-  
-  .carousel-indicators {
-    margin-bottom: var(--space-4);
-  }
-  
-  .carousel-nav {
-    display: none; /* Hide nav buttons on very small screens */
-  }
-  
-  .indicator-btn {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .indicator-btn.active {
-    width: 24px;
-  }
-}
-
-/* Ultra Small Devices (360px وما تحت) */
-@media (max-width: 360px) {
-  .hero-slider {
-    height: min(400px, 100vh);
-  }
-  
-  .slide-content {
-    padding: var(--space-3);
-  }
-  
-  .slide-title {
-    font-size: var(--text-lg);
+    margin-top: var(--space-4);
+    gap: var(--space-2);
   }
   
   .hero-buttons a {
@@ -748,60 +620,128 @@
     font-size: var(--text-xs);
     min-height: 40px;
   }
+  
+  .slider-controls {
+    bottom: var(--space-3);
+  }
+  
+  .carousel-indicators {
+    margin-bottom: var(--space-3);
+  }
+  
+  .carousel-nav {
+    display: none;
+  }
+  
+  .indicator-btn {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .indicator-btn.active {
+    width: 22px;
+  }
+}
+
+/* Ultra Small Devices (360px وما تحت) */
+@media (max-width: 360px) {
+  .hero-slider {
+    height: min(300px, 60vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-3);
+  }
+  
+  .hero-buttons a {
+    padding: var(--space-1_5) var(--space-2);
+    min-height: 36px;
+  }
 }
 
 /* ============================================
-   LOADING & PERFORMANCE OPTIMIZATIONS
+   تحسينات إضافية للموقع الحي
    ============================================ */
-.hero-slider.loading .slide-content {
-  opacity: 0;
-}
 
-.hero-slider.loaded .slide-content {
-  opacity: 1;
-  transition: opacity var(--transition-base);
-}
-
-/* Progressive image loading */
+/* تحسين التحميل التدريجي للصور */
 .carousel-slide {
   background-color: var(--color-primary-900);
+  transition: background-color var(--transition-base);
 }
 
 .carousel-slide.loaded {
   background-color: transparent;
 }
 
-/* Will-change optimizations */
-.above-the-fold .hero-slider {
-  will-change: transform, opacity;
+/* تحسين رؤية العناصر عند التمرير */
+.hero-slider .slide-text {
+  opacity: 1;
+  transition: opacity var(--transition-base);
 }
 
-/* Safe area insets for modern devices */
-@supports (padding: max(0px)) {
-  .hero-slider {
-    padding-top: max(var(--space-4), env(safe-area-inset-top));
+/* تحسين تفاعل الأزرار على الهواتف */
+@media (hover: none) and (pointer: coarse) {
+  .hero-buttons a:hover,
+  .stat-item:hover,
+  .nav-btn:hover {
+    transform: none;
   }
   
-  .slider-controls {
-    padding-bottom: max(var(--space-8), env(safe-area-inset-bottom));
+  .hero-buttons a:active,
+  .stat-item:active,
+  .nav-btn:active {
+    transform: scale(0.98);
+  }
+}
+
+/* تحسين التباين للنصوص */
+.carousel-slide:nth-child(1) .slide-title,
+.carousel-slide:nth-child(2) .slide-title,
+.carousel-slide:nth-child(3) .slide-title,
+.carousel-slide:nth-child(4) .slide-title {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ============================================
+   تحسينات الوصولية
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .hero-logo-container {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .carousel-slide::before {
+    background: rgba(0, 0, 0, 0.95);
+  }
+  
+  .hero-buttons a,
+  .stat-item,
+  .indicator-btn {
+    border-width: 2px;
   }
 }
 
 /* ============================================
-   PRINT STYLES
+   تحسينات الطباعة
    ============================================ */
 @media print {
   .hero-slider {
     height: auto !important;
-    min-height: 300px;
-    background: none !important;
+    min-height: 250px;
+    background: var(--color-primary-100) !important;
   }
   
   .carousel-slide {
     position: relative !important;
     opacity: 1 !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
     background: none !important;
   }
   
@@ -809,70 +749,17 @@
     background: none !important;
   }
   
-  .slide-content {
+  .slide-text {
     color: var(--color-neutral-900) !important;
-    text-align: left !important;
   }
   
   .slide-title {
     background: none !important;
-    -webkit-text-fill-color: var(--color-primary-500) !important;
-    color: var(--color-primary-500) !important;
+    -webkit-text-fill-color: var(--color-primary-700) !important;
+    color: var(--color-primary-700) !important;
   }
   
-  .slider-controls,
-  .nav-btn,
-  .progress-container,
-  .carousel-indicators {
+  .slider-controls {
     display: none !important;
   }
 }
-
-/* ============================================
-   CUSTOM ANIMATIONS
-   ============================================ */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 5px var(--color-secondary-300);
-  }
-  50% {
-    box-shadow: 0 0 20px var(--color-secondary-500);
-  }
-}
-
-.pulse-animation {
-  animation: pulse-glow 2s infinite;
-}
-
-/* ============================================
-   RTL/LTR SPECIFIC STYLES
-   ============================================ */
-[dir="rtl"] .carousel-nav,
-[lang="ar"] .carousel-nav {
-  flex-direction: row-reverse;
-}
-
-[dir="rtl"] .prev-btn i,
-[lang="ar"] .prev-btn i {
-  transform: rotate(180deg);
-}
-
-[dir="rtl"] .next-btn i,
-[lang="ar"] .next-btn i {
-  transform: rotate(180deg);
-}
-
-/* ============================================
-   END OF HOME HERO STYLES
-   ============================================ */
