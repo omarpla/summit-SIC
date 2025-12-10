@@ -1,0 +1,878 @@
+/* ============================================
+   HOME HERO SLIDER - شركة سومت العالمية
+   File: home-hero.css
+   Version: 3.0.0
+   Description: سلايدر الهيرو المتكامل مع نظام التصميم
+   ============================================ */
+
+/* ============================================
+   HERO SLIDER CONTAINER
+   ============================================ */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: min(600px, 100vh);
+  overflow: hidden;
+  background-color: var(--color-primary-900);
+  isolation: isolate;
+  contain: layout style paint;
+}
+
+/* ============================================
+   CAROUSEL CONTAINER & SLIDES
+   ============================================ */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateZ(0);
+  transition: opacity var(--transition-slow) var(--ease-in-out);
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: opacity, transform;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: var(--z-10);
+}
+
+/* Dark overlay for better text contrast */
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 34, 78, 0.85) 0%,
+    rgba(5, 7, 16, 0.9) 100%
+  );
+  z-index: -1;
+}
+
+/* ============================================
+   SLIDE CONTENT & TYPOGRAPHY
+   ============================================ */
+.slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  z-index: var(--z-20);
+}
+
+.content-wrapper {
+  max-width: var(--container-xl);
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.slide-text {
+  text-align: center;
+  color: var(--color-white);
+  z-index: var(--z-30);
+}
+
+@media (min-width: 768px) {
+  .slide-text {
+    text-align: right;
+  }
+  
+  [dir="ltr"] .slide-text,
+  [lang="en"] .slide-text {
+    text-align: left;
+  }
+}
+
+/* Hero Logo Container */
+.hero-logo-container {
+  margin-bottom: var(--space-8);
+  animation: logoFloat 3s var(--ease-in-out) infinite;
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+.hero-logo {
+  width: min(150px, 30vw);
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(var(--shadow-lg));
+  transition: all var(--transition-base);
+}
+
+.hero-logo:hover {
+  transform: rotate(5deg) scale(1.1);
+  filter: drop-shadow(var(--shadow-2xl));
+}
+
+/* Slide Title */
+.slide-title {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-black);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-6);
+  text-shadow: var(--shadow-lg);
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+@media (min-width: 768px) {
+  .slide-title {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .slide-title {
+    font-size: var(--text-5xl);
+  }
+}
+
+/* Slide Subtitle */
+.slide-subtitle {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  color: var(--color-neutral-200);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out) 0.2s forwards;
+}
+
+@media (min-width: 768px) {
+  .slide-subtitle {
+    font-size: var(--text-xl);
+  }
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--gradient-secondary);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-semibold);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-sm);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s var(--ease-out) 0.1s forwards;
+}
+
+.badge i {
+  font-size: var(--text-base);
+}
+
+/* ============================================
+   HERO STATISTICS
+   ============================================ */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out) 0.3s forwards;
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-base);
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  border-color: var(--color-secondary-300);
+}
+
+.stat-number {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-secondary-500);
+  margin-bottom: var(--space-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-300);
+  font-weight: var(--font-medium);
+}
+
+/* ============================================
+   QUALITY FEATURES
+   ============================================ */
+.quality-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out) 0.4s forwards;
+}
+
+.feature-item {
+  text-align: center;
+  padding: var(--space-4);
+  transition: all var(--transition-base);
+}
+
+.feature-item i {
+  font-size: var(--text-2xl);
+  color: var(--color-secondary-500);
+  margin-bottom: var(--space-3);
+  display: inline-block;
+}
+
+.feature-item h4 {
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  margin: 0;
+  line-height: var(--leading-tight);
+}
+
+/* ============================================
+   HERO BUTTONS
+   ============================================ */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-8);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s var(--ease-out) 0.5s forwards;
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+  
+  [dir="rtl"] .hero-buttons,
+  [lang="ar"] .hero-buttons {
+    justify-content: flex-end;
+  }
+}
+
+.hero-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-6);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  min-height: 48px;
+}
+
+.btn-primary {
+  background: var(--gradient-brand);
+  color: var(--color-white);
+  border: 2px solid transparent;
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-400) 0%,
+    var(--color-secondary-600) 100%
+  );
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border: 2px solid var(--color-secondary-500);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary-500);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-secondary);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+/* ============================================
+   SLIDER CONTROLS
+   ============================================ */
+.slider-controls {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 0;
+  width: 100%;
+  z-index: var(--z-40);
+  padding: 0 var(--space-4);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.indicator-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  padding: 0;
+}
+
+.indicator-btn:hover,
+.indicator-btn:focus {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.2);
+}
+
+.indicator-btn.active {
+  background: var(--color-secondary-500);
+  width: 32px;
+  transform: scale(1.1);
+}
+
+/* Navigation Buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  pointer-events: none;
+  z-index: var(--z-30);
+}
+
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(17, 34, 78, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
+}
+
+.nav-btn:hover {
+  background: var(--color-primary-500);
+  border-color: var(--color-secondary-500);
+  transform: scale(1.1);
+  box-shadow: var(--shadow-primary);
+}
+
+.nav-btn i {
+  font-size: var(--text-lg);
+}
+
+/* Progress Bar */
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--gradient-brand);
+  width: 0%;
+  transition: width linear;
+  will-change: width;
+}
+
+/* ============================================
+   ACCESSIBILITY & PERFORMANCE
+   ============================================ */
+.keyboard-instructions {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hero-slider,
+  .carousel-slide,
+  .hero-logo,
+  .stat-item,
+  .feature-item,
+  .hero-buttons a,
+  .indicator-btn,
+  .nav-btn {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  
+  .hero-logo-container {
+    animation: none;
+  }
+  
+  .carousel-slide {
+    transition: opacity 0.01ms linear;
+  }
+  
+  .fade-in,
+  .fade-in-left,
+  .fade-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .carousel-slide::before {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  .stat-item,
+  .btn-outline {
+    border: 2px solid var(--color-white);
+  }
+  
+  .indicator-btn {
+    border: 1px solid var(--color-white);
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Desktop - Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .hero-slider {
+    height: min(700px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-12);
+  }
+  
+  .hero-logo {
+    width: 180px;
+    max-height: 180px;
+  }
+  
+  .hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Laptop - Medium Screens (992px-1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero-slider {
+    height: min(650px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-10);
+  }
+  
+  .hero-logo {
+    width: 140px;
+    max-height: 140px;
+  }
+}
+
+/* Tablets - Small Screens (768px-991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-slider {
+    height: min(550px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-8);
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile - Large (600px-767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .hero-slider {
+    height: min(500px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-6);
+  }
+  
+  .slide-title {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-4);
+  }
+  
+  .slide-subtitle {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-6);
+  }
+  
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+    margin: var(--space-6) 0;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .hero-buttons a {
+    width: 100%;
+  }
+  
+  .carousel-nav {
+    padding: 0 var(--space-2);
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Mobile - Normal (599px وما تحت) */
+@media (max-width: 599px) {
+  .hero-slider {
+    height: min(450px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-4);
+  }
+  
+  .hero-logo-container {
+    margin-bottom: var(--space-6);
+  }
+  
+  .hero-logo {
+    width: 100px;
+    max-height: 100px;
+  }
+  
+  .slide-title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+  }
+  
+  .slide-subtitle {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-4);
+  }
+  
+  .badge {
+    font-size: var(--text-xs);
+    padding: var(--space-1_5) var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+  }
+  
+  .stat-item {
+    padding: var(--space-3);
+  }
+  
+  .stat-number {
+    font-size: var(--text-2xl);
+  }
+  
+  .stat-label {
+    font-size: var(--text-xs);
+  }
+  
+  .quality-features {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    margin: var(--space-4) 0;
+  }
+  
+  .hero-buttons {
+    margin-top: var(--space-6);
+    gap: var(--space-3);
+  }
+  
+  .hero-buttons a {
+    padding: var(--space-2_5) var(--space-4);
+    font-size: var(--text-sm);
+    min-height: 44px;
+  }
+  
+  .slider-controls {
+    bottom: var(--space-4);
+  }
+  
+  .carousel-indicators {
+    margin-bottom: var(--space-4);
+  }
+  
+  .carousel-nav {
+    display: none; /* Hide nav buttons on very small screens */
+  }
+  
+  .indicator-btn {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .indicator-btn.active {
+    width: 24px;
+  }
+}
+
+/* Ultra Small Devices (360px وما تحت) */
+@media (max-width: 360px) {
+  .hero-slider {
+    height: min(400px, 100vh);
+  }
+  
+  .slide-content {
+    padding: var(--space-3);
+  }
+  
+  .slide-title {
+    font-size: var(--text-lg);
+  }
+  
+  .hero-buttons a {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-xs);
+    min-height: 40px;
+  }
+}
+
+/* ============================================
+   LOADING & PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+.hero-slider.loading .slide-content {
+  opacity: 0;
+}
+
+.hero-slider.loaded .slide-content {
+  opacity: 1;
+  transition: opacity var(--transition-base);
+}
+
+/* Progressive image loading */
+.carousel-slide {
+  background-color: var(--color-primary-900);
+}
+
+.carousel-slide.loaded {
+  background-color: transparent;
+}
+
+/* Will-change optimizations */
+.above-the-fold .hero-slider {
+  will-change: transform, opacity;
+}
+
+/* Safe area insets for modern devices */
+@supports (padding: max(0px)) {
+  .hero-slider {
+    padding-top: max(var(--space-4), env(safe-area-inset-top));
+  }
+  
+  .slider-controls {
+    padding-bottom: max(var(--space-8), env(safe-area-inset-bottom));
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .hero-slider {
+    height: auto !important;
+    min-height: 300px;
+    background: none !important;
+  }
+  
+  .carousel-slide {
+    position: relative !important;
+    opacity: 1 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    background: none !important;
+  }
+  
+  .carousel-slide::before {
+    background: none !important;
+  }
+  
+  .slide-content {
+    color: var(--color-neutral-900) !important;
+    text-align: left !important;
+  }
+  
+  .slide-title {
+    background: none !important;
+    -webkit-text-fill-color: var(--color-primary-500) !important;
+    color: var(--color-primary-500) !important;
+  }
+  
+  .slider-controls,
+  .nav-btn,
+  .progress-container,
+  .carousel-indicators {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   CUSTOM ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--color-secondary-300);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-secondary-500);
+  }
+}
+
+.pulse-animation {
+  animation: pulse-glow 2s infinite;
+}
+
+/* ============================================
+   RTL/LTR SPECIFIC STYLES
+   ============================================ */
+[dir="rtl"] .carousel-nav,
+[lang="ar"] .carousel-nav {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .prev-btn i,
+[lang="ar"] .prev-btn i {
+  transform: rotate(180deg);
+}
+
+[dir="rtl"] .next-btn i,
+[lang="ar"] .next-btn i {
+  transform: rotate(180deg);
+}
+
+/* ============================================
+   END OF HOME HERO STYLES
+   ============================================ */
