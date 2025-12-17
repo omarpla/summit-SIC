@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="handheldFriendly" content="true" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>شركة سومت العالمية - Summit International Company</title>
-
+    
     <!-- Primary Meta Tags -->
-    <meta
-      name="description"
-      content="شركة سومت العالمية - رواد في حلول البناء والبنية التحتية بأعلى معايير الجودة والسلامة"
-    />
-    <meta
-      name="keywords"
-      content="سومت, بناء, تشييد, كويت, مقاولات, هندسة, مشاريع, سحب مياه, تدعيم, حفر, تشطيبات"
-    />
+    <meta name="description" content="شركة سومت العالمية - رواد في حلول البناء والبنية التحتية بأعلى معايير الجودة والسلامة" />
+    <meta name="keywords" content="سومت, بناء, تشييد, كويت, مقاولات, هندسة, مشاريع, سحب مياه, تدعيم, حفر, تشطيبات" />
     <meta name="author" content="Summit International Company" />
     <meta name="robots" content="index, follow" />
-
+    
+    <!-- نظام الألوان الأساسي -->
+    <style>
+        :root {
+            --trust-blue: #1A365D;
+            --energy-orange: #F97316;
+            --light-gray: #F8FAFC;
+            --dark-gray: #334155;
+            --success-green: #10B981;
+            --spacing-unit: 8px;
+            --border-radius: 8px;
+            --color-primary-50: #eff6ff;
+            --color-primary-300: #93c5fd;
+            --color-primary-600: #2563eb;
+            --color-neutral-200: #e5e7eb;
+            --radius-xl: 1rem;
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --transition-base: 300ms ease;
+        }
+    </style>
+    
     <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=IBM+Plex+Sans+Arabic:wght@300;400;700;900&family=JetBrains+Mono&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
     <!-- Owl Carousel -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
     <!-- Summit CSS System -->
     <link rel="stylesheet" href="css/global-styles.css" />
     <link rel="stylesheet" href="css/navigation.css" />
@@ -56,2295 +53,1780 @@
     <link rel="stylesheet" href="css/services-map.css" />
     <link rel="stylesheet" href="css/project.css" />
     <link rel="stylesheet" href="css/contact.css" />
-
+    
+    <!-- CSS Components المدمجة -->
     <style>
-      /* أداء إضافي */
-      .above-the-fold {
-        will-change: transform, opacity;
-      }
-
-      .below-the-fold {
-        content-visibility: auto;
-      }
-
-      @media (prefers-reduced-data: reduce) {
-        * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
+        /* نظام القيم المحسن */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
-      }
-
-      /* تحسينات خاصة */
-      .values-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--space-6);
-        margin-top: var(--space-8);
-      }
-
-      .value-card {
-        background: var(--color-white);
-        padding: var(--space-6);
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-md);
-        border: var(--border-width) solid var(--color-neutral-200);
-        transition: all var(--transition-base);
-      }
-
-      .value-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-        border-color: var(--color-primary-300);
-      }
-
-      .value-icon {
-        width: 60px;
-        height: 60px;
-        background: var(--color-primary-50);
-        border-radius: var(--radius-full);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: var(--space-4);
-      }
-
-      .value-icon i {
-        font-size: var(--text-2xl);
-        color: var(--color-primary-600);
-      }
-
-      .equipment-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: var(--space-8);
-        margin-top: var(--space-8);
-      }
-
-      .equipment-card {
-        text-align: center;
-        padding: var(--space-6);
-        background: var(--color-white);
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow-md);
-        border: var(--border-width) solid var(--color-neutral-200);
-        transition: all var(--transition-base);
-      }
-
-      .equipment-card:hover {
-        transform: translateY(-5px);
-        box-shadow: var(--shadow-lg);
-      }
-
-      .equipment-icon {
-        width: 80px;
-        height: 80px;
-        background: var(--color-primary-50);
-        border-radius: var(--radius-full);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto var(--space-4);
-      }
-
-      .equipment-icon i {
-        font-size: var(--text-3xl);
-        color: var(--color-primary-600);
-      }
+        
+        .value-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-neutral-200);
+            transition: all var(--transition-base);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary-300);
+        }
+        
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--color-primary-50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .value-icon i {
+            font-size: 1.5rem;
+            color: var(--color-primary-600);
+        }
+        
+        /* نظام التمرير الرئيسي المحسن */
+        .hero-slider {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+        }
+        
+        /* أداء إضافي */
+        .above-the-fold {
+            will-change: transform, opacity;
+        }
+        
+        .below-the-fold {
+            content-visibility: auto;
+        }
+        
+        @media (prefers-reduced-data: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+        
+        /* تحسينات خاصة لشبكة المعدات */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .equipment-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--color-neutral-200);
+            transition: all var(--transition-base);
+        }
+        
+        .equipment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .equipment-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--color-primary-50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .equipment-icon i {
+            font-size: 2rem;
+            color: var(--color-primary-600);
+        }
+        
+        /* ميزات متحركة */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        
+        /* أزرار محسنة */
+        .btn-primary {
+            background: linear-gradient(to right, #F97316, #FB923C);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.3);
+        }
+        
+        /* نظام اللغة المدمج */
+        .language-content .en {
+            display: none;
+        }
+        
+        .language-content.english .ar {
+            display: none;
+        }
+        
+        .language-content.english .en {
+            display: inline;
+        }
+        
+        /* شريط الاتصال الثابت */
+        .fixed-contact-bar {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .contact-fab {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.25rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-fab.whatsapp { background: #25D366; }
+        .contact-fab.email { background: #EA4335; }
+        .contact-fab.social { background: var(--trust-blue); }
+        
+        .contact-fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* زر العودة للأعلى */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--trust-blue);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
-  </head>
-  <body class="seo-optimized">
+</head>
+<body class="seo-optimized language-content">
     <!-- ============================================
-         NAVIGATION SYSTEM
+         NAVIGATION SYSTEM - المدمج والمحسن
          ============================================ -->
-    <nav
-      class="navbar"
-      id="navbar"
-      role="navigation"
-      aria-label="القائمة الرئيسية"
-    >
-      <div class="navbar-container">
-        <!-- Branding -->
-        <a
-          href="#home"
-          class="navbar-brand"
-          aria-label="الرئيسية - سومت العالمية"
-        >
-          <img
-            src="assets/images/logo/logo.png"
-            alt="شعار سومت العالمية للخدمات والمشاريع"
-            class="navbar-logo"
-            onerror="this.src='https://via.placeholder.com/60x60/11224E/F87B1B?text=SIC'"
-            loading="lazy"
-            width="60"
-            height="60"
-          />
-          <div class="brand-text">
-            <h1 class="brand-title">
-              <span class="ar">سومت العالمية</span>
-              <span class="en hidden">Summit International</span>
-            </h1>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <ul class="desktop-menu" role="menubar" aria-label="القائمة الرئيسية">
-          <li role="none">
-            <a
-              href="#home"
-              class="nav-link active"
-              role="menuitem"
-              data-section="home"
-            >
-              <span class="ar">الرئيسية</span>
-              <span class="en hidden">Home</span>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="القائمة الرئيسية">
+        <div class="navbar-container">
+            <!-- Branding -->
+            <a href="#home" class="navbar-brand" aria-label="الرئيسية - سومت العالمية">
+                <img src="assets/images/logo/logo.png" alt="شعار سومت العالمية للخدمات والمشاريع" 
+                     class="navbar-logo" loading="lazy" width="60" height="60" />
+                <div class="brand-text">
+                    <h1 class="brand-title">
+                        <span class="ar">سومت العالمية</span>
+                        <span class="en hidden">Summit International</span>
+                    </h1>
+                    <p class="brand-subtitle">
+                        <span class="ar">حلول البنية التحتية المتكاملة</span>
+                        <span class="en hidden">Integrated Infrastructure Solutions</span>
+                    </p>
+                </div>
             </a>
-          </li>
-          <li role="none">
-            <a
-              href="#about"
-              class="nav-link"
-              role="menuitem"
-              data-section="about"
-            >
-              <span class="ar">عن الشركة</span>
-              <span class="en hidden">About</span>
-            </a>
-          </li>
-          <li role="none">
-            <a
-              href="#services"
-              class="nav-link"
-              role="menuitem"
-              data-section="services"
-            >
-              <span class="ar">الخدمات</span>
-              <span class="en hidden">Services</span>
-            </a>
-          </li>
-          <li role="none">
-            <a
-              href="#projects"
-              class="nav-link"
-              role="menuitem"
-              data-section="projects"
-            >
-              <span class="ar">المشاريع</span>
-              <span class="en hidden">Projects</span>
-            </a>
-          </li>
-          <li role="none">
-            <a href="#map" class="nav-link" role="menuitem" data-section="map">
-              <span class="ar">خريطة الموقع</span>
-              <span class="en hidden">Location Map</span>
-            </a>
-          </li>
-          <li role="none">
-            <a
-              href="#contact"
-              class="nav-link"
-              role="menuitem"
-              data-section="contact"
-            >
-              <span class="ar">اتصل بنا</span>
-              <span class="en hidden">Contact</span>
-            </a>
-          </li>
-        </ul>
 
-        <!-- Right Section -->
-        <div class="navbar-right">
-          <!-- Language Toggle -->
-          <div class="desktop-lang">
-            <button class="lang-btn" id="langToggle" aria-label="تبديل اللغة">
-              <span class="ar">
-                English
-                <i class="fas fa-globe"></i>
-              </span>
-              <span class="en hidden">
-                العربية
-                <i class="fas fa-globe"></i>
-              </span>
-            </button>
-          </div>
+            <!-- Desktop Navigation -->
+            <ul class="desktop-menu" role="menubar" aria-label="القائمة الرئيسية">
+                <li role="none">
+                    <a href="#home" class="nav-link active" role="menuitem" data-section="home">
+                        <span class="ar">الرئيسية</span>
+                        <span class="en hidden">Home</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#about" class="nav-link" role="menuitem" data-section="about">
+                        <span class="ar">عن الشركة</span>
+                        <span class="en hidden">About</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#services" class="nav-link" role="menuitem" data-section="services">
+                        <span class="ar">الخدمات</span>
+                        <span class="en hidden">Services</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#projects" class="nav-link" role="menuitem" data-section="projects">
+                        <span class="ar">المشاريع</span>
+                        <span class="en hidden">Projects</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#equipment" class="nav-link" role="menuitem" data-section="equipment">
+                        <span class="ar">المعدات</span>
+                        <span class="en hidden">Equipment</span>
+                    </a>
+                </li>
+                <li role="none">
+                    <a href="#contact" class="nav-link" role="menuitem" data-section="contact">
+                        <span class="ar">اتصل بنا</span>
+                        <span class="en hidden">Contact</span>
+                    </a>
+                </li>
+            </ul>
 
-          <!-- Mobile Menu Button -->
-          <button
-            class="mobile-menu-btn nav-mobile-only"
-            id="mobileMenuBtn"
-            aria-label="فتح القائمة الرئيسية"
-            aria-expanded="false"
-            aria-controls="mobileMenu"
-          >
-            <i class="fas fa-bars"></i>
-            <span class="sr-only">القائمة</span>
-          </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div
-          class="mobile-menu"
-          id="mobileMenu"
-          role="menu"
-          aria-label="القائمة الرئيسية للمحمول"
-          aria-hidden="true"
-        >
-          <a href="#home" class="nav-link active" data-section="home">
-            <span class="ar">الرئيسية</span>
-            <span class="en hidden">Home</span>
-          </a>
-          <a href="#about" class="nav-link" data-section="about">
-            <span class="ar">عن الشركة</span>
-            <span class="en hidden">About</span>
-          </a>
-          <a href="#services" class="nav-link" data-section="services">
-            <span class="ar">الخدمات</span>
-            <span class="en hidden">Services</span>
-          </a>
-          <a href="#projects" class="nav-link" data-section="projects">
-            <span class="ar">المشاريع</span>
-            <span class="en hidden">Projects</span>
-          </a>
-          <a href="#map" class="nav-link" data-section="map">
-            <span class="ar">خريطة الموقع</span>
-            <span class="en hidden">Location Map</span>
-          </a>
-          <a href="#contact" class="nav-link mobile-cta" data-section="contact">
-            <span class="ar">اتصل بنا الآن</span>
-            <span class="en hidden">Contact Us Now</span>
-            <i class="fas fa-phone-alt"></i>
-          </a>
-
-          <!-- Mobile Language Switcher -->
-          <div class="mobile-language-switcher">
-            <button
-              class="lang-btn"
-              id="mobileLangToggle"
-              aria-label="تبديل اللغة من القائمة المتنقلة"
-            >
-              <span class="ar">
-                English
-                <i class="fas fa-globe"></i>
-              </span>
-              <span class="en hidden">
-                العربية
-                <i class="fas fa-globe"></i>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="nav-scroll-indicator" id="navScrollIndicator"></div>
-      </div>
-    </nav>
-
-    <!-- ============================================
-         HERO SLIDER SYSTEM
-         ============================================ -->
-    <section
-      id="home"
-      class="hero-slider"
-      aria-label="شركة سومت العالمية - القسم الرئيسي"
-    >
-      <div
-        class="carousel-container"
-        tabindex="0"
-        aria-label="عارض الشرائح"
-        id="carouselContainer"
-      >
-        <!-- Slide 1: Welcome -->
-        <div
-          class="carousel-slide active"
-          data-slide="1"
-          role="region"
-          aria-label="شريحة 1 من 4: ترحيبية"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
-          "
-        >
-          <div class="slide-content">
-            <div class="content-wrapper">
-              <div class="slide-text">
-                <!-- Logo -->
-                <div class="hero-logo-container fade-in">
-                  <img
-                    src="assets/images/logo/logo-large.png"
-                    alt="شعار سومت العالمية"
-                    class="hero-logo"
-                    loading="lazy"
-                    width="150"
-                    height="150"
-                    onerror="this.src='assets/images/logo/logo.png'"
-                  />
+            <!-- Right Section -->
+            <div class="navbar-right">
+                <!-- Language Toggle -->
+                <div class="desktop-lang">
+                    <button class="lang-btn" id="langToggle" aria-label="تبديل اللغة">
+                        <span class="ar">
+                            English
+                            <i class="fas fa-globe"></i>
+                        </span>
+                        <span class="en hidden">
+                            العربية
+                            <i class="fas fa-globe"></i>
+                        </span>
+                    </button>
                 </div>
 
-                <!-- Title -->
-                <h1 class="slide-title fade-in stagger-delay-1">
-                  <span class="ar">شركة سومت العالمية</span>
-                  <span class="en hidden">Summit International Company</span>
-                </h1>
+                <!-- زر الاتصال السريع -->
+                <a href="tel:+96560415151" class="cta-button primary-btn nav-cta">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="ar">اتصل الآن</span>
+                    <span class="en hidden">Call Now</span>
+                </a>
 
-                <!-- Subtitle -->
-                <div class="slide-subtitle fade-in stagger-delay-2">
-                  <p>
-                    <span class="ar"
-                      >حلول متكاملة لسحب المياه والتدعيم والحفر باحترافية
-                      عالية</span
-                    >
-                    <span class="en hidden"
-                      >Integrated solutions for water pumping, reinforcement and
-                      drilling with high professionalism</span
-                    >
-                  </p>
-                </div>
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn nav-mobile-only" id="mobileMenuBtn" 
+                        aria-label="فتح القائمة الرئيسية" aria-expanded="false" aria-controls="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                    <span class="sr-only">القائمة</span>
+                </button>
+            </div>
 
-                <!-- Statistics -->
-                <div class="hero-stats fade-in stagger-delay-3">
-                  <div class="stat-item">
-                    <div class="stat-number" data-count="20">0</div>
-                    <div class="stat-label">
-                      <span class="ar">سنة خبرة</span>
-                      <span class="en hidden">Years Experience</span>
-                    </div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-number" data-count="500">0</div>
-                    <div class="stat-label">
-                      <span class="ar">مشروع ناجح</span>
-                      <span class="en hidden">Successful Projects</span>
-                    </div>
-                  </div>
-                  <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">
-                      <span class="ar">فريق متخصص</span>
-                      <span class="en hidden">Expert Team</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Buttons -->
-                <div class="hero-buttons fade-in stagger-delay-4">
-                  <a
-                    href="#contact"
-                    class="btn-primary pulse-animation"
-                    aria-label="الاتصال بنا"
-                  >
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu" role="menu" 
+                 aria-label="القائمة الرئيسية للمحمول" aria-hidden="true">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <span class="ar">الرئيسية</span>
+                    <span class="en hidden">Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="ar">عن الشركة</span>
+                    <span class="en hidden">About</span>
+                </a>
+                <a href="#services" class="nav-link" data-section="services">
+                    <span class="ar">الخدمات</span>
+                    <span class="en hidden">Services</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="ar">المشاريع</span>
+                    <span class="en hidden">Projects</span>
+                </a>
+                <a href="#equipment" class="nav-link" data-section="equipment">
+                    <span class="ar">المعدات</span>
+                    <span class="en hidden">Equipment</span>
+                </a>
+                <a href="#contact" class="nav-link mobile-cta" data-section="contact">
                     <span class="ar">اتصل بنا الآن</span>
                     <span class="en hidden">Contact Us Now</span>
                     <i class="fas fa-phone-alt"></i>
-                  </a>
-                  <a
-                    href="#projects"
-                    class="btn-secondary"
-                    aria-label="عرض المشاريع"
-                  >
-                    <span class="ar">عرض المشاريع</span>
-                    <span class="en hidden">View Projects</span>
-                    <i class="fas fa-eye"></i>
-                  </a>
-                  <a
-                    href="#services"
-                    class="btn-outline"
-                    aria-label="اكتشاف الخدمات"
-                  >
-                    <span class="ar">اكتشف خدماتنا</span>
-                    <span class="en hidden">Discover Services</span>
-                    <i class="fas fa-arrow-down"></i>
-                  </a>
+                </a>
+
+                <!-- Mobile Language Switcher -->
+                <div class="mobile-language-switcher">
+                    <button class="lang-btn" id="mobileLangToggle" aria-label="تبديل اللغة من القائمة المتنقلة">
+                        <span class="ar">
+                            English
+                            <i class="fas fa-globe"></i>
+                        </span>
+                        <span class="en hidden">
+                            العربية
+                            <i class="fas fa-globe"></i>
+                        </span>
+                    </button>
                 </div>
-              </div>
             </div>
-          </div>
+
+            <!-- Scroll Indicator -->
+            <div class="nav-scroll-indicator" id="navScrollIndicator"></div>
         </div>
+    </nav>
 
-        <!-- Slide 2: Services -->
-        <div
-          class="carousel-slide"
-          data-slide="2"
-          role="region"
-          aria-label="شريحة 2 من 4: الخدمات"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
-          "
-        >
-          <div class="slide-content">
-            <div class="content-wrapper">
-              <div class="slide-text">
-                <div class="badge">
-                  <span class="ar">خدمات متخصصة</span>
-                  <span class="en hidden">Specialized Services</span>
-                  <i class="fas fa-cogs"></i>
+    <!-- ============================================
+         HERO SLIDER SYSTEM - المدمج والمحسن
+         ============================================ -->
+    <section id="home" class="hero-slider" aria-label="شركة سومت العالمية - القسم الرئيسي">
+        <div class="carousel-container" tabindex="0" aria-label="عارض الشرائح" id="carouselContainer">
+            <!-- Slide 1: Welcome -->
+            <div class="carousel-slide active" data-slide="1" role="region" 
+                 aria-label="شريحة 1 من 4: ترحيبية"
+                 style="background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('assets/images/projects/project-1.jpg');">
+                <div class="slide-content">
+                    <div class="content-wrapper">
+                        <div class="slide-text">
+                            <!-- Logo -->
+                            <div class="hero-logo-container fade-in">
+                                <img src="assets/images/logo/logo-large.png" alt="شعار سومت العالمية" 
+                                     class="hero-logo" loading="lazy" width="150" height="150" />
+                            </div>
+
+                            <!-- Title -->
+                            <h1 class="slide-title fade-in stagger-delay-1">
+                                <span class="ar">الريادة في أعمال البنية التحتية</span>
+                                <span class="en hidden">Leadership in Infrastructure Works</span>
+                            </h1>
+
+                            <!-- Subtitle -->
+                            <div class="slide-subtitle fade-in stagger-delay-2">
+                                <p>
+                                    <span class="ar">نقدم حلولاً متكاملة في سحب المياه الجوفية، التدعيم، الحفر والتشطيبات بأعلى معايير الجودة والسلامة</span>
+                                    <span class="en hidden">We provide integrated solutions in groundwater pumping, reinforcement, drilling and finishing with the highest standards of quality and safety</span>
+                                </p>
+                            </div>
+
+                            <!-- Statistics -->
+                            <div class="hero-stats fade-in stagger-delay-3">
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="50">0</div>
+                                    <div class="stat-label">
+                                        <span class="ar">مشروع منجز</span>
+                                        <span class="en hidden">Completed Projects</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="15">0</div>
+                                    <div class="stat-label">
+                                        <span class="ar">سنة خبرة</span>
+                                        <span class="en hidden">Years Experience</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number" data-count="100">0</div>
+                                    <div class="stat-label">
+                                        <span class="ar">فريق متخصص</span>
+                                        <span class="en hidden">Expert Team</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Buttons -->
+                            <div class="hero-buttons fade-in stagger-delay-4">
+                                <a href="#contact" class="btn-primary pulse-animation" aria-label="الاتصال بنا">
+                                    <span class="ar">اتصل بنا الآن</span>
+                                    <span class="en hidden">Contact Us Now</span>
+                                    <i class="fas fa-phone-alt"></i>
+                                </a>
+                                <a href="#projects" class="btn-secondary" aria-label="عرض المشاريع">
+                                    <span class="ar">عرض المشاريع</span>
+                                    <span class="en hidden">View Projects</span>
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <h1 class="slide-title">
-                  <span class="ar"
-                    >خبرة في سحب المياه والتدعيم تبني مستقبل المشاريع</span
-                  >
-                  <span class="en hidden"
-                    >Experience in water pumping and reinforcement builds
-                    project future</span
-                  >
-                </h1>
-
-                <div class="slide-subtitle">
-                  <p>
-                    <span class="ar"
-                      >خبرة واسعة في سحب المياه والتدعيم والحفر والتشطيبات بأعلى
-                      المعايير</span
-                    >
-                    <span class="en hidden"
-                      >Extensive experience in water pumping, reinforcement,
-                      drilling, and finishing with highest standards</span
-                    >
-                  </p>
-                </div>
-
-                <div class="hero-buttons">
-                  <a
-                    href="#services"
-                    class="btn-primary"
-                    aria-label="عرض جميع الخدمات"
-                  >
-                    <span class="ar">عرض جميع الخدمات</span>
-                    <span class="en hidden">View All Services</span>
-                    <i class="fas fa-list"></i>
-                  </a>
-                  <a href="#contact" class="btn-outline" aria-label="طلب خدمة">
-                    <span class="ar">طلب خدمة</span>
-                    <span class="en hidden">Request Service</span>
-                    <i class="fas fa-clipboard-list"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Slide 3: Projects -->
-        <div
-          class="carousel-slide"
-          data-slide="3"
-          role="region"
-          aria-label="شريحة 3 من 4: المشاريع"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
-          "
-        >
-          <div class="slide-content">
-            <div class="content-wrapper">
-              <div class="slide-text">
-                <div class="badge">
-                  <span class="ar">مشاريع ناجحة</span>
-                  <span class="en hidden">Successful Projects</span>
-                  <i class="fas fa-trophy"></i>
+            <!-- Slide 2: Services -->
+            <div class="carousel-slide" data-slide="2" role="region" 
+                 aria-label="شريحة 2 من 4: الخدمات"
+                 style="background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('assets/images/projects/project-2.jpg');">
+                <div class="slide-content">
+                    <div class="content-wrapper">
+                        <div class="slide-text">
+                            <div class="badge">
+                                <span class="ar">خدمات متخصصة</span>
+                                <span class="en hidden">Specialized Services</span>
+                                <i class="fas fa-cogs"></i>
+                            </div>
+
+                            <h1 class="slide-title">
+                                <span class="ar">خبرة في سحب المياه والتدعيم تبني مستقبل المشاريع</span>
+                                <span class="en hidden">Experience in water pumping and reinforcement builds project future</span>
+                            </h1>
+
+                            <div class="slide-subtitle">
+                                <p>
+                                    <span class="ar">خبرة واسعة في سحب المياه والتدعيم والحفر والتشطيبات بأعلى المعايير</span>
+                                    <span class="en hidden">Extensive experience in water pumping, reinforcement, drilling, and finishing with highest standards</span>
+                                </p>
+                            </div>
+
+                            <div class="hero-buttons">
+                                <a href="#services" class="btn-primary" aria-label="عرض جميع الخدمات">
+                                    <span class="ar">عرض جميع الخدمات</span>
+                                    <span class="en hidden">View All Services</span>
+                                    <i class="fas fa-list"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <h1 class="slide-title">
-                  <span class="ar">نحو مشاريع آمنة وناجحة بخبرة واحتراف</span>
-                  <span class="en hidden"
-                    >Towards safe and successful projects with expertise and
-                    professionalism</span
-                  >
-                </h1>
-
-                <div class="slide-subtitle">
-                  <p>
-                    <span class="ar"
-                      >ننفذ مشاريع معقدة باحترافية عالية ونسلمها في الوقت
-                      المحدد</span
-                    >
-                    <span class="en hidden"
-                      >We execute complex projects with high professionalism and
-                      deliver on time</span
-                    >
-                  </p>
-                </div>
-
-                <div class="hero-buttons">
-                  <a
-                    href="#projects"
-                    class="btn-primary"
-                    aria-label="استعراض المشاريع"
-                  >
-                    <span class="ar">استعراض المشاريع</span>
-                    <span class="en hidden">Browse Projects</span>
-                    <i class="fas fa-images"></i>
-                  </a>
-                  <a
-                    href="#contact"
-                    class="btn-outline"
-                    aria-label="طلب مشروع جديد"
-                  >
-                    <span class="ar">طلب مشروع جديد</span>
-                    <span class="en hidden">Request New Project</span>
-                    <i class="fas fa-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Slide 4: Quality & Safety -->
-        <div
-          class="carousel-slide"
-          data-slide="4"
-          role="region"
-          aria-label="شريحة 4 من 4: الجودة والسلامة"
-          style="
-            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80&blend=11224E&blend-mode=multiply&blend-alpha=30');
-          "
-        >
-          <div class="slide-content">
-            <div class="content-wrapper">
-              <div class="slide-text">
-                <div class="badge">
-                  <span class="ar">الجودة والسلامة</span>
-                  <span class="en hidden">Quality & Safety</span>
-                  <i class="fas fa-shield-alt"></i>
+            <!-- Slide 3: Projects -->
+            <div class="carousel-slide" data-slide="3" role="region" 
+                 aria-label="شريحة 3 من 4: المشاريع"
+                 style="background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('assets/images/projects/project-3.jpg');">
+                <div class="slide-content">
+                    <div class="content-wrapper">
+                        <div class="slide-text">
+                            <div class="badge">
+                                <span class="ar">مشاريع ناجحة</span>
+                                <span class="en hidden">Successful Projects</span>
+                                <i class="fas fa-trophy"></i>
+                            </div>
+
+                            <h1 class="slide-title">
+                                <span class="ar">خبرة تعاقدية مع كبرى الشركات</span>
+                                <span class="en hidden">Contractual Experience with Major Companies</span>
+                            </h1>
+
+                            <div class="slide-subtitle">
+                                <p>
+                                    <span class="ar">شركاء نجاح مع الهيئة العامة للإسكان، شركة الخرافي، الغانم، السويدي، والعديد من الشركات الرائدة</span>
+                                    <span class="en hidden">Success partners with Public Authority for Housing, Al-Kharafi, Al-Ghanim, Al-Suwaidi, and many leading companies</span>
+                                </p>
+                            </div>
+
+                            <div class="hero-buttons">
+                                <a href="#projects" class="btn-primary" aria-label="استعراض المشاريع">
+                                    <span class="ar">استعراض المشاريع</span>
+                                    <span class="en hidden">Browse Projects</span>
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <h1 class="slide-title">
-                  <span class="ar">جودة تسبق الزمن... من الأرض حتى السقف</span>
-                  <span class="en hidden"
-                    >Quality precedes time... from ground to ceiling</span
-                  >
-                </h1>
-
-                <div class="slide-subtitle">
-                  <p>
-                    <span class="ar"
-                      >نلتزم بأعلى معايير الجودة العالمية ونضع السلامة كأولوية
-                      قصوى</span
-                    >
-                    <span class="en hidden"
-                      >We commit to the highest international quality standards
-                      and prioritize safety</span
-                    >
-                  </p>
-                </div>
-
-                <!-- Quality Features -->
-                <div class="quality-features">
-                  <div class="feature-item">
-                    <i class="fas fa-award"></i>
-                    <h4>
-                      <span class="ar">شهادات الجودة</span>
-                      <span class="en hidden">Quality Certificates</span>
-                    </h4>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>
-                      <span class="ar">نظام سلامة متكامل</span>
-                      <span class="en hidden">Integrated Safety System</span>
-                    </h4>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-clock"></i>
-                    <h4>
-                      <span class="ar">التسليم في الوقت</span>
-                      <span class="en hidden">On-Time Delivery</span>
-                    </h4>
-                  </div>
-                </div>
-
-                <div class="hero-buttons">
-                  <a
-                    href="#about"
-                    class="btn-primary"
-                    aria-label="معرفة المزيد عنا"
-                  >
-                    <span class="ar">معرفة المزيد عنا</span>
-                    <span class="en hidden">Learn More About Us</span>
-                    <i class="fas fa-info-circle"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Controls -->
-      <div class="slider-controls">
-        <div
-          class="carousel-indicators"
-          role="tablist"
-          aria-label="التحكم بالشرائح"
-        >
-          <button
-            class="indicator-btn active"
-            data-slide="0"
-            role="tab"
-            aria-label="الانتقال إلى الشريحة 1"
-            aria-selected="true"
-          ></button>
-          <button
-            class="indicator-btn"
-            data-slide="1"
-            role="tab"
-            aria-label="الانتقال إلى الشريحة 2"
-            aria-selected="false"
-          ></button>
-          <button
-            class="indicator-btn"
-            data-slide="2"
-            role="tab"
-            aria-label="الانتقال إلى الشريحة 3"
-            aria-selected="false"
-          ></button>
-          <button
-            class="indicator-btn"
-            data-slide="3"
-            role="tab"
-            aria-label="الانتقال إلى الشريحة 4"
-            aria-selected="false"
-          ></button>
-        </div>
+            <!-- Slide 4: Quality & Safety -->
+            <div class="carousel-slide" data-slide="4" role="region" 
+                 aria-label="شريحة 4 من 4: الجودة والسلامة"
+                 style="background-image: linear-gradient(rgba(26, 54, 93, 0.8), rgba(26, 54, 93, 0.9)), url('assets/images/services/water-pumping.jpg');">
+                <div class="slide-content">
+                    <div class="content-wrapper">
+                        <div class="slide-text">
+                            <div class="badge">
+                                <span class="ar">الجودة والسلامة</span>
+                                <span class="en hidden">Quality & Safety</span>
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
 
-        <div class="carousel-nav">
-          <button
-            type="button"
-            class="nav-btn prev-btn"
-            aria-label="الشريحة السابقة"
-            title="الشريحة السابقة"
-          >
-            <i class="fas fa-chevron-right"></i>
-            <span class="sr-only">
-              <span class="ar">السابقة</span>
-              <span class="en hidden">Previous</span>
-            </span>
-          </button>
+                            <h1 class="slide-title">
+                                <span class="ar">أحدث التقنيات والمعدات</span>
+                                <span class="en hidden">Latest Technologies and Equipment</span>
+                            </h1>
 
-          <button
-            type="button"
-            class="nav-btn next-btn"
-            aria-label="الشريحة التالية"
-            title="الشريحة التالية"
-          >
-            <i class="fas fa-chevron-left"></i>
-            <span class="sr-only">
-              <span class="ar">التالية</span>
-              <span class="en hidden">Next</span>
-            </span>
-          </button>
+                            <div class="slide-subtitle">
+                                <p>
+                                    <span class="ar">نمتلك أحدث المضخات المتطورة، اللوادر الحديثة، والحفارات المتخصصة لضمان الجودة والكفاءة</span>
+                                    <span class="en hidden">We own the latest advanced pumps, modern loaders, and specialized excavators to ensure quality and efficiency</span>
+                                </p>
+                            </div>
+
+                            <!-- Quality Features -->
+                            <div class="quality-features">
+                                <div class="feature-item">
+                                    <i class="fas fa-award"></i>
+                                    <h4>
+                                        <span class="ar">شهادات الجودة</span>
+                                        <span class="en hidden">Quality Certificates</span>
+                                    </h4>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h4>
+                                        <span class="ar">نظام سلامة متكامل</span>
+                                        <span class="en hidden">Integrated Safety System</span>
+                                    </h4>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-clock"></i>
+                                    <h4>
+                                        <span class="ar">التسليم في الوقت</span>
+                                        <span class="en hidden">On-Time Delivery</span>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Progress Bar -->
-        <div class="progress-container" aria-hidden="true">
-          <div
-            class="progress-bar"
-            role="progressbar"
-            aria-valuemin="0"
-            aria-valuemax="100"
-            aria-valuenow="25"
-          ></div>
-        </div>
-      </div>
+        <!-- Controls -->
+        <div class="slider-controls">
+            <div class="carousel-indicators" role="tablist" aria-label="التحكم بالشرائح">
+                <button class="indicator-btn active" data-slide="0" role="tab" 
+                        aria-label="الانتقال إلى الشريحة 1" aria-selected="true"></button>
+                <button class="indicator-btn" data-slide="1" role="tab" 
+                        aria-label="الانتقال إلى الشريحة 2" aria-selected="false"></button>
+                <button class="indicator-btn" data-slide="2" role="tab" 
+                        aria-label="الانتقال إلى الشريحة 3" aria-selected="false"></button>
+                <button class="indicator-btn" data-slide="3" role="tab" 
+                        aria-label="الانتقال إلى الشريحة 4" aria-selected="false"></button>
+            </div>
 
-      <!-- Keyboard Instructions -->
-      <div class="keyboard-instructions sr-only" role="note">
-        <span class="ar"
-          >استخدم مفاتيح الأسهم اليمنى واليسرى للتنقل بين الشرائح</span
-        >
-        <span class="en hidden"
-          >Use left and right arrow keys to navigate between slides</span
-        >
-      </div>
+            <div class="carousel-nav">
+                <button type="button" class="nav-btn prev-btn" aria-label="الشريحة السابقة" title="الشريحة السابقة">
+                    <i class="fas fa-chevron-right"></i>
+                    <span class="sr-only">
+                        <span class="ar">السابقة</span>
+                        <span class="en hidden">Previous</span>
+                    </span>
+                </button>
+
+                <button type="button" class="nav-btn next-btn" aria-label="الشريحة التالية" title="الشريحة التالية">
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="sr-only">
+                        <span class="ar">التالية</span>
+                        <span class="en hidden">Next</span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container" aria-hidden="true">
+                <div class="progress-bar" role="progressbar" 
+                     aria-valuemin="0" aria-valuemax="100" aria-valuenow="25"></div>
+            </div>
+        </div>
+
+        <!-- Keyboard Instructions -->
+        <div class="keyboard-instructions sr-only" role="note">
+            <span class="ar">استخدم مفاتيح الأسهم اليمنى واليسرى للتنقل بين الشرائح</span>
+            <span class="en hidden">Use left and right arrow keys to navigate between slides</span>
+        </div>
     </section>
 
     <!-- ============================================
-         ABOUT SECTION
+         ABOUT SECTION - المدمج والمحسن
          ============================================ -->
     <section id="about" class="section-padding bg-white">
-      <div class="section-container">
-        <h2 class="section-title text-center">
-          <span class="ar">عن شركتنا</span>
-          <span class="en hidden">About Our Company</span>
-        </h2>
+        <div class="section-container">
+            <h2 class="section-title text-center">
+                <span class="ar">عن شركة سومت العالمية</span>
+                <span class="en hidden">About Summit International Company</span>
+            </h2>
 
-        <div class="about-content fade-in">
-          <div class="mb-8">
-            <h3 class="mb-4">
-              <span class="ar">نظرة عامة</span>
-              <span class="en hidden">Overview</span>
-            </h3>
-            <p class="mb-4">
-              <span class="ar">
-                تأسست شركة سومت العالمية لتكون واحدة من الشركات المتخصصة
-                والرائدة في مجال سحب المياه الجوفية وأعمال التدعيم والحفر، مع
-                التوسع في تقديم حلول متكاملة لأعمال البناء والتشطيبات.
-              </span>
-              <span class="en hidden">
-                Summit International Company was established to be one of the
-                specialized and leading companies in groundwater pumping,
-                reinforcement works, and drilling, while expanding to provide
-                integrated solutions for construction and finishing works.
-              </span>
-            </p>
-            <p>
-              <span class="ar">
-                نتميز بخبرة عملية وفريق عمل مؤهل، مدعوم بأحدث المعدات والأنظمة،
-                لنضمن لعملائنا تنفيذ مشاريعهم بجودة عالية، ووفق أعلى معايير
-                السلامة والالتزام بالمواعيد.
-              </span>
-              <span class="en hidden">
-                We are distinguished by practical experience and a qualified
-                team, supported by the latest equipment and systems, to ensure
-                our clients' projects are implemented with high quality and
-                according to the highest standards of safety and deadline
-                commitment.
-              </span>
-            </p>
-          </div>
+            <div class="about-content fade-in">
+                <div class="mb-8">
+                    <h3 class="mb-4">
+                        <span class="ar">نظرة عامة</span>
+                        <span class="en hidden">Overview</span>
+                    </h3>
+                    <p class="mb-4">
+                        <span class="ar">
+                            تأسست شركة سومت العالمية لتكون واحدة من الشركات المتخصصة والرائدة في مجال سحب المياه الجوفية وأعمال التدعيم والحفر، مع التوسع في تقديم حلول متكاملة لأعمال البناء والتشطيبات.
+                        </span>
+                        <span class="en hidden">
+                            Summit International Company was established to be one of the specialized and leading companies in groundwater pumping, reinforcement works, and drilling, while expanding to provide integrated solutions for construction and finishing works.
+                        </span>
+                    </p>
+                    <p>
+                        <span class="ar">
+                            نتميز بخبرة عملية وفريق عمل مؤهل، مدعوم بأحدث المعدات والأنظمة، لنضمن لعملائنا تنفيذ مشاريعهم بجودة عالية، ووفق أعلى معايير السلامة والالتزام بالمواعيد.
+                        </span>
+                        <span class="en hidden">
+                            We are distinguished by practical experience and a qualified team, supported by the latest equipment and systems, to ensure our clients' projects are implemented with high quality and according to the highest standards of safety and deadline commitment.
+                        </span>
+                    </p>
+                    
+                    <p class="mt-6">
+                        <span class="ar">
+                            نشارك بفعالية في المشاريع الضخمة التي تقوم عليها دولة الكويت كجزء من <strong>رؤية الكويت 2035</strong>، بما في ذلك مشاريع تطوير الجزر، مدينة الحرير، وتوسعة مطار الكويت الدولي.
+                        </span>
+                        <span class="en hidden">
+                            We actively participate in the massive projects undertaken by the State of Kuwait as part of <strong>Kuwait Vision 2035</strong>, including island development projects, Silk City, and the expansion of Kuwait International Airport.
+                        </span>
+                    </p>
+                </div>
 
-          <div class="grid grid-cols-2 gap-6 mb-8">
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-neutral-200"
-            >
-              <div class="text-primary text-3xl mb-4">
-                <i class="fas fa-eye"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الرؤية</span>
-                <span class="en hidden">Vision</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >أن نكون الخيار الأول في الكويت والمنطقة في مجال سحب المياه
-                  والتدعيم وأعمال الحفر والتشطيبات، من خلال تقديم حلول متكاملة
-                  تواكب التطور وتحقق أعلى معايير الجودة.</span
-                >
-                <span class="en hidden"
-                  >To be the first choice in Kuwait and the region in water
-                  pumping, reinforcement, drilling and finishing works, by
-                  providing integrated solutions that keep pace with development
-                  and achieve the highest quality standards.</span
-                >
-              </p>
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-neutral-200">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الرؤية</span>
+                            <span class="en hidden">Vision</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">
+                                أن نكون الخيار الأول في الكويت والمنطقة في مجال سحب المياه والتدعيم وأعمال الحفر والتشطيبات، من خلال تقديم حلول متكاملة تواكب التطور وتحقق أعلى معايير الجودة.
+                            </span>
+                            <span class="en hidden">
+                                To be the first choice in Kuwait and the region in water pumping, reinforcement, drilling and finishing works, by providing integrated solutions that keep pace with development and achieve the highest quality standards.
+                            </span>
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-neutral-200">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الرسالة</span>
+                            <span class="en hidden">Mission</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">
+                                الالتزام بتقديم خدمات متخصصة وفعّالة لعملائنا، ترتكز على الخبرة، الكفاءة، الابتكار، والسلامة، وبناء شراكات طويلة الأمد تقوم على الثقة والاحترافية.
+                            </span>
+                            <span class="en hidden">
+                                Commitment to providing specialized and effective services to our clients, based on experience, efficiency, innovation, and safety, and building long-term partnerships based on trust and professionalism.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <h3 class="mb-4">
+                    <span class="ar">قيمنا الأساسية</span>
+                    <span class="en hidden">Our Core Values</span>
+                </h3>
+
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الجودة</span>
+                            <span class="en hidden">Quality</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">نحرص على تنفيذ جميع أعمالنا وفق أعلى معايير الجودة العالمية.</span>
+                            <span class="en hidden">We ensure all our works are executed according to the highest international quality standards.</span>
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الالتزام</span>
+                            <span class="en hidden">Commitment</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">نوفي بوعودنا ونلتزم بالمواعيد والتسليم في الوقت المحدد.</span>
+                            <span class="en hidden">We fulfill our promises and commit to deadlines and on-time delivery.</span>
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">السلامة</span>
+                            <span class="en hidden">Safety</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">نضع سلامة فريقنا ومواقع العمل على رأس أولوياتنا.</span>
+                            <span class="en hidden">We place the safety of our team and work sites at the top of our priorities.</span>
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الاحترافية</span>
+                            <span class="en hidden">Professionalism</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">نعمل بفريق متخصص يمتلك الخبرة والكفاءة العالية.</span>
+                            <span class="en hidden">We work with a specialized team that possesses experience and high efficiency.</span>
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4 class="mb-2">
+                            <span class="ar">الشفافية</span>
+                            <span class="en hidden">Transparency</span>
+                        </h4>
+                        <p class="text-sm">
+                            <span class="ar">نبني علاقتنا مع العملاء على الثقة والمصداقية.</span>
+                            <span class="en hidden">We build our relationships with clients on trust and credibility.</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div
-              class="bg-white p-6 rounded-xl shadow-md border border-neutral-200"
-            >
-              <div class="text-primary text-3xl mb-4">
-                <i class="fas fa-bullseye"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الرسالة</span>
-                <span class="en hidden">Mission</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >الالتزام بتقديم خدمات متخصصة وفعّالة لعملائنا، ترتكز على
-                  الخبرة، الكفاءة، الابتكار، والسلامة، وبناء شراكات طويلة الأمد
-                  تقوم على الثقة والاحترافية.</span
-                >
-                <span class="en hidden"
-                  >Commitment to providing specialized and effective services to
-                  our clients, based on experience, efficiency, innovation, and
-                  safety, and building long-term partnerships based on trust and
-                  professionalism.</span
-                >
-              </p>
-            </div>
-          </div>
-
-          <h3 class="mb-4">
-            <span class="ar">قيمنا الأساسية</span>
-            <span class="en hidden">Our Core Values</span>
-          </h3>
-
-          <div class="values-grid">
-            <div class="value-card">
-              <div class="value-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الجودة</span>
-                <span class="en hidden">Quality</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >نحرص على تنفيذ جميع أعمالنا وفق أعلى معايير الجودة
-                  العالمية.</span
-                >
-                <span class="en hidden"
-                  >We ensure all our works are executed according to the highest
-                  international quality standards.</span
-                >
-              </p>
-            </div>
-
-            <div class="value-card">
-              <div class="value-icon">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الالتزام</span>
-                <span class="en hidden">Commitment</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >نوفي بوعودنا ونلتزم بالمواعيد والتسليم في الوقت المحدد.</span
-                >
-                <span class="en hidden"
-                  >We fulfill our promises and commit to deadlines and on-time
-                  delivery.</span
-                >
-              </p>
-            </div>
-
-            <div class="value-card">
-              <div class="value-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">السلامة</span>
-                <span class="en hidden">Safety</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >نضع سلامة فريقنا ومواقع العمل على رأس أولوياتنا.</span
-                >
-                <span class="en hidden"
-                  >We place the safety of our team and work sites at the top of
-                  our priorities.</span
-                >
-              </p>
-            </div>
-
-            <div class="value-card">
-              <div class="value-icon">
-                <i class="fas fa-user-tie"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الاحترافية</span>
-                <span class="en hidden">Professionalism</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >نعمل بفريق متخصص يمتلك الخبرة والكفاءة العالية.</span
-                >
-                <span class="en hidden"
-                  >We work with a specialized team that possesses experience and
-                  high efficiency.</span
-                >
-              </p>
-            </div>
-
-            <div class="value-card">
-              <div class="value-icon">
-                <i class="fas fa-eye"></i>
-              </div>
-              <h4 class="mb-2">
-                <span class="ar">الشفافية</span>
-                <span class="en hidden">Transparency</span>
-              </h4>
-              <p class="text-sm">
-                <span class="ar"
-                  >نبني علاقتنا مع العملاء على الثقة والمصداقية.</span
-                >
-                <span class="en hidden"
-                  >We build our relationships with clients on trust and
-                  credibility.</span
-                >
-              </p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- ============================================
          SERVICES SECTION - INTERACTIVE
          ============================================ -->
-    <section
-      id="services"
-      class="services-section section-padding bg-neutral-50"
-    >
-      <div class="section-container">
-        <div class="services-header text-center mb-12 fade-in">
-          <h2 class="section-title mb-4">
-            <span class="ar">خدماتنا المتكاملة</span>
-            <span class="en hidden">Our Integrated Services</span>
-          </h2>
-          <p class="max-w-3xl mx-auto mb-8">
-            <span class="ar">
-              نقدم مجموعة شاملة من الخدمات المتخصصة في مجال البناء والبنية
-              التحتية، مدعومة بأحدث المعدات وأفضل الخبرات.
-            </span>
-            <span class="en hidden">
-              We offer a comprehensive range of specialized services in the
-              field of construction and infrastructure, supported by the latest
-              equipment and best expertise.
-            </span>
-          </p>
+    <section id="services" class="services-section section-padding bg-neutral-50">
+        <div class="section-container">
+            <div class="services-header text-center mb-12 fade-in">
+                <h2 class="section-title mb-4">
+                    <span class="ar">خدماتنا المتكاملة</span>
+                    <span class="en hidden">Our Integrated Services</span>
+                </h2>
+                <p class="max-w-3xl mx-auto mb-8">
+                    <span class="ar">
+                        نقدم مجموعة شاملة من الخدمات المتخصصة في مجال البناء والبنية التحتية، مدعومة بأحدث المعدات وأفضل الخبرات.
+                    </span>
+                    <span class="en hidden">
+                        We offer a comprehensive range of specialized services in the field of construction and infrastructure, supported by the latest equipment and best expertise.
+                    </span>
+                </p>
+            </div>
+
+            <!-- Interactive Services Grid -->
+            <div class="services-grid" id="servicesGrid">
+                <!-- Service 1: Water Pumping -->
+                <div class="service-card fade-in" data-service="water-pumping">
+                    <div class="service-preview">
+                        <div class="service-icon">
+                            <i class="fas fa-water"></i>
+                        </div>
+                        <h3 class="service-title">
+                            <span class="ar">سحب المياه الجوفية</span>
+                            <span class="en hidden">Groundwater Pumping</span>
+                        </h3>
+                        <p class="service-brief">
+                            <span class="ar">خدمات متخصصة بسحب المياه باستخدام أحدث التقنيات العالمية</span>
+                            <span class="en hidden">Specialized water pumping services using latest global technologies</span>
+                        </p>
+                        <button class="service-toggle" data-action="expand">
+                            <span class="ar">عرض التفاصيل</span>
+                            <span class="en hidden">View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="service-details">
+                        <div class="details-content">
+                            <p class="service-description">
+                                <span class="ar">
+                                    نقدم خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات المتطورة لضمان كفاءة وجودة عالية. نستخدم مضخات متطورة وأنظمة مراقبة ذكية. نتعامل مع جميع أنواع المشاريع من الصغيرة إلى الكبيرة.
+                                </span>
+                                <span class="en hidden">
+                                    We provide groundwater pumping services with the latest equipment and advanced technologies to ensure high efficiency and quality. We use advanced pumps and smart monitoring systems. We handle all types of projects from small to large.
+                                </span>
+                            </p>
+
+                            <div class="service-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">مضخات متطورة عالية الكفاءة</span><span class="en hidden">Advanced high-efficiency pumps</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">أنظمة مراقبة حديثة</span><span class="en hidden">Modern monitoring systems</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">حلول مخصصة للمشاريع الكبرى</span><span class="en hidden">Customized solutions for major projects</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="service-media">
+                                <img src="assets/images/services/water-pumping.jpg" alt="سحب المياه" class="media-image" loading="lazy" />
+                            </div>
+
+                            <button class="close-details" data-action="collapse">
+                                <span class="ar">إغلاق التفاصيل</span>
+                                <span class="en hidden">Close Details</span>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 2: Reinforcement Works -->
+                <div class="service-card fade-in stagger-delay-1" data-service="reinforcement">
+                    <div class="service-preview">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h3 class="service-title">
+                            <span class="ar">أعمال التدعيم</span>
+                            <span class="en hidden">Reinforcement Works</span>
+                        </h3>
+                        <p class="service-brief">
+                            <span class="ar">تدعيم المباني والمنشآت بأعلى معايير السلامة والجودة</span>
+                            <span class="en hidden">Building and structure reinforcement with highest safety and quality standards</span>
+                        </p>
+                        <button class="service-toggle" data-action="expand">
+                            <span class="ar">عرض التفاصيل</span>
+                            <span class="en hidden">View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="service-details">
+                        <div class="details-content">
+                            <p class="service-description">
+                                <span class="ar">
+                                    نقوم بتدعيم المباني والمنشآت باستخدام أحدث تقنيات التدعيم والمواد عالية الجودة لضمان متانة وأمان المنشآت. خبرتنا تشمل تدعيم الأساسات والجدران والأسقف.
+                                </span>
+                                <span class="en hidden">
+                                    We reinforce buildings and structures using the latest reinforcement technologies and high-quality materials to ensure durability and safety of facilities. Our expertise includes foundation, wall, and ceiling reinforcement.
+                                </span>
+                            </p>
+
+                            <div class="service-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">تدعيم مؤقت باستخدام أنظمة I-Beam</span><span class="en hidden">Temporary reinforcement using I-Beam systems</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">تدعيم دائم بالخوازيق الخرسانية</span><span class="en hidden">Permanent reinforcement with concrete piles</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">ضمان سلامة العمال والمباني المجاورة</span><span class="en hidden">Ensuring safety of workers and adjacent buildings</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="service-media">
+                                <img src="assets/images/services/reinforcement.jpg" alt="أعمال التدعيم" class="media-image" loading="lazy" />
+                            </div>
+
+                            <button class="close-details" data-action="collapse">
+                                <span class="ar">إغلاق التفاصيل</span>
+                                <span class="en hidden">Close Details</span>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 3: Drilling Works -->
+                <div class="service-card fade-in stagger-delay-2" data-service="drilling">
+                    <div class="service-preview">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="service-title">
+                            <span class="ar">أعمال الحفر</span>
+                            <span class="en hidden">Drilling Works</span>
+                        </h3>
+                        <p class="service-brief">
+                            <span class="ar">حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات</span>
+                            <span class="en hidden">Precise and safe drilling for all types of projects and applications</span>
+                        </p>
+                        <button class="service-toggle" data-action="expand">
+                            <span class="ar">عرض التفاصيل</span>
+                            <span class="en hidden">View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="service-details">
+                        <div class="details-content">
+                            <p class="service-description">
+                                <span class="ar">
+                                    حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات باستخدام معدات متطورة وخبراء مؤهلين في أعمال الحفر المختلفة. نضمن الدقة والأمان في جميع عمليات الحفر.
+                                </span>
+                                <span class="en hidden">
+                                    Precise and safe drilling for all types of projects and applications using advanced equipment and qualified experts in various drilling works. We ensure precision and safety in all drilling operations.
+                                </span>
+                            </p>
+
+                            <div class="service-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">حفارات متخصصة بأحدث التقنيات</span><span class="en hidden">Specialized excavators with latest technologies</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">أنظمة مراقبة وتحكم دقيقة</span><span class="en hidden">Precise monitoring and control systems</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">تنفيذ وفق المخططات الهندسية</span><span class="en hidden">Implementation according to engineering plans</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="service-media">
+                                <img src="assets/images/services/drilling.jpg" alt="أعمال الحفر" class="media-image" loading="lazy" />
+                            </div>
+
+                            <button class="close-details" data-action="collapse">
+                                <span class="ar">إغلاق التفاصيل</span>
+                                <span class="en hidden">Close Details</span>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service 4: Finishing Works -->
+                <div class="service-card fade-in stagger-delay-3" data-service="finishing">
+                    <div class="service-preview">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3 class="service-title">
+                            <span class="ar">التشطيبات</span>
+                            <span class="en hidden">Finishing Works</span>
+                        </h3>
+                        <p class="service-brief">
+                            <span class="ar">تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم</span>
+                            <span class="en hidden">High-quality finishes that achieve clients' vision and expectations</span>
+                        </p>
+                        <button class="service-toggle" data-action="expand">
+                            <span class="ar">عرض التفاصيل</span>
+                            <span class="en hidden">View Details</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+
+                    <div class="service-details">
+                        <div class="details-content">
+                            <p class="service-description">
+                                <span class="ar">
+                                    تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم بأفضل الأسعار وأعلى مستويات الدقة والاهتمام بالتفاصيل. نقدم جميع أنواع التشطيبات الداخلية والخارجية.
+                                </span>
+                                <span class="en hidden">
+                                    High-quality finishes that achieve clients' vision and expectations at the best prices and highest levels of precision and attention to detail. We provide all types of interior and exterior finishes.
+                                </span>
+                            </p>
+
+                            <div class="service-features">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">مواد عالية الجودة من مصادر موثوقة</span><span class="en hidden">High-quality materials from reliable sources</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">فريق فني متخصص في التشطيبات</span><span class="en hidden">Specialized technical team for finishing works</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span class="ar">ضمان الجودة والجمالية</span><span class="en hidden">Quality and aesthetic guarantee</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="service-media">
+                                <img src="assets/images/projects/project-3.jpg" alt="التشطيبات" class="media-image" loading="lazy" />
+                            </div>
+
+                            <button class="close-details" data-action="collapse">
+                                <span class="ar">إغلاق التفاصيل</span>
+                                <span class="en hidden">Close Details</span>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-note text-center mt-12 fade-in">
+                <p>
+                    <strong>
+                        <span class="ar">ملاحظة:</span>
+                        <span class="en hidden">Note:</span>
+                    </strong>
+                    <span class="ar">
+                        نستخدم <strong>منصة PlanRadar</strong> المتطورة لإدارة المشاريع، مما يضمن التواصل المركزي، التوثيق الكامل، والإشراف الفعّال على جميع مراحل المشروع.
+                    </span>
+                    <span class="en hidden">
+                        We use the advanced <strong>PlanRadar platform</strong> for project management, ensuring centralized communication, complete documentation, and effective supervision of all project stages.
+                    </span>
+                </p>
+            </div>
+
+            <!-- Service Actions -->
+            <div class="services-actions text-center mt-8 fade-in" id="servicesActions">
+                <button class="btn-primary mr-4" id="expandAll">
+                    <span class="ar">عرض كل التفاصيل</span>
+                    <span class="en hidden">Expand All</span>
+                </button>
+                <button class="btn-secondary" id="collapseAll">
+                    <span class="ar">إغلاق الكل</span>
+                    <span class="en hidden">Collapse All</span>
+                </button>
+            </div>
         </div>
-
-        <!-- Interactive Services Grid -->
-        <div class="services-grid" id="servicesGrid">
-          <!-- Service 1: Water Pumping -->
-          <div class="service-card fade-in" data-service="water-pumping">
-            <div class="service-preview">
-              <div class="service-icon">
-                <i class="fas fa-water"></i>
-              </div>
-              <h3 class="service-title">
-                <span class="ar">سحب المياه الجوفية</span>
-                <span class="en hidden">Groundwater Pumping</span>
-              </h3>
-              <p class="service-brief">
-                <span class="ar"
-                  >خدمات متخصصة بسحب المياه باستخدام أحدث التقنيات
-                  العالمية</span
-                >
-                <span class="en hidden"
-                  >Specialized water pumping services using latest global
-                  technologies</span
-                >
-              </p>
-              <button class="service-toggle" data-action="expand">
-                <span class="ar">عرض التفاصيل</span>
-                <span class="en hidden">View Details</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-
-            <div class="service-details">
-              <div class="details-content">
-                <p class="service-description">
-                  <span class="ar"
-                    >نقدم خدمات سحب المياه الجوفية بأحدث المعدات والتقنيات
-                    المتطورة لضمان كفاءة وجودة عالية. نستخدم مضخات متطورة وأنظمة
-                    مراقبة ذكية. نتعامل مع جميع أنواع المشاريع من الصغيرة إلى
-                    الكبيرة.</span
-                  >
-                  <span class="en hidden"
-                    >We provide groundwater pumping services with the latest
-                    equipment and advanced technologies to ensure high
-                    efficiency and quality. We use advanced pumps and smart
-                    monitoring systems. We handle all types of projects from
-                    small to large.</span
-                  >
-                </p>
-
-                <div class="service-media">
-                  <img
-                    src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5"
-                    alt="سحب المياه"
-                    class="media-image"
-                    loading="lazy"
-                  />
-                </div>
-
-                <button class="close-details" data-action="collapse">
-                  <span class="ar">إغلاق التفاصيل</span>
-                  <span class="en hidden">Close Details</span>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 2: Reinforcement Works -->
-          <div
-            class="service-card fade-in stagger-delay-1"
-            data-service="reinforcement"
-          >
-            <div class="service-preview">
-              <div class="service-icon">
-                <i class="fas fa-hard-hat"></i>
-              </div>
-              <h3 class="service-title">
-                <span class="ar">أعمال التدعيم</span>
-                <span class="en hidden">Reinforcement Works</span>
-              </h3>
-              <p class="service-brief">
-                <span class="ar"
-                  >تدعيم المباني والمنشآت بأعلى معايير السلامة والجودة</span
-                >
-                <span class="en hidden"
-                  >Building and structure reinforcement with highest safety and
-                  quality standards</span
-                >
-              </p>
-              <button class="service-toggle" data-action="expand">
-                <span class="ar">عرض التفاصيل</span>
-                <span class="en hidden">View Details</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-
-            <div class="service-details">
-              <div class="details-content">
-                <p class="service-description">
-                  <span class="ar"
-                    >نقوم بتدعيم المباني والمنشآت باستخدام أحدث تقنيات التدعيم
-                    والمواد عالية الجودة لضمان متانة وأمان المنشآت. خبرتنا تشمل
-                    تدعيم الأساسات والجدران والأسقف.</span
-                  >
-                  <span class="en hidden"
-                    >We reinforce buildings and structures using the latest
-                    reinforcement technologies and high-quality materials to
-                    ensure durability and safety of facilities. Our expertise
-                    includes foundation, wall, and ceiling reinforcement.</span
-                  >
-                </p>
-
-                <div class="service-media">
-                  <img
-                    src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122"
-                    alt="أعمال التدعيم"
-                    class="media-image"
-                    loading="lazy"
-                  />
-                </div>
-
-                <button class="close-details" data-action="collapse">
-                  <span class="ar">إغلاق التفاصيل</span>
-                  <span class="en hidden">Close Details</span>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 3: Drilling Works -->
-          <div
-            class="service-card fade-in stagger-delay-2"
-            data-service="drilling"
-          >
-            <div class="service-preview">
-              <div class="service-icon">
-                <i class="fas fa-tools"></i>
-              </div>
-              <h3 class="service-title">
-                <span class="ar">أعمال الحفر</span>
-                <span class="en hidden">Drilling Works</span>
-              </h3>
-              <p class="service-brief">
-                <span class="ar"
-                  >حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات</span
-                >
-                <span class="en hidden"
-                  >Precise and safe drilling for all types of projects and
-                  applications</span
-                >
-              </p>
-              <button class="service-toggle" data-action="expand">
-                <span class="ar">عرض التفاصيل</span>
-                <span class="en hidden">View Details</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-
-            <div class="service-details">
-              <div class="details-content">
-                <p class="service-description">
-                  <span class="ar"
-                    >حفر دقيق وآمن لجميع أنواع المشاريع والتطبيقات باستخدام
-                    معدات متطورة وخبراء مؤهلين في أعمال الحفر المختلفة. نضمن
-                    الدقة والأمان في جميع عمليات الحفر.</span
-                  >
-                  <span class="en hidden"
-                    >Precise and safe drilling for all types of projects and
-                    applications using advanced equipment and qualified experts
-                    in various drilling works. We ensure precision and safety in
-                    all drilling operations.</span
-                  >
-                </p>
-
-                <div class="service-media">
-                  <img
-                    src="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
-                    alt="أعمال الحفر"
-                    class="media-image"
-                    loading="lazy"
-                  />
-                </div>
-
-                <button class="close-details" data-action="collapse">
-                  <span class="ar">إغلاق التفاصيل</span>
-                  <span class="en hidden">Close Details</span>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 4: Finishing Works -->
-          <div
-            class="service-card fade-in stagger-delay-3"
-            data-service="finishing"
-          >
-            <div class="service-preview">
-              <div class="service-icon">
-                <i class="fas fa-paint-roller"></i>
-              </div>
-              <h3 class="service-title">
-                <span class="ar">التشطيبات</span>
-                <span class="en hidden">Finishing Works</span>
-              </h3>
-              <p class="service-brief">
-                <span class="ar"
-                  >تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم</span
-                >
-                <span class="en hidden"
-                  >High-quality finishes that achieve clients' vision and
-                  expectations</span
-                >
-              </p>
-              <button class="service-toggle" data-action="expand">
-                <span class="ar">عرض التفاصيل</span>
-                <span class="en hidden">View Details</span>
-                <i class="fas fa-chevron-down"></i>
-              </button>
-            </div>
-
-            <div class="service-details">
-              <div class="details-content">
-                <p class="service-description">
-                  <span class="ar"
-                    >تشطيبات عالية الجودة تحقق رؤية العملاء وتوقعاتهم بأفضل
-                    الأسعار وأعلى مستويات الدقة والاهتمام بالتفاصيل. نقدم جميع
-                    أنواع التشطيبات الداخلية والخارجية.</span
-                  >
-                  <span class="en hidden"
-                    >High-quality finishes that achieve clients' vision and
-                    expectations at the best prices and highest levels of
-                    precision and attention to detail. We provide all types of
-                    interior and exterior finishes.</span
-                  >
-                </p>
-
-                <div class="service-media">
-                  <img
-                    src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4"
-                    alt="التشطيبات"
-                    class="media-image"
-                    loading="lazy"
-                  />
-                </div>
-
-                <button class="close-details" data-action="collapse">
-                  <span class="ar">إغلاق التفاصيل</span>
-                  <span class="en hidden">Close Details</span>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Service Actions -->
-        <div
-          class="services-actions text-center mt-8 fade-in"
-          id="servicesActions"
-        >
-          <button class="btn-primary mr-4" id="expandAll">
-            <span class="ar">عرض كل التفاصيل</span>
-            <span class="en hidden">Expand All</span>
-          </button>
-          <button class="btn-secondary" id="collapseAll">
-            <span class="ar">إغلاق الكل</span>
-            <span class="en hidden">Collapse All</span>
-          </button>
-        </div>
-      </div>
     </section>
 
     <!-- ============================================
-         EQUIPMENT SECTION
+         EQUIPMENT SECTION - المدمج والمحسن
          ============================================ -->
-    <section class="section-padding bg-white">
-      <div class="section-container">
-        <h2 class="section-title text-center mb-8">
-          <span class="ar">معداتنا المتطورة</span>
-          <span class="en hidden">Our Advanced Equipment</span>
-        </h2>
+    <section id="equipment" class="section-padding bg-white">
+        <div class="section-container">
+            <h2 class="section-title text-center mb-8">
+                <span class="ar">معداتنا المتطورة</span>
+                <span class="en hidden">Our Advanced Equipment</span>
+            </h2>
 
-        <p class="text-center max-w-3xl mx-auto mb-12">
-          <span class="ar">
-            نمتلك أحدث المعدات والتقنيات التي تمكننا من تنفيذ مشاريعنا بكفاءة
-            وجودة عالية.
-          </span>
-          <span class="en hidden">
-            We possess the latest equipment and technologies that enable us to
-            execute our projects with high efficiency and quality.
-          </span>
-        </p>
-
-        <div class="equipment-grid">
-          <div class="equipment-card fade-in">
-            <div class="equipment-icon">
-              <i class="fas fa-cog"></i>
-            </div>
-            <h3 class="mb-3">
-              <span class="ar">مضخات متطورة</span>
-              <span class="en hidden">Advanced Pumps</span>
-            </h3>
-            <p class="text-sm">
-              <span class="ar"
-                >مضخات عالية الكفاءة لسحب المياه الجوفية بأحدث التقنيات
-                العالمية</span
-              >
-              <span class="en hidden"
-                >High-efficiency pumps for groundwater pumping using the latest
-                global technologies</span
-              >
+            <p class="text-center max-w-3xl mx-auto mb-12">
+                <span class="ar">
+                    نمتلك أحدث المعدات والتقنيات التي تمكننا من تنفيذ مشاريعنا بكفاءة وجودة عالية.
+                </span>
+                <span class="en hidden">
+                    We possess the latest equipment and technologies that enable us to execute our projects with high efficiency and quality.
+                </span>
             </p>
-          </div>
 
-          <div class="equipment-card fade-in stagger-delay-1">
-            <div class="equipment-icon">
-              <i class="fas fa-truck"></i>
-            </div>
-            <h3 class="mb-3">
-              <span class="ar">لوادر حديثة</span>
-              <span class="en hidden">Modern Loaders</span>
-            </h3>
-            <p class="text-sm">
-              <span class="ar"
-                >لوادر حديثة لجميع أعمال البناء والتشييد مع قدرات تحميل
-                عالية</span
-              >
-              <span class="en hidden"
-                >Modern loaders for all construction works with high loading
-                capacities</span
-              >
-            </p>
-          </div>
+            <div class="equipment-grid">
+                <div class="equipment-card fade-in">
+                    <div class="equipment-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="mb-3">
+                        <span class="ar">مضخات متطورة</span>
+                        <span class="en hidden">Advanced Pumps</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="ar">مضخات عالية الكفاءة لسحب المياه الجوفية بأحدث التقنيات العالمية</span>
+                        <span class="en hidden">High-efficiency pumps for groundwater pumping using the latest global technologies</span>
+                    </p>
+                    <ul class="equipment-specs mt-4">
+                        <li><i class="fas fa-check"></i> <span class="ar">قدرة ضخ تصل إلى 500 م³/ساعة</span><span class="en hidden">Pumping capacity up to 500 m³/hour</span></li>
+                        <li><i class="fas fa-check"></i> <span class="ar">أنظمة مراقبة وتشغيل آلي</span><span class="en hidden">Automated monitoring and control systems</span></li>
+                    </ul>
+                </div>
 
-          <div class="equipment-card fade-in stagger-delay-2">
-            <div class="equipment-icon">
-              <i class="fas fa-hammer"></i>
+                <div class="equipment-card fade-in stagger-delay-1">
+                    <div class="equipment-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="mb-3">
+                        <span class="ar">لوادر حديثة</span>
+                        <span class="en hidden">Modern Loaders</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="ar">لوادر حديثة لجميع أعمال البناء والتشييد مع قدرات تحميل عالية</span>
+                        <span class="en hidden">Modern loaders for all construction works with high loading capacities</span>
+                    </p>
+                    <ul class="equipment-specs mt-4">
+                        <li><i class="fas fa-check"></i> <span class="ar">أحجام وقدرات متنوعة</span><span class="en hidden">Various sizes and capacities</span></li>
+                        <li><i class="fas fa-check"></i> <span class="ar">أنظمة أمان متقدمة</span><span class="en hidden">Advanced safety systems</span></li>
+                    </ul>
+                </div>
+
+                <div class="equipment-card fade-in stagger-delay-2">
+                    <div class="equipment-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3 class="mb-3">
+                        <span class="ar">حفارات تدعيم</span>
+                        <span class="en hidden">Reinforcement Excavators</span>
+                    </h3>
+                    <p class="text-sm">
+                        <span class="ar">حفارات متخصصة لأعمال التدعيم والحفر بأعلى مستويات الدقة والأمان</span>
+                        <span class="en hidden">Specialized excavators for reinforcement and drilling works with the highest levels of precision and safety</span>
+                    </p>
+                    <ul class="equipment-specs mt-4">
+                        <li><i class="fas fa-check"></i> <span class="ar">قدرة حفر تصل إلى 30 متر عمق</span><span class="en hidden">Drilling capacity up to 30 meters depth</span></li>
+                        <li><i class="fas fa-check"></i> <span class="ar">أنظمة استشعار للمواقع الحساسة</span><span class="en hidden">Sensing systems for sensitive sites</span></li>
+                    </ul>
+                </div>
             </div>
-            <h3 class="mb-3">
-              <span class="ar">حفارات تدعيم</span>
-              <span class="en hidden">Reinforcement Excavators</span>
-            </h3>
-            <p class="text-sm">
-              <span class="ar"
-                >حفارات متخصصة لأعمال التدعيم والحفر بأعلى مستويات الدقة
-                والأمان</span
-              >
-              <span class="en hidden"
-                >Specialized excavators for reinforcement and drilling works
-                with the highest levels of precision and safety</span
-              >
-            </p>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- ============================================
-         PROJECTS SECTION - UNIFIED
+         PROJECTS SECTION - UNIFIED والمحسن
          ============================================ -->
     <section id="projects" class="section-padding bg-white">
-      <div class="section-container">
-        <!-- رأس القسم المحسن -->
-        <div class="projects-header fade-in">
-          <h2 class="section-title mb-4">
-            <span class="ar">مشاريعنا الناجحة</span>
-            <span class="en hidden">Our Successful Projects</span>
-          </h2>
+        <div class="section-container">
+            <!-- رأس القسم المحسن -->
+            <div class="projects-header fade-in">
+                <h2 class="section-title mb-4">
+                    <span class="ar">مشاريعنا الناجحة</span>
+                    <span class="en hidden">Our Successful Projects</span>
+                </h2>
 
-          <p class="projects-subtitle mb-6">
-            <span class="ar">
-              نفتخر بتنفيذ مشاريع متنوعة وناجحة في جميع أنحاء الكويت بأعلى
-              معايير الجودة والسلامة. استعرض مشاريعنا المميزة وتصفح أعمالنا في
-              مختلف المجالات.
-            </span>
-            <span class="en hidden">
-              We are proud to implement diverse and successful projects
-              throughout Kuwait with the highest standards of quality and
-              safety. Browse our featured projects and explore our work in
-              various fields.
-            </span>
-          </p>
+                <p class="projects-subtitle mb-6">
+                    <span class="ar">
+                        نفتخر بتنفيذ مشاريع متنوعة وناجحة في جميع أنحاء الكويت بأعلى معايير الجودة والسلامة. استعرض مشاريعنا المميزة وتصفح أعمالنا في مختلف المجالات.
+                    </span>
+                    <span class="en hidden">
+                        We are proud to implement diverse and successful projects throughout Kuwait with the highest standards of quality and safety. Browse our featured projects and explore our work in various fields.
+                    </span>
+                </p>
 
-          <!-- عداد المشاريع -->
-          <div class="projects-counter" id="projectsCount">
-            <span class="ar"
-              >عرض <strong>15</strong> من <strong>20+</strong> مشروع</span
-            >
-            <span class="en hidden"
-              >Showing <strong>15</strong> of
-              <strong>20+</strong> projects</span
-            >
-          </div>
-        </div>
-
-        <!-- نظام الفلترة -->
-        <div class="projects-filter fade-in stagger-delay-1">
-          <button class="filter-btn active" data-filter="all">
-            <i class="fas fa-layer-group"></i>
-            <span class="ar">الكل</span>
-            <span class="en hidden">All</span>
-          </button>
-
-          <button class="filter-btn" data-filter="construction">
-            <i class="fas fa-building"></i>
-            <span class="ar">تشييد</span>
-            <span class="en hidden">Construction</span>
-          </button>
-
-          <button class="filter-btn" data-filter="infrastructure">
-            <i class="fas fa-road"></i>
-            <span class="ar">بنية تحتية</span>
-            <span class="en hidden">Infrastructure</span>
-          </button>
-
-          <button class="filter-btn" data-filter="water">
-            <i class="fas fa-water"></i>
-            <span class="ar">مياه</span>
-            <span class="en hidden">Water</span>
-          </button>
-
-          <button class="filter-btn" data-filter="education">
-            <i class="fas fa-school"></i>
-            <span class="ar">تعليم</span>
-            <span class="en hidden">Education</span>
-          </button>
-
-          <button class="filter-btn" data-filter="industrial">
-            <i class="fas fa-industry"></i>
-            <span class="ar">صناعي</span>
-            <span class="en hidden">Industrial</span>
-          </button>
-        </div>
-
-        
-
-        <!-- شبكة المشاريع الرئيسية -->
-        <div class="projects-grid-main" id="projectsGridMain">
-          <!-- المشروع 1 -->
-          <div
-            class="project-card-enhanced fade-in"
-            data-category="water"
-            data-featured="true"
-          >
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="إصلاح وصيانة بايبات الماء محطة توليد الكهرباء الزور"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
+                <!-- عداد المشاريع -->
+                <div class="projects-counter" id="projectsCount">
+                    <span class="ar">عرض <strong>15</strong> من <strong>20+</strong> مشروع</span>
+                    <span class="en hidden">Showing <strong>15</strong> of <strong>20+</strong> projects</span>
+                </div>
             </div>
 
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >إصلاح وصيانة بايبات الماء محطة توليد الكهرباء الزور</span
-                >
-                <span class="en hidden"
-                  >Water Pipes Repair & Maintenance at Al-Zour Power Plant</span
-                >
-              </h3>
+            <!-- نظام الفلترة -->
+            <div class="projects-filter fade-in stagger-delay-1">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i>
+                    <span class="ar">الكل</span>
+                    <span class="en hidden">All</span>
+                </button>
 
-              <p class="project-description">
-                <span class="ar">
-                  إصلاح وصيانة أنابيب المياه بمحطة توليد الكهرباء في الزور.
-                  المقاول الرئيسي: شركة الغانم. خدماتنا: سحب المياه الجوفية.
-                </span>
-                <span class="en hidden">
-                  Repair and maintenance of water pipes at Al-Zour Power Plant.
-                  Main contractor: Al-Ghanim Company. Our services: Groundwater
-                  pumping.
-                </span>
-              </p>
+                <button class="filter-btn" data-filter="construction">
+                    <i class="fas fa-building"></i>
+                    <span class="ar">تشييد</span>
+                    <span class="en hidden">Construction</span>
+                </button>
 
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
+                <button class="filter-btn" data-filter="infrastructure">
+                    <i class="fas fa-road"></i>
+                    <span class="ar">بنية تحتية</span>
+                    <span class="en hidden">Infrastructure</span>
+                </button>
+
+                <button class="filter-btn" data-filter="water">
+                    <i class="fas fa-water"></i>
+                    <span class="ar">مياه</span>
+                    <span class="en hidden">Water</span>
+                </button>
+
+                <button class="filter-btn" data-filter="education">
+                    <i class="fas fa-school"></i>
+                    <span class="ar">تعليم</span>
+                    <span class="en hidden">Education</span>
+                </button>
+
+                <button class="filter-btn" data-filter="industrial">
+                    <i class="fas fa-industry"></i>
+                    <span class="ar">صناعي</span>
+                    <span class="en hidden">Industrial</span>
+                </button>
+            </div>
+
+            <!-- المشاريع المميزة (كاروسيل) -->
+            <div class="featured-projects fade-in stagger-delay-2">
+                <h3 class="section-subtitle">
+                    <i class="fas fa-star"></i>
+                    <span class="ar">مشاريعنا المميزة</span>
+                    <span class="en hidden">Featured Projects</span>
+                </h3>
+
+                <div class="featured-slider">
+                    <div class="owl-carousel owl-theme" id="projectsCarousel">
+                        <!-- سيتم توليد المشاريع المميزة ديناميكياً -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- شبكة المشاريع الرئيسية -->
+            <div class="projects-grid-main" id="projectsGridMain">
+                <!-- المشروع 1 -->
+                <div class="project-card-enhanced fade-in" data-category="water" data-featured="true">
+                    <div class="project-image-container">
+                        <img src="assets/images/projects/project-4.jpg" alt="إصلاح وصيانة بايبات الماء محطة توليد الكهرباء الزور" class="project-image" loading="lazy" />
+                        <span class="project-badge">
+                            <span class="ar">مشروع مكتمل</span>
+                            <span class="en hidden">Completed</span>
+                        </span>
+                    </div>
+
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            <span class="ar">إصلاح وصيانة بايبات الماء محطة توليد الكهرباء الزور</span>
+                            <span class="en hidden">Water Pipes Repair & Maintenance at Al-Zour Power Plant</span>
+                        </h3>
+
+                        <p class="project-description">
+                            <span class="ar">
+                                إصلاح وصيانة أنابيب المياه بمحطة توليد الكهرباء في الزور. المقاول الرئيسي: شركة الغانم. خدماتنا: سحب المياه الجوفية.
+                            </span>
+                            <span class="en hidden">
+                                Repair and maintenance of water pipes at Al-Zour Power Plant. Main contractor: Al-Ghanim Company. Our services: Groundwater pumping.
+                            </span>
+                        </p>
+
+                        <div class="project-meta">
+                            <div class="project-date">
+                                <i class="far fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
+
+                            <a href="#contact" class="project-link">
+                                <span class="ar">استفسر عن المشروع</span>
+                                <span class="en hidden">Inquire About Project</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+                <!-- المشروع 2 -->
+                <div class="project-card-enhanced fade-in" data-category="infrastructure" data-featured="true">
+                    <div class="project-image-container">
+                        <img src="assets/images/projects/project-5.jpg" alt="إنشاء وصيانة أبراج كهرباء الضغط العالي الصبية جزيرة بوبيان" class="project-image" loading="lazy" />
+                        <span class="project-badge">
+                            <span class="ar">مشروع مكتمل</span>
+                            <span class="en hidden">Completed</span>
+                        </span>
+                    </div>
 
-          <!-- المشروع 2 -->
-          <div
-            class="project-card-enhanced fade-in"
-            data-category="infrastructure"
-            data-featured="true"
-          >
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="إنشاء وصيانة أبراج كهرباء الضغط العالي الصبية جزيرة بوبيان"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
-            </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            <span class="ar">أبراج كهرباء الضغط العالي - الصبية جزيرة بوبيان</span>
+                            <span class="en hidden">High Voltage Electricity Towers - Subiya Bubiyan Island</span>
+                        </h3>
 
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >أبراج كهرباء الضغط العالي - الصبية جزيرة بوبيان</span
-                >
-                <span class="en hidden"
-                  >High Voltage Electricity Towers - Subiya Bubiyan Island</span
-                >
-              </h3>
+                        <p class="project-description">
+                            <span class="ar">
+                                إنشاء وصيانة أبراج كهرباء الضغط العالي. الجهة المالكة: وزارة الكهرباء. المقاول الرئيسي: شركة السويدي. خدماتنا: سحب المياه.
+                            </span>
+                            <span class="en hidden">
+                                Construction and maintenance of high voltage electricity towers. Owner: Ministry of Electricity. Main contractor: Al-Suwaidi Company. Our services: Water pumping.
+                            </span>
+                        </p>
 
-              <p class="project-description">
-                <span class="ar">
-                  إنشاء وصيانة أبراج كهرباء الضغط العالي. الجهة المالكة: وزارة
-                  الكهرباء. المقاول الرئيسي: شركة السويدي. خدماتنا: سحب المياه.
-                </span>
-                <span class="en hidden">
-                  Construction and maintenance of high voltage electricity
-                  towers. Owner: Ministry of Electricity. Main contractor:
-                  Al-Suwaidi Company. Our services: Water pumping.
-                </span>
-              </p>
+                        <div class="project-meta">
+                            <div class="project-date">
+                                <i class="far fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
 
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
+                            <a href="#contact" class="project-link">
+                                <span class="ar">استفسر عن المشروع</span>
+                                <span class="en hidden">Inquire About Project</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+                <!-- المشروع 3 -->
+                <div class="project-card-enhanced fade-in" data-category="education" data-featured="true">
+                    <div class="project-image-container">
+                        <img src="assets/images/projects/project-6.jpg" alt="المدرسة المتوسطة بنين منطقة صباح الأحمد" class="project-image" loading="lazy" />
+                        <span class="project-badge">
+                            <span class="ar">مشروع مكتمل</span>
+                            <span class="en hidden">Completed</span>
+                        </span>
+                    </div>
 
-          <!-- المشروع 3 -->
-          <div
-            class="project-card-enhanced fade-in"
-            data-category="education"
-            data-featured="true"
-          >
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="المدرسة المتوسطة بنين منطقة صباح الأحمد"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
-            </div>
+                    <div class="project-content">
+                        <h3 class="project-title">
+                            <span class="ar">المدرسة المتوسطة بنين - منطقة صباح الأحمد</span>
+                            <span class="en hidden">Middle School for Boys - Sabah Al-Ahmad Area</span>
+                        </h3>
 
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >المدرسة المتوسطة بنين - منطقة صباح الأحمد</span
-                >
-                <span class="en hidden"
-                  >Middle School for Boys - Sabah Al-Ahmad Area</span
-                >
-              </h3>
+                        <p class="project-description">
+                            <span class="ar">
+                                إنشاء وصيانة المدرسة المتوسطة للبنين. الجهة المالكة: الهيئة العامة للإسكان. المقاول الرئيسي: شركة الخرافي. خدماتنا: تدعيم وسحب ماء.
+                            </span>
+                            <span class="en hidden">
+                                Construction and maintenance of middle school for boys. Owner: Public Authority for Housing. Main contractor: Al-Kharafi Company. Our services: Reinforcement and water pumping.
+                            </span>
+                        </p>
 
-              <p class="project-description">
-                <span class="ar">
-                  إنشاء وصيانة المدرسة المتوسطة للبنين. الجهة المالكة: الهيئة
-                  العامة للإسكان. المقاول الرئيسي: شركة الخرافي. خدماتنا: تدعيم
-                  وسحب ماء.
-                </span>
-                <span class="en hidden">
-                  Construction and maintenance of middle school for boys. Owner:
-                  Public Authority for Housing. Main contractor: Al-Kharafi
-                  Company. Our services: Reinforcement and water pumping.
-                </span>
-              </p>
+                        <div class="project-meta">
+                            <div class="project-date">
+                                <i class="far fa-calendar"></i>
+                                <span>2023</span>
+                            </div>
 
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
+                            <a href="#contact" class="project-link">
+                                <span class="ar">استفسر عن المشروع</span>
+                                <span class="en hidden">Inquire About Project</span>
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
+            <!-- رسالة عدم وجود مشاريع -->
+            <div class="no-projects-message" style="display: none">
+                <i class="fas fa-search"></i>
+                <h3>
+                    <span class="ar">لا توجد مشاريع مطابقة</span>
+                    <span class="en hidden">No matching projects</span>
+                </h3>
+                <p>
+                    <span class="ar">لم نعثر على مشاريع تطابق الفلتر المحدد. جرب فلتراً مختلفاً.</span>
+                    <span class="en hidden">We couldn't find projects matching your filter. Try a different filter.</span>
+                </p>
+            </div>
+
+            <!-- أزرار التحكم -->
+            <div class="projects-actions">
+                <button class="load-more-btn" id="loadMoreProjects">
+                    <i class="fas fa-plus"></i>
+                    <span class="ar">تحميل المزيد</span>
+                    <span class="en hidden">Load More</span>
+                </button>
+
+                <a href="#contact" class="view-all-btn" id="viewAllProjects">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="ar">طلب مشروع جديد</span>
+                    <span class="en hidden">Request New Project</span>
                 </a>
-              </div>
             </div>
-          </div>
-
-          <!-- المشروع 4 -->
-          <div class="project-card-enhanced fade-in" data-category="education">
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="المدرسة الابتدائية بنين المنطقة الاستثمارية صباح الأحمد"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >المدرسة الابتدائية بنين - المنطقة الاستثمارية صباح
-                  الأحمد</span
-                >
-                <span class="en hidden"
-                  >Primary School for Boys - Sabah Al-Ahmad Investment
-                  Area</span
-                >
-              </h3>
-
-              <p class="project-description">
-                <span class="ar">
-                  إنشاء وصيانة المدرسة الابتدائية للبنين. الجهة المالكة: الهيئة
-                  العامة للإسكان. المقاول الرئيسي: شركة الخرافي.
-                </span>
-                <span class="en hidden">
-                  Construction and maintenance of primary school for boys.
-                  Owner: Public Authority for Housing. Main contractor:
-                  Al-Kharafi Company.
-                </span>
-              </p>
-
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
-                </div>
-
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- المشروع 5 -->
-          <div class="project-card-enhanced fade-in" data-category="education">
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="المدرسة الابتدائية بنات المنطقة الاستثمارية صباح الأحمد"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >المدرسة الابتدائية بنات - المنطقة الاستثمارية صباح
-                  الأحمد</span
-                >
-                <span class="en hidden"
-                  >Primary School for Girls - Sabah Al-Ahmad Investment
-                  Area</span
-                >
-              </h3>
-
-              <p class="project-description">
-                <span class="ar">
-                  إنشاء وصيانة المدرسة الابتدائية للبنات. الجهة المالكة: الهيئة
-                  العامة للإسكان. المقاول الرئيسي: شركة الخرافي.
-                </span>
-                <span class="en hidden">
-                  Construction and maintenance of primary school for girls.
-                  Owner: Public Authority for Housing. Main contractor:
-                  Al-Kharafi Company.
-                </span>
-              </p>
-
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
-                </div>
-
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- المشروع 6 -->
-          <div
-            class="project-card-enhanced fade-in"
-            data-category="construction"
-          >
-            <div class="project-image-container">
-              <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                alt="المستوصف ومخفر الشرطة المنطقة الاستثمارية (66 عمارة) صباح الأحمد"
-                class="project-image"
-                loading="lazy"
-              />
-              <span class="project-badge">
-                <span class="ar">مشروع مكتمل</span>
-                <span class="en hidden">Completed</span>
-              </span>
-            </div>
-
-            <div class="project-content">
-              <h3 class="project-title">
-                <span class="ar"
-                  >المستوصف ومخفر الشرطة - المنطقة الاستثمارية صباح الأحمد</span
-                >
-                <span class="en hidden"
-                  >Clinic & Police Station - Sabah Al-Ahmad Investment
-                  Area</span
-                >
-              </h3>
-
-              <p class="project-description">
-                <span class="ar">
-                  إنشاء وصيانة المستوصف ومخفر الشرطة للمنطقة الاستثمارية (66
-                  عمارة). الجهة المالكة: الهيئة العامة للإسكان. المقاول الرئيسي:
-                  شركة الخرافي. خدماتنا: سحب المياه الجوفية.
-                </span>
-                <span class="en hidden">
-                  Construction and maintenance of clinic and police station for
-                  investment area (66 buildings). Owner: Public Authority for
-                  Housing. Main contractor: Al-Kharafi Company. Our services:
-                  Groundwater pumping.
-                </span>
-              </p>
-
-              <div class="project-meta">
-                <div class="project-date">
-                  <i class="far fa-calendar"></i>
-                  <span>2023</span>
-                </div>
-
-                <a href="#contact" class="project-link">
-                  <span class="ar">استفسر عن المشروع</span>
-                  <span class="en hidden">Inquire About Project</span>
-                  <i class="fas fa-arrow-left"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- رسالة عدم وجود مشاريع -->
-        <div class="no-projects-message" style="display: none">
-          <i class="fas fa-search"></i>
-          <h3>
-            <span class="ar">لا توجد مشاريع مطابقة</span>
-            <span class="en hidden">No matching projects</span>
-          </h3>
-          <p>
-            <span class="ar"
-              >لم نعثر على مشاريع تطابق الفلتر المحدد. جرب فلتراً مختلفاً.</span
-            >
-            <span class="en hidden"
-              >We couldn't find projects matching your filter. Try a different
-              filter.</span
-            >
-          </p>
-        </div>
-
-        <!-- أزرار التحكم -->
-        <div class="projects-actions">
-          <button class="load-more-btn" id="loadMoreProjects">
-            <i class="fas fa-plus"></i>
-            <span class="ar">تحميل المزيد</span>
-            <span class="en hidden">Load More</span>
-          </button>
-
-          <a href="#contact" class="view-all-btn" id="viewAllProjects">
-            <i class="fas fa-phone-alt"></i>
-            <span class="ar">طلب مشروع جديد</span>
-            <span class="en hidden">Request New Project</span>
-          </a>
-        </div>
-      </div>
-      <!-- المشاريع المميزة (كاروسيل) -->
-        <div class="featured-projects fade-in stagger-delay-2">
-          <h3 class="section-subtitle">
-            <i class="fas fa-star"></i>
-            <span class="ar">مشاريعنا المميزة</span>
-            <span class="en hidden">Featured Projects</span>
-          </h3>
-
-          <div class="featured-slider">
-            <div class="owl-carousel owl-theme">
-              <!-- سيتم توليد المشاريع المميزة ديناميكياً -->
-            </div>
-          </div>
         </div>
     </section>
 
     <!-- ============================================
-         INTERACTIVE MAP SECTION
+         ADVANTAGES SECTION - المدمج من الملف القديم
          ============================================ -->
-    <section id="map" class="map-section">
-      <div class="section-container">
-        <h2 class="section-title text-center mb-8">
-          <span class="ar">موقعنا ومشاريعنا</span>
-          <span class="en hidden">Our Location & Projects</span>
-        </h2>
-
-        <p class="text-center max-w-3xl mx-auto mb-12">
-          <span class="ar">
-            استعرض مواقع مشاريعنا الناجحة على الخريطة التفاعلية وتعرف على أماكن
-            تنفيذ أعمالنا في جميع أنحاء الكويت.
-          </span>
-          <span class="en hidden">
-            Browse the locations of our successful projects on the interactive
-            map and learn about the places where we implement our work
-            throughout Kuwait.
-          </span>
-        </p>
-
-        <div class="map-container">
-          <!-- Google Map Iframe -->
-          <iframe
-            id="interactiveMap"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892621.9633528772!2d46.94956243383769!3d29.29852725421783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
-
-          <!-- Custom Markers -->
-          <div class="custom-markers" id="mapMarkers">
-            <!-- Marker 1: Main Office -->
-            <div
-              class="map-marker pulse-marker"
-              data-marker="office"
-              style="top: 50%; left: 50%"
-              data-lat="29.2985"
-              data-lng="47.6855"
-            >
-              <div class="marker-icon">
-                <i class="fas fa-building"></i>
-              </div>
-              <div class="marker-label">
-                <span class="ar">المكتب الرئيسي</span>
-                <span class="en hidden">Main Office</span>
-              </div>
+    <section class="section-padding bg-neutral-50">
+        <div class="section-container">
+            <div class="text-center mb-16">
+                <h2 class="section-title mb-4">
+                    <span class="ar">مميزات الشركة</span>
+                    <span class="en hidden">Company Advantages</span>
+                </h2>
+                <div class="w-24 h-1 bg-energy-orange mx-auto"></div>
             </div>
 
-          <!-- Info Overlay -->
-          <div class="map-overlay">
-            <div class="map-info">
-              <h4>
-                <span class="ar">مكتب شركة سومت العالمية</span>
-                <span class="en hidden"
-                  >Summit International Company Office</span
-                >
-              </h4>
-              <p>
-                <i class="fas fa-map-marker-alt"></i>
-                <span class="ar"
-                  >الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span
-                >
-                <span class="en hidden"
-                  >Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor,
-                  Office 312</span
-                >
-              </p>
-              <p>
-                <i class="fas fa-phone"></i>
-                <span>+965 6041 5151</span>
-              </p>
-            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center fade-in">
+                    <div class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-award text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="ar">الجودة</span>
+                        <span class="en hidden">Quality</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span class="ar">نلتزم بأعلى معايير الجودة العالمية</span>
+                        <span class="en hidden">We adhere to the highest international quality standards</span>
+                    </p>
+                </div>
 
-            <div class="map-actions">
-              <button class="action-btn" id="getDirections">
-                <i class="fas fa-directions"></i>
-                <span class="ar">الاتجاهات</span>
-                <span class="en hidden">Directions</span>
-              </button>
-              <button class="action-btn secondary" id="copyAddress">
-                <i class="far fa-copy"></i>
-                <span class="ar">نسخ العنوان</span>
-                <span class="en hidden">Copy Address</span>
-              </button>
+                <div class="text-center fade-in">
+                    <div class="bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-clock text-green-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="ar">الالتزام بالوقت</span>
+                        <span class="en hidden">Time Commitment</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span class="ar">نوفي بوعودنا ونلتزم بالمواعيد المحددة</span>
+                        <span class="en hidden">We keep our promises and meet deadlines</span>
+                    </p>
+                </div>
+
+                <div class="text-center fade-in">
+                    <div class="bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-blue-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="ar">الخبرة</span>
+                        <span class="en hidden">Experience</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span class="ar">فريق عمل متخصص ذو خبرة واسعة</span>
+                        <span class="en hidden">Specialized team with extensive experience</span>
+                    </p>
+                </div>
+
+                <div class="text-center fade-in">
+                    <div class="bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-dollar-sign text-orange-500 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <span class="ar">الأسعار التنافسية</span>
+                        <span class="en hidden">Competitive Prices</span>
+                    </h3>
+                    <p class="text-gray-600">
+                        <span class="ar">أسعار تنافسية مع جودة عالية</span>
+                        <span class="en hidden">Competitive prices with high quality</span>
+                    </p>
+                </div>
             </div>
-          </div>
+            
+            <div class="industry-update mt-12 text-center fade-in">
+                <div class="update-icon inline-block mb-4">
+                    <i class="fas fa-newspaper text-3xl text-trust-blue"></i>
+                </div>
+                <div class="update-content">
+                    <h3 class="text-2xl font-bold mb-4">
+                        <span class="ar">مواكبة لصناعة البناء في الكويت</span>
+                        <span class="en hidden">Keeping Pace with Kuwait's Construction Industry</span>
+                    </h3>
+                    <p class="max-w-3xl mx-auto">
+                        <span class="ar">
+                            نشارك بفعالية في فعاليات القطاع مثل <strong>قمة الكويت للبناء 2025</strong> التي تركز على الابتكار والاستدامة والبنية التحتية الذكية، مما يمكننا من تقديم أحدث الحلول التقنية لعملائنا.
+                        </span>
+                        <span class="en hidden">
+                            We actively participate in sector events such as <strong>Kuwait Construction Summit 2025</strong> which focuses on innovation, sustainability, and smart infrastructure, enabling us to provide the latest technical solutions to our clients.
+                        </span>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <!-- Advantages Section -->
-    <section class="py-20">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">
-            <span class="ar">مميزات الشركة</span>
-            <span class="en hidden">Company Advantages</span>
-          </h2>
-          <div class="w-24 h-1 bg-secondary mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="text-center fade-in">
-            <div
-              class="bg-primary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-award text-primary text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">الجودة</span>
-              <span class="en hidden">Quality</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">نلتزم بأعلى معايير الجودة العالمية</span>
-              <span class="en hidden"
-                >We adhere to the highest international quality standards</span
-              >
-            </p>
-          </div>
-
-          <div class="text-center fade-in">
-            <div
-              class="bg-green-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-clock text-green-500 text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">الالتزام بالوقت</span>
-              <span class="en hidden">Time Commitment</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">نوفي بوعودنا ونلتزم بالمواعيد المحددة</span>
-              <span class="en hidden"
-                >We keep our promises and meet deadlines</span
-              >
-            </p>
-          </div>
-
-          <div class="text-center fade-in">
-            <div
-              class="bg-blue-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-user-graduate text-blue-500 text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">الخبرة</span>
-              <span class="en hidden">Experience</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">فريق عمل متخصص ذو خبرة واسعة</span>
-              <span class="en hidden"
-                >Specialized team with extensive experience</span
-              >
-            </p>
-          </div>
-
-          <div class="text-center fade-in">
-            <div
-              class="bg-orange-500/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-            >
-              <i class="fas fa-dollar-sign text-orange-500 text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-4">
-              <span class="ar">الأسعار التنافسية</span>
-              <span class="en hidden">Competitive Prices</span>
-            </h3>
-            <p class="text-gray-600">
-              <span class="ar">أسعار تنافسية مع جودة عالية</span>
-              <span class="en hidden"
-                >Competitive prices with high quality</span
-              >
-            </p>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- ============================================
-         CONTACT SECTION
+         CONTACT SECTION - المدمج والمحسن
          ============================================ -->
     <section id="contact" class="section-padding bg-white">
-      <div class="section-container">
-        <h2 class="section-title text-center mb-12">
-          <span class="ar">اتصل بنا</span>
-          <span class="en hidden">Contact Us</span>
-        </h2>
+        <div class="section-container">
+            <h2 class="section-title text-center mb-12">
+                <span class="ar">اتصل بنا</span>
+                <span class="en hidden">Contact Us</span>
+            </h2>
 
-        <div class="contact-grid">
-          <div class="contact-info fade-in-left">
-            <h3 class="mb-8">
-              <span class="ar">معلومات التواصل</span>
-              <span class="en hidden">Contact Information</span>
-            </h3>
+            <div class="contact-grid">
+                <div class="contact-info fade-in-left">
+                    <h3 class="mb-8">
+                        <span class="ar">معلومات التواصل</span>
+                        <span class="en hidden">Contact Information</span>
+                    </h3>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div>
-                <h4 class="mb-2">
-                  <span class="ar">الهاتف</span>
-                  <span class="en hidden">Phone</span>
-                </h4>
-                <p>+965 6041 5151</p>
-              </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">
+                                <span class="ar">الهاتف</span>
+                                <span class="en hidden">Phone</span>
+                            </h4>
+                            <p>+965 6041 5151</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">
+                                <span class="ar">البريد الإلكتروني</span>
+                                <span class="en hidden">Email</span>
+                            </h4>
+                            <p>summitceo25@gmail.com</p>
+                            <p class="text-sm mt-1">summitsic81@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">
+                                <span class="ar">العنوان</span>
+                                <span class="en hidden">Address</span>
+                            </h4>
+                            <p>
+                                <span class="ar">الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span>
+                                <span class="en hidden">Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor, Office 312</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="mb-4">
+                            <span class="ar">وسائل التواصل الاجتماعي</span>
+                            <span class="en hidden">Social Media</span>
+                        </h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com/summitsic" target="_blank" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://instagram.com/summitsic" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/company/summitsic" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <p class="text-sm mt-2">@summitsic</p>
+                    </div>
+                    
+                    <div class="working-hours mt-8">
+                        <h4 class="mb-3">
+                            <i class="fas fa-clock"></i>
+                            <span class="ar">ساعات العمل</span>
+                            <span class="en hidden">Working Hours</span>
+                        </h4>
+                        <p class="mb-1">
+                            <span class="ar">الأحد - الخميس: 8:00 صباحاً - 5:00 مساءً</span>
+                            <span class="en hidden">Sunday - Thursday: 8:00 AM - 5:00 PM</span>
+                        </p>
+                        <p>
+                            <span class="ar">الجمعة والسبت: مغلق</span>
+                            <span class="en hidden">Friday and Saturday: Closed</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in-right">
+                    <h3 class="mb-8">
+                        <span class="ar">أرسل لنا رسالة</span>
+                        <span class="en hidden">Send Us a Message</span>
+                    </h3>
+
+                    <form id="contactForm" class="space-y-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="الاسم الكامل" required />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني" required />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="الشركة / المؤسسة" />
+                        </div>
+
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="">اختر الخدمة المطلوبة</option>
+                                <option value="water-pumping">سحب المياه الجوفية</option>
+                                <option value="reinforcement">أعمال التدعيم</option>
+                                <option value="drilling">أعمال الحفر</option>
+                                <option value="finishing">أعمال التشطيبات</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="الرسالة / تفاصيل المشروع" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span class="ar">إرسال الرسالة</span>
+                            <span class="en hidden">Send Message</span>
+                        </button>
+                    </form>
+                </div>
             </div>
+            
+            <!-- خريطة الموقع -->
+            <div class="contact-map mt-16 fade-in">
+                <h3 class="text-center mb-8">
+                    <span class="ar">موقعنا على الخريطة</span>
+                    <span class="en hidden">Our Location on Map</span>
+                </h3>
+                <div class="map-container">
+                    <iframe
+                        id="interactiveMap"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d892621.9633528772!2d46.94956243383769!3d29.29852725421783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea51a1%3A0x74726bcd92d8edd2!2sKuwait!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    
+                    <!-- Info Overlay -->
+                    <div class="map-overlay">
+                        <div class="map-info">
+                            <h4>
+                                <span class="ar">مكتب شركة سومت العالمية</span>
+                                <span class="en hidden">Summit International Company Office</span>
+                            </h4>
+                            <p>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="ar">الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span>
+                                <span class="en hidden">Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor, Office 312</span>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"></i>
+                                <span>+965 6041 5151</span>
+                            </p>
+                        </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div>
-                <h4 class="mb-2">
-                  <span class="ar">البريد الإلكتروني</span>
-                  <span class="en hidden">Email</span>
-                </h4>
-                <p>summitceo25@gmail.com</p>
-                <p class="text-sm mt-1">summitsic81@gmail.com</p>
-              </div>
+                        <div class="map-actions">
+                            <button class="action-btn" id="getDirections">
+                                <i class="fas fa-directions"></i>
+                                <span class="ar">الاتجاهات</span>
+                                <span class="en hidden">Directions</span>
+                            </button>
+                            <button class="action-btn secondary" id="copyAddress">
+                                <i class="far fa-copy"></i>
+                                <span class="ar">نسخ العنوان</span>
+                                <span class="en hidden">Copy Address</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div>
-                <h4 class="mb-2">
-                  <span class="ar">العنوان</span>
-                  <span class="en hidden">Address</span>
-                </h4>
-                <p>
-                  <span class="ar"
-                    >الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span
-                  >
-                  <span class="en hidden"
-                    >Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor,
-                    Office 312</span
-                  >
-                </p>
-              </div>
-            </div>
-
-            <div class="mt-8">
-              <h4 class="mb-4">
-                <span class="ar">وسائل التواصل الاجتماعي</span>
-                <span class="en hidden">Social Media</span>
-              </h4>
-              <div class="social-links">
-                <a
-                  href="https://facebook.com/summitsic"
-                  target="_blank"
-                  class="social-link"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  href="https://instagram.com/summitsic"
-                  target="_blank"
-                  class="social-link"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a
-                  href="https://linkedin.com/company/summitsic"
-                  target="_blank"
-                  class="social-link"
-                >
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form fade-in-right">
-            <h3 class="mb-8">
-              <span class="ar">أرسل لنا رسالة</span>
-              <span class="en hidden">Send Us a Message</span>
-            </h3>
-
-            <form id="contactForm" class="space-y-6">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الاسم"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="البريد الإلكتروني"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="الموضوع"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <textarea
-                  class="form-control"
-                  placeholder="الرسالة"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn-submit">
-                <span class="ar">إرسال الرسالة</span>
-                <span class="en hidden">Send Message</span>
-              </button>
-            </form>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- ============================================
-         FOOTER
+         FOOTER - المدمج والمحسن
          ============================================ -->
     <footer class="footer">
-      <div class="section-container">
-        <div class="footer-grid">
-          <div>
-            <img
-              src="assets/images/logo/logo.png"
-              alt="شعار سومت العالمية"
-              class="footer-logo"
-              onerror="this.src='https://via.placeholder.com/80x80/11224E/F87B1B?text=SIC'"
-              loading="lazy"
-            />
-            <h3 class="mb-4">
-              <span class="ar">سومت العالمية</span>
-              <span class="en hidden">Summit International</span>
-            </h3>
-            <p class="mb-6">
-              <span class="ar"
-                >شركة رائدة في مجال حلول البناء والبنية التحتية في الكويت</span
-              >
-              <span class="en hidden"
-                >A leading company in construction and infrastructure solutions
-                in Kuwait</span
-              >
-            </p>
-            <div class="social-links">
-              <a
-                href="https://facebook.com/summitsic"
-                target="_blank"
-                class="social-link"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="https://instagram.com/summitsic"
-                target="_blank"
-                class="social-link"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="https://linkedin.com/company/summitsic"
-                target="_blank"
-                class="social-link"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </div>
+        <div class="section-container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/logo/logo.png" alt="شعار سومت العالمية" class="footer-logo" loading="lazy" />
+                    <h3 class="mb-4">
+                        <span class="ar">سومت العالمية</span>
+                        <span class="en hidden">Summit International</span>
+                    </h3>
+                    <p class="mb-6">
+                        <span class="ar">شركة رائدة في مجال حلول البناء والبنية التحتية في الكويت</span>
+                        <span class="en hidden">A leading company in construction and infrastructure solutions in Kuwait</span>
+                    </p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/summitsic" target="_blank" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/summitsic" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/summitsic" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
 
-          <div>
-            <h4 class="mb-6">
-              <span class="ar">روابط سريعة</span>
-              <span class="en hidden">Quick Links</span>
-            </h4>
-            <div class="footer-links">
-              <a href="#home" class="footer-link">
-                <span class="ar">الرئيسية</span>
-                <span class="en hidden">Home</span>
-              </a>
-              <a href="#about" class="footer-link">
-                <span class="ar">عن الشركة</span>
-                <span class="en hidden">About</span>
-              </a>
-              <a href="#services" class="footer-link">
-                <span class="ar">الخدمات</span>
-                <span class="en hidden">Services</span>
-              </a>
-              <a href="#projects" class="footer-link">
-                <span class="ar">المشاريع</span>
-                <span class="en hidden">Projects</span>
-              </a>
-              <a href="#contact" class="footer-link">
-                <span class="ar">اتصل بنا</span>
-                <span class="en hidden">Contact</span>
-              </a>
-            </div>
-          </div>
+                <div>
+                    <h4 class="mb-6">
+                        <span class="ar">روابط سريعة</span>
+                        <span class="en hidden">Quick Links</span>
+                    </h4>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">
+                            <span class="ar">الرئيسية</span>
+                            <span class="en hidden">Home</span>
+                        </a>
+                        <a href="#about" class="footer-link">
+                            <span class="ar">عن الشركة</span>
+                            <span class="en hidden">About</span>
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="ar">الخدمات</span>
+                            <span class="en hidden">Services</span>
+                        </a>
+                        <a href="#projects" class="footer-link">
+                            <span class="ar">المشاريع</span>
+                            <span class="en hidden">Projects</span>
+                        </a>
+                        <a href="#contact" class="footer-link">
+                            <span class="ar">اتصل بنا</span>
+                            <span class="en hidden">Contact</span>
+                        </a>
+                    </div>
+                </div>
 
-          <div>
-            <h4 class="mb-6">
-              <span class="ar">خدماتنا</span>
-              <span class="en hidden">Our Services</span>
-            </h4>
-            <div class="footer-links">
-              <a href="#services" class="footer-link">
-                <span class="ar">سحب المياه الجوفية</span>
-                <span class="en hidden">Groundwater Pumping</span>
-              </a>
-              <a href="#services" class="footer-link">
-                <span class="ar">أعمال التدعيم</span>
-                <span class="en hidden">Reinforcement Works</span>
-              </a>
-              <a href="#services" class="footer-link">
-                <span class="ar">أعمال الحفر</span>
-                <span class="en hidden">Drilling Works</span>
-              </a>
-              <a href="#services" class="footer-link">
-                <span class="ar">التشطيبات</span>
-                <span class="en hidden">Finishing Works</span>
-              </a>
-            </div>
-          </div>
+                <div>
+                    <h4 class="mb-6">
+                        <span class="ar">خدماتنا</span>
+                        <span class="en hidden">Our Services</span>
+                    </h4>
+                    <div class="footer-links">
+                        <a href="#services" class="footer-link">
+                            <span class="ar">سحب المياه الجوفية</span>
+                            <span class="en hidden">Groundwater Pumping</span>
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="ar">أعمال التدعيم</span>
+                            <span class="en hidden">Reinforcement Works</span>
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="ar">أعمال الحفر</span>
+                            <span class="en hidden">Drilling Works</span>
+                        </a>
+                        <a href="#services" class="footer-link">
+                            <span class="ar">التشطيبات</span>
+                            <span class="en hidden">Finishing Works</span>
+                        </a>
+                    </div>
+                </div>
 
-          <div>
-            <h4 class="mb-6">
-              <span class="ar">بيانات التواصل</span>
-              <span class="en hidden">Contact Info</span>
-            </h4>
-            <div class="footer-links">
-              <p class="mb-3">
-                <i class="fas fa-phone mr-3"></i>+965 6041 5151
-              </p>
-              <p class="mb-3">
-                <i class="fas fa-envelope mr-3"></i>summitceo25@gmail.com
-              </p>
-              <p>
-                <i class="fas fa-map-marker-alt mr-3"></i>
-                <span class="ar"
-                  >الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span
-                >
-                <span class="en hidden"
-                  >Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor,
-                  Office 312</span
-                >
-              </p>
+                <div>
+                    <h4 class="mb-6">
+                        <span class="ar">بيانات التواصل</span>
+                        <span class="en hidden">Contact Info</span>
+                    </h4>
+                    <div class="footer-links">
+                        <p class="mb-3">
+                            <i class="fas fa-phone mr-3"></i>+965 6041 5151
+                        </p>
+                        <p class="mb-3">
+                            <i class="fas fa-envelope mr-3"></i>summitceo25@gmail.com
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker-alt mr-3"></i>
+                            <span class="ar">الفحيحيل شارع مكة قطعة ٧ قسيمة ٧٣٠١ الدور ٤ مكتب ٣١٢</span>
+                            <span class="en hidden">Al-Fahaheel, Makkah Street, Piece 7, Plot 7301, 4th Floor, Office 312</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <div class="footer-bottom">
+                <p>
+                    <span class="ar">© 2024 شركة سومت العالمية. جميع الحقوق محفوظة.</span>
+                    <span class="en hidden">© 2024 Summit International Company. All rights reserved.</span>
+                </p>
+                <div class="footer-policies">
+                    <a href="#">
+                        <span class="ar">سياسة الخصوصية</span>
+                        <span class="en hidden">Privacy Policy</span>
+                    </a> | 
+                    <a href="#">
+                        <span class="ar">الشروط والأحكام</span>
+                        <span class="en hidden">Terms & Conditions</span>
+                    </a> | 
+                    <a href="#">
+                        <span class="ar">خريطة الموقع</span>
+                        <span class="en hidden">Site Map</span>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            <span class="ar"
-              >© 2024 شركة سومت العالمية. جميع الحقوق محفوظة.</span
-            >
-            <span class="en hidden"
-              >© 2024 Summit International Company. All rights reserved.</span
-            >
-          </p>
-        </div>
-      </div>
     </footer>
 
     <!-- ============================================
-         FIXED CONTACT BAR
+         FIXED CONTACT BAR - المدمج من الملف القديم
          ============================================ -->
     <div class="fixed-contact-bar">
-      <!-- WhatsApp -->
-      <a
-        href="https://wa.me/96560415151"
-        class="contact-fab whatsapp"
-        target="_blank"
-        aria-label="WhatsApp"
-      >
-        <i class="fab fa-whatsapp"></i>
-      </a>
+        <!-- WhatsApp -->
+        <a href="https://wa.me/96560415151" class="contact-fab whatsapp" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
 
-      <!-- Email -->
-      <a
-        href="mailto:summitceo25@gmail.com"
-        class="contact-fab email"
-        aria-label="Email"
-      >
-        <i class="fas fa-envelope"></i>
-      </a>
+        <!-- Email -->
+        <a href="mailto:summitceo25@gmail.com" class="contact-fab email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
 
-      <!-- Social Media -->
-      <div style="position: relative">
-        <button
-          id="socialFab"
-          class="contact-fab social"
-          aria-label="Social Media"
-        >
-          <i class="fas fa-share-alt"></i>
-        </button>
-
-        <div id="socialDropdown" class="social-dropdown">
-          <a
-            href="https://facebook.com/summitsic"
-            class="social-item"
-            target="_blank"
-          >
-            <i class="fab fa-facebook-f text-primary"></i> Facebook
-          </a>
-          <a
-            href="https://instagram.com/summitsic"
-            class="social-item"
-            target="_blank"
-          >
-            <i class="fab fa-instagram text-secondary"></i> Instagram
-          </a>
-          <a
-            href="https://linkedin.com/company/summitsic"
-            class="social-item"
-            target="_blank"
-          >
-            <i class="fab fa-linkedin-in text-info"></i> LinkedIn
-          </a>
-        </div>
-      </div>
+        <!-- Phone -->
+        <a href="tel:+96560415151" class="contact-fab phone" aria-label="Phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
     </div>
 
     <!-- ============================================
          BACK TO TOP BUTTON
          ============================================ -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- ============================================
@@ -2352,14 +1834,19 @@
          ============================================ -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="js/all.min.js"></script>
-
+    
+    <!-- مكتبات JavaScript الإضافية -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    
     <!-- Summit JavaScript Systems -->
-
     <script src="js/navigation.js"></script>
     <script src="js/hero-slider.js"></script>
     <script src="js/services-map.js"></script>
     <script src="js/project.js"></script>
     <script src="js/contact.js"></script>
-  </body>
+    
+    <!-- Scripts المدمجة -->
+   
+</body>
 </html>
